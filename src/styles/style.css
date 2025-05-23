@@ -1,0 +1,48 @@
+body{
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.font-lato{
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+}
+i {
+    font-family: "Courgette", cursive;
+    font-style: normal;
+  }
+  
+.absolute-center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.absolute-bottom-center {
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.resp-btn.absolute-bottom-center {
+    bottom: 0px;
+    left: 0%;
+    transform: translate(0%, 0%);
+}
+.middlingbtns{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 226px;
+	bottom:20px;
+}
+@media screen and (max-width: 768px) {
+    .resp-btn.absolute-bottom-center {
+        bottom: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+  }

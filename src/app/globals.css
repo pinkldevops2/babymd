@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-sans: var(--font-lato);
+  --font-display: var(--font-baloo2);
+  --font-display: var(--font-courgette);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-lato), cursive;
+  font-size: 16px;
+  color:#000;
+}
+
+label {
+  color:#000;
+}
+
+h1, h2 {
+  font-family: var(--font-baloo2), cursive;
+  margin: 0;
+}
+h1{
+	font-size:42px;
+	line-height:38px;
+}
+h1.contactSub{
+	font-size:34px;
+	line-height:38px;
+}
+footer{
+	background-image:url(assets/bgfooter.png);
+	background-position:-80px -30px;
+	background-size:cover;
+}
+footer h3{
+	font-family: var(--font-lato);
+	font-weight:800;
+	font-size:16px;
+}
+.footerULline{
+	line-height:40px;
+}
+.fontSmallTem{
+	font-size:10px;
+}
+@keyframes swingUpDown {
+	0%, 100% {
+	  transform: translateY(0);
+	}
+	50% {
+	  transform: translateY(-10px);
+	}
+}
+@keyframes semiCircularMotion {
+  	0%, 100% {
+	  transform: translateX(0);
+	}
+	50% {
+		  transform:translateX(-10px);
+	}
+}
+.semicircmotion{
+	animation: semiCircularMotion 2s linear infinite;
+}
+.swing {
+    animation: swingUpDown 2s ease-in-out infinite;
+}
+.spansidecour{
+	font-family: var(--font-courgette);
+	font-weight:500!important;
+}
+.customtenight{
+	font-size:28px;
+}
+.fastbeecontact{
+	top:-30px;
+	right:-20px;
+}
+.contactblkbee{
+	background-image:url(assets/contactbright.png);
+	background-position:top right;
+	background-repeat:no-repeat;
+}
+.mediumWnn{
+	font-family: var(--font-lato);
+	font-weight:900;
+	width:70%;
+}
+.fastbeecontact2 {
+    top: 11px;
+    right: 27px;
+}
+.fixedNavbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 0;
+    border-top: 0;
+	transition:all linear 0.3s;
+}
