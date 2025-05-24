@@ -88,6 +88,10 @@ footer h3{
 	font-family: var(--font-courgette);
 	font-weight:500!important;
 }
+.spansidelato{
+	font-family: var(--font-lato);
+	font-weight:500!important;
+}
 .customtenight{
 	font-size:28px;
 }
@@ -131,4 +135,28 @@ footer h3{
     background-position: -55px 0px;
 	background-repeat: no-repeat;
 	background-repeat: repeat-x;
+}
+.border-customOrange{
+	border-image: repeating-linear-gradient(90deg, #F8845D 0 10px, transparent 10px 20px) 1;
+}
+.rounded_circle{
+	position:relative;
+	padding: 0px 10px;
+}
+.rounded_circle::before{
+	position:absolute;
+	content: '';
+	left: -5px;
+    top: 0px;
+    right: -5px;
+    bottom: -15px;
+	background-image: url(../../public/images/solvingcirc.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.curved_lines {
+    background-image: url(assets/curved_lines.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
 }

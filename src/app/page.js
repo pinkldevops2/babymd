@@ -45,6 +45,24 @@ import cloudtext from "../app/assets/cloud.png";
 import cloud from "../app/assets/cloud2.png";
 import bluebtnarrow from "../app/assets/btnBluearrow.png";
 import whitebtnarrow from "../app/assets/btnwhitearrow.png";
+import yellowtextcircle from "../app/assets/textcircle-yellow.png";
+import topright from "../app/assets/topright.png";
+import bottomleft from "../app/assets/bottomleft.png";
+import dotearrow from "../app/assets/dotearrow.png";
+import bee2 from "../app/assets/bee2.png";
+import contactpagebee from "../app/assets/contactpagebee.png";
+import beehive2 from "../app/assets/beehive2.png";
+import beehive3 from "../app/assets/beehive3.png";
+import beehive4 from "../app/assets/beehive4.png";
+import gold_package from "../app/assets/gold_package.svg";
+import platinum_package from "../app/assets/platinum_package.svg";
+
+import SuperDocButton from '../../components/SuperDocButton';
+import SubHeading from '../../components/SubHeading';
+import ClinicCarousel from '../../components/ClinicCarousel';
+import WorkshopCarousel from '../../components/WorkshopCarousel';
+import CaseStudyCarousel from '../../components/CaseStudyCarousel';
+
 
 export default function Home() {
   // Clinic data
@@ -118,30 +136,10 @@ export default function Home() {
 
   // Symptom buttons data (3 rows, each with 3 buttons)
   const symptomRows = [
-    ["Lorem ipsum 1", "Lorem ipsum 2", "Lorem ipsum 3"],
-    ["Lorem ipsum 4", "Lorem ipsum 5", "Lorem ipsum 6"],
-    ["Lorem ipsum 7", "Lorem ipsum 8", "Lorem ipsum 9"],
+    ["Lorem", "ipsum 2", "Lorem ip", "Lorem ipsum", "Lorem ipsum 3"],
+    ["Lorem ipsum 4", "Lorem ips", "Lorem", "Lor", "Lorem ipsu"],
+    ["Lorem ips", "Lorem ipsum 8", "Lorem ipsum", "Lorem ipsu", "Lorem"],
   ];
-
-  // Keen-slider setup for clinic carousel with free mode
-  const [clinicSliderRef, instanceRef] = useKeenSlider({
-    loop: true,
-    mode: "free",
-    slides: {
-      perView: 1,
-      spacing: 15,
-    },
-  });
-
-  // Keen-slider setup for workshop carousel with free mode
-  const [workshopSliderRef] = useKeenSlider({
-    loop: true,
-    mode: "centre",
-    slides: {
-      perView: 1.2,
-      spacing: 9,
-    },
-  });
 
   // Keen-slider setup for case study carousel with free mode
   const [caseStudySliderRef, caseStudyInstanceRef] = useKeenSlider({
@@ -156,6 +154,7 @@ export default function Home() {
   // Keen-slider setup for each row of symptom buttons
   const [symptomSliderRef1] = useKeenSlider({
     mode: "free-snap",
+    loop: true,
     slides: {
       origin: "center",
       perView: 2,
@@ -165,18 +164,20 @@ export default function Home() {
 
   const [symptomSliderRef2] = useKeenSlider({
     mode: "free-snap",
+    loop: true,
     slides: {
       origin: "center",
-      perView: 2,
+      perView: 2.5,
       spacing: 15,
     },
   });
 
   const [symptomSliderRef3] = useKeenSlider({
     mode: "free-snap",
+    loop: true,
     slides: {
       origin: "center",
-      perView: 2,
+      perView: 2.2,
       spacing: 15,
     },
   });
@@ -235,11 +236,12 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">     
+    <div class="border border-customOrange mx-6"></div> 
       {/* Main Content Container */}
       <div>
         {/* Purple Splash Frame */}
-        <div className="rounded-3xl p-8 md:p-12 mb-8 md:mb-12 ">
+        <div className="rounded-3xl p-6 md:p-12 mb-8 md:mb-12 mt-8">
           <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
             Raising a baby <br /> takes a village,
           </h1>
@@ -248,7 +250,7 @@ export default function Home() {
             welcome to <br />
           </h2>
           <h3
-            className=" text-[#5943A5] font-italic text-[42px] leading-[38px] mb-[20px] font-baloo2"
+            className="rounded_circle text-[#5943A5] spansidecour text-[42px] leading-[38px] mb-[20px] font-baloo2"
           >
             yours
           </h3>
@@ -283,27 +285,21 @@ export default function Home() {
             className="absolute bottom-24 left-1/2 transform -translate-x-1/2"
           />
           <Image
-            width={80}
-            height={200}
+            width={50}
+            height={120}
             src={spring}
             alt="Layer 3"
-            className="absolute bottom-12 left-11 transform -translate-x-1/2"
+            className="absolute bottom-22 left-14 transform -translate-x-1/2"
           />
-          <button className="absolute flex top-85 translate-x-9 items-center gap-2 bg-[#F9825F] hover:bg-[#f86f47] text-white font-bold py-5 px-10 rounded-full text-sm tracking-wide transition-transform duration-300 transform hover:scale-105">
-            WHERE IS MY SUPERDOC&apos;S?
-            <span className="text-white text-base col"><svg width="25" height="18" viewBox="0 0 79 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.5" d="M56.1238 31.7983L14.6527 58.7715L14.6527 4.82511L56.1238 31.7983Z" fill="white"/>
-<path d="M78.7151 31.7983L37.244 58.7715L37.244 4.82511L78.7151 31.7983Z" fill="white"/>
-</svg></span>
-          </button>
+          <SuperDocButton href="/superdoc" label="WHERE IS MY SUPERDOC'S?" className="absolute left-1/2 bottom-[40px] translate-x-[-50%]" variant="pink" />
         </div>
 
-        <div className="w-full mt-8 px-6 pt-4">
-          <h2 className="text-[28px] leading-[32px] font-bold text-gray-900">
-            But you don&apos;t have to <br />
-            <span className="text-[#5943A5]">figure it out</span>{" "}
-            <i className="italic text-[#5943A5] font-thin">alone</i>
-          </h2>
+        <div className="w-full mt-8 px-6 pt-4 ">
+          <SubHeading
+            mainText={<>But you don&apos;t have to</>}
+            highlightText={<>figure it out</>}
+            subText={<><i>alone</i></>}
+          />
 
           <p className="pt-3">
             Behind our every mark is a parent who found clarity and a child who
@@ -313,7 +309,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="w-full mt-8 mb-4 flex flex-col items-center space-y-4">
+        <div className="w-full mt-8 mb-4 flex flex-col items-center space-y-4 curved_lines">
           <div className="mb-8">
             <Image
               width={80}
@@ -343,7 +339,7 @@ export default function Home() {
               className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
             />
              <div>
-           <h2 className="w-fit text-[#5943A5] text-[64px] font-bold absolute left-[70px] top-[40px] z-5 ">
+           <h2 className="w-fit text-[#5943A5] text-[60px] font-bold absolute left-[70px] top-[40px] z-5 ">
              {inView1 ? <CountUp start={0} end={5000} duration={2} suffix="+" /> : "5000+"}
            </h2>
            <p className="w-fit text-[#5943A5] absolute left-[170px] top-[120px] top-340 z-5 leading-[20px]">Happy <br />Families <br />and <br />Counting </p>
@@ -367,7 +363,7 @@ export default function Home() {
               className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
             />
             <div className="">
-                <h2 className="w-fit text-[#E3B200] relative font-bold text-[64px] left-[140px] top-[0px]  ">
+                <h2 className="w-fit text-[#E3B200] relative font-bold text-[60px] left-[140px] top-[0px]  ">
                   {inView2 ? <CountUp start={0} end={4.9} decimals={1} duration={2} suffix="+" /> : "4.9+"}
                 </h2>
                 <p className="w-fit text-[#E3B200] relative text-[20px] left-[150px] top-[-25px]"> Google Rating</p>
@@ -391,7 +387,7 @@ export default function Home() {
               className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
             />
             <div>
-              <h2 className="w-fit text-[#269BD9] text-[64px] relative font-bold left-[130px] top-[25px]">
+              <h2 className="w-fit text-[#269BD9] text-[60px] relative font-bold left-[130px] top-[25px]">
                 {inView3 ? <CountUp start={0} end={2500} duration={2} suffix="+" /> : "2500+"}
               </h2>
               <p className="w-fit text-[#269BD9] text-[20px] relative left-[190px] top-[0px]">Glowing <br /> Reviews </p>
@@ -414,7 +410,7 @@ export default function Home() {
               alt="Layer 2"
               className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2"
             />
-            <h2 className="w-fit text-[#ED750F] text-[64px] relative font-bold left-[130px] top-[25px]">
+            <h2 className="w-fit text-[#ED750F] text-[60px] relative font-bold left-[130px] top-[25px]">
               {inView4 ? <CountUp start={0} end={30} duration={2} suffix="+" /> : "30+"}
             </h2>
             <p className="w-fit text-[#ED750F] text-[20px] relative whitespace-nowrap left-[130px] top-[0px]">Years of Peaditric <br/> Wisdom </p>
@@ -423,11 +419,20 @@ export default function Home() {
 
         {/* Every Child is a Miracle Section */}
       <div className="bg-linear-to-t from-[#F0EBFF] to-[#FDF8DB]">
-        <div className=" rounded-3xl p-8 pb-0 md:p-12 md:mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-4">
-            Every child is a miracle - <br /> a unique story{" "}
-            <span className="text-[#4B3A8F]">we&apos;re here to  <br /><i>care for</i></span>
-          </h2>
+        <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-12 md:mb-12">
+          <div className="relative"><SubHeading
+            mainText={<>Every child is a miracle - <br /> a unique story</>}
+            highlightText={<>we&apos;re here<br />to</>}
+            subText={<><i>care for</i></>}
+          />
+          <Image
+                      src={beehive4}
+                      alt="Bee"
+                      width={33}
+                      height={30}
+                      className="absolute right-[0px] top-[60px]"
+                    /></div>
+          
           <p className="leading-relaxed mb-4 mt-3">
             Each moment of your child&apos;s growth is worth celebrating, from first
             steps to first words. But parenting isn&apos;t always magical, with
@@ -444,7 +449,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="rounded-3xl p-8 md:p-12 mb-8 md:mb-12">
+        <div className="rounded-3xl p-6 md:p-12 mb-8 md:mb-12">
           {/* Replaced Placeholder with New Content */}
           <div className="w-full bg-[#F4DF76] rounded-xl mb-4">
             <div className="p-8">
@@ -458,12 +463,12 @@ export default function Home() {
                   <Image
                     src={PromiseIcon1}
                     alt="Empathy Icon"
-                    width={38}
+                    width={45}
                     height={40}
                     className="flex-shrink-0"
                   />
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900">
+                    <h4 className="text-lg font-semibold font-lato text-gray-900">
                       Expert care, built on empathy:
                     </h4>
                     <p className="text-gray-700">
@@ -478,12 +483,12 @@ export default function Home() {
                   <Image
                     src={PromiseIcon2}
                     alt="Checklist Icon"
-                    width={40}
+                    width={45}
                     height={40}
                     className="flex-shrink-0"
                   />
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900">
+                    <h4 className="text-lg font-semibold font-lato text-gray-900">
                       Attention to every detail:
                     </h4>
                     <p className="text-gray-700">
@@ -498,12 +503,12 @@ export default function Home() {
                   <Image
                     src={PromiseIcon3}
                     alt="Play Icon"
-                    width={40}
+                    width={45}
                     height={40}
                     className="flex-shrink-0"
                   />
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900">
+                    <h4 className="text-lg font-semibold font-lato text-gray-900">
                       Joy, every step of the way:
                     </h4>
                     <p className="text-gray-700">
@@ -515,14 +520,27 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-4">
-            We&apos;re here for the{" "}
-            <span className="text-[#4B3A8F]">
-              giggles, sniffles, and everything in{" "}
-              <span className="italic font-light"> <i>between!</i></span>
-            </span>
-          </h2>
+          <div className="pt-4 pr-[70px] relative">
+            <SubHeading
+            mainText={<>We&apos;re here for the</>}
+            highlightText={<>giggles, sniffles, and everything in</>}
+            subText={<><i>between!</i></>}
+          />
+          <Image
+                      src={contactpagebee}
+                      alt="Bee"
+                      width={130}
+                      height={130}
+                      className="absolute right-[-30px] top-[-20px]"
+                    />
+                 <Image
+                      src={beehive3}
+                      alt="Bee"
+                      width={33}
+                      height={30}
+                      className="absolute right-[0px] top-[90px]"
+                    />   
+          </div>        
           <p className="text-[16px] mt-3">
             Some days you&apos;re celebrating first steps. <br /> Other days, you&apos;re
             worried about a fever at 2 AM. We are here for it all. Whether it&apos;s a
@@ -711,26 +729,28 @@ export default function Home() {
         </div>
 
         {/* New Section: More Than Symptoms */}
-        <div className="p-8 pt-0 md:p-12 mt-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-4">
-            More than symptoms, <br />
-            we see the <span className="text-[#4B3A8F]">bigger </span> <br />
-            <span className="text-[#4B3A8F] italic font-light">picture</span>
-          </h2>
+        <div className="pt-8 pb-8 md:p-12 mt-8 md:mb-12">
+          <div className="px-6">
+          <SubHeading
+            mainText={<>More than symptoms, <br />we see the</>}
+            highlightText={<>bigger</>}
+            subText={<><i>picture</i></>}
+          />
           <p>
             Because every child is a miracle, and every concern deserves real
             attention. Whether it&apos;s just a feeling, your tiny tot&apos;s in a fever, a
             delay, or just a feeling, we&apos;re here with expert eyes, kind hearts,
             and real answers.
           </p>
+          </div>
           {/* Symptom Buttons Carousels (One for Each Row) */}
           <div className="space-y-4 mt-4">
             {/* Row 1 Carousel */}
-            <div className="mx-auto rounded-2xl overflow-hidden p-1">
+            <div className="mx-auto rounded-2xl overflow-hidden p-0">
               <div ref={symptomSliderRef1} className="keen-slider ">
                 {symptomRows[0].map((buttonText, index) => (
-                  <div key={index} className="keen-slider__slide">
-                    <button className="bg-[#FBE38F] text-[#4B3A8F] rounded-full px-4 py-2 w-full hover:bg-[#F6E8C3] transition-all duration-300">
+                  <div key={index} className="keen-slider__slide !w-[XXXpx]">
+                    <button className="bg-[#FBE38F] text-[#4B3A8F] rounded-full w-full px-4 py-2 hover:bg-[#F6E8C3] transition-all duration-300">
                       {buttonText}
                     </button>
                   </div>
@@ -739,7 +759,7 @@ export default function Home() {
             </div>
 
             {/* Row 2 Carousel */}
-            <div className=" mx-auto rounded-2xl overflow-hidden p-1">
+            <div className=" mx-auto rounded-2xl overflow-hidden p-0">
               <div ref={symptomSliderRef2} className="keen-slider ">
                 {symptomRows[1].map((buttonText, index) => (
                   <div key={index} className="keen-slider__slide">
@@ -752,7 +772,7 @@ export default function Home() {
             </div>
 
             {/* Row 3 Carousel */}
-            <div className=" mx-auto rounded-2xl overflow-hidden p-1">
+            <div className=" mx-auto rounded-2xl overflow-hidden p-0">
               <div ref={symptomSliderRef3} className="keen-slider">
                 {symptomRows[2].map((buttonText, index) => (
                   <div key={index} className="keen-slider__slide">
@@ -770,13 +790,11 @@ export default function Home() {
         {/* Curious About Growth Section */}
         <div className="bg-white rounded-3xl p-8 md:p-12 md:mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-[28px] md:text-3xl  mb-8 leading-[32px]">
-              <span className="font-bold">Curious about your{" "}</span>
-              <span className="text-[#4B3A8F] font-bold">child&apos;s growth?</span>
-              <br />
-              <span className="text-[#4B3A8F] font-bold">Let&apos;s take a look </span>
-              <span className="text-[#4B3A8F] italic"><i>together</i></span>
-            </h2>
+            <SubHeading
+            mainText={<>Curious about your</>}
+            highlightText={<>child&apos;s growth? Let&apos;s take a look</>}
+            subText={<><i>together</i></>}
+          />
             <p className="text-gray-700 text-lg leading-relaxed mb-1 mt-4">
               You&apos;re the expert when it comes to your child but sometimes, it
               helps to have an extra pair of professional eyes. Our free, online{" "}
@@ -789,6 +807,8 @@ export default function Home() {
           </div>
         </div>
         <div className="relative w-full  h-[280px] md:mb-12 ">
+          <div className="relative w-full  h-[280px] mb-16 mt-12">
+          <div  className="relative w-fit mx-auto">
           <Image
             width={300}
             height={300}
@@ -798,29 +818,71 @@ export default function Home() {
             className=" mx-auto max-w-[250px]"
           />
           <Image
-            width={250}
-            height={200}
+            width={255}
+            height={255}
             src={RectangleImg}
             alt="Layer 2"
             className="absolute absolute-center   mx-auto"
           />
+          <Image
+            width={75}
+            src={topright}
+            alt="Layer 2"
+            className="absolute top-[-40] right-[-40px] mx-auto"
+          />
+           <Image
+            width={75}
+            src={bottomleft}
+            alt="Layer 2"
+            className="absolute bottom-[-40] left-[-40px] mx-auto"
+          />
+          <div className=" w-fit absolute -bottom-13 left-12">
+              <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">Spectator Behaviour </p>
+          </div>
+          <div className=" w-fit absolute -top-12 -left-8">
+              <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">Cognition </p>
+          </div>
+          <div className=" w-fit absolute top-12 -right-[50px]">
+              <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">Unoccupied Play </p>
+          </div>
+          <div className=" w-fit absolute top-[150px] -right-[50px]">
+              <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">Neurodivergent </p>
+          </div>
+          <div className=" w-fit absolute top-[150px] -left-[50px]">
+              <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">Color stimulation </p>
+          </div>
+          <Image
+            width={100}
+            src={dotearrow}
+            alt="Layer 2"
+            className="absolute bottom-[-15] right-[-15px] mx-auto"
+          />
+ 
+          <Image
+            width={100}
+            src={bee2}
+            alt="Layer 2"
+            className="absolute top-[-30] right-[-80px] mx-auto"
+          />
+ 
+          </div>
+        </div>
         </div>
 
-        <div className="flex justify-center mt-2 mb-8">
+        <div className="flex justify-center mt-12 mb-8">
           <button className="text-lg font-medium underline hover:text-[#3A2A7F] transition-colors duration-300">
             Take our milestone assessment test
           </button>
         </div>
 
         {/* All Around the Corner Section */}
-        <div className="bg-[#FFF5F5] p-9 md:p-12 md:mb-12">
+        <div className="bg-[#FFF5F5] p-6 md:p-12 md:mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-[28px]leading-[32px] md:text-3xl font-bold ">
-              All of this, <span className="text-[#4B3A8F]">just</span>
-              <br />
-              <span className="text-[#4B3A8F]">around</span>{" "}
-              <span className="text-[#4B3A8F] italic"><i>the corner</i></span>
-            </h2>
+            <SubHeading
+            mainText={<>All of this,</>}
+            highlightText={<>just around</>}
+            subText={<><i>the corner</i></>}
+          />
             <p className="text-lg leading-relaxed mt-4">
               Late-night worries or last-minute scrambles shouldn&apos;t mean a long
               drive or endless queues. We&apos;re all about making care easy and
@@ -856,87 +918,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Clinic Carousel Section with Keen-Slider Free Mode */}
-        <div className="bg-[#FFF5F5] p-9 md:p-12 pt-0 md:mb-12">
-          <div className="relative max-w-md mx-auto rounded-2xl  bg-white p-4">
-            <div ref={clinicSliderRef} className="keen-slider">
-              {clinics.map((clinic, index) => (
-                <div key={index} className="keen-slider__slide">
-                  <div className="relative w-full h-[300px] mb-6 rounded-xl overflow-hidden">
-                    <Image
-                      width={350}
-                      height={300}
-                      src={clinic.image}
-                      alt={clinic.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="text-center mb-4 px-8">
-                    <h3 className="text-xl font-bold text-gray-800 mb-1 font-baloo2">
-                      {clinic.name}
-                    </h3>
-                    <p
-                      className="text-sm text-gray-600 mb-2 font-baloo2"
-                      dangerouslySetInnerHTML={{ __html: clinic.address }}
-                    />
-                    <p
-                      className="text-sm text-gray-600 font-baloo2"
-                      dangerouslySetInnerHTML={{ __html: clinic.hours }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-            {/* Navigation Arrows for Clinic Carousel */}
-            <button
-              onClick={() => instanceRef.current?.prev()}
-              className="absolute left-[-10px] top-100 z-4 transform -translate-y-1/2 bg-[#F4DF76] rounded-full shadow-md"
-            >
-              <svg
-                className="w-6 h-6 text-gray-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={() => instanceRef.current?.next()}
-              className="absolute right-[-10px] top-100 z-4 transform -translate-y-1/2 bg-[#F4DF76]  rounded-full shadow-md"
-            >
-              <svg
-                className="w-6 h-6 text-gray-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="flex justify-center items-center mt-6">
-            <button className="flex items-center bg-[#F9825F] hover:bg-[#f86f47] text-white font-bold py-5 px-10 rounded-full text-sm tracking-wide transition-transform duration-300 transform hover:scale-105">
-              VISIT YOUR NEAREST BABYMD
-              <span className="text-white text-base ml-2"><svg width="25" height="18" viewBox="0 0 79 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.5" d="M56.1238 31.7983L14.6527 58.7715L14.6527 4.82511L56.1238 31.7983Z" fill="white"/>
-<path d="M78.7151 31.7983L37.244 58.7715L37.244 4.82511L78.7151 31.7983Z" fill="white"/>
-</svg>
-</span>
-            </button>
-          </div>
-        </div>
-
+        <ClinicCarousel clinics={clinics} />
         
 
         {/* Testimonial Section */}
@@ -1058,59 +1040,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Workshop Carousel with Keen-Slider Free Mode */}
-          <div className="relative w-full mx-auto pl-6">
-            <div ref={workshopSliderRef} className="keen-slider">
-              {workshops.map((workshop, index) => (
-                <div key={index} className="keen-slider__slide">
-                  <div className=" overflow-hidden">
-                    <div className=" mb-4  pt-4">
-                      <h3 className="text-xl font-bold text-[#5943A5] mb-1 font-baloo2">
-                        {workshop.title}
-                      </h3>
-                    </div>
-                    <div className="relative h-[192px] w-full">
-                      <Image
-                        width={350}
-                        height={192}
-                        src={workshop.image}
-                        alt={workshop.title}
-                        className="w-full h-full object-cover rounded-2xl"
-                      />
-                      <div className="absolute top-2 right-2 bg-[#5943A5] text-white text-xs p-1 rounded-md font-bold text-center w-[70px]">
-                        <span className="text-base">{workshop.date.split(" ")[0]}</span>
-                        <br />
-                        <span className="text-[9px]">{workshop.date.split(" ").slice(1).join(" ")}</span>
-                      </div>
-                      <div className="absolute bottom-2 left-0 right-0 flex flex-wrap gap-1 px-2">
-                        {workshop.tags.map((tag, tagIndex) => (
-                          <span
-                            key={tagIndex}
-                            className="border border-white bg-opacity-20 backdrop-blur-sm text-white px-2 py-0.5 rounded-full text-[10px] font-medium"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            {/* Navigation Arrows and Indicators for Workshop Carousel */}
-            <div className="flex justify-between items-center mt-4">
-              <div className="flex space-x-2 pl-32">
-                {workshops.map((_, index) => (
-                  <div
-                    key={index}
-                    className={`w-2 h-2 rounded-full ${
-                      currentWorkshopSlide === index ? "bg-[#4B3A8F]" : "bg-gray-300"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+         <WorkshopCarousel workshops={workshops} />
 
           {/* CTA Button */}
           <div className="flex justify-center pt-1">
@@ -1131,13 +1061,10 @@ export default function Home() {
         <div className="bg-[#FDF8DB] pt-6">
           {/* Heading */}
           <div className="text-[#231F20] p-6">
-            <h2 className="text-[28px] leading-[32px] font-bold">
-              Parenting
-              <span className="italic font-light text-[#4B3A8F]">
-                {" "}
-               <i>unplugged!</i> 
-              </span>
-            </h2>
+            <SubHeading
+            mainText={<>Parenting</>}
+            subText={<><i>unplugged!</i></>}
+          />
             <p className="text-sm mt-2 text-[#231F20]">
               Juggling work, family, and endless advice on parenting? We&apos;ve got
               you covered. Delve into our expert insights, practical tips, and
@@ -1145,66 +1072,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Case Study Carousel with Keen-Slider Free Mode */}
-          <div className="relative max-w-md mx-auto rounded-2xl overflow-hidden bg-[#FDF8DB] px-6">
-            <div ref={caseStudySliderRef} className="keen-slider p-[0]">
-              {caseStudies.map((caseStudy, index) => (
-                <div key={index} className="keen-slider__slide">
-                  <div className="bg-[#FDF8DB] rounded-2xl w-full">
-                    <div className="relative h-[250px] w-full">
-                      <Image
-                       /*  width={350}
-                        height={190}
-                        sizes="100vw" */
-                        src={caseStudy.image}
-                        alt={caseStudy.title}
-                        className="absolute bottom-1 w-full object-cover"
-                      />
-                    </div>
-                    <div className="mt-3">
-                      <p className="text-[10px] font-bold text-[#EB5A44] uppercase font-baloo2">
-                        {caseStudy.category}
-                      </p>
-                      <p className="font-semibold text-[20px] leading-[26px] text-[#231F20] font-baloo2">
-                        {caseStudy.title}
-                      </p>
-                    </div>
-                    <button
-                      onClick={nextCaseStudySlide}
-                      className="mt-2 bg-[#F4DF76] rounded-full p-2"
-                    >
-                      <svg
-                        className="w-3 h-3 text-gray-600"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-            {/* Indicators for Case Study Carousel */}
-            <div className="flex justify-center items-center mt-4">
-              <div className="flex space-x-2">
-                {caseStudies.map((_, index) => (
-                  <div
-                    key={index}
-                    className={`w-2 h-2 rounded-full ${
-                      currentCaseStudySlide === index ? "bg-[#4B3A8F]" : "bg-gray-300"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+          <CaseStudyCarousel caseStudies={caseStudies} />
 
           {/* CTA Button */}
           <div className="flex justify-center">
@@ -1222,7 +1090,7 @@ export default function Home() {
         </div>
         
         <div className="px-6">
-          <div className="relative bg-[#FF9A6C] text-white mt-8 mb-4 px-4 py-6 rounded-2xl space-y-14 w-full mx-auto overflow-hidden">
+          <div className="relative bg-[#FF9A6C] text-white mt-8 mb-4 px-4 pt-6  pb-50 rounded-2xl space-y-14 w-full mx-auto overflow-hidden">
             {/* Heading */}
             <div>
               <h2 className="text-lg font-bold leading-snug text-[28px] leading-[30px]">
@@ -1245,12 +1113,12 @@ export default function Home() {
                 round.
               </p>
               <p className="text-sm mt-2">
-                Choose from our plans and save up to â‚¹10,000 annually.
+                Choose from our plans and save up to &#8377;10,000 annually.
               </p>
             </div>
 
             {/* Membership Cards */}
-            <div className="flex flex-row gap-3 ">
+            <div className="flex flex-row gap-3 text-center">
               {/* Gold Plan */}
               <div
                 className="bg-white text-[#231F20] p-4 rounded-2xl space-y-2  w-full w-1/2"
@@ -1258,36 +1126,51 @@ export default function Home() {
                   boxShadow: "-5px 5px 0 #F4DF76;"
                 }}
               >
-                <div className="text-yellow-500 text-2xl">ðŸ…</div>
-                <h3 className="font-semibold text-sm">Gold Membership</h3>
+                <div className="text-yellow-500 h-70 text-2xl text-center pt-4">
+                  <Image
+              width={70}
+              height={50}
+              sizes="80vw"
+              src={gold_package}
+              alt="Layer 1"
+              className="mx-auto"
+            /></div>
+                <h3 className="font-semibold text-sm">Gold<br/>Membership</h3>
                 <p className="text-xs">Save more on everyday care</p>
                 <p className="text-[#009A67] font-bold text-lg mt-1">
-                  â‚¹699<span className="text-xs">/year</span>
+                  &#8377;699<span className="text-xs">/year</span>
                 </p>
                 <ul className="text-xs list-disc list-inside text-[#4D4D4D] space-y-1 mt-2">
                   <li>10% off consults</li>
                   <li>5% off other services</li>
-                  <li>â‚¹700 gift card</li>
+                  <li>&#8377;700 gift card</li>
                 </ul>
               </div>
 
               {/* Platinum Plan */}
               <div
-                className="bg-white text-[#231F20] p-4 rounded-2xl space-y-2 `    w-full w-1/2"
+                className="bg-white text-center text-[#231F20] p-4 rounded-2xl space-y-2 `    w-full w-1/2"
                 style={{
                   boxShadow: "5px 5px 0 #5943A5;"
                 }}
               >
-                <div className="text-[#6C40B5] text-2xl">ðŸ’Ž</div>
-                <h3 className="font-semibold text-sm">Platinum Membership</h3>
+                <div className="text-[#6C40B5] text-center h-70 text-2xl"><Image
+              width={50}
+              height={28}
+              sizes="80vw"
+              src={platinum_package}
+              alt="Layer 1"
+              className="mx-auto"
+            /></div>
+                <h3 className="font-semibold text-sm">Platinum<br/>Membership</h3>
                 <p className="text-xs">Our best value for growing families</p>
                 <p className="text-[#009A67] font-bold text-lg mt-1">
-                  â‚¹999<span className="text-xs">/year</span>
+                  &#8377;999<span className="text-xs">/year</span>
                 </p>
                 <ul className="text-xs list-disc list-inside text-[#4D4D4D] space-y-1 mt-2">
                   <li>15% off consults</li>
                   <li>10% off all services</li>
-                  <li>â‚¹1000 gift card</li>
+                  <li>&#8377;1000 gift card</li>
                 </ul>
               </div>
             </div>
@@ -1299,7 +1182,8 @@ export default function Home() {
                 fontWeight: "400",
                 fontSize: "16px",
                 lineHeight: "22px",
-                fontFamily: "Lato, sans-serif"
+                fontFamily: "Lato, sans-serif",
+                marginBottom:"135px"
               }}
             >
               With both plans, you get priority booking at all BabyMD clinics and
@@ -1387,39 +1271,16 @@ export default function Home() {
         </div>
         {/* New Section: Some of the Questions Parents Really Ask Us */}
         
-        <div className="p-6">
+        <div>
         <div
-          className="bg-[#E1F5FF] rounded-3xl p-8 md:p-12 mb-8 md:mb-12 w-full"
+          className="bg-[#E1F5FF] p-6 md:p-12 mb-0 md:mb-12 w-full mt-6"
           
         >
-          <h2
-            className="text-[#03000b] mb-4 text-[28px] font-bold leading-[30px]" >
-            Some of the questions{" "}
-            <span
-              className="text-[#4B3A8F]"
-              style={{
-                fontFamily: "Baloo 2, sans-serif",
-                fontWeight: 700,
-                fontSize: "28px",
-                lineHeight: "30px",
-                letterSpacing: "0%",
-              }}
-            >
-              parents really ask <br />
-              us{" "}
-              <span
-                style={{
-                  fontFamily: "Courgette, sans-serif",
-                  fontWeight: 400,
-                  fontSize: "28px",
-                  lineHeight: "30px",
-                  letterSpacing: "0%",
-                }}
-              >
-                (a lot!)
-              </span>
-            </span>
-          </h2>
+          <SubHeading
+            mainText={<>Some of the questions</>}
+            highlightText={<>parents really ask <br />us</>}
+            subText={<><i>(a lot!)</i></>}
+          />
           <p
             className="text-[#4B3A8F] text-lg md:text-xl leading-relaxed font-medium mb-4 mt-4"
             style={{
