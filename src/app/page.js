@@ -1188,7 +1188,7 @@ export default function Home() {
             >
               With both plans, you get priority booking at all BabyMD clinics and
               online consults. Plus, a dedicated Care Manager to handle
-              appointments, reminders, and check-ins â€” so you can focus on what
+              appointments, reminders, and check-ins so you can focus on what
               matters most.
             </p>
 
@@ -1211,14 +1211,14 @@ export default function Home() {
               <Image
                 src={Premiumlayer}
                 alt="Background shape"
-                className=" top-205  right-1.5 absolute"
+                className=" top-205  right-1.5 absolute bottom-[-20px]"
               />
               <Image
                 src={PremiumlayerImg}
                 alt="Doctor and Child"
                 width={320}
                 height={200}
-                className="absolute right-0 transform -translate-y-80 mt-10 "
+                className="absolute right-0 mt-10 bottom-0"
               />
             </div>
           </div>
