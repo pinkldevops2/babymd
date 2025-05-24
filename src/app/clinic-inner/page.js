@@ -367,8 +367,8 @@ let autoplayTimeout;
       </section>
 
       {/* Testimonials */}
-      <div className="navigation-wrapper relative max-w-md mx-auto my-10">
-	  		<div className="px-6">
+      <div className="navigation-wrapper px-4 relative max-w-md mx-auto my-10">
+	  		<div className="">
 	   			<h2 className="text-[28px] leading-[30px] font-semibold text-gray-800 pb-6">
                   High-fives From <span className="text-purple-700 font-bold">happy</span><br />
                   <span className="text-purple-600 spansidecour">families</span>
