@@ -1211,7 +1211,7 @@ export default function Home() {
               <Image
                 src={Premiumlayer}
                 alt="Background shape"
-                className=" top-205  right-1.5 absolute bottom-[-20px]"
+                className="right-1.5 absolute bottom-[-20px]"
               />
               <Image
                 src={PremiumlayerImg}
