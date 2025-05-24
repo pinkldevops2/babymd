@@ -289,9 +289,12 @@ export default function Home() {
             alt="Layer 3"
             className="absolute bottom-12 left-11 transform -translate-x-1/2"
           />
-          <button className="absolute flex top-85 translate-x-9 items-center gap-2 bg-[#F9825F] hover:bg-[#f86f47] text-white font-bold py-3 px-10 rounded-full text-sm tracking-wide transition-transform duration-300 transform hover:scale-105">
+          <button className="absolute flex top-85 translate-x-9 items-center gap-2 bg-[#F9825F] hover:bg-[#f86f47] text-white font-bold py-5 px-10 rounded-full text-sm tracking-wide transition-transform duration-300 transform hover:scale-105">
             WHERE IS MY SUPERDOC&apos;S?
-            <span className="text-white text-base col"></span>
+            <span className="text-white text-base col"><svg width="25" height="18" viewBox="0 0 79 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M56.1238 31.7983L14.6527 58.7715L14.6527 4.82511L56.1238 31.7983Z" fill="white"/>
+<path d="M78.7151 31.7983L37.244 58.7715L37.244 4.82511L78.7151 31.7983Z" fill="white"/>
+</svg></span>
           </button>
         </div>
 
@@ -409,7 +412,7 @@ export default function Home() {
               height={200}
               src={Vector4a}
               alt="Layer 2"
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
+              className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2"
             />
             <h2 className="w-fit text-[#ED750F] text-[64px] relative font-bold left-[130px] top-[25px]">
               {inView4 ? <CountUp start={0} end={30} duration={2} suffix="+" /> : "30+"}
@@ -923,9 +926,13 @@ export default function Home() {
             </button>
           </div>
           <div className="flex justify-center items-center mt-6">
-            <button className="flex items-center bg-[#F9825F] hover:bg-[#f86f47] text-white font-bold py-3 px-10 rounded-full text-sm tracking-wide transition-transform duration-300 transform hover:scale-105">
+            <button className="flex items-center bg-[#F9825F] hover:bg-[#f86f47] text-white font-bold py-5 px-10 rounded-full text-sm tracking-wide transition-transform duration-300 transform hover:scale-105">
               VISIT YOUR NEAREST BABYMD
-              <span className="text-white text-base ml-2">Ã¢ÂÂµ</span>
+              <span className="text-white text-base ml-2"><svg width="25" height="18" viewBox="0 0 79 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M56.1238 31.7983L14.6527 58.7715L14.6527 4.82511L56.1238 31.7983Z" fill="white"/>
+<path d="M78.7151 31.7983L37.244 58.7715L37.244 4.82511L78.7151 31.7983Z" fill="white"/>
+</svg>
+</span>
             </button>
           </div>
         </div>
