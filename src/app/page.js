@@ -1126,7 +1126,7 @@ export default function Home() {
                   boxShadow: "-5px 5px 0 #F4DF76;"
                 }}
               >
-                <div className="text-yellow-500 h-70 text-2xl text-center pt-4">
+                <div className="text-yellow-500 h-20 text-2xl text-center pt-4">
                   <Image
               width={70}
               height={50}
@@ -1154,7 +1154,7 @@ export default function Home() {
                   boxShadow: "5px 5px 0 #5943A5;"
                 }}
               >
-                <div className="text-[#6C40B5] text-center h-70 text-2xl"><Image
+                <div className="text-[#6C40B5] text-center h-20 text-2xl"><Image
               width={50}
               height={28}
               sizes="80vw"
