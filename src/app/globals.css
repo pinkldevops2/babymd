@@ -209,3 +209,19 @@ footer h3{
 .memberlisting li:last-child::after {
   content: none;
 }
+.imageoverlay{
+	position: relative;
+}
+.imageoverlay::after{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: #000000;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+	border-radius: 15px;
+	content: '';
+	opacity: 0.8;
+	z-index: 1;
+}

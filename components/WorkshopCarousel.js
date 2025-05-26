@@ -58,7 +58,7 @@ const WorkshopCarousel = ({ workshops }) => {
                   {workshop.title}
                 </h3>
               </div>
-              <div className="relative h-[192px] w-full">
+              <div className="relative h-[192px] w-full imageoverlay">
                 <Image
                   width={300}
                   height={260}
@@ -66,12 +66,12 @@ const WorkshopCarousel = ({ workshops }) => {
                   alt={workshop.title}
                   className="w-full h-full object-cover rounded-2xl"
                 />
-                <div className="absolute top-2 right-2 bg-[#5943A5] text-white text-xs p-1 rounded-md font-bold text-center w-[70px]">
+                <div className="absolute z-10 top-2 right-2 bg-[#5943A5] text-white text-xs p-1 rounded-md font-bold text-center w-[70px]">
                   <span className="text-base">{workshop.date.split(" ")[0]}</span>
                   <br />
                   <span className="text-[9px]">{workshop.date.split(" ").slice(1).join(" ")}</span>
                 </div>
-                <div className="absolute bottom-2 left-0 right-0 flex flex-wrap gap-1 px-2">
+                <div className="absolute bottom-2 left-0 right-0 flex flex-wrap gap-1 px-2 z-10">
                   {workshop.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
