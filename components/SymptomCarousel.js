@@ -55,8 +55,8 @@ const SymptomCarousel = ({ symptomRows }) => {
         />
         <p className="pt-2">
           Because every child is a miracle, and every concern deserves real
-          attention. Whether it's just a feeling, your tiny tot's in a fever, a
-          delay, or just a feeling, we're here with expert eyes, kind hearts,
+          attention. Whether it&apos;s just a feeling, your tiny tot&apos;s in a fever, a
+          delay, or just a feeling, we&apos;re here with expert eyes, kind hearts,
           and real answers.
         </p>
       </div>
