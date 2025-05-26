@@ -42,7 +42,7 @@ const CaseStudyCarousel = ({ caseStudies }) => {
       {/* Left Arrow */}
       <button
         onClick={() => instanceRef.current?.prev()}
-        className="absolute left-[20px] bottom-3 z-10 bg-[#F4DF76] rounded-full p-2 shadow-md"
+        className="absolute left-[20px] bottom-[100px] z-10 bg-[#F4DF76] rounded-full p-2 shadow-md"
       >
         <svg className="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -52,7 +52,7 @@ const CaseStudyCarousel = ({ caseStudies }) => {
       {/* Right Arrow */}
       <button
         onClick={() => instanceRef.current?.next()}
-        className="absolute right-[20px] bottom-3 z-10 bg-[#F4DF76] rounded-full p-2 shadow-md"
+        className="absolute right-[20px] bottom-[100px] z-10 bg-[#F4DF76] rounded-full p-2 shadow-md"
       >
         <svg className="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -84,7 +84,7 @@ const CaseStudyCarousel = ({ caseStudies }) => {
             </div>
           </div>
         ))}
-      </div><div className="flex justify-center">
+      </div><div className="flex justify-center pr-6">
             <SuperDocButton href="/superdoc" label="STAY INFORMED" className="my-5" variant="purple"/>
           </div>
     </div>

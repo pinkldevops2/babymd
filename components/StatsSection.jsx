@@ -45,7 +45,7 @@ const StatsSection = ({
         </p>
       </div>
 
-      <div className="w-full mt-8 mb-4 flex flex-col items-center space-y-4 curved_lines">
+      <div className="w-full mt-8 pb-6 flex flex-col items-center space-y-4 curved_lines">
         {/* Decorative Bees */}
         <div className="mb-8 relative w-full">
           <Image
@@ -53,14 +53,7 @@ const StatsSection = ({
             height={93}
             src={bee}
             alt="Bee"
-            className="absolute left-[70px] top-[280px]"
-          />
-          <Image
-            width={115}
-            height={115}
-            src={sleep_bee}
-            alt="Sleep Bee"
-            className="absolute right-0 top-[510px]"
+            className="absolute right-[50px] top-[-50px]"
           />
         </div>
 
@@ -81,7 +74,7 @@ const StatsSection = ({
           </div>
 
           {/* Stat 2 */}
-          <div className="relative w-80 h-[300px]" ref={ref2}>
+          <div className="relative w-80 h-[330px]" ref={ref2}>
             <Image src={Vector2} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover" />
             <Image src={Vector2a} alt="overlay" className="absolute bottom-0 left-1/2 transform -translate-x-1/2" />
             <div>
@@ -109,7 +102,7 @@ const StatsSection = ({
           </div>
 
           {/* Stat 4 */}
-          <div className="relative w-80 h-[300px]" ref={ref4}>
+          <div className="relative w-80 h-[320px]" ref={ref4}>
             <Image src={Vector4} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover" />
             <Image src={Vector4a} alt="overlay" className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2" />
             <h2 className="w-fit text-[#ED750F] text-[60px] relative font-bold left-[130px] top-[25px]">

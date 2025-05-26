@@ -158,7 +158,7 @@ footer h3{
     background-image: url(assets/curved_lines.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left top;
+    background-position: left 30px;
 }
 .yellow_circle{
 	background-image: url(assets/yellow_circle.png);
