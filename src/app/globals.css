@@ -160,3 +160,52 @@ footer h3{
     background-size: cover;
     background-position: left top;
 }
+.yellow_circle{
+	background-image: url(assets/yellow_circle.png);
+    background-repeat: no-repeat;
+    display: inline-flex;
+    padding: 5px;
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+    font-size: 98%;
+    margin-top: -5px;
+    background-position: center center;
+}
+.package_price_bg{
+	background-image: url(assets/package_price_bg.png);
+    background-repeat: no-repeat;
+    display: inline-flex;
+    padding: 5px;
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+    background-position: center center;
+	font-size: 150%;
+}
+.purple_circle{
+	background-image: url(assets/purple_circle.png);
+    background-repeat: no-repeat;
+    display: inline-flex;
+    padding-right: 10px;
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+    background-position: center center;
+}
+.memberlisting li{
+	position: relative;
+}
+.memberlisting li::after{
+	position: absolute;;
+	content: '';
+	width: 20px;
+	height: 2px;
+	background-color: #9B9B9B;
+	bottom: 0px;
+	left: 50%;
+	transform:  translateX(-50%);
+}
+.memberlisting li:last-child::after {
+  content: none;
+}

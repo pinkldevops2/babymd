@@ -3,17 +3,41 @@ import React, { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import Image from 'next/image';
 import 'keen-slider/keen-slider.min.css';
+import SuperDocButton from './SuperDocButton';
+import SubHeading from './SubHeading';
+import beehive_22a from "@/app/assets/beehive_22a.png";
 
 const CaseStudyCarousel = ({ caseStudies }) => {
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     slides: {
-      perView: 1.3,
+      perView: 1.2,
       spacing: 16,
     },
   });
 
   return (
+    <div className="bg-[#FDF8DB] pt-6 pb-6">
+          {/* Heading */}
+          <div className="text-[#231F20] p-6">
+            <div className='relative'>
+            <SubHeading
+            mainText={<>Parenting</>}
+            subText={<><i>unplugged!</i></>}
+          />
+            <Image
+                src={beehive_22a}
+                width={35}
+                height={36}
+                className='absolute top-[-15px] right-0'
+                />
+            </div>
+            <p className="mt-2 text-[#231F20]">
+              Juggling work, family, and endless advice on parenting? We&apos;ve got
+              you covered. Delve into our expert insights, practical tips, and
+              the latest updates curated exclusively for you.
+            </p>
+          </div>
     <div className="relative max-w-md mx-auto rounded-2xl overflow-hidden bg-[#FDF8DB] pl-6">
       {/* Left Arrow */}
       <button
@@ -53,7 +77,7 @@ const CaseStudyCarousel = ({ caseStudies }) => {
                 <p className="text-[10px] font-bold text-[#EB5A44] uppercase font-baloo2">
                   {caseStudy.category}
                 </p>
-                <p className="font-semibold text-[20px] leading-[26px] text-[#231F20] font-baloo2">
+                <p className="font-semibold text-[20px] leading-[25px] text-[#231F20] font-lato">
                   {caseStudy.title}
                 </p>
               </div>
@@ -62,6 +86,11 @@ const CaseStudyCarousel = ({ caseStudies }) => {
         ))}
       </div>
     </div>
+    {/* CTA Button */}
+          <div className="flex justify-center">
+            <SuperDocButton href="/superdoc" label="STAY INFORMED" className="my-5" variant="purple"/>
+          </div>
+        </div>
   );
 };
 

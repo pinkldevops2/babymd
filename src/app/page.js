@@ -15,11 +15,14 @@ import Vector3 from "../app/assets/Vector3.png";
 import Vector3a from "../app/assets/Vector3a.png";
 import Vector4 from "../app/assets/Vector4.png";
 import Vector4a from "../app/assets/Vector4a.png";
-import Rectangle from "../app/assets/Rectangle.png";
-import RectangleImg from "../app/assets/RectangleImg.png";
+import sleep_bee from "../app/assets/sleep_bee.png";
+import beehive_full from "../app/assets/beehive_full.png";
+
+
 import Nearbyclinic from "../app/assets/Nearbyclinic.png";
 import workshop from "../app/assets/workshop.png";
 import casestudy from "../app/assets/casestudy.png";
+import casestudy2 from "../app/assets/casestudy2.png";
 import spring from "../app/assets/spring.png";
 import PromiseIcon1 from "../app/assets/PromiseIcon1.png";
 import PromiseIcon2 from "../app/assets/PromiseIcon2.png";
@@ -29,14 +32,14 @@ import DevelopmentalTherapies from "../app/assets/DevelopmentalTherapies.png";
 import GeneralConsultations from "../app/assets/GeneralConsultations.png";
 import Vaccinations from "../app/assets/Vaccinations.png";
 import IconBackground from "../app/assets/supporticonbackground.png";
-import Premiumlayer from "../app/assets/Premiumlayer.png";
+import premiumLayer from "../app/assets/Premiumlayer.png";
 import PremiumlayerImg from "../app/assets/PremiumlayerImg.png";
 import bee from "../app/assets/bee.png";
 import longspring from "../app/assets/longspring.png";
 import readyvectorImg from "../app/assets/readyvectorImg.png";
 import readyvector from "../app/assets/readyvector.png";
-import Nearbyclinic2 from "../app/assets/Nearbyclinic2.png";
-import Nearbyclinic3 from "../app/assets/Nearbyclinic3.png";
+import Nearbyclinic2 from "../app/assets/c340ff5accd3a76b9824168ee4a673930fbf9234.jpg";
+import Nearbyclinic3 from "../app/assets/bd6e88dec0f434f565572c1a818fb23885fb5b33.jpg";
 import workshop2 from "../app/assets/workshop2.png";
 import workshop3 from "../app/assets/workshop3.png";
 import curvedBottom from "../app/assets/curved-bottom.png";
@@ -46,23 +49,24 @@ import cloud from "../app/assets/cloud2.png";
 import bluebtnarrow from "../app/assets/btnBluearrow.png";
 import whitebtnarrow from "../app/assets/btnwhitearrow.png";
 import yellowtextcircle from "../app/assets/textcircle-yellow.png";
-import topright from "../app/assets/topright.png";
-import bottomleft from "../app/assets/bottomleft.png";
-import dotearrow from "../app/assets/dotearrow.png";
-import bee2 from "../app/assets/bee2.png";
 import contactpagebee from "../app/assets/contactpagebee.png";
 import beehive2 from "../app/assets/beehive2.png";
 import beehive3 from "../app/assets/beehive3.png";
 import beehive4 from "../app/assets/beehive4.png";
-import gold_package from "../app/assets/gold_package.svg";
-import platinum_package from "../app/assets/platinum_package.svg";
+import beehive9 from "../app/assets/beehive9.png";
+import goldPackageImg from "../app/assets/gold_package.svg";
+import platinumPackageImg from "../app/assets/platinum_package.svg";
 
 import SuperDocButton from '../../components/SuperDocButton';
 import SubHeading from '../../components/SubHeading';
 import ClinicCarousel from '../../components/ClinicCarousel';
 import WorkshopCarousel from '../../components/WorkshopCarousel';
 import CaseStudyCarousel from '../../components/CaseStudyCarousel';
-
+import CloudTestimonials from "../../components/CloudTestimonials";
+import FaqSection from "../../components/FaqSection";
+import ReadySection from "../../components/ReadySection";
+import MembershipPlans from "../../components/MembershipPlans";
+import MilestoneAssessmentSection from "../../components/MilestoneAssessmentSection";
 
 export default function Home() {
   // Clinic data
@@ -103,7 +107,7 @@ export default function Home() {
     },
     {
       title: "Nutrition for Toddlers Workshop",
-      image: workshop3,
+      image: workshop,
       date: "10 JAN 2026",
       tags: ["NUTRITION", "HEALTHY EATING", "PARENT&apos;S KNOWLEDGE"],
     },
@@ -124,12 +128,12 @@ export default function Home() {
     },
     {
       title: "Behavioral Milestones Insights",
-      image: workshop2,
+      image: casestudy2,
       category: "Case Study",
     },
     {
       title: "Nutrition for Toddlers Guide",
-      image: workshop3,
+      image: casestudy,
       category: "Case Study",
     },
   ];
@@ -140,6 +144,30 @@ export default function Home() {
     ["Lorem ipsum 4", "Lorem ips", "Lorem", "Lor", "Lorem ipsu"],
     ["Lorem ips", "Lorem ipsum 8", "Lorem ipsum", "Lorem ipsu", "Lorem"],
   ];
+
+  const faqData = [
+  {
+    question: "Are these therapies invasive?",
+    answer: "No, these therapies are non-invasive and absolutely safe for your child.",
+    open: true,
+  },
+  {
+    question: "When does my child need occupational therapy?",
+    answer: "When they face challenges in daily routines, motor skills, or sensory processing.",
+  },
+  {
+    question: "What are the advantages of speech therapy for kids?",
+    answer: "Improved communication, articulation, comprehension, and confidence.",
+  },
+  {
+    question: "What kind of issues can be managed by family therapy?",
+    answer: "Behavioral concerns, parenting challenges, sibling rivalry, and emotional conflicts.",
+  },
+  {
+    question: "What kind of techniques are used for CBT treatment?",
+    answer: "Techniques like cognitive restructuring, exposure therapy, and behavior activation.",
+  },
+];
 
   // Keen-slider setup for case study carousel with free mode
   const [caseStudySliderRef, caseStudyInstanceRef] = useKeenSlider({
@@ -237,7 +265,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">     
-    <div class="border border-customOrange mx-6"></div> 
+    <div className="border border-customOrange mx-6"></div> 
       {/* Main Content Container */}
       <div>
         {/* Purple Splash Frame */}
@@ -269,6 +297,7 @@ export default function Home() {
         </div>
         {/* Image Container with Relative Positioning */}
         <div className="relative w-full h-[400px] md:mb-12">
+          
           <Image
             width={800}
             height={200}
@@ -276,6 +305,18 @@ export default function Home() {
             src={i1}
             alt="Layer 1"
             className="absolute top-6 left-0 h-full "
+          />
+          <Image
+            width={56}
+            height={61}
+            src={beehive_full}
+            className="absolute top-[-30px] left-[20px] z-10"
+          />
+          <Image
+            width={38}
+            height={42}
+            src={beehive9}
+            className="absolute top-[220px] right-[30px] z-10"
           />
           <Image
             width={400}
@@ -294,12 +335,18 @@ export default function Home() {
           <SuperDocButton href="/superdoc" label="WHERE IS MY SUPERDOC'S?" className="absolute left-1/2 bottom-[40px] translate-x-[-50%]" variant="pink" />
         </div>
 
-        <div className="w-full mt-8 px-6 pt-4 ">
+        <div className="w-full mt-8 px-6 pt-10 relative">
           <SubHeading
-            mainText={<>But you don&apos;t have to</>}
+            mainText={<>But you don&apos;t have to<br/></>}
             highlightText={<>figure it out</>}
             subText={<><i>alone</i></>}
           />
+          <Image
+              width={33}
+              height={30}
+              src={beehive2}
+              className="absolute right-[40px] top-[20px]"
+            />
 
           <p className="pt-3">
             Behind our every mark is a parent who found clarity and a child who
@@ -312,12 +359,18 @@ export default function Home() {
         <div className="w-full mt-8 mb-4 flex flex-col items-center space-y-4 curved_lines">
           <div className="mb-8">
             <Image
-              width={80}
-              height={50}
+              width={93}
+              height={93}
               sizes="80vw"
               src={bee}
               alt="Layer 1"
-              className="absolute left-70 top-270 mt-10 mb-10 "
+              className="absolute left-70 top-280 mt-10 mb-10 "
+            />
+            <Image
+              width={115}
+              height={115}
+              src={sleep_bee}
+              className="absolute right-0 top-510 mt-10 mb-10 "
             />
           </div>
           
@@ -449,7 +502,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="rounded-3xl p-6 md:p-12 mb-8 md:mb-12">
+        <div className="rounded-3xl p-6 md:p-12 mb-2 md:mb-12">
           {/* Replaced Placeholder with New Content */}
           <div className="w-full bg-[#F4DF76] rounded-xl mb-4">
             <div className="p-8">
@@ -720,7 +773,7 @@ export default function Home() {
                 <div className="p-4 bg-[#D6F4FA] text-gray-700 leading-relaxed">
                   Our developmental pediatricians and certified therapists go
                   beyond symptoms to create personalized plans that address your
-                  little one&apos;s unique needs â€” from speech delays to behavioral
+                  little one&apos;s unique needs from speech delays to behavioral
                   challenges.
                 </div>
               </details>
@@ -729,14 +782,14 @@ export default function Home() {
         </div>
 
         {/* New Section: More Than Symptoms */}
-        <div className="pt-8 pb-8 md:p-12 mt-8 md:mb-12">
+        <div className="pt-0 pb-8 md:p-12 mt-0 md:mb-12">
           <div className="px-6">
           <SubHeading
             mainText={<>More than symptoms, <br />we see the</>}
-            highlightText={<>bigger</>}
+            highlightText={<>bigger<br /></>}
             subText={<><i>picture</i></>}
           />
-          <p>
+          <p className="pt-2">
             Because every child is a miracle, and every concern deserves real
             attention. Whether it&apos;s just a feeling, your tiny tot&apos;s in a fever, a
             delay, or just a feeling, we&apos;re here with expert eyes, kind hearts,
@@ -744,7 +797,7 @@ export default function Home() {
           </p>
           </div>
           {/* Symptom Buttons Carousels (One for Each Row) */}
-          <div className="space-y-4 mt-4">
+          <div className="space-y-4 mt-10">
             {/* Row 1 Carousel */}
             <div className="mx-auto rounded-2xl overflow-hidden p-0">
               <div ref={symptomSliderRef1} className="keen-slider ">
@@ -787,140 +840,8 @@ export default function Home() {
         </div>
       </div>
 
-        {/* Curious About Growth Section */}
-        <div className="bg-white rounded-3xl p-8 md:p-12 md:mb-12">
-          <div className="max-w-2xl">
-            <SubHeading
-            mainText={<>Curious about your</>}
-            highlightText={<>child&apos;s growth? Let&apos;s take a look</>}
-            subText={<><i>together</i></>}
-          />
-            <p className="text-gray-700 text-lg leading-relaxed mb-1 mt-4">
-              You&apos;re the expert when it comes to your child but sometimes, it
-              helps to have an extra pair of professional eyes. Our free, online{" "}
-              <span className="font-semibold">milestone assessment tool</span>{" "}
-              lets you easily track their development, from physical growth to
-              behavioral needs. In just a few simple steps, you&apos;ll get the
-              clarity you need to understand where they stand and feel confident
-              in their progress.
-            </p>
-          </div>
-        </div>
-        <div className="relative w-full  h-[280px] md:mb-12 ">
-          <div className="relative w-full  h-[280px] mb-16 mt-12">
-          <div  className="relative w-fit mx-auto">
-          <Image
-            width={300}
-            height={300}
-            /* sizes="100vw" */
-            src={Rectangle}
-            alt="Layer 1"
-            className=" mx-auto max-w-[250px]"
-          />
-          <Image
-            width={255}
-            height={255}
-            src={RectangleImg}
-            alt="Layer 2"
-            className="absolute absolute-center   mx-auto"
-          />
-          <Image
-            width={75}
-            src={topright}
-            alt="Layer 2"
-            className="absolute top-[-40] right-[-40px] mx-auto"
-          />
-           <Image
-            width={75}
-            src={bottomleft}
-            alt="Layer 2"
-            className="absolute bottom-[-40] left-[-40px] mx-auto"
-          />
-          <div className=" w-fit absolute -bottom-13 left-12">
-              <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">Spectator Behaviour </p>
-          </div>
-          <div className=" w-fit absolute -top-12 -left-8">
-              <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">Cognition </p>
-          </div>
-          <div className=" w-fit absolute top-12 -right-[50px]">
-              <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">Unoccupied Play </p>
-          </div>
-          <div className=" w-fit absolute top-[150px] -right-[50px]">
-              <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">Neurodivergent </p>
-          </div>
-          <div className=" w-fit absolute top-[150px] -left-[50px]">
-              <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">Color stimulation </p>
-          </div>
-          <Image
-            width={100}
-            src={dotearrow}
-            alt="Layer 2"
-            className="absolute bottom-[-15] right-[-15px] mx-auto"
-          />
- 
-          <Image
-            width={100}
-            src={bee2}
-            alt="Layer 2"
-            className="absolute top-[-30] right-[-80px] mx-auto"
-          />
- 
-          </div>
-        </div>
-        </div>
-
-        <div className="flex justify-center mt-12 mb-8">
-          <button className="text-lg font-medium underline hover:text-[#3A2A7F] transition-colors duration-300">
-            Take our milestone assessment test
-          </button>
-        </div>
-
-        {/* All Around the Corner Section */}
-        <div className="bg-[#FFF5F5] p-6 md:p-12 md:mb-12">
-          <div className="max-w-2xl">
-            <SubHeading
-            mainText={<>All of this,</>}
-            highlightText={<>just around</>}
-            subText={<><i>the corner</i></>}
-          />
-            <p className="text-lg leading-relaxed mt-4">
-              Late-night worries or last-minute scrambles shouldn&apos;t mean a long
-              drive or endless queues. We&apos;re all about making care easy and
-              accessible, so you can feel confident even on your toughest days.
-              That&apos;s why our clinics are right in your neighborhood cozy,
-              colourful, and designed with your little one in mind.
-            </p>
-            <p className="text-lg mb-8">
-              Call us, book online, or just walk in, we&apos;ll be ready.
-            </p>
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search your nearby location"
-                className="w-full px-4 py-3 pl-10 rounded-md bg-white border border-gray-300 focus:outline-none focus:border-[#4B3A8F]"
-              />
-              <span className="absolute left-3 top-1/2 transform -translate-y-1/2">
-                <svg
-                  className="w-5 h-5 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={3}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </span>
-            </div>
-          </div>
-        </div>
-
+        <MilestoneAssessmentSection /> 
         <ClinicCarousel clinics={clinics} />
-        
-
         {/* Testimonial Section */}
         <div className="relative w-full bg-[#FFF5F5]">
           <Image
@@ -931,645 +852,38 @@ export default function Home() {
           />
         </div>
 
-        <div className="bg-[#E1F5FF]  md:p-8 text-[#4B3A8F] relative z-2">
-          {/* Heading */}
-          <h2 className="text-[28px] leading-[32px] md:text-2xl font-bold mb-2 px-6 ">
-            Don&apos;t just <span className="text-[#5943A5]">take</span>
-            <br />
-            <span className="text-[#5943A5] italic font-medium">
-              <i>our word </i>
-            </span>{" "}
-            for it
-          </h2>
+        <CloudTestimonials/>
 
-          {/* Decorative Elements */}
-          <div className="absolute top-4 right-6">
-            {/* You could add SVG or img elements for the bee and bubbles */}
-          </div>
-          
-          <div className="testimonial-cloud">
-       
-
-          {/* Testimonial Box */}
-          <div className=" mt-4 relative px-6 w-80 top-[88px] z-2">
-             {/*  <div className="absolute w-full bg-[#E1F5FF] z-0">
-              <Image
-                src={cloudtext}
-                alt="Layer 1"
-                className="w-full"
-              />
-            </div> */}
-            <p className="text-sm relative leading-relaxed text-gray-800  ">
-              &quot;We had a wonderful consultation with Dr Shivanga Bora at BabyMD
-              HSR Layout, for my son&apos;s wheezing issue. She was incredibly
-              patient, listened to all our concerns, and provided a clear
-              effective treatment plan. Her friendly approach and expertise made
-              us feel reassured and confident in the care my son received. Highly
-              recommend her for pediatric care!&quot;
-            </p>
-
-            {/* Author */}
-            <div className="mt-4 flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-gray-200 Overflow-hidden">
-                {/* Profile image would go here */}
-              </div>
-              <div className="text-xs">
-                <p className="font-semibold text-[#EB5A44]">Keerthana A</p>
-                <p className="text-[#4B3A8F] text-xs">BabyMD HSR Layout</p>
-              </div>
-            </div>
-            {/* See Video Link */}
-            <div className="flex items-center justify-start mt-5 mb-6">
-              <button className="text-xs font-semibold text-[#4B3A8F] flex items-center underline underline-offset-[3px]">
-                SEE VIDEO <span className="ml-1 text-xs">
-                <Image
-                src={bluebtnarrow}
-                alt="Layer 1"
-                className="w-full min-w-[15px]"
-              />
-                </span>
-              </button>
-            </div>
-
-          </div>
-
-          
-
-          {/* CTA Button */}
-          <div className="mt-[160px] px-6">
-            <button className="bg-[#4B3A8F] text-white font-semibold py-3 px-6 rounded-full text-xs flex items-center gap-2">
-              SEE MORE REVIEWS <span className="ml-1 text-xs">
-              <Image
-                src={whitebtnarrow}
-                alt="Layer 1"
-                className="w-full min-w-[15px]"
-              />
-              </span>
-            </button>
-          </div>
-        </div>
-        </div>
-        <div className="relative w-full bg-[#FFF5F5] z-0">
+        <div className="relative w-full bg-[#FFFFFF] z-0">
           <Image
             /* sizes="100vw" */
             src={curvedBottom}
             alt="Layer 1"
             className=" mx-auto w-full relative  top[-30px]"
           />
-        </div>
+        </div>        
 
-        {/* Parenting Workshop Section */}
-        <div className="bg-[#F8F6FB] bg-opacity-80  space-y-4">
-          {/* Heading */}
-          <div className="text-[#6A58AD] p-6">
-            <h2 className="text-[28px] leading-[32px] font-bold">
-              How about some <br />
-              <span className="italic font-medium text-[#6A58AD]">
-                <i>parenting tips</i>
-              </span>
-              , <span className="text-black">
-                so you can skip
-                the panic scroll?
-              </span>
-            </h2>
-            <p className="text-[16px] text-black mt-2 leading-[24px]">
-              Ever wished parenting came with a guidebook? From picky eating to
-              tantrums, we know you&apos;ve got questions. Join our expert-led
-              webinars to get practical tips and expert answers to feel confident
-              and supported in your parenting journey.
-            </p>
-          </div>
+<WorkshopCarousel 
+        workshops={workshops} 
+        />
 
-         <WorkshopCarousel workshops={workshops} />
-
-          {/* CTA Button */}
-          <div className="flex justify-center pt-1">
-            <button className="bg-[#F47B54] text-white font-bold text-sm py-3 px-6 rounded-full flex items-center gap-1 my-8">
-              SAVE YOUR SPOT
-              <span className="text-xs ml-1">
-              <Image
-                src={whitebtnarrow}
-                alt="Layer 1"
-                className="w-full min-w-[15px]"
-              />
-              </span>
-            </button>
-          </div>
-        </div>
-
-        {/* Parenting Unplugged Section */}
-        <div className="bg-[#FDF8DB] pt-6">
-          {/* Heading */}
-          <div className="text-[#231F20] p-6">
-            <SubHeading
-            mainText={<>Parenting</>}
-            subText={<><i>unplugged!</i></>}
-          />
-            <p className="text-sm mt-2 text-[#231F20]">
-              Juggling work, family, and endless advice on parenting? We&apos;ve got
-              you covered. Delve into our expert insights, practical tips, and
-              the latest updates curated exclusively for you.
-            </p>
-          </div>
-
-          <CaseStudyCarousel caseStudies={caseStudies} />
-
-          {/* CTA Button */}
-          <div className="flex justify-center">
-            <button className="bg-[#4B3A8F] text-white text-sm font-semibold py-4 px-7 my-5 rounded-full flex items-center gap-2 hover:scale-105 transition">
-              STAY IN THE KNOW
-              <span className="text-base">
-              <Image
-                src={whitebtnarrow}
-                alt="Layer 1"
-                className="w-full min-w-[15px]"
-              />
-              </span>
-            </button>
-          </div>
-        </div>
-        
-        <div className="px-6">
-          <div className="relative bg-[#FF9A6C] text-white mt-8 mb-4 px-4 pt-6  pb-50 rounded-2xl space-y-14 w-full mx-auto overflow-hidden">
-            {/* Heading */}
-            <div>
-              <h2 className="text-lg font-bold leading-snug text-[28px] leading-[30px]">
-                Because <span className="text-white"> Parenting </span>
-                Shouldn&apos;t Cost A <span className="italic font-normal">
-                  <i>Fortune</i>
-                </span>
-              </h2>
-              <p
-                className="text-sm mt-2"
-                style={{
-                  fontFamily: "Baloo 2, sans-serif",
-                  fontSize: "16px",
-                  lineHeight: "22px",
-                }}
-              >
-                Midnight fevers, last-minute travel checkups, vaccine days we
-                know parenting comes with curveballs. Our membership plans are here
-                to make expert care simpler, smoother, and more affordable all year
-                round.
-              </p>
-              <p className="text-sm mt-2">
-                Choose from our plans and save up to &#8377;10,000 annually.
-              </p>
-            </div>
-
-            {/* Membership Cards */}
-            <div className="flex flex-row gap-3 text-center">
-              {/* Gold Plan */}
-              <div
-                className="bg-white text-[#231F20] p-4 rounded-2xl space-y-2  w-full w-1/2"
-                style={{
-                  boxShadow: "-5px 5px 0 #F4DF76;"
-                }}
-              >
-                <div className="text-yellow-500 h-20 text-2xl text-center pt-4">
-                  <Image
-              width={70}
-              height={50}
-              sizes="80vw"
-              src={gold_package}
-              alt="Layer 1"
-              className="mx-auto"
-            /></div>
-                <h3 className="font-semibold text-sm">Gold<br/>Membership</h3>
-                <p className="text-xs">Save more on everyday care</p>
-                <p className="text-[#009A67] font-bold text-lg mt-1">
-                  &#8377;699<span className="text-xs">/year</span>
-                </p>
-                <ul className="text-xs list-disc list-inside text-[#4D4D4D] space-y-1 mt-2">
-                  <li>10% off consults</li>
-                  <li>5% off other services</li>
-                  <li>&#8377;700 gift card</li>
-                </ul>
-              </div>
-
-              {/* Platinum Plan */}
-              <div
-                className="bg-white text-center text-[#231F20] p-4 rounded-2xl space-y-2 `    w-full w-1/2"
-                style={{
-                  boxShadow: "5px 5px 0 #5943A5;"
-                }}
-              >
-                <div className="text-[#6C40B5] text-center h-20 text-2xl"><Image
-              width={50}
-              height={28}
-              sizes="80vw"
-              src={platinum_package}
-              alt="Layer 1"
-              className="mx-auto"
-            /></div>
-                <h3 className="font-semibold text-sm">Platinum<br/>Membership</h3>
-                <p className="text-xs">Our best value for growing families</p>
-                <p className="text-[#009A67] font-bold text-lg mt-1">
-                  &#8377;999<span className="text-xs">/year</span>
-                </p>
-                <ul className="text-xs list-disc list-inside text-[#4D4D4D] space-y-1 mt-2">
-                  <li>15% off consults</li>
-                  <li>10% off all services</li>
-                  <li>&#8377;1000 gift card</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Note */}
-            <p
-              className="text-xs "
-              style={{
-                fontWeight: "400",
-                fontSize: "16px",
-                lineHeight: "22px",
-                fontFamily: "Lato, sans-serif",
-                marginBottom:"135px"
-              }}
-            >
-              With both plans, you get priority booking at all BabyMD clinics and
-              online consults. Plus, a dedicated Care Manager to handle
-              appointments, reminders, and check-ins so you can focus on what
-              matters most.
-            </p>
-
-            {/* CTA Button */}
-            <div className="flex justify-center relative bottom-[-40px] z-15">
-              <button className="bg-[#4B3A8F] text-white text-sm font-semibold py-3 px-6 rounded-full flex items-center gap-2 hover:scale-105 transition">
-                PICK A PLAN, START SAVING
-                <span className="text-base">
-                  <Image
-                  src={whitebtnarrow}
-                  alt="Layer 1"
-                  className="w-full min-w-[15px]"
-                />
-                </span>
-              </button>
-            </div>
-
-            {/* Overlapping Images */}
-            <div className="mt-10">
-              <Image
-                src={Premiumlayer}
-                alt="Background shape"
-                className="right-1.5 absolute bottom-[-20px]"
-              />
-              <Image
-                src={PremiumlayerImg}
-                alt="Doctor and Child"
-                width={320}
-                height={200}
-                className="absolute right-0 mt-10 bottom-0"
-              />
-            </div>
-          </div>
-        </div>
-        
-        <div className=" px-6 pt-1">
-          <div className="relative bg-[#5943A5] text-white rounded-2xl mt-4 p-6 w-full mx-auto space-y-2">
-            {/* Heading */}
-            <h2 className="font-baloo2 text-[28px] leading-[30px] font-bold leading-8">
-              Whenever you need us, we&apos;re here with care{" "}
-              <span className="italic font-light text-white px-1 rounded">
-                <i>that&apos;s ready</i>
-              </span>
-            </h2>
-
-            {/* Description */}
-            <p className="text-base leading-6 font-lato pt-3">
-              Babies don&apos;t come with instructions, but we do. Whether it&apos;s a routine
-              check-up, a fever that won&apos;t quit, or just a little peace of mind â€” just
-              pick a time, choose a clinic, and we&apos;ll handle the rest.
-            </p>
-
-            {/* Overlapping Images */}
-            <div className="relative bottom-[-31px] h-62">
-              <Image
-                src={readyvector}
-                alt="Background shape"
-                className="absolute absolute-center w-58 h-auto"
-              />
-              <Image
-                src={readyvectorImg}
-                alt="Family"
-                width={460}
-                height={250}
-                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-65 max-w-[460px] h-auto"
-              />
-            </div>
-            <div className="flex absolute transform -translate-x-1/2 left-50 bottom-[20px] z-20 ">
-              <button className="bg-[#F9EEB6] text-[#231F20] text-sm font-semibold py-3 px-4 rounded-full w-full flex justify-center items-center gap-2 hover:scale-105 transition whitespace-nowrap">
-                BOOK YOUR APPOINTMENT <span className="text-base">
-                <Image
-                  src={bluebtnarrow}
-                  alt="Layer 1"
-                  className="w-full min-w-[15px]"
-                />
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-        {/* New Section: Some of the Questions Parents Really Ask Us */}
-        
-        <div>
-        <div
-          className="bg-[#E1F5FF] p-6 md:p-12 mb-0 md:mb-12 w-full mt-6"
-          
-        >
-          <SubHeading
-            mainText={<>Some of the questions</>}
-            highlightText={<>parents really ask <br />us</>}
-            subText={<><i>(a lot!)</i></>}
-          />
-          <p
-            className="text-[#4B3A8F] text-lg md:text-xl leading-relaxed font-medium mb-4 mt-4"
-            style={{
-              fontFamily: "inherit",
-              fontSize: "16px",
-              lineHeight: "22px",
-              verticalAlign: "middle",
-            }}
-          >
-            Got questions about midnight fevers, first foods, routine vaccines,
-            tricky rashes, or curious growth spurts? We&apos;re here to guide you
-            through every question no judgment, just answers you can rely on.
-          </p>
-          <div className="space-y-4">
-            {/* Question 1 */}
-            <details className="group">
-              <summary className="flex  justify-between items-center p-4 bg-[#E1F5FF] rounded-xl border border-[#91CFDA80] gap-2 cursor-pointer">
-                <span
-                  className="text-[#4B3A8F] text-lg font-medium"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  What is treatment therapy for kids?
-                </span>
-                <svg
-                  className="min-w-[20px] h-[20px] p-[2px] bg-[#91CFDA] rounded-full text-[#4B3A8F] transform transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="#fff"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="mt-0.5 p-4 bg-[#FAF1D6] rounded-xl">
-                <p
-                  className="text-[#4B3A8F] text-sm leading-relaxed"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  No, these therapies are non-invasive and absolutely safe for
-                  your child.
-                </p>
-              </div>
-            </details>
-
-            {/* Question 2 */}
-            <details className="group">
-              <summary className="flex justify-between items-center p-4 bg-[#E1F5FF] rounded-xl border border-[#91CFDA80] gap-2  cursor-pointer">
-                <span
-                  className="text-[#4B3A8F] text-lg font-medium"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  How are therapies different from assessment sessions?
-                </span>
-                <svg
-                  className="min-w-[20px] h-[20px] p-[2px] bg-[#91CFDA] rounded-full text-[#4B3A8F] transform transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="#fff"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="mt-0.5 p-4 bg-[#FAF1D6] rounded-xl">
-                <p
-                  className="text-[#4B3A8F] text-sm leading-relaxed"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  No, these therapies are non-invasive and absolutely safe for
-                  your child.
-                </p>
-              </div>
-            </details>
-
-            {/* Question 3 (Expanded by default) */}
-            <details className="group" open>
-              <summary className="flex justify-between items-center p-4 bg-[#E1F5FF] rounded-xl border border-[#91CFDA80] gap-2  cursor-pointer">
-                <span
-                  className="text-[#4B3A8F] text-lg font-medium"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  Are these therapies invasive?
-                </span>
-                <svg
-                  className="min-w-[20px] h-[20px] p-[2px] bg-[#91CFDA] rounded-full text-[#4B3A8F] transform transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="#fff"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="mt-0.5 p-4 bg-[#FAF1D6] rounded-xl">
-                <p
-                  className="text-[#4B3A8F] text-sm leading-relaxed"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  No, these therapies are non-invasive and absolutely safe for
-                  your child.
-                </p>
-              </div>
-            </details>
-
-            {/* Question 4 */}
-            <details className="group">
-              <summary className="flex justify-between items-center p-4 bg-[#E1F5FF] rounded-xl border border-[#91CFDA80] gap-2  cursor-pointer">
-                <span
-                  className="text-[#4B3A8F] text-lg font-medium"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  When does my child need occupational therapy?
-                </span>
-                <svg
-                  className="min-w-[20px] h-[20px] p-[2px] bg-[#91CFDA] rounded-full text-[#4B3A8F] transform transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="#fff"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="mt-0.5 p-4 bg-[#FAF1D6] rounded-xl">
-                <p
-                  className="text-[#4B3A8F] text-sm leading-relaxed"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  No, these therapies are non-invasive and absolutely safe for
-                  your child.
-                </p>
-              </div>
-            </details>
-
-            {/* Question 5 */}
-            <details className="group">
-              <summary className="flex justify-between items-center p-4 bg-[#E1F5FF] rounded-xl border border-[#91CFDA80] gap-2  cursor-pointer">
-                <span
-                  className="text-[#4B3A8F] text-lg font-medium"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  What are the advantages of speech therapy for kids?
-                </span>
-                <svg
-                  className="min-w-[20px] h-[20px] p-[2px] bg-[#91CFDA] rounded-full text-[#4B3A8F] transform transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="#fff"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="mt-0.5 p-4 bg-[#FAF1D6] rounded-xl">
-                <p
-                  className="text-[#4B3A8F] text-sm leading-relaxed"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  No, these therapies are non-invasive and absolutely safe for
-                  your child.
-                </p>
-              </div>
-            </details>
-
-            {/* Question 6 */}
-            <details className="group">
-              <summary className="flex justify-between items-center p-4 bg-[#E1F5FF] rounded-xl border border-[#91CFDA80] gap-2  cursor-pointer">
-                <span
-                  className="text-[#4B3A8F] text-lg font-medium"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  What kind of issues can be managed by family therapy?
-                </span>
-                <svg
-                  className="min-w-[20px] h-[20px] p-[2px] bg-[#91CFDA] rounded-full text-[#4B3A8F] transform transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="#fff"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="mt-0.5 p-4 bg-[#FAF1D6] rounded-xl">
-                <p
-                  className="text-[#4B3A8F] text-sm leading-relaxed"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  No, these therapies are non-invasive and absolutely safe for
-                  your child.
-                </p>
-              </div>
-            </details>
-
-            {/* Question 7 */}
-            <details className="group">
-              <summary className="flex justify-between items-center p-4 bg-[#E1F5FF] rounded-xl border border-[#91CFDA80] gap-2  cursor-pointer">
-                <span
-                  className="text-[#4B3A8F] text-lg font-medium"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  What is treatment therapy for kids?
-                </span>
-                <svg
-                  className="min-w-[20px] h-[20px] p-[2px] bg-[#91CFDA] rounded-full text-[#4B3A8F] transform transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="#fff"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="mt-0.5 p-4 bg-[#FAF1D6] rounded-xl">
-                <p
-                  className="text-[#4B3A8F] text-sm leading-relaxed"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  No, these therapies are non-invasive and absolutely safe for
-                  your child.
-                </p>
-              </div>
-            </details>
-
-            {/* Question 8 */}
-            <details className="group">
-              <summary className="flex justify-between items-center p-4 bg-[#E1F5FF] rounded-xl border border-[#91CFDA80] gap-2 cursor-pointer">
-                <span
-                  className="text-[#4B3A8F] text-lg font-medium"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  What kind of techniques are used for CBT treatment?
-                </span>
-                <svg
-                  className="min-w-[20px] h-[20px] p-[2px] bg-[#91CFDA] rounded-full text-[#4B3A8F] transform transition-transform group-open:rotate-180"
-                  fill="none"
-                  stroke="#fff"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="mt-0.5 p-4 bg-[#FAF1D6] rounded-xl">
-                <p
-                  className="text-[#4B3A8F] text-sm leading-relaxed"
-                  style={{ fontSize: "14px", lineHeight: "18px" }}
-                >
-                  No, these therapies are non-invasive and absolutely safe for
-                  your child.
-                </p>
-              </div>
-            </details>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
+<CaseStudyCarousel 
+        caseStudies={caseStudies} 
+        />
+<MembershipPlans 
+        goldPackageImg={goldPackageImg}
+        platinumPackageImg={platinumPackageImg}
+        premiumLayerBg={premiumLayer}
+        premiumLayerImg={PremiumlayerImg}
+        />       
+<ReadySection 
+        readyvector={readyvector} 
+        readyvectorImg={readyvectorImg}  
+        bluebtnarrow={bluebtnarrow} 
+        />
+<FaqSection 
+        faqs={faqData} 
+        />
+</div></div>
   );
 }
