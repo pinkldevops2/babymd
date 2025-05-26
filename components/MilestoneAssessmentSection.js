@@ -124,7 +124,7 @@ const MilestoneAssessmentSection = () => {
                 width={100}
                 src={bee2}
                 alt="Bee Icon"
-                className="absolute top-[-30px] right-[-80px]"
+                className="absolute top-[-30px] right-[-80px] swing"
               />
             </div>
           </div>

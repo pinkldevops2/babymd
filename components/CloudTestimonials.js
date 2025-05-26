@@ -18,7 +18,7 @@ const CloudTestimonials = () => {
                   src={next_bees_sleeping}
                   width={152}
                   height={152}
-                  className="absolute right-[40px] top-[-120px]"
+                  className="absolute right-[40px] top-[-120px] swing"
                 />
         <Image
                   src={beehive2}

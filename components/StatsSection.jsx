@@ -53,7 +53,7 @@ const StatsSection = ({
             height={93}
             src={bee}
             alt="Bee"
-            className="absolute right-[50px] top-[-50px]"
+            className="absolute right-[50px] top-[-50px] swing"
           />
         </div>
 

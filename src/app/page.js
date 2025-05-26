@@ -386,7 +386,7 @@ export default function Home() {
                       alt="Bee"
                       width={130}
                       height={130}
-                      className="absolute right-[-30px] top-[-20px]"
+                      className="absolute right-[-30px] top-[-20px] swing"
                     />
                  <Image
                       src={beehive3}

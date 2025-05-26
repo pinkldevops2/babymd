@@ -41,7 +41,7 @@ const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
 
         {/* Button: absolute on mobile (20px from bottom), static on desktop */}
         <div className="absolute  bottom-[20px] left-1/2 transform -translate-x-1/2 w-full px-6 lg:transform-none lg:px-0 lg:w-auto lg:mt-8 lg:w-fit lg:relative lg:left-[152px]">
-          <SuperDocButton href="/superdoc" label="BOOK YOUR APPOINTMENT" className="text-center justify-center" variant="pink"/>
+          <SuperDocButton href="#" label="BOOK YOUR APPOINTMENT" className="text-center justify-center" variant="yellow" textColor="#5943A5"/>
         </div>
       </div>
     </div>
