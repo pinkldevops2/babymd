@@ -93,7 +93,7 @@ let autoplayTimeout;
   return (
     <div>
       {/* Banner Section */}
-      <section className="banner-box bg-white relative z-2 py-12">
+      <section className="banner-box bg-white relative z-2 pt-12 pb-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-center">
             <div className="w-full md:w-1/2 relative">
@@ -114,7 +114,7 @@ let autoplayTimeout;
               <img className="mx-auto" src="/images/Vector copy.svg" />
               <img className="mx-auto absolute top-0 left-1/2 transform -translate-x-1/2" src="/images/Mask group.png" />
             </div>
-			<button className="uppercase mt-12 text-white bg-[#F8845D] hover:bg-[#5943A5] transition-all font-medium rounded-full text-sm px-8 py-4 flex items-center gap-2">
+			<button className="uppercase mt-4 text-white bg-[#F8845D] hover:bg-[#5943A5] transition-all font-medium rounded-full text-sm px-8 py-4 flex items-center gap-2">
                 Come say hi! <img src="/images/Group 2349.png" />
               </button>
           </div>

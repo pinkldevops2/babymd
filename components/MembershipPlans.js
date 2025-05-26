@@ -9,9 +9,9 @@ const MembershipPlans = ({
 }) => {
   return (
     <div className="px-6">
-      <div className="relative bg-[#FF9A6C] text-white mt-8 mb-4 pt-10 rounded-2xl space-y-4 w-full mx-auto overflow-hidden">
+      <div className="relative bg-[#FF9A6C] text-white mt-8 mb-4 pt-10 rounded-2xl space-y-4 w-full mx-auto overflow-hidden flex flex-col md:flex-row">
         {/* Heading */}
-        <div className="px-8 ">
+        <div className="px-4 md:w-1/2">
           <h2 className="text-[28px] leading-[30px] font-bold">
             Because <span className="text-white purple_circle">Parenting</span> Shouldn&apos;t Cost a{' '}
             <span className="italic font-normal">
@@ -30,7 +30,7 @@ const MembershipPlans = ({
         <div className="flex flex-row md:flex-row gap-3 text-center">
           {/* Gold Plan */}
           <div
-            className="bg-white text-[#231F20] p-4 rounded-2xl space-y-2 w-full md:w-1/2"
+            className="bg-white text-[#231F20] p-4 rounded-2xl space-y-2 w-full md:w-2/3"
             style={{ boxShadow: '-5px 5px 0 #F4DF76' }}
           >
             <div className="h-20 flex justify-center items-center">
@@ -93,15 +93,16 @@ const MembershipPlans = ({
         </div>
 
         {/* CTA Button */}
-          <SuperDocButton
-            href="/superdoc"
-            label="PICK A PLAN, START SAVING"
-            className="absolute bottom-[30px] left-1/2 transform -translate-x-1/2 z-10"
-            variant="purple"
-          />
+          
 
         {/* Overlapping Images */}
-        <div className="mt-2 pl-6 pb-2 relative">
+        <div className="mt-2 pl-6 pb-2 relative md:w-1/3">
+        <SuperDocButton
+            href="/superdoc"
+            label="PICK A PLAN, START SAVING"
+            className="absolute bottom-[30px] left-1/2 transform -translate-x-1/2 z-10 px-[20px]"
+            variant="purple"
+          />
           <Image
             src={premiumLayerImg}
             alt="Doctor and Child"

@@ -3,9 +3,9 @@ import SuperDocButton from './SuperDocButton';
 
 const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
   return (
-    <div className="px-6 py-10 lg:px-24 lg:pt-12">
+    <div className="px-6 py-10 lg:pt-12">
       {/* Parent container: relative for button positioning on mobile */}
-      <div className="relative bg-[#5943A5] text-white rounded-2xl mt-4 px-8 pt-10 lg:p-12 w-full max-w-screen-lg mx-auto">
+      <div className="relative bg-[#5943A5] text-white rounded-2xl mt-4 px-8 pt-10 lg:p-12 w-full mx-auto">
         <div className="flex flex-col lg:flex-row items-start lg:items-end gap-0">
           {/* Left: Text Content (60% on desktop) */}
           <div className="w-full lg:w-3/5 space-y-6">
@@ -40,8 +40,8 @@ const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
         </div>
 
         {/* Button: absolute on mobile (20px from bottom), static on desktop */}
-        <div className="absolute bottom-[20px] left-1/2 transform -translate-x-1/2 w-full px-6 lg:static lg:transform-none lg:px-0 lg:w-auto lg:mt-8">
-          <SuperDocButton href="/superdoc" label="BOOK YOUR APPOINTMENT" className="text-center" variant="pink"/>
+        <div className="absolute  bottom-[20px] left-1/2 transform -translate-x-1/2 w-full px-6 lg:transform-none lg:px-0 lg:w-auto lg:mt-8 lg:w-fit lg:relative lg:left-[152px]">
+          <SuperDocButton href="/superdoc" label="BOOK YOUR APPOINTMENT" className="text-center justify-center" variant="pink"/>
         </div>
       </div>
     </div>

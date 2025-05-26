@@ -67,6 +67,9 @@ import FaqSection from "../../components/FaqSection";
 import ReadySection from "../../components/ReadySection";
 import MembershipPlans from "../../components/MembershipPlans";
 import MilestoneAssessmentSection from "../../components/MilestoneAssessmentSection";
+import HeroSection from "../../components/HeroSection";
+import StatsSection from "../../components/StatsSection";
+import SymptomCarousel from "../../components/SymptomCarousel"
 
 export default function Home() {
   // Clinic data
@@ -138,11 +141,10 @@ export default function Home() {
     },
   ];
 
-  // Symptom buttons data (3 rows, each with 3 buttons)
-  const symptomRows = [
-    ["Lorem", "ipsum 2", "Lorem ip", "Lorem ipsum", "Lorem ipsum 3"],
-    ["Lorem ipsum 4", "Lorem ips", "Lorem", "Lor", "Lorem ipsu"],
-    ["Lorem ips", "Lorem ipsum 8", "Lorem ipsum", "Lorem ipsu", "Lorem"],
+  const symptoms = [
+    ['Fever', 'Cough', 'Rashes', 'Ear Pain'],
+    ['Irritability', 'Not Eating', 'Sleep Issues'],
+    ['Delayed', 'Vaccination', 'Milestones', 'Doubts']
   ];
 
   const faqData = [
@@ -180,35 +182,7 @@ export default function Home() {
   });
 
   // Keen-slider setup for each row of symptom buttons
-  const [symptomSliderRef1] = useKeenSlider({
-    mode: "free-snap",
-    loop: true,
-    slides: {
-      origin: "center",
-      perView: 2,
-      spacing: 15,
-    },
-  });
-
-  const [symptomSliderRef2] = useKeenSlider({
-    mode: "free-snap",
-    loop: true,
-    slides: {
-      origin: "center",
-      perView: 2.5,
-      spacing: 15,
-    },
-  });
-
-  const [symptomSliderRef3] = useKeenSlider({
-    mode: "free-snap",
-    loop: true,
-    slides: {
-      origin: "center",
-      perView: 2.2,
-      spacing: 15,
-    },
-  });
+  
 
   // State for tracking current slide for workshop and case study carousels
   const [currentWorkshopSlide, setCurrentWorkshopSlide] = useState(0);
@@ -269,214 +243,37 @@ export default function Home() {
       {/* Main Content Container */}
       <div>
         {/* Purple Splash Frame */}
-        <div className="rounded-3xl p-6 md:p-12 mb-8 md:mb-12 mt-8">
-          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
-            Raising a baby <br /> takes a village,
-          </h1>
+        
+        
+        <HeroSection
+        i1={i1}
+        i1a={i1a}
+        beehive_full={beehive_full}
+        beehive9={beehive9}
+        spring={spring}
+      />
 
-          <h2 className=" text-[#5943A5] font-bold text-[42px] leading-[38px]">
-            welcome to <br />
-          </h2>
-          <h3
-            className="rounded_circle text-[#5943A5] spansidecour text-[42px] leading-[38px] mb-[20px] font-baloo2"
-          >
-            yours
-          </h3>
-          {/* White Text Frame */}
-          <div className="md:mt-7 mb-8">
-            <p>
-              You deserve care that&apos;s as thoughtful as your
-              <br />
-              parenting. From cozy clinics to expert
-              <br />
-              pediatricians and holistic support, we&apos;re here
-              <br />
-              for every milestone, worry, and wonder.
-            </p>
-          </div>
-        </div>
-        {/* Image Container with Relative Positioning */}
-        <div className="relative w-full h-[400px] md:mb-12">
-          
-          <Image
-            width={800}
-            height={200}
-            sizes="100vw"
-            src={i1}
-            alt="Layer 1"
-            className="absolute top-6 left-0 h-full "
-          />
-          <Image
-            width={56}
-            height={61}
-            src={beehive_full}
-            className="absolute top-[-30px] left-[20px] z-10"
-          />
-          <Image
-            width={38}
-            height={42}
-            src={beehive9}
-            className="absolute top-[220px] right-[30px] z-10"
-          />
-          <Image
-            width={400}
-            height={200}
-            src={i1a}
-            alt="Layer 2"
-            className="absolute bottom-24 left-1/2 transform -translate-x-1/2"
-          />
-          <Image
-            width={50}
-            height={120}
-            src={spring}
-            alt="Layer 3"
-            className="absolute bottom-22 left-14 transform -translate-x-1/2"
-          />
-          <SuperDocButton href="/superdoc" label="WHERE IS MY SUPERDOC'S?" className="absolute left-1/2 bottom-[40px] translate-x-[-50%]" variant="pink" />
-        </div>
-
-        <div className="w-full mt-8 px-6 pt-10 relative">
-          <SubHeading
-            mainText={<>But you don&apos;t have to<br/></>}
-            highlightText={<>figure it out</>}
-            subText={<><i>alone</i></>}
-          />
-          <Image
-              width={33}
-              height={30}
-              src={beehive2}
-              className="absolute right-[40px] top-[20px]"
-            />
-
-          <p className="pt-3">
-            Behind our every mark is a parent who found clarity and a child who
-            felt better, safer, and happier. From midnight fevers to milestone
-            check-ups, these stats reflect a story of care that goes beyond
-            treatment - it&apos;s about peace of mind and trust.
-          </p>
-        </div>
-
-        <div className="w-full mt-8 mb-4 flex flex-col items-center space-y-4 curved_lines">
-          <div className="mb-8">
-            <Image
-              width={93}
-              height={93}
-              sizes="80vw"
-              src={bee}
-              alt="Layer 1"
-              className="absolute left-70 top-280 mt-10 mb-10 "
-            />
-            <Image
-              width={115}
-              height={115}
-              src={sleep_bee}
-              className="absolute right-0 top-510 mt-10 mb-10 "
-            />
-          </div>
-          
-          {/* Circular Container 1 */}
-          <div className="relative w-80 h-[300px] md:mb-12" ref={ref1}>
-            <Image
-              width={800}
-              height={200}
-              sizes="100vw"
-              src={Vector}
-              alt="Layer 1"
-              className="absolute top-0 left-0 h-full "
-            />
-            <Image
-              width={400}
-              height={200}
-              src={Vector1}
-              alt="Layer 2"
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
-            />
-             <div>
-           <h2 className="w-fit text-[#5943A5] text-[60px] font-bold absolute left-[70px] top-[40px] z-5 ">
-             {inView1 ? <CountUp start={0} end={5000} duration={2} suffix="+" /> : "5000+"}
-           </h2>
-           <p className="w-fit text-[#5943A5] absolute left-[170px] top-[120px] top-340 z-5 leading-[20px]">Happy <br />Families <br />and <br />Counting </p>
-          </div>
-          </div>
-         
-          <div className="relative w-80 h-[300px] md:mb-12" ref={ref2}>
-            <Image
-              width={800}
-              height={200}
-              sizes="100vw"
-              src={Vector2}
-              alt="Layer 1"
-              className="absolute top-0 left-0 h-full "
-            />
-            <Image
-              width={400}
-              height={200}
-              src={Vector2a}
-              alt="Layer 2"
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
-            />
-            <div className="">
-                <h2 className="w-fit text-[#E3B200] relative font-bold text-[60px] left-[140px] top-[0px]  ">
-                  {inView2 ? <CountUp start={0} end={4.9} decimals={1} duration={2} suffix="+" /> : "4.9+"}
-                </h2>
-                <p className="w-fit text-[#E3B200] relative text-[20px] left-[150px] top-[-25px]"> Google Rating</p>
-            </div>
-          </div>
-
-          <div className="relative w-80 h-[300px] md:mb-12" ref={ref3}>
-            <Image
-              width={800}
-              height={200}
-              sizes="100vw"
-              src={Vector3}
-              alt="Layer 1"
-              className="absolute top-0 left-0 h-full "
-            />
-            <Image
-              width={400}
-              height={200}
-              src={Vector3a}
-              alt="Layer 2"
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
-            />
-            <div>
-              <h2 className="w-fit text-[#269BD9] text-[60px] relative font-bold left-[130px] top-[25px]">
-                {inView3 ? <CountUp start={0} end={2500} duration={2} suffix="+" /> : "2500+"}
-              </h2>
-              <p className="w-fit text-[#269BD9] text-[20px] relative left-[190px] top-[0px]">Glowing <br /> Reviews </p>
-            </div>
-          </div>
-
-          <div className="relative w-80 h-[300px] md:mb-12" ref={ref4}>
-            <Image
-              width={800}
-              height={200}
-              sizes="100vw"
-              src={Vector4}
-              alt="Layer 1"
-              className="absolute top-0 left-0 h-full "
-            />
-            <Image
-              width={400}
-              height={200}
-              src={Vector4a}
-              alt="Layer 2"
-              className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2"
-            />
-            <h2 className="w-fit text-[#ED750F] text-[60px] relative font-bold left-[130px] top-[25px]">
-              {inView4 ? <CountUp start={0} end={30} duration={2} suffix="+" /> : "30+"}
-            </h2>
-            <p className="w-fit text-[#ED750F] text-[20px] relative whitespace-nowrap left-[130px] top-[0px]">Years of Peaditric <br/> Wisdom </p>
-          </div>
-        </div>
+        <StatsSection
+      beehive2={beehive2}
+      bee={bee}
+      sleep_bee={sleep_bee}
+      Vector={Vector}
+      Vector1={Vector1}
+      Vector2={Vector2}
+      Vector2a={Vector2a}
+      Vector3={Vector3}
+      Vector3a={Vector3a}
+      Vector4={Vector4}
+      Vector4a={Vector4a}
+    />
 
         {/* Every Child is a Miracle Section */}
       <div className="bg-linear-to-t from-[#F0EBFF] to-[#FDF8DB]">
         <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-12 md:mb-12">
           <div className="relative"><SubHeading
             mainText={<>Every child is a miracle - <br /> a unique story</>}
-            highlightText={<>we&apos;re here<br />to</>}
-            subText={<><i>care for</i></>}
+            highlightText={<>we&apos;re here<br />to care for</>}
+            /* subText={<><i>care for</i></>} */
           />
           <Image
                       src={beehive4}
@@ -487,18 +284,23 @@ export default function Home() {
                     /></div>
           
           <p className="leading-relaxed mb-4 mt-3">
-            Each moment of your child&apos;s growth is worth celebrating, from first
+            {/* Each moment of your child&apos;s growth is worth celebrating, from first
             steps to first words. But parenting isn&apos;t always magical, with
-            midnight fevers, stubborn coughs, and moments of doubt.
+            midnight fevers, stubborn coughs, and moments of doubt. */}
+
+            Each moment of your child&apos;s growth is worth celebrating, from first steps to first words. But parenting isn&apos;t always magical, with midnight fevers, stubborn coughs, and moments of doubt.
           </p>
           <p className="leading-relaxed mb-4">
-            That&apos;s where we come in: your trusted partner in ensuring nothing
+           {/*  That&apos;s where we come in: your trusted partner in ensuring nothing
             stands in the way of your child&apos;s health and well-being. We go beyond
             treating symptoms, offering holistic care that nurtures their
             physical, emotional, mental, and social development. From
             personalized growth assessments to making every clinic visit a
             positive experience, we&apos;re here with expert care, joy, and
-            compassion.
+            compassion. */}
+
+            That&apos;s where we come in; your trusted partner in ensuring nothing stands in the way of your child&apos;s health and well-being. We go beyond treating symptoms, offering holistic care that nurtures their physical, emotional, mental, and social development. From personalized growth assessments to making every clinic visit a positive experience, we&apos;re here with expert care, joy, and compassion.
+
           </p>
         </div>
 
@@ -601,7 +403,7 @@ export default function Home() {
             look, we offer the kind of care that listens, explains, and walks the
             path with you.
           </p>
-          <h3 className="md:text-2xl mb-16">
+          <h3 className="md:text-2xl mb-16 md:mt-4">
             Here&apos;s how we support you and your child - every step of the way:
           </h3>
           <div className="relative z-10 -mt-12 max-w-md mx-auto">
@@ -782,63 +584,10 @@ export default function Home() {
         </div>
 
         {/* New Section: More Than Symptoms */}
-        <div className="pt-0 pb-8 md:p-12 mt-0 md:mb-12">
-          <div className="px-6">
-          <SubHeading
-            mainText={<>More than symptoms, <br />we see the</>}
-            highlightText={<>bigger<br /></>}
-            subText={<><i>picture</i></>}
-          />
-          <p className="pt-2">
-            Because every child is a miracle, and every concern deserves real
-            attention. Whether it&apos;s just a feeling, your tiny tot&apos;s in a fever, a
-            delay, or just a feeling, we&apos;re here with expert eyes, kind hearts,
-            and real answers.
-          </p>
-          </div>
-          {/* Symptom Buttons Carousels (One for Each Row) */}
-          <div className="space-y-4 mt-10">
-            {/* Row 1 Carousel */}
-            <div className="mx-auto rounded-2xl overflow-hidden p-0">
-              <div ref={symptomSliderRef1} className="keen-slider ">
-                {symptomRows[0].map((buttonText, index) => (
-                  <div key={index} className="keen-slider__slide !w-[XXXpx]">
-                    <button className="bg-[#FBE38F] text-[#4B3A8F] rounded-full w-full px-4 py-2 hover:bg-[#F6E8C3] transition-all duration-300">
-                      {buttonText}
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Row 2 Carousel */}
-            <div className=" mx-auto rounded-2xl overflow-hidden p-0">
-              <div ref={symptomSliderRef2} className="keen-slider ">
-                {symptomRows[1].map((buttonText, index) => (
-                  <div key={index} className="keen-slider__slide">
-                    <button className="bg-[#FBE38F] text-[#4B3A8F] rounded-full px-4 py-2 w-full hover:bg-[#F6E8C3] transition-all duration-300">
-                      {buttonText}
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Row 3 Carousel */}
-            <div className=" mx-auto rounded-2xl overflow-hidden p-0">
-              <div ref={symptomSliderRef3} className="keen-slider">
-                {symptomRows[2].map((buttonText, index) => (
-                  <div key={index} className="keen-slider__slide">
-                    <button className="bg-[#FBE38F] text-[#4B3A8F] rounded-full px-4 py-2 w-full hover:bg-[#F6E8C3] transition-all duration-300">
-                      {buttonText}
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        <SymptomCarousel symptomRows={symptoms} />
       </div>
+
+      
 
         <MilestoneAssessmentSection /> 
         <ClinicCarousel clinics={clinics} />

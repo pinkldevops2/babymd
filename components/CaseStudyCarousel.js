@@ -17,9 +17,9 @@ const CaseStudyCarousel = ({ caseStudies }) => {
   });
 
   return (
-    <div className="bg-[#FDF8DB] pt-6 pb-6">
+    <div className="bg-[#FDF8DB] pt-6 pb-6 flex flex-col md:flex-row">
           {/* Heading */}
-          <div className="text-[#231F20] p-6">
+          <div className="text-[#231F20] p-6 md:w-1/2">
             <div className='relative'>
             <SubHeading
             mainText={<>Parenting</>}
@@ -38,7 +38,7 @@ const CaseStudyCarousel = ({ caseStudies }) => {
               the latest updates curated exclusively for you.
             </p>
           </div>
-    <div className="relative max-w-md mx-auto rounded-2xl overflow-hidden bg-[#FDF8DB] pl-6">
+    <div className="relative rounded-2xl overflow-hidden bg-[#FDF8DB] pl-6 md:w-1/2">
       {/* Left Arrow */}
       <button
         onClick={() => instanceRef.current?.prev()}
@@ -84,12 +84,12 @@ const CaseStudyCarousel = ({ caseStudies }) => {
             </div>
           </div>
         ))}
-      </div>
-    </div>
-    {/* CTA Button */}
-          <div className="flex justify-center">
+      </div><div className="flex justify-center">
             <SuperDocButton href="/superdoc" label="STAY INFORMED" className="my-5" variant="purple"/>
           </div>
+    </div>
+    {/* CTA Button */}
+          
         </div>
   );
 };

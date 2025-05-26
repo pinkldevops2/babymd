@@ -19,9 +19,9 @@ const WorkshopCarousel = ({ workshops }) => {
     },
   });
 
-  return (<div className="bg-opacity-80  space-y-4">
+  return (<div className="bg-opacity-80  space-y-4 flex flex-col md:flex-row">
           {/* Heading */}
-          <div className="text-[#6A58AD] px-6 pt-3">
+          <div className="text-[#6A58AD] px-6 pt-3 md:w-1/2">
             <div className='relative'>
             <h2 className="text-[28px] leading-[32px] font-bold">
               How about some <br />
@@ -38,7 +38,7 @@ const WorkshopCarousel = ({ workshops }) => {
                         src={beehive_22b}
                         width={37}
                         height={41}
-                        className="absolute right-[90px] top-[-15px]"
+                        className="absolute right-[0px] top-[-15px]"
                       />            
             </div>
             <p className="text-[16px] text-black mt-2 leading-[24px]">
@@ -48,7 +48,7 @@ const WorkshopCarousel = ({ workshops }) => {
               and supported in your parenting journey.
             </p>
           </div>
-    <div className="relative w-full mx-auto pl-6">
+    <div className="relative w-full mx-auto pl-6 md:w-1/2">
       <div ref={sliderRef} className="keen-slider">
         {workshops.map((workshop, index) => (
           <div key={index} className="keen-slider__slide min-w-[280px] md:min-w-[350px] pr-4">
@@ -98,10 +98,10 @@ const WorkshopCarousel = ({ workshops }) => {
             }`}
           />
         ))}
-      </div>
-    </div><div className="flex justify-center pt-1">
-                <SuperDocButton href="/superdoc" label="SAVE YOUR SPOT" className="mb-10 mt-0" variant="pink"/>
+      </div><div className="flex justify-center pt-1">
+                <SuperDocButton href="#" label="SAVE YOUR SPOT" className="mb-10 mt-0" variant="pink"/>
               </div>
+    </div>
             </div>
   );
 };

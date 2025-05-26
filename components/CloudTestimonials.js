@@ -96,7 +96,7 @@ const CloudTestimonials = () => {
 
         {/* CTA Button */}
         <div className="mt-[160px] px-6">
-          <SuperDocButton href="/superdoc" label="SEE MORE REVIEWS" className="w-60 text-center" variant="purple"/>
+          <SuperDocButton href="#" label="SEE MORE REVIEWS" className="w-60 text-center" variant="purple"/>
         </div>
       </div>
     </div>

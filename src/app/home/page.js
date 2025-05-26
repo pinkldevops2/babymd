@@ -28,7 +28,7 @@ export default function Home() {
 
         {/* White Text Frame */}
         <div className="bg-white rounded-3xl p-8 md:p-12 mb-8 md:mb-12 shadow-md">
-          <p className="text-[#4B3A8F] text-xl md:text-2xl leading-relaxed font-medium">
+          <p className="text-[#4B3A8F] text-xl md:text-2xl pt-4 leading-relaxed font-medium">
             You deserve care that&apos;s as thoughtful as your
             <br />
             parenting. From cozy clinics to expert
