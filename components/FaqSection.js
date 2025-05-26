@@ -28,7 +28,7 @@ const FaqSection = ({ faqs }) => {
 
       <p className="text-[#2E2E2E] text-lg md:text-xl leading-relaxed font-medium mb-4 mt-4">
         Got questions about midnight fevers, first foods, routine vaccines,
-        tricky rashes, or curious growth spurts? We're here to guide you through
+        tricky rashes, or curious growth spurts? We&apos;re here to guide you through
         every question—no judgment, just answers you can rely on.
       </p>
 
