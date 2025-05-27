@@ -9,6 +9,7 @@ import beehive4 from '@/app/assets/beehive4.png';
 
 const ClinicCarousel = ({ clinics }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [totalSlides, setTotalSlides] = useState(0);
 
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: false,
@@ -18,6 +19,9 @@ const ClinicCarousel = ({ clinics }) => {
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
+    },
+    created(slider) {
+      setTotalSlides(slider.track.details.slides.length);
     },
     breakpoints: {
       '(min-width: 768px)': {
@@ -55,10 +59,10 @@ const ClinicCarousel = ({ clinics }) => {
             That&apos;s why our clinics are right in your neighborhood—cozy,
             colourful, and designed with your little one in mind.
           </p>
-          <p className="text-lg mb-8">
+          <p className="text-lg mb-2">
             Call us, book online, or just walk in—we&apos;ll be ready.
           </p>
-          <div className="relative">
+          <div className="relative hidden">
             <input
               type="text"
               placeholder="Search your nearby location"
@@ -118,7 +122,7 @@ const ClinicCarousel = ({ clinics }) => {
           {/* Arrows */}
           <button
             onClick={() => instanceRef.current?.prev()}
-            className="absolute left-[-20px] md:left-[-40px] p-2 top-1/2 z-10 transform -translate-y-1/2 bg-[#F4DF76] rounded-full shadow-md"
+            className="absolute left-[-20px] md:left-[-40px] p-2 top-3/4 z-10 transform -translate-y-1/2 bg-[#F4DF76] rounded-full shadow-md"
           >
             <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -126,7 +130,7 @@ const ClinicCarousel = ({ clinics }) => {
           </button>
           <button
             onClick={() => instanceRef.current?.next()}
-            className="absolute right-[-20px] md:right-[-40px] p-2 top-1/2 z-10 transform -translate-y-1/2 bg-[#F4DF76] rounded-full shadow-md"
+            className="absolute right-[-20px] md:right-[-40px] p-2 top-3/4 z-10 transform -translate-y-1/2 bg-[#F4DF76] rounded-full shadow-md"
           >
             <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -136,7 +140,7 @@ const ClinicCarousel = ({ clinics }) => {
 
         {/* Pagination Dots */}
         <div className="flex justify-center mt-6 gap-2">
-          {Array.from({ length: instanceRef.current?.track.details.slides.length || 0 }).map((_, idx) => (
+          {Array.from({ length: totalSlides }).map((_, idx) => (
             <button
               key={idx}
               onClick={() => instanceRef.current?.moveToIdx(idx)}

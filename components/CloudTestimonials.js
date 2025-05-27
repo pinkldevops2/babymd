@@ -80,7 +80,7 @@ const CloudTestimonials = () => {
           </div>
 
           {/* See Video Link */}
-          <div className="flex items-center justify-start mt-5 mb-6">
+          <div className="invisible flex items-center justify-start mt-5 mb-6">
             <button className="text-xs font-semibold text-[#4B3A8F] flex items-center underline underline-offset-[3px]">
               SEE VIDEO
               <span className="ml-1 text-xs">
@@ -95,7 +95,7 @@ const CloudTestimonials = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-[160px] px-6">
+        <div className="mt-[160px] px-6 invisible">
           <SuperDocButton href="#" label="SEE MORE REVIEWS" className="w-60 text-center" variant="purple"/>
         </div>
       </div>

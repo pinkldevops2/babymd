@@ -43,7 +43,7 @@ const MilestoneAssessmentSection = () => {
           </div>
 
           {/* Right Column: Image Cluster */}
-          <div className="relative w-full md:w-1/2 h-[340px] pt-10">
+          <div className="relative w-full md:w-1/2 h-[380px] pt-10">
             <div className="relative w-fit mx-auto">
               <Image
                 width={30}
@@ -132,7 +132,7 @@ const MilestoneAssessmentSection = () => {
       </div>
 
       {/* CTA Button */}
-      <div className="flex justify-center mt-6 mb-12">
+      <div className="flex justify-center mt-6 mb-12 hidden">
         <button className="text-lg font-medium underline hover:text-[#3A2A7F] transition-colors duration-300">
           Take our milestone assessment test
         </button>

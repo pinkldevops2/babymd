@@ -46,3 +46,10 @@ i {
         transform: translate(-50%, 0%);
     }
   }
+  @media screen and (min-width: 768px) {
+    .middlingbtns{
+        position: unset;
+        margin-left: 0;
+        transform: unset;
+    }
+  }

@@ -16,7 +16,7 @@ export default function Contact() {
             <h1 className="text-xl font-bold leading-tight text-black contactSub mt-8">
               Guidance? Concerns?
               <br />
-              <span className="text-[#5d3fd3] underline decoration-[#5d3fd3]">Appointments?</span>
+              <span className="text-[#5d3fd3] decoration-[#5d3fd3]">Appointments?</span>
             </h1>
 			<svg className="absolute top-0 right-0 swing" width="33" height="29" viewBox="0 0 33 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.62805 12.8662L8.1579 9.88482L13.5854 13.2672L13.367 19.5468L7.83714 22.5281L2.63519 19.1708L2.62805 12.8662Z" stroke="#FF9A6C" strokeWidth="2.5"/>

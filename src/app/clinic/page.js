@@ -68,8 +68,8 @@ export default function Clinic() {
       <div className="banner-box bg-[#F9EEB6] relative z-2 py-14 pb-6">
         <div className="container mx-auto">
           <div className="flex flex-col justify-center items-center md:flex-row">
-            <div className="w-full md:w-1/2">
-              <div className="relative px-8 md:px-0">
+            <div className="w-full md:w-2/3">
+              <div className="relative px-8 md:px-0 md:w-3/4">
                 <h1 className="text-2xl font-bold text-[34px]">
                   Care that feels{" "}
                   <span className="text-[#5943A5]">like your second </span>
@@ -102,11 +102,11 @@ export default function Clinic() {
               </div>
             </div>
 
-            <div className="w-full py-4 md:w-1/2 md:py-0 relative px-8 md:px-0">
+            <div className="w-full py-4 md:w-1/3 md:py-0 relative px-8 md:px-0">
               <img className="mx-auto" src="/images/Vector.svg" alt="Vector" />
               <img
                 className="mx-auto absolute absolute-center"
-                src="/images/Mask group.svg"
+                src="/images/clinic_listing_banner.png"
                 alt="Mask group"
               />
             </div>
@@ -123,7 +123,7 @@ export default function Clinic() {
       <div className="location-section bg-[#FFF2EF] py-4 relative">
         <div className="container mx-auto">
           <div className="flex flex-row gap-1 items-start">
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-3/4">
               <div className="relative px-6 md:px-0">
                 <h2 className="text-2xl font-bold text-[28px] leading-[26px] pb-4">
                   Right around the
@@ -155,7 +155,7 @@ export default function Clinic() {
           </div>
 
           {/* Clinic Cards */}
-          <div className="w-full my-8 flex flex-col md:flex-row gap-4 px-6">
+          <div className="w-full my-8 flex flex-col md:flex-row gap-4 px-6 md:px-0">
             {clinics.map((clinic, i) => (
               <div key={i} className="w-full lg:w-1/2 xl:w-1/4">
                 <div className="bg-white p-4 rounded-[20px]">
@@ -186,7 +186,7 @@ export default function Clinic() {
                       ))}
                       <button
                         type="button"
-                        className="text-white bg-[#5943A5] hover:bg-[#F8845D] transition-all focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-4 text-center mt-5 mx-auto flex flex-row gap-2"
+                        className="hidden text-white bg-[#5943A5] hover:bg-[#F8845D] transition-all focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-4 text-center mt-5 mx-auto flex flex-row gap-2"
                       >
                         <span>view details</span>
                         <img src="/images/Group 2349.png" alt="Arrow" />
@@ -215,7 +215,7 @@ export default function Clinic() {
       <div className="py-6 bg-[#FFF2EF] ">
         <div className="container mx-auto">
           <div className="flex flex-col relative justify-center items-center md:flex-row bg-[#DBFFCC] rounded-[20px] mx-4 md:mx-0 overflow-hidden pt-8">
-            <div className="w-full md:w-1/2 px-2 py-2 md:p-4">
+            <div className="w-full md:w-2/3 px-2 py-2 md:p-4 md:pl-12">
               <div className="relative px-8 md:px-0">
                 <h2 className="font-bold text-[28px] leading-[26px]">
                   <span className="text-[#5943A5]">
@@ -228,7 +228,7 @@ export default function Clinic() {
                       got you.
                     </i>
                     <img
-                      className="absolute top-[13px] right-0 z-0 w-full"
+                      className="absolute top-[5px] right-0 z-0 w-full"
                       src="/images/Vector 2.svg"
                       alt="Vector 2"
                     />
@@ -244,7 +244,7 @@ export default function Clinic() {
               </button>
             </div>
 
-            <div className="w-full md:w-1/2 relative md:px-0 pt-4">
+            <div className="w-full md:w-1/3 relative md:px-0 pt-4">
               <img
                 className="mx-auto"
                 src="/images/Vector 3.svg"
