@@ -26,12 +26,12 @@ const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
           {/* Right: Image (40% on desktop) */}
           <div className="w-full lg:w-2/5 relative lg:mt-0 md:h-[300px] lg:h-[300px]">
             <div className="flex justify-center lg:justify-end items-end">
-              <div className="relative w-[100%] lg:w-full h-[300px] mx-auto lg:mx-0">
+              <div className="relative w-[100%] lg:w-full h-[300px] mx-auto lg:mx-0 lg:h-[430px]">
                 <Image
                   src={readyvectorImg}
                   alt="Family"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   priority
                 />
               </div>

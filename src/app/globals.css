@@ -118,7 +118,7 @@ footer h3{
     left: 0;
     top: 0;
     bottom: 0;
-    width: 100%;
+    width: 80%;
     margin-top: 0;
     border-top: 0;
 	transition:all linear 0.3s;
@@ -135,6 +135,22 @@ footer h3{
     background-position: -55px 0px;
 	background-repeat: no-repeat;
 	background-repeat: repeat-x;
+}
+.cloud-img_slider{
+	background-image:url(assets/cloud.png);
+	background-size: 100% 100%;
+	width: 100%;
+	background-position: 0px;
+	padding: 95px 60px 20px;
+    left: -30px;
+	background-repeat: no-repeat;
+	display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 400px;
+}
+.cloud-testimonial-pera{
+	
 }
 .border-customOrange{
 	border-image: repeating-linear-gradient(90deg, #F8845D 0 10px, transparent 10px 20px) 1;

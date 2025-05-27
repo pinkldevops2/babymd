@@ -272,7 +272,7 @@ export default function Home() {
         <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-12 md:mb-12">
           <div className="relative"><SubHeading
             mainText={<>Every child is a miracle - <br /> a unique story</>}
-            highlightText={<>we&apos;re here<br />to care for</>}
+            highlightText={<>we&apos;re here<br />to care for.</>}
             /* subText={<><i>care for</i></>} */
           />
           <Image

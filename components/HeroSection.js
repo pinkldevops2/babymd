@@ -67,7 +67,7 @@ const HeroSection = ({
           height={200}
           src={i1a}
           alt="Layer 2"
-          className="absolute bottom-24 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-24 left-1/2 transform -translate-x-1/2 lg:bottom-[30px]"
         />
         <Image
           width={50}

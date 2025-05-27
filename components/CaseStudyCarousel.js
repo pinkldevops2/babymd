@@ -14,6 +14,26 @@ const CaseStudyCarousel = ({ caseStudies }) => {
       perView: 1.2,
       spacing: 16,
     },
+    breakpoints: {
+      "(min-width: 640px)": {
+        slides: {
+          perView: 1.3,
+          spacing: 16,
+        },
+      },
+      "(min-width: 1024px)": {
+        slides: {
+          perView: 2.3,
+          spacing: 16,
+        },
+      },
+      "(min-width: 1280px)": {
+        slides: {
+          perView: 2.3,
+          spacing: 16,
+        },
+      },
+    },
   });
 
   return (
