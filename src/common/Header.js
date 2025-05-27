@@ -12,6 +12,11 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
+  // Function to close the menu when any link is clicked
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header className="bg-white p-4 sticky top-0 z-50">
       <div className="flex justify-between items-center px-1 py-2">
@@ -49,37 +54,37 @@ export default function Header() {
 </svg></Link>
           <ul className="flex flex-col space-y-2">
             <li>
-              <Link href="/" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+              <Link href="/" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                 Home
               </Link>
             </li>
             <li className="hidden">
-              <Link href="/doctor" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+              <Link href="/doctor" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                 Doctor
               </Link>
             </li>
             <li>
-              <Link href="/clinic" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+              <Link href="/clinic" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                 Clinic
               </Link>
             </li>
             <li className="hidden">
-              <Link href="/testimonials" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+              <Link href="/testimonials" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                 Testimonials
               </Link>
             </li>
             <li className="hidden">
-              <Link href="/about-us" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+              <Link href="/about-us" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/contact-us" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+              <Link href="/contact-us" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                 Contact Us
               </Link>
             </li>
               <li className="hidden">
-              <Link href="/resources" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+              <Link href="/resources" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                 Resources
               </Link>
             </li>
