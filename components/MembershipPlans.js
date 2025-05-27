@@ -9,7 +9,7 @@ const MembershipPlans = ({
 }) => {
   return (
     <div className="px-6">
-      <div className="relative bg-[#FF9A6C] text-white mt-8 mb-4 pt-10 rounded-2xl space-y-4 w-full mx-auto overflow-hidden flex flex-col md:flex-row">
+      <div className="relative bg-[#FF9A6C] text-white mt-8 mb-4 pt-10 rounded-2xl space-y-4 w-full mx-auto overflow-hidden flex flex-col md:flex-row lg:p-12">
         {/* Heading */}
         <div className="px-4 md:w-1/2">
           <h2 className="text-[28px] leading-[30px] font-bold">
@@ -30,7 +30,7 @@ const MembershipPlans = ({
         <div className="flex flex-row md:flex-row gap-3 text-center">
           {/* Gold Plan */}
           <div
-            className="bg-white text-[#231F20] p-4 rounded-2xl space-y-2 w-full md:w-2/3"
+            className="bg-white text-[#231F20] p-4 rounded-2xl space-y-2 w-full md:w-1/2"
             style={{ boxShadow: '-5px 5px 0 #F4DF76' }}
           >
             <div className="h-20 flex justify-center items-center">

@@ -52,4 +52,8 @@ i {
         margin-left: 0;
         transform: unset;
     }
+    .curved_lines
+    {
+        background-image:none!important;
+    }
   }

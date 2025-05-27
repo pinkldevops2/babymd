@@ -13,7 +13,7 @@ import keerthana from "@/app/assets/keerthana.png";
 
 const CloudTestimonials = () => {
   return (
-    <div className="bg-[#E1F5FF] md:p-8 text-[#4B3A8F] relative z-2">
+    <div className="bg-[#E1F5FF] md:px-8 text-[#4B3A8F] relative z-2">
       <Image
                   src={next_bees_sleeping}
                   width={152}
