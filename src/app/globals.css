@@ -241,3 +241,82 @@ footer h3{
 	opacity: 0.8;
 	z-index: 1;
 }
+	.crossWidth{
+		width:100px;
+		height:100px;
+		position:relative;
+		animation: swayCurve 2s ease-in-out infinite alternate;
+ 		 transform-origin: bottom center;
+	}
+	.bee_holder{
+			animation: swayCurve 2s ease-in-out infinite alternate;
+  			transform-origin: bottom center;
+			width:100px;
+			height:100px;
+	}
+	.bee_holder img{
+			animation: softZoom 3s ease-in-out infinite alternate;
+	}
+	.first_hexagon{
+		  position: absolute;
+		  left: 32px;
+		  top: 0px;
+		  animation: zoomRotateCycle 10s ease-in-out 4s infinite;
+	}
+	.second_hexagon{
+		  position: absolute;
+		  left: 10px;
+		  top: 36px;
+		  animation: zoomRotateCycle 25s ease-in-out 8s infinite;
+	}
+	.third_hexagon{
+		  position: absolute;
+		  left: 67px;
+		  top: 48px;
+		  animation: zoomRotateCycle 12s ease-in-out 5s infinite;
+	}
+	.scale_hexagon{
+		transform: scale(0.45)!important;
+	}
+	@keyframes zoomRotateCycle {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  10% {
+    transform: scale(1.2) rotate(0deg); /* zoom in */
+  }
+
+  40% {
+    transform: scale(1.2) rotate(180deg); /* start rotating */
+  }
+
+  70% {
+    transform: scale(1.2) rotate(360deg); /* complete rotation */
+  }
+
+  90% {
+    transform: scale(1) rotate(360deg); /* zoom out */
+  }
+
+  100% {
+    transform: scale(1) rotate(360deg); /* loop reset */
+  }
+}
+@keyframes swayCurve {
+  0% {
+    transform: rotate(-5deg) translateX(-5px);
+  }
+  100% {
+    transform: rotate(5deg) translateX(5px);
+  }
+}
+@keyframes softZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}

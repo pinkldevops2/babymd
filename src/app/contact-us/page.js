@@ -3,6 +3,9 @@ import Image from 'next/image';
 import beeimage from "../assets/contactpagebee.png";
 import contactbaby from "../assets/contactbaby.png";
 import contactbb from "../assets/contactbb.png";
+import HexagonGroup from "../../../components/anime/Hexagon";
+import BeeHolder from "../../../components/anime/BeeHolder";
+
 export default function Contact() {
   return (
     <>
@@ -18,12 +21,7 @@ export default function Contact() {
               <br />
               <span className="text-[#5d3fd3] decoration-[#5d3fd3]">Appointments?</span>
             </h1>
-			<svg className="absolute top-0 right-0 swing" width="33" height="29" viewBox="0 0 33 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.62805 12.8662L8.1579 9.88482L13.5854 13.2672L13.367 19.5468L7.83714 22.5281L2.63519 19.1708L2.62805 12.8662Z" stroke="#FF9A6C" strokeWidth="2.5"/>
-<path d="M23.022 20.161L26.9255 18.0566L30.6533 20.2524L30.3982 24.4978L26.4948 26.6023L22.9237 24.4197L23.022 20.161Z" stroke="#FF9A6C" strokeWidth="2.5"/>
-<path d="M8.91809 4.48676L14.4479 1.50543L19.6997 4.56195L19.3098 10.5232L13.7799 13.5046L8.74955 10.4656L8.91809 4.48676Z" stroke="#5943A5" strokeWidth="2.5"/>
-</svg>
-
+            <HexagonGroup className="scale_hexagon absolute top-[-40px] right-[-20px]" />
             <p className=" text-gray-700 mt-2">
 			  Reach out anytime, we&rsquo;ve got the time and the team!
             </p>
@@ -88,13 +86,7 @@ export default function Contact() {
           <div className="relative pt-8">
             <h2 className="text-xl font-bold text-black pb-2 customtenight">
               Grow <span className="spansidecour text-[#5d3fd3]">with us</span>
-			  <Image 
-				src={beeimage}
-				className="absolute right-0 top-0 swing fastbeecontact"
-				alt="Bee" 
-				width={134} // adjust as needed
-				height={134} // adjust as needed
-			  />
+			      <BeeHolder src={beeimage} width={150} height={150} className="absolute right-0 top-0"/>
             </h2>
             <p className="mt-2 text-gray-700 ">
               Looking to join a bunch of enthusiasts passionate about shaping brighter futures for little humans?
