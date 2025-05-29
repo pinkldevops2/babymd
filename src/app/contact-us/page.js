@@ -3,9 +3,6 @@ import Image from 'next/image';
 import beeimage from "../assets/contactpagebee.png";
 import contactbaby from "../assets/contactbaby.png";
 import contactbb from "../assets/contactbb.png";
-import HexagonGroup from "../../../components/anime/Hexagon";
-import BeeHolder from "../../../components/anime/BeeHolder";
-
 export default function Contact() {
   return (
     <>
@@ -21,7 +18,12 @@ export default function Contact() {
               <br />
               <span className="text-[#5d3fd3] decoration-[#5d3fd3]">Appointments?</span>
             </h1>
-            <HexagonGroup className="scale_hexagon absolute top-[-40px] right-[-20px]" />
+			<svg className="absolute top-0 right-0 swing" width="33" height="29" viewBox="0 0 33 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.62805 12.8662L8.1579 9.88482L13.5854 13.2672L13.367 19.5468L7.83714 22.5281L2.63519 19.1708L2.62805 12.8662Z" stroke="#FF9A6C" strokeWidth="2.5"/>
+<path d="M23.022 20.161L26.9255 18.0566L30.6533 20.2524L30.3982 24.4978L26.4948 26.6023L22.9237 24.4197L23.022 20.161Z" stroke="#FF9A6C" strokeWidth="2.5"/>
+<path d="M8.91809 4.48676L14.4479 1.50543L19.6997 4.56195L19.3098 10.5232L13.7799 13.5046L8.74955 10.4656L8.91809 4.48676Z" stroke="#5943A5" strokeWidth="2.5"/>
+</svg>
+
             <p className=" text-gray-700 mt-2">
 			  Reach out anytime, we&rsquo;ve got the time and the team!
             </p>
@@ -86,7 +88,13 @@ export default function Contact() {
           <div className="relative pt-8">
             <h2 className="text-xl font-bold text-black pb-2 customtenight">
               Grow <span className="spansidecour text-[#5d3fd3]">with us</span>
-			      <BeeHolder src={beeimage} width={150} height={150} className="absolute right-0 top-0"/>
+			  <Image 
+				src={beeimage}
+				className="absolute right-0 top-0 swing fastbeecontact"
+				alt="Bee" 
+				width={134} // adjust as needed
+				height={134} // adjust as needed
+			  />
             </h2>
             <p className="mt-2 text-gray-700 ">
               Looking to join a bunch of enthusiasts passionate about shaping brighter futures for little humans?
@@ -133,7 +141,7 @@ export default function Contact() {
 </span>
                 <p>Email: help@babymd.in</p>
               </div>
-              <div className="flex items-center gap-2 pb-4">
+              <div className="flex items-center gap-2 pb-4 hidden">
                 <span><svg width="26" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M19.3232 16.0465L17.1056 18.3102C16.9842 18.4892 16.5333 19 15.263 19C14.8533 19 14.359 18.9476 13.7629 18.8123L13.752 18.8101C13.6631 18.7861 11.53 18.2076 8.91352 16.3958C7.37873 15.3327 5.99568 14.0622 4.80556 12.6215C3.31846 10.825 2.12835 8.75774 1.26557 6.47223C1.22872 6.38928 1.03578 5.92868 0.977254 5.30655C0.890543 4.40064 1.13117 3.5755 1.67095 2.9228L1.67962 2.91189L4.18341 0.370971L4.19642 0.360056C4.25495 0.309849 4.79473 -0.11582 5.38653 0.0304354C5.74422 0.117752 6.02169 0.386251 6.21029 0.827201L8.02256 4.30022C8.08543 4.38318 8.23717 4.6102 8.30004 4.92672C8.37374 5.28909 8.34556 5.83918 7.80578 6.40238L7.79277 6.41547L6.9972 7.15548L6.97769 7.1664C6.83678 7.26681 6.90832 7.3956 6.93216 7.43708L6.93867 7.45018C6.94517 7.46546 7.41775 8.38665 8.33255 9.52613C9.16715 10.5674 10.5545 12.0125 12.4297 12.997C12.5012 13.0035 12.7202 12.9948 12.9868 12.7263L12.9911 12.7219L13.7087 12.0278C13.7715 11.9448 13.9406 11.7549 14.2333 11.6326C14.5498 11.5017 15.0809 11.4231 15.8157 11.8029L15.8331 11.8116L19.2452 13.8265C19.3688 13.8832 19.8413 14.1321 19.9432 14.656C20.0234 15.0948 19.8153 15.5619 19.3232 16.0465Z" fill="black"/>
 </svg>

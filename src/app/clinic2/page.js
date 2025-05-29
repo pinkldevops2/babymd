@@ -1,5 +1,6 @@
 ﻿"use client";
 import Image from "next/image";
+import '../../styles/style_bg2.css'; // Adjust the path as needed
 export default function Clinic() {
   const clinics = [
     {

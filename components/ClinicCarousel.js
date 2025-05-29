@@ -36,7 +36,7 @@ const ClinicCarousel = ({ clinics }) => {
   return (
     <div className='flex flex-col md:flex-row'>
       {/* HEADER SECTION */}
-      <div className="bg-[#FFF5F5] p-6 md:p-12 md:mb-0 md:w-1/2">
+      <div className="bg-[#FFF5F5] p-6 md:p-12 md:mb-12 md:w-1/2">
         <div className="max-w-2xl">
           <div className="relative">
             <SubHeading
@@ -88,7 +88,7 @@ const ClinicCarousel = ({ clinics }) => {
       </div>
 
       {/* SLIDER SECTION */}
-      <div className="bg-[#FFF5F5] p-6 md:p-12 pt-0 md:mb-0 md:w-1/2">
+      <div className="bg-[#FFF5F5] p-6 md:p-12 pt-0 md:mb-12 md:w-1/2">
         <div className="relative max-w-md mx-auto md:max-w-6xl rounded-2xl bg-white p-4">
           <div ref={sliderRef} className="keen-slider">
             {clinics.map((clinic, index) => (

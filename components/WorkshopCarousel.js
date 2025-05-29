@@ -119,7 +119,7 @@ const WorkshopCarousel = ({ workshops }) => {
           />
         ))}
       </div><div className="flex justify-center pt-6">
-                <SuperDocButton href="#" label="SAVE YOUR SPOT" className="mb-10 mt-0 hidden" variant="pink"/>
+                <SuperDocButton href="#" label="SAVE YOUR SPOT" className="mb-10 mt-0" variant="pink"/>
               </div>
     </div>
             </div>

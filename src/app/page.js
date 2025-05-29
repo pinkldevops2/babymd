@@ -17,7 +17,6 @@ import Vector4 from "../app/assets/Vector4.png";
 import Vector4a from "../app/assets/Vector4a.png";
 import sleep_bee from "../app/assets/sleep_bee.png";
 import beehive_full from "../app/assets/beehive_full.png";
-import '../styles/stacking-cards.css';
 
 
 import Nearbyclinic from "../app/assets/Nearbyclinic.png";
@@ -71,10 +70,8 @@ import MilestoneAssessmentSection from "../../components/MilestoneAssessmentSect
 import HeroSection from "../../components/HeroSection";
 import StatsSection from "../../components/StatsSection";
 import SymptomCarousel from "../../components/SymptomCarousel"
-import StackingCards from '../../components/StackingCards';
 
 export default function Home() {
-  
   // Clinic data
   const clinics = [
     {
@@ -272,7 +269,7 @@ export default function Home() {
 
         {/* Every Child is a Miracle Section */}
       <div className="bg-linear-to-t from-[#F0EBFF] to-[#FDF8DB]">
-        <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-12 md:pb-0">
+        <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-12 md:mb-12">
           <div className="relative"><SubHeading
             mainText={<>Every child is a miracle - <br /> a unique story</>}
             highlightText={<>we&apos;re here<br />to care for.</>}
@@ -589,6 +586,8 @@ export default function Home() {
         {/* New Section: More Than Symptoms */}
         <SymptomCarousel symptomRows={symptoms} />
       </div>
+
+      
 
         <MilestoneAssessmentSection /> 
         <ClinicCarousel clinics={clinics} />

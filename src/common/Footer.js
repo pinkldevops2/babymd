@@ -4,6 +4,7 @@ import flogo from "../app/assets/baby_md_logo.svg";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
+    <div className="container">
     <footer className="bg-[#FFFBE6] p-4 text-[#4B3A8F] text-sm p-5">
       {/* Top section with Company and Services */}
 	  <Image
@@ -72,7 +73,7 @@ export default function Footer() {
       </div>
 
       {/* Middle section with Contact and Social Media */}
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-8 mt-8">
+      <div className=" flex gap-2 mt-8">
         {/* Contact Us Column */}
         <div>
           <h3 className="font-bold uppercase mb-4">Contact Us</h3>
@@ -100,10 +101,9 @@ export default function Footer() {
               7070708220
             </li>
             <li className="flex items-start gap-3">
-              <svg width="55" height="20" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="max-w-[15px] w-full" height="20" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.16634 6.34823C8.38521 6.34823 8.60194 6.30512 8.80415 6.22136C9.00636 6.1376 9.19009 6.01483 9.34485 5.86007C9.49962 5.70531 9.62238 5.52157 9.70614 5.31936C9.7899 5.11716 9.83301 4.90043 9.83301 4.68156C9.83301 4.23953 9.65741 3.81561 9.34485 3.50305C9.03229 3.19049 8.60837 3.01489 8.16634 3.01489C7.72431 3.01489 7.30039 3.19049 6.98783 3.50305C6.67527 3.81561 6.49967 4.23953 6.49967 4.68156C6.49967 4.90043 6.54278 5.11716 6.62654 5.31936C6.7103 5.52157 6.83307 5.70531 6.98783 5.86007C7.30039 6.17263 7.72431 6.34823 8.16634 6.34823ZM8.16634 0.0148926C10.7397 0.0148926 12.833 2.10156 12.833 4.68156C12.833 8.18156 8.16634 13.3482 8.16634 13.3482C8.16634 13.3482 3.49967 8.18156 3.49967 4.68156C3.49967 3.44388 3.99134 2.2569 4.86651 1.38173C5.74168 0.506558 6.92866 0.0148926 8.16634 0.0148926V0.0148926ZM2.16634 4.68156C2.16634 7.68156 5.55301 11.7882 6.16634 12.5549L5.49967 13.3482C5.49967 13.3482 0.833008 8.18156 0.833008 4.68156C0.833008 2.56823 2.23967 0.781559 4.16634 0.208226C2.93967 1.30823 2.16634 2.90156 2.16634 4.68156Z" fill="#5943A5"/>
 </svg>
-
               WeWork, Prestige Atlanta, 80 Feet Road, Bengaluru-560034, Karnataka, India
             </li>
           </ul>
@@ -156,5 +156,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </div>
   );
 }

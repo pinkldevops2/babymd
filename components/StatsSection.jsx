@@ -58,7 +58,7 @@ const StatsSection = ({
         </div>
 
         {/* Stat Blocks */}
-        <div className="flex flex-col md:flex-row justify-between flex-wrap gap-6 md:gap-3 items-center">
+        <div className="flex flex-col md:flex-row justify-between flex-wrap gap-6 items-center">
           {/* Stat 1 */}
           <div className="relative w-80 h-[300px]" ref={ref1}>
             <Image src={Vector} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover" />
