@@ -590,7 +590,6 @@ export default function Home() {
         <SymptomCarousel symptomRows={symptoms} />
       </div>
 
-
         <MilestoneAssessmentSection /> 
         <ClinicCarousel clinics={clinics} />
         {/* Testimonial Section */}
