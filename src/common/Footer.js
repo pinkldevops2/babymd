@@ -14,7 +14,7 @@ export default function Footer() {
             height={45}
             className="object-contain mb-5 mt-7"
           />  
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 items-start">
         <div>
           <h3 className="font-bold uppercase mb-2">Company</h3>
           <ul className="space-y-1 footerULline">
@@ -70,10 +70,9 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-      </div>
-
-      {/* Middle section with Contact and Social Media */}
-      <div className=" flex gap-2 mt-8">
+        
+        
+        <div className=" flex gap-2 mt-8 md:mt-0">
         {/* Contact Us Column */}
         <div>
           <h3 className="font-bold uppercase mb-4">Contact Us</h3>
@@ -110,8 +109,8 @@ export default function Footer() {
         </div>
 
         {/* Social Media Column */}
-        <div className="pt-12">
-          <div className="flex justify-end space-x-4">
+        <div className="pt-12 relative">
+          <div className="flex justify-end space-x-4 absolute top-[40px] right-[-175px] md:relative md:top-[-15px]  md:right-0">
             <a
               href="https://facebook.com"
               target="_blank"
@@ -139,6 +138,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
+        
+      </div>
+
+      {/* Middle section with Contact and Social Media */}
+      
 
       {/* Bottom section with copyright and links */}
       <div className="mt-8 pt-4">
