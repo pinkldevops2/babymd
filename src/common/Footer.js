@@ -110,7 +110,7 @@ export default function Footer() {
 
         {/* Social Media Column */}
         <div className="pt-12 relative">
-          <div className="flex justify-end space-x-4 absolute top-[40px] right-[-175px] md:relative md:top-[-15px]  md:right-0">
+          <div className="flex justify-end space-x-4 absolute top-[0px] right-[-195px] md:relative md:top-[-50px]  md:right-0">
             <a
               href="https://facebook.com"
               target="_blank"
