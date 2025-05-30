@@ -373,10 +373,10 @@ export default function Home() {
                     /></div>
           
           <p className="leading-relaxed mb-4 mt-3">
-            Each moment of your child's growth is worth celebrating, from first steps to first words. But parenting isn't always magical, with midnight fevers, stubborn coughs, and moments of doubt.
+            Each moment of your child&#39;s growth is worth celebrating, from first steps to first words. But parenting isn&#39;t always magical, with midnight fevers, stubborn coughs, and moments of doubt.
           </p>
           <p className="leading-relaxed mb-4">
-            That's where we come in; your trusted partner in ensuring nothing stands in the way of your child's health and well-being. We go beyond treating symptoms, offering holistic care that nurtures their physical, emotional, mental, and social development. From personalized growth assessments to making every clinic visit a positive experience, we're here with expert care, joy, and compassion.
+            That&#39;s where we come in; your trusted partner in ensuring nothing stands in the way of your child&#39;s health and well-being. We go beyond treating symptoms, offering holistic care that nurtures their physical, emotional, mental, and social development. From personalized growth assessments to making every clinic visit a positive experience, we&#39;re here with expert care, joy, and compassion.
           </p>
         </div>
 
@@ -453,7 +453,7 @@ export default function Home() {
           </div>
           <div className="pt-4 pr-[70px] relative">
             <SubHeading
-            mainText={<>We're here for the</>}
+            mainText={<>We&#39;re here for the</>}
             highlightText={<>giggles, sniffles, and everything in</>}
             subText={<><i>between!</i></>}
           />
@@ -473,14 +473,14 @@ export default function Home() {
                     />   
           </div>        
           <p className="text-[16px] mt-3">
-            Some days you're celebrating first steps. <br /> Other days, you're
-            worried about a fever at 2 AM. We are here for it all. Whether it's a
+            Some days you&#39;re celebrating first steps. <br /> Other days, you&#39;re
+            worried about a fever at 2 AM. We are here for it all. Whether it&#39;s a
             quick check-up, a vaccine visit, or something that needs a deeper
             look, we offer the kind of care that listens, explains, and walks the
             path with you.
           </p>
           <h3 className="md:text-2xl mb-16 md:mt-4">
-            Here's how we support you and your child - every step of the way:
+            Here&#39;s how we support you and your child - every step of the way:
           </h3>
           <div className="relative z-10 -mt-12 max-w-md mx-auto">
             <div className="rounded-t-2xl bg-white overflow-hidden">
@@ -514,7 +514,7 @@ export default function Home() {
                 </summary>
                 <div className="p-4 bg-[#DDD0FF] text-gray-700 leading-relaxed">
                   Comprehensive health check-ups and consultations for your
-                  child's everyday needs.
+                  child&#39;s everyday needs.
                 </div>
               </details>
 
@@ -615,7 +615,7 @@ export default function Home() {
                 <div className="p-4 bg-[#D6F4FA] text-gray-700 leading-relaxed">
                   Our developmental pediatricians and certified therapists go
                   beyond symptoms to create personalized plans that address your
-                  little one's unique needs from speech delays to behavioral
+                  little one&#39;s unique needs from speech delays to behavioral
                   challenges.
                 </div>
               </details>
