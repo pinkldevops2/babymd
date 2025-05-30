@@ -28,19 +28,15 @@ body {
   font-family: var(--font-lato), cursive;
   font-size: 16px;
   color:#000;
-  background-image: url(assets/bg_pattern.jpg);
-  background-size: 400px 300px;
+  background-color: #FFF2EF;
 }
 body,html{
 	overflow-x: hidden;
 }
 .container{
-	max-width: 768px!important;
+	max-width: 1024px!important;
 	width: 100%!important;
 	margin: auto!important;
-	box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.5);
-	-moz-box-shadow: 0px 0px 19px -5px rgba(0,0,0,0.5);
 }
 label {
   color:#000;
