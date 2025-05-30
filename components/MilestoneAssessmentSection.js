@@ -13,7 +13,7 @@ import beehive8 from '@/app/assets/beehive8.png';
 const MilestoneAssessmentSection = () => {
   return (
     <>
-      <div className="bg-white rounded-3xl p-6 md:p-12 md:mb-12">
+      <div className="bg-white rounded-3xl p-6 md:py-12 md:px-4 md:mb-12">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           {/* Left Column: Text Section */}
           <div className="w-full md:w-1/2">

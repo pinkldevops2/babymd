@@ -3,6 +3,7 @@ import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider,KeenSliderInstance, KeenSliderPlugin } from 'keen-slider/react'
 import React, { useEffect,useRef, useState } from "react"
 import Image from 'next/image';
+import docImg from '../assets/doc.png'
 export default function ClinicInner() {
  // Slider 1 (e.g., Hero or General Slider)
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -89,7 +90,33 @@ let autoplayTimeout;
       setDocCurrentSlide(slider.track.details.rel);
     },
   });
-  const docSlides = [1, 2, 3]; // Replace with actual doctor data if needed
+  const docSlides = [
+    {
+      id: 1,
+      name: "Dr Bhaskar MV",
+      title: "Paediatrician and Neonatologist",
+      experience: "15+ Years | English, Kannada and Hindi",
+      bgColor: "bg-[#DBFFCC]",
+      image: docImg,
+    },
+    {
+      id: 2,
+      name: "Dr Vidisha Kumari",
+      title: "Paediatric Pulmonologist",
+      experience: "18+ Years | English, and Hindi",
+      bgColor: "bg-[#D9F9FF]",
+      image: docImg,
+    },
+    {
+      id: 3,
+      name: "Ms Rashmitha",
+      title: "Behavioural Therapist",
+      experience: "1.5+ Years | English, Hindi, Tulu, and Kannada",
+      bgColor: "bg-[#DBFFCC]",
+      image: docImg,
+    },
+
+  ]; // Replace with actual doctor data if needed
   return (
     <div>
       {/* Banner Section */}
@@ -289,17 +316,18 @@ let autoplayTimeout;
 	  
 	  <div className="px-4">
       <div ref={docSliderRef} className="keen-slider max-w-6xl mx-auto" id="doctorSlider">
-        {docSlides.map((_, index) => (
-          <div key={index} className="keen-slider__slide bg-[#DBFFCC] rounded-2xl">
-            <div className="flex flex-col md:flex-row gap-1 items-start">
+        {docSlides.map((docSlides) => (
+          <div key={docSlides.id} className={`${docSlides.bgColor} keen-slider__slide rounded-2xl`}>
+            <div className="flex flex-col md:flex-row gap-1 items-start justify-between h-full
+">
               <div className="w-full md:w-1/2">
                 <div className="relative flex items-start">
                   <div className="text-[#000] text-[16px] p-6">
                     <h3 className="text-2xl font-lato font-bold text-[16px] leading-tight pb-3">
-                      Dr Vidisha Kumari
+                    {docSlides.name}
                     </h3>
-                    <p><i className="font-normal z-2">Paediatric Pulmonologist!</i></p>
-                    <p>18+ Years | English, and Hindi</p>
+                    <p><i className="font-normal z-2">{docSlides.title}</i></p>
+                    <p>{docSlides.experience}</p>
                   </div>
                   <img className="absolute right-[65px] md:left-20 bottom-[10px] w-20 h-20" src="/images/bee.png" alt="bee" />
                 </div>
@@ -324,7 +352,7 @@ let autoplayTimeout;
           <button
             key={idx}
             onClick={() => docSliderInstanceRef.current?.moveToIdx(idx)}
-            className={`w-2 h-2 rounded-full ${docCurrentSlide === idx ? 'bg-blue-500' : 'bg-gray-400'}`}
+            className={`w-2 h-2 rounded-full ${docCurrentSlide === idx ? 'bg-[#5943A5]' : 'bg-gray-400'}`}
           />
         ))}
       </div>
@@ -376,8 +404,8 @@ let autoplayTimeout;
 				</div>
         <div ref={testimonialSliderRef} className="keen-slider">
           {[
-            { quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et", name: "Revathy Kumar", img: "Mom+%26+Baby" },
-            { quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et", name: "Anjali Sharma", img: "Mom+%26+Baby+2" },
+            { quote: "Amazing experience at BabyMD. Timely service, ease of making appointments, lovely staff, and an amazing doctor. We visited for my child's vaccination—they made the process a breeze and clarified all my doubts. Plus, they even gave my child some freebies", name: "Revathy Kumar", img: "Mom+%26+Baby" },
+            { quote: "Amazing experience at BabyMD. Timely service, ease of making appointments, lovely staff, and an amazing doctor. We visited for my child's vaccination—they made the process a breeze and clarified all my doubts. Plus, they even gave my child some freebies", name: "Anjali Sharma", img: "Mom+%26+Baby+2" },
           ].map((t, idx) => (
             <div key={idx} className="keen-slider__slide flex justify-center">
               <div className="bg-[#FF9A6C] rounded-3xl px-6 pt-6 text-white w-full max-w-sm relative">               

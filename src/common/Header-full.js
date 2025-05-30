@@ -12,13 +12,8 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
-
   return (
-    <div className="container sticky top-0 z-50">
-    <header className="bg-white p-4 ">
+    <header className="bg-white p-4 sticky top-0 z-50">
       <div className="flex justify-between items-center px-1 py-2">
       <Link href="/" passHref>
         <div className="flex items-center space-x-2 cursor-pointer">
@@ -54,37 +49,37 @@ export default function Header() {
 </svg></Link>
           <ul className="flex flex-col space-y-2">
             <li>
-              <Link href="/" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+              <Link href="/" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
                 Home
               </Link>
             </li>
             <li className="hidden">
-              <Link href="/doctor" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+              <Link href="/doctor" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
                 Doctor
               </Link>
             </li>
             <li>
-              <Link href="/clinic" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+              <Link href="/clinic" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
                 Clinic
               </Link>
             </li>
             <li className="hidden">
-              <Link href="/testimonials" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+              <Link href="/testimonials" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
                 Testimonials
               </Link>
             </li>
             <li className="hidden">
-              <Link href="/about-us" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+              <Link href="/about-us" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/contact-baby-md" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+              <Link href="/contact-baby-md" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
                 Contact Us
               </Link>
             </li>
               <li className="hidden">
-              <Link href="/resources" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+              <Link href="/resources" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
                 Resources
               </Link>
             </li>
@@ -121,6 +116,5 @@ export default function Header() {
         </nav>
       )}
     </header>
-    </div>
   );
 }

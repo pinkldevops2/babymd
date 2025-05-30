@@ -1,5 +1,6 @@
 export default function Home() {
   return (
+    <div className="container">
     <div className="min-h-screen bg-white">
       {/* Main Content Container */}
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -51,6 +52,7 @@ export default function Home() {
         </div>
 
       </div>
+    </div>
     </div>
   );
 }

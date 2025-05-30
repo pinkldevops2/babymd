@@ -23,7 +23,8 @@ const StatsSection = ({
 
   return (
     <>
-      <div className="w-full mt-8 px-6 pt-10 relative">
+      <div className="container">
+      <div className="w-full mt-8 md:mt-0 px-6 pt-10 relative">
         <SubHeading
           mainText={<> You don&apos;t have to<br /></>}
           highlightText={<>figure it out</>}
@@ -58,7 +59,7 @@ const StatsSection = ({
         </div>
 
         {/* Stat Blocks */}
-        <div className="flex flex-col md:flex-row justify-between flex-wrap gap-6 items-center">
+        <div className="flex flex-col md:flex-row justify-between flex-wrap gap-6 items-center md:px-4">
           {/* Stat 1 */}
           <div className="relative w-80 h-[300px]" ref={ref1}>
             <Image src={Vector} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover" />
@@ -113,6 +114,7 @@ const StatsSection = ({
             </p>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

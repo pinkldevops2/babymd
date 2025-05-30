@@ -18,6 +18,7 @@ import Vector4a from "../app/assets/Vector4a.png";
 import sleep_bee from "../app/assets/sleep_bee.png";
 import beehive_full from "../app/assets/beehive_full.png";
 
+
 import Nearbyclinic from "../app/assets/Nearbyclinic.png";
 import workshop from "../app/assets/workshop.png";
 import casestudy from "../app/assets/casestudy.png";
@@ -107,7 +108,7 @@ export default function Home() {
       title: "Pediatric Care Online Workshop",
       image: workshop,
       date: "28 NOV 2025",
-      tags: ["PARENT'S KNOWLEDGE", "CHILD FEEDING CARE", "FEEDING CARE"],
+      tags: ["PARENT&apos;S KNOWLEDGE", "CHILD FEEDING CARE", "FEEDING CARE"],
     },
     {
       title: "Behavioral Milestones Workshop",
@@ -119,7 +120,7 @@ export default function Home() {
       title: "Nutrition for Toddlers Workshop",
       image: workshop,
       date: "10 JAN 2026",
-      tags: ["NUTRITION", "HEALTHY EATING", "PARENT'S KNOWLEDGE"],
+      tags: ["NUTRITION", "HEALTHY EATING", "PARENT&apos;S KNOWLEDGE"],
     },
     {
       title: "Behavioral Milestones Workshop",
@@ -208,6 +209,9 @@ export default function Home() {
     },
   });
 
+  // Keen-slider setup for each row of symptom buttons
+  
+
   // State for tracking current slide for workshop and case study carousels
   const [currentWorkshopSlide, setCurrentWorkshopSlide] = useState(0);
   const [currentCaseStudySlide, setCurrentCaseStudySlide] = useState(0);
@@ -261,71 +265,113 @@ export default function Home() {
     threshold: 0.5,
   });
 
-  // State to control the open status of each dropdown
-  const [isGeneralConsultationsOpen, setIsGeneralConsultationsOpen] = useState(false);
-  const [isVaccinationsOpen, setIsVaccinationsOpen] = useState(false);
-  const [isSuperSpecialistOpen, setIsSuperSpecialistOpen] = useState(false);
-  const [isDevelopmentalTherapiesOpen, setIsDevelopmentalTherapiesOpen] = useState(false);
+  //card scroll script//
+  /* const containerRef = useRef(null);
 
-  // Refs for each dropdown to access their DOM elements
-  const generalConsultationsRef = useRef(null);
-  const vaccinationsRef = useRef(null);
-  const superSpecialistRef = useRef(null);
-  const developmentalTherapiesRef = useRef(null);
-
-  // State to track scroll direction
-  const [scrollDirection, setScrollDirection] = useState(null);
-  const lastScrollY = useRef(0);
-
-  // Function to check if an element crosses the adjusted center of the viewport
-  const isElementCrossingCenter = (elementRef) => {
-    if (!elementRef.current) return false;
-
-    const rect = elementRef.current.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
-    // Adjust the center point to 70% of the viewport height (moving it downward)
-    const centerY = viewportHeight * 0.7;
-
-    // Check if the element's top or bottom crosses the adjusted center of the viewport
-    return rect.top <= centerY && rect.bottom >= centerY;
-  };
-
-  // Scroll handler to manage dropdown states based on scroll direction and center crossing
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+    const container = containerRef.current;
+    const items = container.querySelectorAll('.js-stack-cards__item');
 
-      // Determine scroll direction
-      if (currentScrollY > lastScrollY.current) {
-        setScrollDirection("down");
-      } else if (currentScrollY < lastScrollY.current) {
-        setScrollDirection("up");
+    let marginY, cardTop, cardHeight, elementHeight, windowHeight;
+    let scrolling = false;
+    let scrollingFn = null;
+
+    function getIntegerFromProperty(margin) {
+      const tempNode = document.createElement('div');
+      tempNode.style = `opacity:0; visibility:hidden; position:absolute; height:${margin}`;
+      container.appendChild(tempNode);
+      const val = parseInt(window.getComputedStyle(tempNode).getPropertyValue('height'));
+      container.removeChild(tempNode);
+      return val;
+    }
+
+    function setStackCards() {
+      const style = getComputedStyle(container);
+      marginY = getIntegerFromProperty(style.getPropertyValue('--stack-cards-gap'));
+      elementHeight = container.offsetHeight;
+
+      const cardStyle = getComputedStyle(items[0]);
+      cardTop = Math.floor(parseFloat(cardStyle.getPropertyValue('top')));
+      cardHeight = Math.floor(parseFloat(cardStyle.getPropertyValue('height')));
+      windowHeight = window.innerHeight;
+
+      container.style.paddingBottom = isNaN(marginY) ? '0px' : `${marginY * (items.length - 1)}px`;
+
+      items.forEach((item, i) => {
+        item.style.transform = isNaN(marginY) ? 'none' : `translateY(${marginY * i}px)`;
+      });
+    }
+
+    function animateStackCards() {
+      if (isNaN(marginY)) {
+        scrolling = false;
+        return;
       }
 
-      lastScrollY.current = currentScrollY;
+      const top = container.getBoundingClientRect().top;
+      if (cardTop - top + windowHeight - elementHeight - cardHeight + marginY + marginY * items.length > 0) {
+        scrolling = false;
+        return;
+      }
 
-      // Check each dropdown for center crossing and update open state
-      const dropdowns = [
-        { ref: generalConsultationsRef, setter: setIsGeneralConsultationsOpen },
-        { ref: vaccinationsRef, setter: setIsVaccinationsOpen },
-        { ref: superSpecialistRef, setter: setIsSuperSpecialistOpen },
-        { ref: developmentalTherapiesRef, setter: setIsDevelopmentalTherapiesOpen },
-      ];
-
-      dropdowns.forEach(({ ref, setter }) => {
-        const isCrossing = isElementCrossingCenter(ref);
-        if (scrollDirection === "down" && isCrossing) {
-          setter(true); // Open when scrolling down and crossing the center
-        } else if (scrollDirection === "up" && isCrossing) {
-          setter(false); // Close when scrolling up and crossing the center
+      items.forEach((item, i) => {
+        const scroll = cardTop - top - i * (cardHeight + marginY);
+        if (scroll > 0) {
+          const scale = i === items.length - 1 ? 1 : (cardHeight - scroll * 0.05) / cardHeight;
+          item.style.transform = `translateY(${marginY * i}px) scale(${scale})`;
+        } else {
+          item.style.transform = `translateY(${marginY * i}px)`;
         }
       });
-    };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [scrollDirection]);
+      scrolling = false;
+    }
 
+    function handleScroll() {
+      if (scrolling) return;
+      scrolling = true;
+      window.requestAnimationFrame(animateStackCards);
+    }
+
+    function stackCardsCallback(entries) {
+      if (entries[0].isIntersecting) {
+        if (!scrollingFn) {
+          scrollingFn = handleScroll;
+          window.addEventListener('scroll', scrollingFn);
+        }
+      } else {
+        if (scrollingFn) {
+          window.removeEventListener('scroll', scrollingFn);
+          scrollingFn = null;
+        }
+      }
+    }
+
+    if ('IntersectionObserver' in window && !Util.osHasReducedMotion()) {
+      setStackCards();
+
+      const observer = new IntersectionObserver(stackCardsCallback, { threshold: [0, 1] });
+      observer.observe(container);
+
+      const handleResize = () => {
+        setTimeout(() => {
+          setStackCards();
+          animateStackCards();
+        }, 500);
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+        observer.disconnect();
+        window.removeEventListener('scroll', scrollingFn);
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []); */
+
+
+  //card end
   return (
     <div className="container">
     <div className="min-h-screen bg-white">     
@@ -333,6 +379,7 @@ export default function Home() {
       {/* Main Content Container */}
       <div>
         {/* Purple Splash Frame */}
+        
         
         <HeroSection
         i1={i1}
@@ -358,10 +405,10 @@ export default function Home() {
 
         {/* Every Child is a Miracle Section */}
       <div className="bg-linear-to-t from-[#F0EBFF] to-[#FDF8DB]">
-        <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-12 md:pb-0 ">
+        <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-12 md:pb-0">
           <div className="relative"><SubHeading
             mainText={<>Every child is a miracle - <br /> a unique story</>}
-            highlightText={<>we're here<br />to care for.</>}
+            highlightText={<>we&apos;re here<br />to care for.</>}
             /* subText={<><i>care for</i></>} */
           />
           <Image
@@ -373,14 +420,27 @@ export default function Home() {
                     /></div>
           
           <p className="leading-relaxed mb-4 mt-3">
-            Each moment of your child's growth is worth celebrating, from first steps to first words. But parenting isn't always magical, with midnight fevers, stubborn coughs, and moments of doubt.
+            {/* Each moment of your child&apos;s growth is worth celebrating, from first
+            steps to first words. But parenting isn&apos;t always magical, with
+            midnight fevers, stubborn coughs, and moments of doubt. */}
+
+            Each moment of your child&apos;s growth is worth celebrating, from first steps to first words. But parenting isn&apos;t always magical, with midnight fevers, stubborn coughs, and moments of doubt.
           </p>
           <p className="leading-relaxed mb-4">
-            That's where we come in; your trusted partner in ensuring nothing stands in the way of your child's health and well-being. We go beyond treating symptoms, offering holistic care that nurtures their physical, emotional, mental, and social development. From personalized growth assessments to making every clinic visit a positive experience, we're here with expert care, joy, and compassion.
+           {/*  That&apos;s where we come in: your trusted partner in ensuring nothing
+            stands in the way of your child&apos;s health and well-being. We go beyond
+            treating symptoms, offering holistic care that nurtures their
+            physical, emotional, mental, and social development. From
+            personalized growth assessments to making every clinic visit a
+            positive experience, we&apos;re here with expert care, joy, and
+            compassion. */}
+
+            That&apos;s where we come in; your trusted partner in ensuring nothing stands in the way of your child&apos;s health and well-being. We go beyond treating symptoms, offering holistic care that nurtures their physical, emotional, mental, and social development. From personalized growth assessments to making every clinic visit a positive experience, we&apos;re here with expert care, joy, and compassion.
+
           </p>
         </div>
 
-        <div className="rounded-3xl p-6 md:p-12 mb-2 md:mb-0">
+        <div className="rounded-3xl p-6 md:p-12 mb-2 md:mb-12">
           {/* Replaced Placeholder with New Content */}
           <div className="w-full bg-[#F4DF76] rounded-xl mb-4">
             <div className="p-8">
@@ -453,7 +513,7 @@ export default function Home() {
           </div>
           <div className="pt-4 pr-[70px] relative">
             <SubHeading
-            mainText={<>We're here for the</>}
+            mainText={<>We&apos;re here for the</>}
             highlightText={<>giggles, sniffles, and everything in</>}
             subText={<><i>between!</i></>}
           />
@@ -473,23 +533,19 @@ export default function Home() {
                     />   
           </div>        
           <p className="text-[16px] mt-3">
-            Some days you're celebrating first steps. <br /> Other days, you're
-            worried about a fever at 2 AM. We are here for it all. Whether it's a
+            Some days you&apos;re celebrating first steps. <br /> Other days, you&apos;re
+            worried about a fever at 2 AM. We are here for it all. Whether it&apos;s a
             quick check-up, a vaccine visit, or something that needs a deeper
             look, we offer the kind of care that listens, explains, and walks the
             path with you.
           </p>
           <h3 className="md:text-2xl mb-16 md:mt-4">
-            Here's how we support you and your child - every step of the way:
+            Here&apos;s how we support you and your child - every step of the way:
           </h3>
           <div className="relative z-10 -mt-12 max-w-md mx-auto">
             <div className="rounded-t-2xl bg-white overflow-hidden">
               {/* General Consultations */}
-              <details 
-                className="group border-b border-gray-200"
-                open={isGeneralConsultationsOpen}
-                ref={generalConsultationsRef}
-              >
+              <details className="group border-b border-gray-200">
                 <summary className="flex items-start gap-4 p-4 bg-[#DDD0FF] cursor-pointer flex-col">
                   <div className="relative w-14 h-14 flex-shrink-0">
                     <Image
@@ -510,20 +566,29 @@ export default function Home() {
                     <p className="text-black text-lg font-bold">
                       General Consultations
                     </p>
+                    {/* <svg
+                      className="w-5 h-5 text-black transform transition-transform group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg> */}
                   </div>
                 </summary>
                 <div className="p-4 bg-[#DDD0FF] text-gray-700 leading-relaxed">
                   Comprehensive health check-ups and consultations for your
-                  child's everyday needs.
+                  child&apos;s everyday needs.
                 </div>
               </details>
 
               {/* Vaccinations */}
-              <details 
-                className="group border-b border-gray-200"
-                open={isVaccinationsOpen}
-                ref={vaccinationsRef}
-              >
+              <details className="group border-b border-gray-200">
                 <summary className="flex items-start flex-col gap-4 p-4 bg-[#A3E48A] cursor-pointer">
                   <div className="relative w-14 h-14 flex-shrink-0">
                     <Image
@@ -542,6 +607,19 @@ export default function Home() {
                   </div>
                   <div className="flex-1 flex justify-between items-center">
                     <p className="text-black text-lg font-bold">Vaccinations</p>
+                    {/* <svg
+                      className="w-5 h-5 text-black transform transition-transform group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg> */}
                   </div>
                 </summary>
                 <div className="p-4 bg-[#A3E48A] text-gray-700 leading-relaxed">
@@ -551,11 +629,7 @@ export default function Home() {
               </details>
 
               {/* Super Specialist Consultations */}
-              <details 
-                className="group border-b border-gray-200"
-                open={isSuperSpecialistOpen}
-                ref={superSpecialistRef}
-              >
+              <details className="group border-b border-gray-200">
                 <summary className="flex items-start flex-col gap-4 p-4 bg-[#FBE38F] cursor-pointer">
                   <div className="relative w-14 h-14 flex-shrink-0">
                     <Image
@@ -576,6 +650,19 @@ export default function Home() {
                     <p className="text-black text-lg font-bold">
                       Super Specialist Consultations
                     </p>
+                   {/*  <svg
+                      className="w-5 h-5 text-black transform transition-transform group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg> */}
                   </div>
                 </summary>
                 <div className="p-4 bg-[#FBE38F] text-sm text-gray-700 leading-relaxed">
@@ -585,11 +672,7 @@ export default function Home() {
               </details>
 
               {/* Developmental Assessments and Therapies */}
-              <details 
-                className="group"
-                open={isDevelopmentalTherapiesOpen}
-                ref={developmentalTherapiesRef}
-              >
+              <details className="group" open>
                 <summary className="flex items-start flex-col gap-4 p-4 bg-[#D6F4FA] cursor-pointer">
                   <div className="relative w-14 h-14 flex-shrink-0">
                     <Image
@@ -610,15 +693,48 @@ export default function Home() {
                     <p className="text-black text-lg font-bold">
                       Developmental Assessments and Therapies
                     </p>
+                   {/*  <svg
+                      className="w-5 h-5 text-black transform transition-transform group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg> */}
                   </div>
                 </summary>
                 <div className="p-4 bg-[#D6F4FA] text-gray-700 leading-relaxed">
                   Our developmental pediatricians and certified therapists go
                   beyond symptoms to create personalized plans that address your
-                  little one's unique needs from speech delays to behavioral
+                  little one&apos;s unique needs from speech delays to behavioral
                   challenges.
                 </div>
               </details>
+
+              {/* <ul className="stack-cards js-stack-cards">
+                <li className="stack-cards__item  rounded-lg shadow-lg js-stack-cards__item bg-red">
+                  <div className="flex justify-center items-center">
+                  card one
+
+                  </div>
+                </li>
+              
+                <li className="stack-cards__item  rounded-lg shadow-lg js-stack-cards__item bg-green">
+                  <div className="flex justify-center items-center">Card Two</div>
+                </li>
+              
+                <li className="stack-cards__item rounded-lg shadow-lg js-stack-cards__item bg-blue">
+                  <div className="flex justify-center items-center">Card Three</div>
+                </li>
+          
+              </ul> */}
+
+
             </div>
           </div>
         </div>
@@ -627,11 +743,14 @@ export default function Home() {
         <SymptomCarousel symptomRows={symptoms} />
       </div>
 
+      
+
         <MilestoneAssessmentSection /> 
         <ClinicCarousel clinics={clinics} />
         {/* Testimonial Section */}
         <div className="relative w-full bg-[#FFF5F5]">
           <Image
+            /* sizes="100vw" */
             src={curvedTop}
             alt="Layer 1"
             className=" mx-auto w-full"
@@ -642,6 +761,7 @@ export default function Home() {
 
         <div className="relative w-full bg-[#FFFFFF] z-0">
           <Image
+            /* sizes="100vw" */
             src={curvedBottom}
             alt="Layer 1"
             className=" mx-auto w-full relative  top[-30px]"

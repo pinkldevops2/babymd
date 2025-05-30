@@ -16,18 +16,21 @@ const CloudTestimonials = () => {
     <div className="bg-[#E1F5FF] md:px-8 text-[#4B3A8F] relative z-2">
       <Image
                   src={next_bees_sleeping}
+                  alt="Bee Animation"
                   width={152}
                   height={152}
                   className="absolute right-[40px] top-[-120px] swing"
                 />
         <Image
                   src={beehive2}
+                  alt="Beehive Animation"
                   width={36}
                   height={36}
                   className="absolute right-[50px] top-[80px]"
                 />  
         <Image
                   src={beehive_cloud}
+                  alt="Beehive Animation"
                   width={56}
                   height={59}
                   className="absolute right-[70px] top-[410px]"
@@ -69,6 +72,7 @@ const CloudTestimonials = () => {
             <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
               <Image
                   src={keerthana}
+                  alt="Keerthana A Photo"
                   width={36}
                   height={36}
                 />  

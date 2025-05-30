@@ -3,9 +3,9 @@ import SuperDocButton from './SuperDocButton';
 
 const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
   return (
-    <div className="px-6 py-10 lg:pt-12">
+    <div className="px-6 py-6 md:pt-2 md:px-0">
       {/* Parent container: relative for button positioning on mobile */}
-      <div className="relative bg-[#5943A5] text-white rounded-2xl mt-4 px-8 pt-10 lg:p-12 w-full mx-auto">
+      <div className="relative bg-[#5943A5] text-white rounded-2xl px-6 pt-10 lg:p-6 w-full mx-auto">
         <div className="flex flex-col lg:flex-row items-start lg:items-end gap-0">
           {/* Left: Text Content (60% on desktop) */}
           <div className="w-full lg:w-3/5 space-y-6">

@@ -28,13 +28,9 @@ body {
   font-family: var(--font-lato), cursive;
   font-size: 16px;
   color:#000;
-  background-color: #FFF2EF;
-}
-body,html{
-	overflow-x: hidden;
 }
 .container{
-	max-width: 1024px!important;
+	max-width: 768px!important;
 	width: 100%!important;
 	margin: auto!important;
 }

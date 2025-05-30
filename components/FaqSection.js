@@ -10,7 +10,7 @@ const FaqSection = ({ faqs }) => {
   };
 
   return (<div>
-    <div className="bg-[#E1F5FF] px-6 py-10 md:p-12 mb-0 md:mb-12 w-full">
+    <div className="bg-[#E1F5FF] px-6 py-10  mb-0  w-full">
       <div className="mb-4 relative">
         <h2 className="text-[28px] leading-[30px] font-semibold">
           Some of the questions <br />

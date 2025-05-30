@@ -9,7 +9,7 @@ export default function Contact() {
       <Head>
         <title>Contact Us | babyMD</title>
       </Head>
-      <main className="min-h-screen bg-[#f0ebea] flex items-center justify-center">
+      <main className="container min-h-screen bg-[#f0ebea] flex items-center justify-center">
         <div className="w-full bg-white p-5  relative">
           {/* Header Title */}
           <div className="mb-6 relative pt-8">

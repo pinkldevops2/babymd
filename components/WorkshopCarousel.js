@@ -23,13 +23,13 @@ const WorkshopCarousel = ({ workshops }) => {
       },
       "(min-width: 1024px)": {
         slides: {
-          perView: 2.3,
+          perView: 1.3,
           spacing: 16,
         },
       },
       "(min-width: 1280px)": {
         slides: {
-          perView: 2.3,
+          perView: 1.3,
           spacing: 16,
         },
       },
@@ -41,7 +41,7 @@ const WorkshopCarousel = ({ workshops }) => {
 
   return (<div className="bg-opacity-80  space-y-4 flex flex-col md:flex-row">
           {/* Heading */}
-          <div className="text-[#6A58AD] px-6 pt-3 md:w-1/2">
+          <div className="text-[#6A58AD] px-6 md:px-4 pt-3 md:w-1/2">
             <div className='relative'>
             <h2 className="text-[28px] leading-[32px] font-bold">
               How about some <br />

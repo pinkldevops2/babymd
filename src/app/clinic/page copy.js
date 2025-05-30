@@ -65,9 +65,8 @@ export default function Clinic() {
   ];
   return (
     <>
-      <div className="container">
       <div className="banner-box bg-[#F9EEB6] relative z-2 py-14 pb-6">
-        <div className="md:px-3">
+        <div className="container mx-auto">
           <div className="flex flex-col justify-center items-center md:flex-row">
             <div className="w-full md:w-2/3">
               <div className="relative px-8 md:px-0 md:w-3/4">
@@ -122,7 +121,7 @@ export default function Clinic() {
       />
 
       <div className="location-section bg-[#FFF2EF] py-4 relative">
-        <div className="md:px-3">
+        <div className="container mx-auto">
           <div className="flex flex-row gap-1 items-start">
             <div className="w-full md:w-3/4">
               <div className="relative px-6 md:px-0">
@@ -156,9 +155,9 @@ export default function Clinic() {
           </div>
 
           {/* Clinic Cards */}
-          <div className="w-full my-8 flex flex-col gap-4 px-6 md:px-0">
+          <div className="w-full my-8 flex flex-col md:flex-row gap-4 px-6 md:px-0">
             {clinics.map((clinic, i) => (
-              <div key={i} className="w-full">
+              <div key={i} className="w-full md:w-1/2 lg:w-1/2 xl:w-1/4">
                 <div className="bg-white p-4 rounded-[20px]">
                   <img
                     className="mx-auto rounded-[20px] min-h-[205px] object-cover"
@@ -169,9 +168,9 @@ export default function Clinic() {
                     <h4 className="text-[20px] font-bold my-1 font-lato">
                       {clinic.title}
                     </h4>
-                    <div className="flex flex-row gap-3">
+                    <div className="flex flex-row gap-2">
                       <img src="/images/map-pin.svg" alt="Map pin" />
-                      <h5 className="text-[14px] text-[#F8845D] underline uppercase underline-offset-[5px] tracking-[2px]">
+                      <h5 className="text-[14px] text-[#F8845D] underline uppercase tracking-[2px]">
                         {clinic.location}
                       </h5>
                     </div>
@@ -259,7 +258,6 @@ export default function Clinic() {
             </div>
           </div>
         </div>
-      </div>
       </div>
     </>
   );

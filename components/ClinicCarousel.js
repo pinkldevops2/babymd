@@ -26,7 +26,7 @@ const ClinicCarousel = ({ clinics }) => {
     breakpoints: {
       '(min-width: 768px)': {
         slides: {
-          perView: 2,
+          perView: 1,
           spacing: 24,
         },
       },
@@ -34,9 +34,10 @@ const ClinicCarousel = ({ clinics }) => {
   });
 
   return (
+
     <div className='flex flex-col md:flex-row'>
       {/* HEADER SECTION */}
-      <div className="bg-[#FFF5F5] p-6 md:p-12 md:mb-12 md:w-1/2">
+      <div className="bg-[#FFF5F5] p-6 md:py-12 md:px-4  md:w-1/2">
         <div className="max-w-2xl">
           <div className="relative">
             <SubHeading
@@ -88,7 +89,7 @@ const ClinicCarousel = ({ clinics }) => {
       </div>
 
       {/* SLIDER SECTION */}
-      <div className="bg-[#FFF5F5] p-6 md:p-12 pt-0 md:mb-12 md:w-1/2">
+      <div className="bg-[#FFF5F5] p-6 md:py-12 md:px-4 pt-0  md:w-1/2">
         <div className="relative max-w-md mx-auto md:max-w-6xl rounded-2xl bg-white p-4">
           <div ref={sliderRef} className="keen-slider">
             {clinics.map((clinic, index) => (
@@ -122,7 +123,7 @@ const ClinicCarousel = ({ clinics }) => {
           {/* Arrows */}
           <button
             onClick={() => instanceRef.current?.prev()}
-            className="absolute left-[-20px] md:left-[-40px] p-2 top-3/4 z-10 transform -translate-y-1/2 bg-[#F4DF76] rounded-full shadow-md"
+            className="absolute left-[-20px] md:left-[-15px] p-2 top-3/4 z-10 transform -translate-y-1/2 bg-[#F4DF76] rounded-full shadow-md"
           >
             <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -130,7 +131,7 @@ const ClinicCarousel = ({ clinics }) => {
           </button>
           <button
             onClick={() => instanceRef.current?.next()}
-            className="absolute right-[-20px] md:right-[-40px] p-2 top-3/4 z-10 transform -translate-y-1/2 bg-[#F4DF76] rounded-full shadow-md"
+            className="absolute right-[-20px] md:right-[-15px] p-2 top-3/4 z-10 transform -translate-y-1/2 bg-[#F4DF76] rounded-full shadow-md"
           >
             <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

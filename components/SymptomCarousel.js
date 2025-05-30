@@ -46,8 +46,9 @@ const SymptomCarousel = ({ symptomRows }) => {
   }, []);
 
   return (
-    <div className="pt-0 pb-8 md:p-12 mt-0 md:mb-12">
-      <div className="px-6">
+    <div className="container">
+    <div className="pt-0 pb-8 mt-0 md:mb-12">
+      <div className="px-6 md:p-12">
         <SubHeading
           mainText={<>More than symptoms, <br />we see the</>}
           highlightText={<>bigger<br /></>}
@@ -77,6 +78,7 @@ const SymptomCarousel = ({ symptomRows }) => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
