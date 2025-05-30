@@ -28,6 +28,7 @@ body {
   font-family: var(--font-lato), cursive;
   font-size: 16px;
   color:#000;
+  background-color: #FFF2EF;
 }
 .container{
 	max-width: 1024px!important;
