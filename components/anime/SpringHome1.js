@@ -1,35 +1,53 @@
-import React, { useEffect } from 'react';
+"use client";
+
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Register the DrawSVGPlugin
-gsap.registerPlugin(DrawSVGPlugin);
+// Register plugins
+gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger);
 
 const SpringHome1 = ({ className }) => {
-  useEffect(() => {
-    const targets = gsap.utils.toArray("#maskReveal path");
-    const appendGroup = document.querySelector("#theMask");
+  const svgRef = useRef(null);
+  const maskRef = useRef(null);
 
-    targets.forEach((obj) => {
-      const clone = obj.cloneNode(true);
+  useEffect(() => {
+    const targets = svgRef.current.querySelectorAll("#maskReveal path");
+
+    targets.forEach((originalPath) => {
+      const clone = originalPath.cloneNode(true);
       clone.removeAttribute("stroke-dasharray");
+
       gsap.set(clone, {
         attr: { stroke: "white" },
-        drawSVG: "100% 100%",
+        drawSVG: "100% 100%", // hidden
       });
-      appendGroup.appendChild(clone);
+
+      maskRef.current.appendChild(clone);
     });
 
-    gsap.to("#theMask path", {
+    gsap.to(maskRef.current.querySelectorAll("path"), {
       duration: 2,
       ease: "power1.inOut",
       stagger: 0.25,
-      drawSVG: "100% 0%",
+      drawSVG: "100% 0%", // animate path from end to start
+      scrollTrigger: {
+        trigger: svgRef.current,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
     });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+      if (maskRef.current) maskRef.current.innerHTML = "";
+    };
   }, []);
 
   return (
     <svg
+      ref={svgRef}
       className={className}
       width="57"
       height="131"
@@ -39,7 +57,7 @@ const SpringHome1 = ({ className }) => {
     >
       <defs>
         <mask id="theMask" maskUnits="userSpaceOnUse">
-          {/* Mask content will be dynamically added via JS */}
+          <g ref={maskRef}></g>
         </mask>
       </defs>
       <g id="maskReveal" mask="url(#theMask)">

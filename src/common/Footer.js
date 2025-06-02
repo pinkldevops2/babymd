@@ -54,7 +54,7 @@ export default function Footer() {
             <h3 className="font-bold uppercase mb-2">Services</h3>
             <ul className="space-y-1 footerULline">
               <li>
-                <Link href="/services/clinics" className="hover:text-[#FF6F61]">
+                <Link href="/clinic" className="hover:text-[#FF6F61]">
                   Clinics
                 </Link>
               </li>

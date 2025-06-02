@@ -2,7 +2,9 @@
 
 import { useEffect } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+
 import SubHeading from "./SubHeading";
 import Rectangle from "@/app/assets/Rectangle.png";
 import RectangleImg from "@/app/assets/RectangleImg.png";
@@ -15,22 +17,33 @@ import beehive7 from "@/app/assets/beehive7.png";
 import beehive8 from "@/app/assets/beehive8.png";
 import SpringHome3 from "./anime/SpringHome3";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const MilestoneAssessmentSection = () => {
   useEffect(() => {
-    gsap.fromTo(
-      ".popinanimation",
-      {
-        scale: 0,
-        opacity: 0,
-      },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.8,
-        ease: "bounce.out",
-        stagger: 0.2,
-      }
-    );
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".popinanimation",
+        {
+          scale: 0,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.8,
+          ease: "bounce.out",
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: ".milestone-image-cluster",
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    });
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -75,7 +88,7 @@ const MilestoneAssessmentSection = () => {
           </div>
 
           {/* Right Column: Image Cluster */}
-          <div className="relative w-full md:w-1/2 h-[380px] pt-10">
+          <div className="relative w-full md:w-1/2 h-[380px] pt-10 milestone-image-cluster">
             <div className="relative w-fit mx-auto">
               <Image
                 width={30}
