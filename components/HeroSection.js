@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import SuperDocButton from './SuperDocButton'; // adjust import based on your folder structure
+import SpringHome1 from "./anime/SpringHome1";
 
 const HeroSection = ({
   i1,
@@ -70,13 +71,7 @@ const HeroSection = ({
           alt="Layer 2"
           className="absolute bottom-24 left-1/2 transform -translate-x-1/2 lg:bottom-[30px]"
         />
-        <Image
-          width={50}
-          height={120}
-          src={spring}
-          alt="Spring"
-          className="absolute bottom-22 left-14 transform -translate-x-1/2"
-        />
+        <SpringHome1 className="absolute bottom-22 left-14 transform -translate-x-1/2" />
 
         <SuperDocButton
           href="#"

@@ -179,7 +179,6 @@ footer h3{
 	background-size: contain;
 }
 .curved_lines {
-    background-image: url(assets/curved_lines.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left 30px;
@@ -248,4 +247,13 @@ footer h3{
 	content: '';
 	opacity: 0.8;
 	z-index: 1;
+}
+.privacy_login{
+	padding-bottom: 40px;
+}
+.privacy_login h2{
+	padding: 20px 0px 10px;
+}
+.privacy_login p{
+	margin-bottom: 20px;
 }

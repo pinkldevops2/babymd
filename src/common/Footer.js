@@ -18,27 +18,32 @@ export default function Footer() {
           <div>
             <h3 className="font-bold uppercase mb-2">Company</h3>
             <ul className="space-y-1 footerULline">
-              <li>
+              <li className="hidden">
                 <Link href="/about-us" className="hover:text-[#FF6F61]">
                   About Us
                 </Link>
               </li>
-              <li>
+              <li className="">
+                <Link href="/contact-baby-md" className="hover:text-[#FF6F61]">
+                  Contact Us
+                </Link>
+              </li>
+              <li className="hidden">
                 <Link href="/doctor" className="hover:text-[#FF6F61]">
                   Our Doctors
                 </Link>
               </li>
-              <li>
+              <li className="hidden">
                 <Link href="/testimonials" className="hover:text-[#FF6F61]">
                   Testimonials
                 </Link>
               </li>
-              <li>
+              <li className="hidden">
                 <Link href="/testimonials" className="hover:text-[#FF6F61]">
                   Our Locations
                 </Link>
               </li>
-              <li>
+              <li className="hidden">
                 <Link href="/testimonials" className="hover:text-[#FF6F61]">
                   Resources
                 </Link>
@@ -53,7 +58,7 @@ export default function Footer() {
                   Clinics
                 </Link>
               </li>
-              <li>
+              <li className="hidden">
                 <Link
                   href="/services/vaccinations"
                   className="hover:text-[#FF6F61]"
@@ -61,7 +66,7 @@ export default function Footer() {
                   Vaccination
                 </Link>
               </li>
-              <li>
+              <li className="hidden">
                 <Link
                   href="/services/24x7-services"
                   className="hover:text-[#FF6F61]"
@@ -69,7 +74,7 @@ export default function Footer() {
                   24x7 Services
                 </Link>
               </li>
-              <li>
+              <li className="hidden">
                 <Link
                   href="/services/treatment-and-therapies"
                   className="hover:text-[#FF6F61]"

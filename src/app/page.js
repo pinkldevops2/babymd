@@ -68,7 +68,7 @@ import MembershipPlans from "../../components/MembershipPlans";
 import MilestoneAssessmentSection from "../../components/MilestoneAssessmentSection";
 import HeroSection from "../../components/HeroSection";
 import StatsSection from "../../components/StatsSection";
-import SymptomCarousel from "../../components/SymptomCarousel"
+import SymptomCarousel from "../../components/SymptomCarousel";
 
 const Util = {
   osHasReducedMotion: () => {
@@ -357,7 +357,7 @@ export default function Home() {
     />
 
         {/* Every Child is a Miracle Section */}
-      <div className="bg-linear-to-t from-[#F0EBFF] to-[#FDF8DB]">
+      <div className="bg-linear-to-t from-[#F0EBFF] to-[#FDF8DB] relative z-5">
         <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-12 md:pb-0 ">
           <div className="relative"><SubHeading
             mainText={<>Every child is a miracle - <br /> a unique story</>}

@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect } from "react";
+import gsap from "gsap";
 import Image from "next/image";
 import SubHeading from "./SubHeading";
 import Rectangle from "@/app/assets/Rectangle.png";
@@ -6,11 +10,29 @@ import topright from "@/app/assets/topright.png";
 import bottomleft from "@/app/assets/bottomleft.png";
 import dotearrow from "@/app/assets/dotearrow.png";
 import bee2 from "@/app/assets/bee2.png";
-import beehive6 from '@/app/assets/beehive6.png';
-import beehive7 from '@/app/assets/beehive7.png';
-import beehive8 from '@/app/assets/beehive8.png';
+import beehive6 from "@/app/assets/beehive6.png";
+import beehive7 from "@/app/assets/beehive7.png";
+import beehive8 from "@/app/assets/beehive8.png";
+import SpringHome3 from "./anime/SpringHome3";
 
 const MilestoneAssessmentSection = () => {
+  useEffect(() => {
+    gsap.fromTo(
+      ".popinanimation",
+      {
+        scale: 0,
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 0.8,
+        ease: "bounce.out",
+        stagger: 0.2,
+      }
+    );
+  }, []);
+
   return (
     <>
       <div className="bg-white rounded-3xl p-6 md:py-12 md:px-4 md:mb-12">
@@ -19,9 +41,20 @@ const MilestoneAssessmentSection = () => {
           <div className="w-full md:w-1/2">
             <div className="relative">
               <SubHeading
-                mainText={<>Curious about your<br />child&apos;s growth?</>}
-                highlightText={<><br />Let&apos;s take a look</>}
-                subText={<><i>together</i></>}
+                mainText={
+                  <>
+                    Curious about your
+                    <br />
+                    child&apos;s growth?
+                  </>
+                }
+                highlightText={
+                  <>
+                    <br />
+                    Let&apos;s take a look
+                  </>
+                }
+                subText={<> <i>together</i> </>}
               />
               <Image
                 width={37}
@@ -32,13 +65,12 @@ const MilestoneAssessmentSection = () => {
               />
             </div>
             <p className="text-gray-700 text-lg leading-relaxed mb-1 mt-2">
-              You&apos;re the expert when it comes to your child but sometimes, it
-              helps to have an extra pair of professional eyes. Our free, online{" "}
-              <span className="font-semibold">milestone assessment tool</span>{" "}
-              lets you easily track their development, from physical growth to
-              behavioral needs. In just a few simple steps, you&apos;ll get the
-              clarity you need to understand where they stand and feel confident
-              in their progress.
+              You&apos;re the expert when it comes to your child but sometimes,
+              it helps to have an extra pair of professional eyes. Our free,
+              online <span className="font-semibold">milestone assessment tool</span> lets you easily track their
+              development, from physical growth to behavioral needs. In just a
+              few simple steps, you&apos;ll get the clarity you need to
+              understand where they stand and feel confident in their progress.
             </p>
           </div>
 
@@ -86,40 +118,35 @@ const MilestoneAssessmentSection = () => {
                 className="absolute bottom-[-40px] left-[-40px]"
               />
 
-              {/* Labels */}
-              <div className="w-fit absolute -bottom-13 left-12">
+              {/* Labels with popinanimation */}
+              <div className="w-fit absolute -bottom-13 left-12 popinanimation">
                 <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">
                   Spectator Behaviour
                 </p>
               </div>
-              <div className="w-fit absolute -top-12 -left-8">
+              <div className="w-fit absolute -top-12 -left-8 popinanimation">
                 <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">
                   Cognition
                 </p>
               </div>
-              <div className="w-fit absolute top-12 -right-[50px]">
+              <div className="w-fit absolute top-12 -right-[50px] popinanimation">
                 <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">
                   Unoccupied Play
                 </p>
               </div>
-              <div className="w-fit absolute top-[150px] -right-[50px]">
+              <div className="w-fit absolute top-[150px] -right-[50px] popinanimation">
                 <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">
                   Neurodivergent
                 </p>
               </div>
-              <div className="w-fit absolute top-[150px] -left-[50px]">
+              <div className="w-fit absolute top-[150px] -left-[50px] popinanimation">
                 <p className="text-[12px] bg-[#DDD0FF] px-4 py-2 rounded-full w-fit">
                   Color stimulation
                 </p>
               </div>
 
               {/* Decorations */}
-              <Image
-                width={100}
-                src={dotearrow}
-                alt="Arrow Decoration"
-                className="absolute bottom-[-15px] right-[-15px]"
-              />
+              <SpringHome3 className="absolute bottom-[-35px] right-[-35px]" />
               <Image
                 width={100}
                 src={bee2}
