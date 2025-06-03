@@ -60,7 +60,7 @@ export default function Clinic() {
     {
       image: "/images/c340ff5accd3a76b9824168ee4a673930fbf9234.jpg",
       title: "BabyMD – Varthur",
-      location: "see map",
+      location: "locate clinic",
       hours: [
         {
           days: "Monday to Saturday",
