@@ -72,28 +72,23 @@ footer h3{
 .fontSmallTem{
 	font-size:10px;
 }
-@keyframes swingUpDown {
-	0%, 100% {
-	  transform: translateY(0);
-	}
-	50% {
-	  transform: translateY(-10px);
-	}
+@keyframes zoomInOnce {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05); /* adjust the zoom level as needed */
+  }
 }
-@keyframes semiCircularMotion {
-  	0%, 100% {
-	  transform: translateX(0);
-	}
-	50% {
-		  transform:translateX(-10px);
-	}
+.swing {
+  animation: 
+    zoomInOnce 0.5s ease-out forwards, /* runs once */
+    swingUpDown 2s ease-in-out infinite; /* loops infinitely */
 }
 .semicircmotion{
 	animation: semiCircularMotion 2s linear infinite;
 }
-.swing {
-    animation: swingUpDown 2s ease-in-out infinite;
-}
+
 .spansidecour{
 	font-family: var(--font-courgette);
 	font-weight:500!important;

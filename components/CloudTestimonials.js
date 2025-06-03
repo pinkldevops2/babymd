@@ -39,31 +39,7 @@ const testimonials = [
     name: "Amit S",
     location: "BabyMD Koramangala",
     image: keerthana,
-  },
-  {
-    id: 3,
-    text: `"We had a wonderful consultation with Dr Shivanga Bora at
-            BabyMD HSR Layout, for my son&apos;s wheezing issue. She was
-            incredibly patient, listened to all our concerns, and provided a
-            clear effective treatment plan. Her friendly approach and expertise
-            made us feel reassured and confident in the care my son received.
-            Highly recommend her for pediatric care!”`,
-    name: "Amit S",
-    location: "BabyMD Koramangala",
-    image: keerthana,
-  },
-  {
-    id: 4,
-    text: `"We had a wonderful consultation with Dr Shivanga Bora at
-            BabyMD HSR Layout, for my son&apos;s wheezing issue. She was
-            incredibly patient, listened to all our concerns, and provided a
-            clear effective treatment plan. Her friendly approach and expertise
-            made us feel reassured and confident in the care my son received.
-            Highly recommend her for pediatric care!"”`,
-    name: "Amit S",
-    location: "BabyMD Koramangala",
-    image: keerthana,
-  },
+  }
 ];
 
  

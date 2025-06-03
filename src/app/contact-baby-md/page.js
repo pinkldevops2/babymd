@@ -6,8 +6,6 @@ import Image from 'next/image';
 import beeimage from "../assets/contactpagebee.png";
 import contactbaby from "../assets/contactbaby.png";
 import contactbb from "../assets/contactbb.png";
-import ZohoLeadForm from "../../../components/form/zohoform";
-import '../../../public/css/form.css';
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -61,7 +59,51 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <ZohoLeadForm />
+          <form className="space-y-4 pt-8 pb-8">
+            {['Name', 'Email', 'Phone'].map((field) => (
+              <div key={field}>
+                <label className=" block mb-1">{field}:</label>
+                <input
+                  type={field === 'Email' ? 'email' : field === 'Phone' ? 'tel' : 'text'}
+                  className="w-full border-b border-black focus:outline-none focus:border-[#5d3fd3] pb-2"
+                />
+              </div>
+            ))}
+
+            {/* Dropdown */}
+            <div>
+              <label className=" block mb-1">My question is about:</label>
+              <select className="w-full h-8 border-b border-black bg-transparent focus:outline-none focus:border-[#5d3fd3] pb-2">
+                <option value=""></option>
+                <option>Appointments</option>
+                <option>Health Advice</option>
+                <option>Follow Up</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            {/* Message Field */}
+            <div>
+              <label className=" block mb-1">Message:</label>
+              <textarea
+                rows={3}
+                className="w-full border-b border-black focus:outline-none focus:border-[#5d3fd3] pb-1"
+              />
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-55 h-14 mx-auto bg-[#5d3fd3] hover:bg-[#4b2eb6] text-white font-semibold  py-2 rounded-full flex justify-center items-center gap-2 transition"
+            >
+              SUBMIT FORM
+              <svg width="29" height="17" viewBox="0 0 29 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M20.0113 8.06535L5.00195 14.947L5.00195 1.18373L20.0113 8.06535Z" fill="white"/>
+<path d="M28.1851 8.06535L13.1758 14.947L13.1758 1.18373L28.1851 8.06535Z" fill="white"/>
+</svg>
+
+            </button>
+          </form>
           <Head>
         <title>Join Us | babyMD</title>
       </Head>
