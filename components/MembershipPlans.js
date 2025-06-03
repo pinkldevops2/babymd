@@ -110,7 +110,7 @@ const MembershipPlans = ({
             alt="Doctor and Child"
             width={420}
             height={350}
-            className="w-full fade-in"
+            className="w-full fade-in md:absolute md:bottom-0"
           />
         </div>
       </div>
