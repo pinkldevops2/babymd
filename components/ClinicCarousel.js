@@ -53,14 +53,14 @@ const ClinicCarousel = ({ clinics }) => {
               alt="beehive"
             />
           </div>
-          <p className="text-lg leading-relaxed mt-4 fade-in">
+          <p className="leading-relaxed mt-4 fade-in">
             Late-night worries or last-minute scrambles shouldn&apos;t mean a long
             drive or endless queues. We&apos;re all about making care easy and
             accessible, so you can feel confident even on your toughest days.
             That&apos;s why our clinics are right in your neighborhood—cozy,
             colourful, and designed with your little one in mind.
           </p>
-          <p className="text-lg mb-2 fade-in">
+          <p className="mb-2 fade-in">
             Call us, book online, or just walk in—we&apos;ll be ready.
           </p>
           <div className="relative hidden">

@@ -77,7 +77,7 @@ const MilestoneAssessmentSection = () => {
                 className="absolute right-0 top-0"
               />
             </div>
-            <p className="text-gray-700 text-lg leading-relaxed mb-1 mt-2 fade-in">
+            <p className="text-gray-700 leading-relaxed mb-1 mt-2 fade-in">
               You&apos;re the expert when it comes to your child but sometimes,
               it helps to have an extra pair of professional eyes. Our free,
               online <span className="font-semibold">milestone assessment tool</span> lets you easily track their
