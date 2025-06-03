@@ -1,5 +1,12 @@
 ﻿"use client";
 import Image from "next/image";
+import React, { useEffect } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Clinic() {
   const clinics = [
     {
@@ -63,6 +70,23 @@ export default function Clinic() {
       ],
     },
   ];
+
+useEffect(() => {
+    gsap.utils.toArray(".fade-in").forEach((el) => {
+      gsap.from(el, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%", // when element top hits 80% of viewport
+          toggleActions: "play none none none", // onEnter, onLeave, onEnterBack, onLeaveBack
+        },
+      });
+    });
+  }, []);
+
   return (
     <>
       <div className="container">
@@ -71,7 +95,7 @@ export default function Clinic() {
           <div className="flex flex-col justify-center items-center md:flex-row">
             <div className="w-full md:w-2/3">
               <div className="relative px-8 md:px-0 md:w-3/4">
-                <h1 className="text-2xl font-bold text-[34px]">
+                <h1 className="text-2xl font-bold text-[34px] fade-in">
                   Care that feels{" "}
                   <span className="text-[#5943A5]">like your second </span>
                   <span className="relative">
@@ -85,18 +109,18 @@ export default function Clinic() {
                     />
                   </span>
                 </h1>
-                <p>
+                <p className="fade-in">
                   Got a sniffle, stumble, or question that can’t wait? We’re
                   just down the road, stocked with smiles, support, and
                   paediatric pros who get it.
                 </p>
                 <img
-                  className="absolute top-[-40px] right-[30px]"
+                  className="absolute top-[-40px] right-[30px] fade-in"
                   src="/images/Group 427319502.svg"
                   alt="Decorative"
                 />
                 <img
-                  className="absolute bottom-[-60px] left-[20px]"
+                  className="absolute bottom-[-60px] left-[20px] fade-in"
                   src="/images/Group 427319515.svg"
                   alt="Decorative"
                 />
@@ -126,7 +150,7 @@ export default function Clinic() {
           <div className="flex flex-row gap-1 items-start">
             <div className="w-full md:w-3/4">
               <div className="relative px-6 md:px-0">
-                <h2 className="text-2xl font-bold text-[28px] leading-[26px] pb-4">
+                <h2 className="text-2xl font-bold text-[28px] leading-[26px] pb-4 fade-in">
                   Right around the
                   <br />
                   corner, <span className="text-[#5943A5]">ready with </span>
@@ -145,7 +169,7 @@ export default function Clinic() {
                     alt="Decorative"
                   />
                 </h2>
-                <p>
+                <p className="fade-in">
                   Whether you&#39;re in HSR, Hosa Road, Whitefield, or wherever life
                   takes you, we’re all set with our warm spaces and caring faces
                   for your tiny superstar. And yep, we’re popping up in even
@@ -159,35 +183,35 @@ export default function Clinic() {
           <div className="w-full my-8 flex flex-col gap-4 px-6 md:px-0">
             {clinics.map((clinic, i) => (
               <div key={i} className="w-full">
-                <div className="bg-white p-4 rounded-[20px]">
+                <div className="bg-white p-4 rounded-[20px] fade-in">
                   <img
                     className="mx-auto rounded-[20px] min-h-[205px] object-cover"
                     src={clinic.image}
                     alt="Clinic"
                   />
                   <div className="p-4">
-                    <h4 className="text-[20px] font-bold my-1 font-lato">
+                    <h4 className="text-[20px] font-bold my-1 font-lato fade-in">
                       {clinic.title}
                     </h4>
-                    <div className="flex flex-row gap-3">
+                    <div className="flex flex-row gap-3 fade-in">
                       <img src="/images/map-pin.svg" alt="Map pin" />
                       <h5 className="text-[14px] text-[#F8845D] underline uppercase underline-offset-[5px] tracking-[2px]">
                         {clinic.location}
                       </h5>
                     </div>
                     <div className="clinic-hrs mt-6">
-                      <h4 className="text-[14px] font-bold font-lato">
+                      <h4 className="text-[14px] font-bold font-lato fade-in">
                         Clinic Hours:
                       </h4>
                       {clinic.hours.map((hour, idx) => (
-                        <h4 key={idx} className="text-[14px] font-lato">
+                        <h4 key={idx} className="text-[14px] font-lato fade-in">
                           <span className="font-bold">{hour.days} </span> –{" "}
                           {hour.time}
                         </h4>
                       ))}
                       <button
                         type="button"
-                        className="hidden text-white bg-[#5943A5] hover:bg-[#F8845D] transition-all focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-4 text-center mt-5 mx-auto flex flex-row gap-2"
+                        className="fade-in hidden text-white bg-[#5943A5] hover:bg-[#F8845D] transition-all focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-4 text-center mt-5 mx-auto flex flex-row gap-2"
                       >
                         <span>view details</span>
                         <img src="/images/Group 2349.png" alt="Arrow" />
@@ -199,7 +223,7 @@ export default function Clinic() {
             ))}
           </div>
 
-          <div className="w-full my-2 flex justify-center flex-row gap-2">
+          <div className="w-full my-2 flex justify-center flex-row gap-2 fade-in">
             <h1 className="text-2xl font-bold text-[34px]">
               <a href="#" className="relative cursor-pointer">
                 <i className="font-normal text-[#5943A5] z-2">... and more !</i>
@@ -218,7 +242,7 @@ export default function Clinic() {
           <div className="flex flex-col relative justify-center items-center md:flex-row bg-[#DBFFCC] rounded-[20px] mx-4 md:mx-0 overflow-hidden pt-8">
             <div className="w-full md:w-2/3 px-2 py-2 md:p-4 md:pl-12">
               <div className="relative px-8 md:px-0">
-                <h2 className="font-bold text-[28px] leading-[26px]">
+                <h2 className="font-bold text-[28px] leading-[26px] fade-in">
                   <span className="text-[#5943A5]">
                     You’ve got this.
                     <br />
@@ -238,7 +262,7 @@ export default function Clinic() {
               </div>
               <button
                 type="button"
-                className="text-white bg-[#5943A5] hover:bg-[#F8845D] transition-all focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-4 text-center mt-12 mx-auto md:mx-0 flex flex-row gap-2 justify-center middlingbtns"
+                className="fade-in text-white bg-[#5943A5] hover:bg-[#F8845D] transition-all focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-4 text-center mt-12 mx-auto md:mx-0 flex flex-row gap-2 justify-center middlingbtns"
               >
                 <span>Care? Right This Way </span>
                 <img src="/images/Group 2349.png" alt="Arrow" />
