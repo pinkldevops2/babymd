@@ -12,7 +12,7 @@ const FaqSection = ({ faqs }) => {
   return (<div>
     <div className="bg-[#E1F5FF] px-6 py-10  mb-0  w-full">
       <div className="mb-4 relative">
-        <h2 className="text-[28px] leading-[30px] font-semibold">
+        <h2 className="text-[28px] leading-[30px] font-semibold fade-in">
           Some of the questions <br />
           <span className="text-[#4B3A8F] font-bold">parents really ask<br/>us</span>
           <span className="spansidecour text-[#4B3A8F]">(a lot!)</span>
@@ -26,7 +26,7 @@ const FaqSection = ({ faqs }) => {
                             />
       </div>
 
-      <p className="text-[#2E2E2E] text-lg md:text-xl leading-relaxed font-medium mb-4 mt-4">
+      <p className="text-[#2E2E2E] text-lg md:text-xl leading-relaxed font-medium mb-4 mt-4 fade-in">
         Got questions about midnight fevers, first foods, routine vaccines,
         tricky rashes, or curious growth spurts? We&apos;re here to guide you through
         every question—no judgment, just answers you can rely on.
@@ -38,7 +38,7 @@ const FaqSection = ({ faqs }) => {
           return (
             <div
               key={index}
-              className="overflow-hidden border border-[#91CFDA80] rounded-[15px]"
+              className="overflow-hidden border border-[#91CFDA80] rounded-[15px] fade-in"
             >
               <button
                 onClick={() => toggleAccordion(index)}

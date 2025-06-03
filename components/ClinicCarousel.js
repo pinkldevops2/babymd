@@ -53,14 +53,14 @@ const ClinicCarousel = ({ clinics }) => {
               alt="beehive"
             />
           </div>
-          <p className="text-lg leading-relaxed mt-4">
+          <p className="text-lg leading-relaxed mt-4 fade-in">
             Late-night worries or last-minute scrambles shouldn&apos;t mean a long
             drive or endless queues. We&apos;re all about making care easy and
             accessible, so you can feel confident even on your toughest days.
             That&apos;s why our clinics are right in your neighborhood—cozy,
             colourful, and designed with your little one in mind.
           </p>
-          <p className="text-lg mb-2">
+          <p className="text-lg mb-2 fade-in">
             Call us, book online, or just walk in—we&apos;ll be ready.
           </p>
           <div className="relative hidden">
@@ -94,7 +94,7 @@ const ClinicCarousel = ({ clinics }) => {
           <div ref={sliderRef} className="keen-slider">
             {clinics.map((clinic, index) => (
               <div key={index} className="keen-slider__slide">
-                <div className="relative w-full h-[300px] mb-6 rounded-xl overflow-hidden">
+                <div className="relative w-full h-[300px] mb-6 rounded-xl overflow-hidden fade-in">
                   <Image
                     width={350}
                     height={300}
@@ -104,15 +104,15 @@ const ClinicCarousel = ({ clinics }) => {
                   />
                 </div>
                 <div className="mb-4 px-4">
-                  <h4 className="text-[20px] font-[700] text-gray-800 mb-1 font-lato">
+                  <h4 className="text-[20px] font-[700] text-gray-800 mb-1 font-lato fade-in">
                     {clinic.name}
                   </h4>
                   <p
-                    className="text-sm text-gray-600 mb-2 font-baloo2"
+                    className="text-sm text-gray-600 mb-2 font-baloo2 fade-in"
                     dangerouslySetInnerHTML={{ __html: clinic.address }}
                   />
                   <p
-                    className="text-sm text-gray-600 font-baloo2"
+                    className="text-sm text-gray-600 font-baloo2 fade-in"
                     dangerouslySetInnerHTML={{ __html: clinic.hours }}
                   />
                 </div>
@@ -157,7 +157,7 @@ const ClinicCarousel = ({ clinics }) => {
           <SuperDocButton
             href="#"
             label="VISIT YOUR NEAREST BABYMD"
-            className="w-80 text-center"
+            className="w-80 text-center fade-in"
             variant="pink"
           />
         </div>

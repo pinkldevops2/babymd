@@ -53,8 +53,9 @@ const SymptomCarousel = ({ symptomRows }) => {
           mainText={<>More than symptoms, <br />we see the</>}
           highlightText={<>bigger<br /></>}
           subText={<><i>picture</i></>}
+          className="fade-in"
         />
-        <p className="pt-2">
+        <p className="pt-2 fade-in">
           Because every child is a miracle, and every concern deserves real
           attention. Whether it&apos;s just a feeling, your tiny tot&apos;s in a fever, a
           delay, or just a feeling, we&apos;re here with expert eyes, kind hearts,
@@ -65,7 +66,7 @@ const SymptomCarousel = ({ symptomRows }) => {
       {/* Carousel Buttons */}
       <div className="space-y-4 mt-10 pb-5">
         {[symptomSliderRef1, symptomSliderRef2, symptomSliderRef3].map((ref, i) => (
-          <div key={i} className="mx-auto rounded-2xl overflow-hidden p-0">
+          <div key={i} className="mx-auto rounded-2xl overflow-hidden p-0 fade-in">
             <div ref={ref} className="keen-slider">
               {symptomRows[i].map((buttonText, index) => (
                 <div key={index} className="keen-slider__slide !w-auto">

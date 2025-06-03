@@ -31,6 +31,7 @@ const StatsSection = ({
           mainText={<> You don&apos;t have to<br /></>}
           highlightText={<>figure it out</>}
           subText={<><i>all alone</i></>}
+          className={"fade-in"}
         />
         <Image
           width={33}
@@ -40,7 +41,7 @@ const StatsSection = ({
           className="absolute right-[40px] top-[20px]"
         />
 
-        <p className="pt-3">
+        <p className="pt-3 fade-in">
           Behind our every mark is a parent who found clarity and a child who
           felt better, safer, and happier. From midnight fevers to milestone
           check-ups, these stats reflect a story of care that goes beyond
@@ -64,13 +65,13 @@ const StatsSection = ({
         <div className="flex flex-col md:flex-row justify-between flex-wrap gap-6 items-center md:px-4">
           {/* Stat 1 */}
           <div className="relative w-80 h-[300px]" ref={ref1}>
-            <Image src={Vector} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover" />
-            <Image src={Vector1} alt="overlay" className="absolute bottom-0 left-1/2 transform -translate-x-1/2" />
+            <Image src={Vector} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover fade-in" />
+            <Image src={Vector1} alt="overlay" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 fade-in" />
             <div>
               <h2 className="w-fit text-[#5943A5] text-[60px] font-bold absolute left-[70px] top-[40px] z-5">
                 {inView1 ? <CountUp start={0} end={5000} duration={2} suffix="+" /> : "5000+"}
               </h2>
-              <p className="w-fit text-[#5943A5] absolute left-[170px] top-[120px] leading-[20px] md:text-[20px] md:leading-[24px]">
+              <p className="fade-in w-fit text-[#5943A5] absolute left-[170px] top-[120px] leading-[20px] md:text-[20px] md:leading-[24px]">
                 Happy <br />Families <br />and <br />Counting
               </p>
             </div>
@@ -78,13 +79,13 @@ const StatsSection = ({
 
           {/* Stat 2 */}
           <div className="relative w-80 h-[330px]" ref={ref2}>
-            <Image src={Vector2} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover" />
-            <Image src={Vector2a} alt="overlay" className="absolute bottom-0 left-1/2 transform -translate-x-1/2" />
+            <Image src={Vector2} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover fade-in" />
+            <Image src={Vector2a} alt="overlay" className="absolute bottom-0 fade-in left-1/2 transform -translate-x-1/2" />
             <div>
               <h2 className="w-fit text-[#E3B200] relative font-bold text-[60px] left-[140px]">
                 {inView2 ? <CountUp start={0} end={4.9} decimals={1} duration={2} suffix="+" /> : "4.9+"}
               </h2>
-              <p className="w-fit text-[#E3B200] text-[20px] relative left-[150px] top-[-25px]">
+              <p className="fade-in w-fit text-[#E3B200] text-[20px] relative left-[150px] top-[-25px]">
                 Google Rating
               </p>
             </div>
@@ -92,13 +93,13 @@ const StatsSection = ({
 
           {/* Stat 3 */}
           <div className="relative w-80 h-[300px]" ref={ref3}>
-            <Image src={Vector3} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover" />
-            <Image src={Vector3a} alt="overlay" className="absolute bottom-0 left-1/2 transform -translate-x-1/2" />
+            <Image src={Vector3} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover fade-in" />
+            <Image src={Vector3a} alt="overlay" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 fade-in" />
             <div>
               <h2 className="w-fit text-[#269BD9] text-[60px] relative font-bold left-[130px] top-[25px]">
                 {inView3 ? <CountUp start={0} end={2500} duration={2} suffix="+" /> : "2500+"}
               </h2>
-              <p className="w-fit text-[#269BD9] text-[20px] relative left-[190px]">
+              <p className="w-fit text-[#269BD9] text-[20px] relative left-[190px] fade-in">
                 Glowing <br /> Reviews
               </p>
             </div>
@@ -106,12 +107,12 @@ const StatsSection = ({
 
           {/* Stat 4 */}
           <div className="relative w-80 h-[320px]" ref={ref4}>
-            <Image src={Vector4} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover" />
-            <Image src={Vector4a} alt="overlay" className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2" />
+            <Image src={Vector4} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover fade-in" />
+            <Image src={Vector4a} alt="overlay" className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2 fade-in" />
             <h2 className="w-fit text-[#ED750F] text-[60px] relative font-bold left-[130px] top-[25px]">
               {inView4 ? <CountUp start={0} end={30} duration={2} suffix="+" /> : "30+"}
             </h2>
-            <p className="w-fit text-[#ED750F] text-[20px] relative whitespace-nowrap left-[130px]">
+            <p className="w-fit text-[#ED750F] text-[20px] relative whitespace-nowrap left-[130px] fade-in">
               Years of Pediatric <br /> Wisdom
             </p>
           </div>

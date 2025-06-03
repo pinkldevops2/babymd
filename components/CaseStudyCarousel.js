@@ -52,7 +52,7 @@ const CaseStudyCarousel = ({ caseStudies }) => {
                 className='absolute top-[-15px] right-0'
                 />
             </div>
-            <p className="mt-2 text-[#231F20]">
+            <p className="mt-2 text-[#231F20] fade-in">
               Juggling work, family, and endless advice on parenting? We&apos;ve got
               you covered. Delve into our expert insights, practical tips, and
               the latest updates curated exclusively for you.
@@ -89,15 +89,15 @@ const CaseStudyCarousel = ({ caseStudies }) => {
                 src={caseStudy.image}
                 alt={caseStudy.title}
                 fill
-                className="object-cover max-h-[200px]"
+                className="object-cover max-h-[200px] fade-in"
                 sizes="100vw"
                 />
               </div>
               <div className="mt-3">
-                <p className="text-[10px] font-bold text-[#EB5A44] uppercase font-baloo2">
+                <p className="text-[10px] font-bold text-[#EB5A44] uppercase font-baloo2 fade-in">
                   {caseStudy.category}
                 </p>
-                <p className="font-semibold text-[20px] leading-[25px] text-[#231F20] font-lato">
+                <p className="font-semibold text-[20px] leading-[25px] text-[#231F20] font-lato fade-in">
                   {caseStudy.title}
                 </p>
               </div>
@@ -105,7 +105,7 @@ const CaseStudyCarousel = ({ caseStudies }) => {
           </div>
         ))}
       </div><div className="flex justify-center pr-6">
-            <SuperDocButton href="/superdoc" label="STAY INFORMED" className="my-5" variant="purple"/>
+            <SuperDocButton href="/superdoc" label="STAY INFORMED" className="my-5 fade-in" variant="purple"/>
           </div>
     </div>
     {/* CTA Button */}

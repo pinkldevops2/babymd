@@ -43,7 +43,7 @@ const WorkshopCarousel = ({ workshops }) => {
           {/* Heading */}
           <div className="text-[#6A58AD] px-6 md:px-4 pt-3 md:w-1/2">
             <div className='relative'>
-            <h2 className="text-[28px] leading-[32px] font-bold">
+            <h2 className="text-[28px] leading-[32px] font-bold fade-in">
               How about some <br />
               <span className="italic font-medium text-[#6A58AD]">
                 <i>parenting tips</i>
@@ -61,7 +61,7 @@ const WorkshopCarousel = ({ workshops }) => {
                         className="absolute right-[0px] top-[-15px]"
                       />            
             </div>
-            <p className="text-[16px] text-black mt-2 leading-[24px]">
+            <p className="text-[16px] text-black mt-2 leading-[24px] fade-in">
               Ever wished parenting came with a guidebook? From picky eating to
               tantrums, we know you&apos;ve got questions. Join our expert-led
               webinars to get practical tips and expert answers to feel confident
@@ -74,7 +74,7 @@ const WorkshopCarousel = ({ workshops }) => {
           <div key={index} className="keen-slider__slide min-w-[280px] md:min-w-[350px] pr-4">
             <div className="overflow-hidden">
               <div className="mb-4 pt-4">
-                <h3 className="text-[20px] leading-[25px] font-bold text-[#5943A5] mb-1 font-lato">
+                <h3 className="text-[20px] leading-[25px] font-bold text-[#5943A5] mb-1 font-lato fade-in">
                   {workshop.title}
                 </h3>
               </div>
@@ -84,7 +84,7 @@ const WorkshopCarousel = ({ workshops }) => {
                   height={260}
                   src={workshop.image}
                   alt={workshop.title}
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-cover rounded-2xl fade-in"
                 />
                 <div className="absolute z-10 top-2 right-2 bg-[#5943A5] text-white text-xs p-1 rounded-md font-bold text-center w-[70px]">
                   <span className="text-base">{workshop.date.split(" ")[0]}</span>
@@ -119,7 +119,7 @@ const WorkshopCarousel = ({ workshops }) => {
           />
         ))}
       </div><div className="flex justify-center pt-6">
-                <SuperDocButton href="#" label="SAVE YOUR SPOT" className="mb-10 mt-0" variant="pink"/>
+                <SuperDocButton href="#" label="SAVE YOUR SPOT" className="mb-10 mt-0 fade-in" variant="pink"/>
               </div>
     </div>
             </div>

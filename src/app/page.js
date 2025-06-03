@@ -70,6 +70,11 @@ import HeroSection from "../../components/HeroSection";
 import StatsSection from "../../components/StatsSection";
 import SymptomCarousel from "../../components/SymptomCarousel";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Util = {
   osHasReducedMotion: () => {
     if (!window.matchMedia) return false;
@@ -326,6 +331,22 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollDirection]);
 
+  useEffect(() => {
+    gsap.utils.toArray(".fade-in").forEach((el) => {
+      gsap.from(el, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%", // when element top hits 80% of viewport
+          toggleActions: "play none none none", // onEnter, onLeave, onEnterBack, onLeaveBack
+        },
+      });
+    });
+  }, []);
+
   return (
     <div className="container">
     <div className="min-h-screen bg-white">     
@@ -359,7 +380,7 @@ export default function Home() {
         {/* Every Child is a Miracle Section */}
       <div className="bg-linear-to-t from-[#F0EBFF] to-[#FDF8DB] relative z-5">
         <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-12 md:pb-0 ">
-          <div className="relative"><SubHeading
+          <div className="relative fade-in"><SubHeading
             mainText={<>Every child is a miracle - <br /> a unique story</>}
             highlightText={<>we&#39;re here<br />to care for.</>}
             /* subText={<><i>care for</i></>} */
@@ -372,10 +393,10 @@ export default function Home() {
                       className="absolute right-[0px] top-[60px]"
                     /></div>
           
-          <p className="leading-relaxed mb-4 mt-3">
+          <p className="leading-relaxed mb-4 mt-3 fade-in">
             Each moment of your child&#39;s growth is worth celebrating, from first steps to first words. But parenting isn&#39;t always magical, with midnight fevers, stubborn coughs, and moments of doubt.
           </p>
-          <p className="leading-relaxed mb-4">
+          <p className="leading-relaxed mb-4 fade-in">
             That&#39;s where we come in; your trusted partner in ensuring nothing stands in the way of your child&#39;s health and well-being. We go beyond treating symptoms, offering holistic care that nurtures their physical, emotional, mental, and social development. From personalized growth assessments to making every clinic visit a positive experience, we&#39;re here with expert care, joy, and compassion.
           </p>
         </div>
@@ -384,19 +405,19 @@ export default function Home() {
           {/* Replaced Placeholder with New Content */}
           <div className="w-full bg-[#F4DF76] rounded-xl mb-4">
             <div className="p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 fade-in">
                 Our Promise to You and Your Child
               </h3>
 
               <div className="space-y-6">
                 {/* Expert care section */}
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 fade-in">
                   <Image
                     src={PromiseIcon1}
                     alt="Empathy Icon"
                     width={45}
                     height={40}
-                    className="flex-shrink-0"
+                    className="flex-shrink-0 fade-in"
                   />
                   <div>
                     <h4 className="text-lg font-semibold font-lato text-gray-900">
@@ -410,13 +431,13 @@ export default function Home() {
                 </div>
 
                 {/* Attention to detail section */}
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 fade-in">
                   <Image
                     src={PromiseIcon2}
                     alt="Checklist Icon"
                     width={45}
                     height={40}
-                    className="flex-shrink-0"
+                    className="flex-shrink-0 fade-in"
                   />
                   <div>
                     <h4 className="text-lg font-semibold font-lato text-gray-900">
@@ -430,19 +451,19 @@ export default function Home() {
                 </div>
 
                 {/* Joy section */}
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 fade-in">
                   <Image
                     src={PromiseIcon3}
                     alt="Play Icon"
                     width={45}
                     height={40}
-                    className="flex-shrink-0"
+                    className="flex-shrink-0 fade-in"
                   />
                   <div>
-                    <h4 className="text-lg font-semibold font-lato text-gray-900">
+                    <h4 className="text-lg font-semibold font-lato text-gray-900 fade-in">
                       Joy, every step of the way:
                     </h4>
-                    <p className="text-gray-700">
+                    <p className="text-gray-700 fade-in">
                       From playful spaces to a team that knows your family by
                       name, we make healthcare warm, welcoming, and child-first.
                     </p>
@@ -451,7 +472,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="pt-4 pr-[70px] relative">
+          <div className="pt-4 pr-[70px] relative fade-in">
             <SubHeading
             mainText={<>We&#39;re here for the</>}
             highlightText={<>giggles, sniffles, and everything in</>}
@@ -472,14 +493,14 @@ export default function Home() {
                       className="absolute right-[0px] top-[90px]"
                     />   
           </div>        
-          <p className="text-[16px] mt-3">
+          <p className="text-[16px] mt-3 fade-in">
             Some days you&#39;re celebrating first steps. <br /> Other days, you&#39;re
             worried about a fever at 2 AM. We are here for it all. Whether it&#39;s a
             quick check-up, a vaccine visit, or something that needs a deeper
             look, we offer the kind of care that listens, explains, and walks the
             path with you.
           </p>
-          <h3 className="md:text-2xl mb-16 md:mt-4">
+          <h3 className="md:text-2xl mb-16 md:mt-4 fade-in">
             Here&#39;s how we support you and your child - every step of the way:
           </h3>
           <div className="relative z-10 -mt-12 max-w-md mx-auto">
@@ -490,7 +511,7 @@ export default function Home() {
                 open={isGeneralConsultationsOpen}
                 ref={generalConsultationsRef}
               >
-                <summary className="flex items-start gap-4 p-4 bg-[#DDD0FF] cursor-pointer flex-col">
+                <summary className="flex items-start gap-4 p-4 bg-[#DDD0FF] cursor-pointer flex-col fade-in">
                   <div className="relative w-14 h-14 flex-shrink-0">
                     <Image
                       src={IconBackground}
@@ -606,13 +627,13 @@ export default function Home() {
                       className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                     />
                   </div>
-                  <div className="flex-1 flex justify-between items-center">
+                  <div className="flex-1 flex justify-between items-center fade-in">
                     <p className="text-black text-lg font-bold">
                       Developmental Assessments and Therapies
                     </p>
                   </div>
                 </summary>
-                <div className="p-4 bg-[#D6F4FA] text-gray-700 leading-relaxed">
+                <div className="p-4 bg-[#D6F4FA] text-gray-700 leading-relaxed fade-in">
                   Our developmental pediatricians and certified therapists go
                   beyond symptoms to create personalized plans that address your
                   little one&#39;s unique needs from speech delays to behavioral

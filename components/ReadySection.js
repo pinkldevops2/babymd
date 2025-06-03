@@ -9,14 +9,14 @@ const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
         <div className="flex flex-col lg:flex-row items-start lg:items-end gap-0">
           {/* Left: Text Content (60% on desktop) */}
           <div className="w-full lg:w-3/5 space-y-6">
-            <h2 className="font-baloo2 text-[28px] md:text-[32px] lg:text-[40px] leading-[30px] font-bold pb-2">
+            <h2 className="fade-in font-baloo2 text-[28px] md:text-[32px] lg:text-[40px] leading-[30px] font-bold pb-2">
               Whenever you need us, we’re here &mdash; with<br/>care{' '}
               <span className="italic font-light text-white px-1 yellow_circle">
                 <i>that’s ready</i>
               </span>
             </h2>
 
-            <p className="md:text-base lg:text-lg leading-relaxed font-lato text-[#FFFFFF]">
+            <p className="fade-in md:text-base lg:text-lg leading-relaxed font-lato text-[#FFFFFF]">
               Babies don’t come with instructions, but we do. Whether it’s a
               routine check-up, a fever that won’t quit, or just a little peace
               of mind — pick a time, choose a clinic, and we’ll handle the rest.
@@ -31,7 +31,7 @@ const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
                   src={readyvectorImg}
                   alt="Family"
                   fill
-                  className="object-contain"
+                  className="object-contain fade-in"
                   priority
                 />
               </div>
@@ -41,7 +41,7 @@ const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
 
         {/* Button: absolute on mobile (20px from bottom), static on desktop */}
         <div className="absolute  bottom-[20px] left-1/2 transform -translate-x-1/2 w-full px-6 lg:transform-none lg:px-0 lg:w-auto lg:mt-8 lg:w-fit lg:relative lg:left-[152px]">
-          <SuperDocButton href="#" label="BOOK YOUR APPOINTMENT" className="text-center justify-center" variant="yellow" textColor="#5943A5"/>
+          <SuperDocButton href="#" label="BOOK YOUR APPOINTMENT" className="text-center justify-center fade-in" variant="yellow" textColor="#5943A5"/>
         </div>
       </div>
     </div>

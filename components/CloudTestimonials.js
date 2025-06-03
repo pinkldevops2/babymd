@@ -135,7 +135,7 @@ const CloudTestimonials = () => {
                   className="absolute right-[70px] top-[410px]"
                 />        
       {/* Heading */}
-      <h2 className="text-[28px] leading-[32px] md:text-2xl font-bold mb-2 px-6 md:px-4">
+      <h2 className="text-[28px] leading-[32px] md:text-2xl font-bold mb-2 px-6 md:px-4 fade-in">
         Don&apos;t just <span className="text-[#5943A5]">take</span>
         <br />
         <span className="text-[#5943A5] italic font-medium">
@@ -158,15 +158,15 @@ const CloudTestimonials = () => {
             key={item.id}
             className="keen-slider__slide mt-4 relative px-6 w-80 z-2 cloud-img_slider "
           >
-            <p className="text-sm relative leading-relaxed text-gray-800 cloud-testimonial-pera max-h-[140px] overflow-x-scroll">{item.text}</p>
+            <p className="fade-in text-sm relative leading-relaxed text-gray-800 cloud-testimonial-pera max-h-[140px] overflow-x-scroll">{item.text}</p>
 
             <div className="mt-4 flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
+              <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden fade-in">
                 <Image src={item.image} width={36} height={36} alt={item.name}/>
               </div>
               <div>
-                <p className="font-semibold text-[#EB5A44] text-sm">{item.name}</p>
-                <p className="italic text-[#4B3A8F] text-xs">{item.location}</p>
+                <p className="font-semibold text-[#EB5A44] text-sm fade-in">{item.name}</p>
+                <p className="italic text-[#4B3A8F] text-xs fade-in">{item.location}</p>
               </div>
             </div>
 
