@@ -49,7 +49,7 @@ const StatsSection = ({
         </p>
       </div>
 
-      <div className="w-full mt-8 pb-6 flex flex-col items-center space-y-4 curved_lines">
+      <div className="w-full mt-8 pb-12 flex flex-col items-center space-y-4 curved_lines">
         {/* Decorative Bees */}
         <div className="mb-8 relative w-full">
           <Image
@@ -62,7 +62,7 @@ const StatsSection = ({
         </div>
 
         {/* Stat Blocks */}
-        <div className="flex flex-col md:flex-row justify-between flex-wrap gap-6 items-center md:px-4">
+        <div className="flex flex-col md:flex-row justify-between flex-wrap gap-6 items-center md:px-6">
           {/* Stat 1 */}
           <div className="relative w-80 h-[300px]" ref={ref1}>
             <Image src={Vector} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover fade-in" />
@@ -71,7 +71,7 @@ const StatsSection = ({
               <h2 className="w-fit text-[#5943A5] text-[60px] font-bold absolute left-[70px] top-[40px] z-5">
                 {inView1 ? <CountUp start={0} end={5000} duration={2} suffix="+" /> : "5000+"}
               </h2>
-              <p className="fade-in w-fit text-[#5943A5] absolute left-[170px] top-[120px] leading-[20px] md:text-[20px] md:leading-[24px]">
+              <p className="fade-in w-fit text-[#5943A5] absolute left-[170px] top-[120px] leading-[20px] text-[20px] md:leading-[24px]">
                 Happy <br />Families <br />and <br />Counting
               </p>
             </div>

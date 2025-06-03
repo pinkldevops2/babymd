@@ -36,7 +36,7 @@ const CloudTestimonials = () => {
                   className="absolute right-[70px] top-[410px]"
                 />        
       {/* Heading */}
-      <h2 className="text-[28px] leading-[32px] md:text-2xl font-bold mb-2 px-6">
+      <h2 className="text-[28px] leading-[32px] font-bold mb-2 px-6">
         Don&apos;t just <span className="text-[#5943A5]">take</span>
         <br />
         <span className="text-[#5943A5] italic font-medium">

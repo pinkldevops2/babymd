@@ -135,7 +135,7 @@ const CloudTestimonials = () => {
                   className="absolute right-[70px] top-[410px]"
                 />        
       {/* Heading */}
-      <h2 className="text-[28px] leading-[32px] md:text-2xl font-bold mb-2 px-6 md:px-4 fade-in">
+      <h2 className="text-[28px] leading-[32px] font-bold mb-2 px-6 md:px-6 fade-in">
         Don&apos;t just <span className="text-[#5943A5]">take</span>
         <br />
         <span className="text-[#5943A5] italic font-medium">
@@ -171,7 +171,7 @@ const CloudTestimonials = () => {
             </div>
 
             <div className=" flex items-center justify-start mt-5 mb-6">
-              <button className="text-xs font-semibold text-[#4B3A8F] flex items-center underline underline-offset-[3px]">
+              <button className="hidden text-xs font-semibold text-[#4B3A8F] flex items-center underline underline-offset-[3px]">
                 SEE VIDEO
                 <span className="ml-1 text-xs">
                   <Image

@@ -3,13 +3,13 @@ import SuperDocButton from './SuperDocButton';
 
 const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
   return (
-    <div className="px-6 py-6 md:pt-2 md:px-0">
+    <div className="px-6 py-6 md:pt-2 md:px-6">
       {/* Parent container: relative for button positioning on mobile */}
       <div className="relative bg-[#5943A5] text-white rounded-2xl px-6 pt-10 lg:p-6 w-full mx-auto">
         <div className="flex flex-col lg:flex-row items-start lg:items-end gap-0">
           {/* Left: Text Content (60% on desktop) */}
           <div className="w-full lg:w-3/5 space-y-6">
-            <h2 className="fade-in font-baloo2 text-[28px] md:text-[32px] lg:text-[40px] leading-[30px] font-bold pb-2">
+            <h2 className="fade-in font-baloo2 text-[28px] md:text-[28px] leading-[30px] font-bold pb-2">
               Whenever you need us, we’re here &mdash; with<br/>care{' '}
               <span className="italic font-light text-white px-1 yellow_circle">
                 <i>that’s ready</i>

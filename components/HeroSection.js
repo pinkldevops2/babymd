@@ -14,7 +14,7 @@ const HeroSection = ({
     <div className="container">
     <div className="flex flex-col md:flex-row justify-between">
       {/* Text Section */}
-      <div className="w-full md:w-7/12 relative rounded-3xl p-6 md:py-12 md:px-4 mb-8 md:mb-12 mt-8">
+      <div className="w-full md:w-7/12 relative rounded-3xl py-6 px-6 md:py-12 md:px-6 mb-8 md:mb-12 mt-8">
         <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 fade-in">
           Raising a baby <br /> takes a village,
         </h1>
@@ -37,14 +37,14 @@ const HeroSection = ({
       </div>
 
       {/* Image Section */}
-      <div className="relative w-full md:w-5/12 h-[420px] md:mb-12">
+      <div className="relative w-full md:w-5/12 h-[420px] md:h-auto md:mb-12">
         <Image
           width={800}
           height={200}
           sizes="100vw"
           src={i1}
           alt="Layer 1"
-          className="absolute top-6 left-0 h-full z-1 fade-in"
+          className="absolute top-6 left-0 h-full z-1 fade-in md:hidden"
         />
         <Image
           width={56}
@@ -72,7 +72,7 @@ const HeroSection = ({
             <SuperDocButton
               href="#"
               label="WHERE IS MY SUPERDOC?"
-              className="fade-in"
+              className="fade-in md:z-10 relative"
               variant="pink"
             />
         </div>

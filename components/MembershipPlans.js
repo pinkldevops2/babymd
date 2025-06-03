@@ -8,7 +8,7 @@ const MembershipPlans = ({
   premiumLayerImg,
 }) => {
   return (
-    <div className="px-6 md:px-0">
+    <div className="px-6 md:px-6">
       <div className="relative bg-[#FF9A6C] text-white mt-6 mb-4 pt-10 rounded-2xl space-y-4 w-full mx-auto overflow-hidden flex flex-col md:flex-row md:p-6">
         {/* Heading */}
         <div className="px-4 md:w-1/2 md:px-0">
@@ -50,7 +50,7 @@ const MembershipPlans = ({
             </p>
             <ul className="list-none m-0 p-0 text-sm text-[#4D4D4D] mt-2 memberlisting leading-[32px]">
               <li>10% off consults</li>
-              <li>5% off other services</li>
+              <li><span className="leading-[18px] block pt-2 pb-2">5% off other services</span></li>
               <li>&#8377;700 gift card</li>
             </ul>
           </div>
@@ -85,8 +85,8 @@ const MembershipPlans = ({
 
         {/* Note */}
         <p
-          className="text-sm mt-4 fade-in"
-          style={{ fontWeight: 400, fontSize: '16px', lineHeight: '22px', fontFamily: 'Lato, sans-serif'}}
+          className="mt-4 fade-in"
+          style={{ fontWeight: 400, lineHeight: '22px', fontFamily: 'Lato, sans-serif'}}
         >
           With both plans, you get priority booking at all BabyMD clinics and online consults. Plus, a dedicated Care Manager to handle appointments, reminders, and check-ins so you can focus on what matters most.
         </p>

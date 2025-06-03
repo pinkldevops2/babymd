@@ -224,11 +224,11 @@ useEffect(() => {
           </div>
 
           <div className="w-full my-2 flex justify-center flex-row gap-2 fade-in">
-            <h1 className="text-2xl font-bold text-[34px]">
+            <h2 className="text-2xl font-bold text-[23px]">
               <a href="#" className="relative cursor-pointer">
                 <i className="font-normal text-[#5943A5] z-2">... and more !</i>
               </a>
-            </h1>
+            </h2>
             <img
               src="/images/uuid-4cbc27ba-dfca-41a0-8924-42aadae760f7.png"
               alt="More"
@@ -260,13 +260,14 @@ useEffect(() => {
                   </span>
                 </h2>
               </div>
+              <div className="fade-in mt-12 mx-auto md:mx-0 flex flex-row gap-2 justify-center middlingbtns">
               <button
                 type="button"
-                className="fade-in text-white bg-[#5943A5] hover:bg-[#F8845D] transition-all focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-4 text-center mt-12 mx-auto md:mx-0 flex flex-row gap-2 justify-center middlingbtns"
+                className="text-white bg-[#5943A5] hover:bg-[#F8845D] transition-all focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-4 text-center md:mx-0 flex flex-row gap-2 justify-center middlingbtns"
               >
                 <span>Care? Right This Way </span>
                 <img src="/images/Group 2349.png" alt="Arrow" />
-              </button>
+              </button></div>
             </div>
 
             <div className="w-full md:w-1/3 relative md:px-0 pt-4">

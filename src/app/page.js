@@ -379,7 +379,7 @@ export default function Home() {
 
         {/* Every Child is a Miracle Section */}
       <div className="bg-linear-to-t from-[#F0EBFF] to-[#FDF8DB] relative z-5">
-        <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-12 md:pb-0 ">
+        <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-6 md:pb-0 ">
           <div className="relative fade-in"><SubHeading
             mainText={<>Every child is a miracle - <br /> a unique story</>}
             highlightText={<>we&#39;re here<br />to care for.</>}
@@ -401,7 +401,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="rounded-3xl p-6 md:p-12 mb-2 md:mb-0">
+        <div className="rounded-3xl p-6 md:p-6 mb-2 md:mb-0">
           {/* Replaced Placeholder with New Content */}
           <div className="w-full bg-[#F4DF76] rounded-xl mb-4">
             <div className="p-8">
@@ -409,9 +409,9 @@ export default function Home() {
                 Our Promise to You and Your Child
               </h3>
 
-              <div className="space-y-6">
+              <div className="space-y-6 md:flex md:flex-row md:flex-wrap md:justify-between gap-4">
                 {/* Expert care section */}
-                <div className="flex items-start gap-4 fade-in">
+                <div className="flex items-start gap-4 fade-in md:w-[32%] w-full">
                   <Image
                     src={PromiseIcon1}
                     alt="Empathy Icon"
@@ -431,7 +431,7 @@ export default function Home() {
                 </div>
 
                 {/* Attention to detail section */}
-                <div className="flex items-start gap-4 fade-in">
+                <div className="flex items-start gap-4 fade-in md:w-[32%]  w-full">
                   <Image
                     src={PromiseIcon2}
                     alt="Checklist Icon"
@@ -451,7 +451,7 @@ export default function Home() {
                 </div>
 
                 {/* Joy section */}
-                <div className="flex items-start gap-4 fade-in">
+                <div className="flex items-start gap-4 fade-in md:w-[32%]  w-full">
                   <Image
                     src={PromiseIcon3}
                     alt="Play Icon"
@@ -599,7 +599,7 @@ export default function Home() {
                     </p>
                   </div>
                 </summary>
-                <div className="p-4 bg-[#FBE38F] text-sm text-gray-700 leading-relaxed">
+                <div className="p-4 bg-[#FBE38F] text-gray-700 leading-relaxed">
                   Expert consultations with top specialists for complex medical
                   conditions.
                 </div>
@@ -668,14 +668,6 @@ export default function Home() {
             className=" mx-auto w-full relative  top[-30px]"
           />
         </div>        
-
-<WorkshopCarousel 
-        workshops={workshops} 
-        />
-
-<CaseStudyCarousel 
-        caseStudies={caseStudies} 
-        />
 <MembershipPlans 
         goldPackageImg={goldPackageImg}
         platinumPackageImg={platinumPackageImg}
