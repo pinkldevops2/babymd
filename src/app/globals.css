@@ -21,7 +21,10 @@
     --foreground: #ededed;
   }
 }
-body,html{
+body{
+	overflow: hidden;
+}
+html{
 	overflow-x: hidden;
 }
 body {
