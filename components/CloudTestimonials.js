@@ -18,26 +18,23 @@ import keerthana from "@/app/assets/keerthana.png";
 const testimonials = [
   {
     id: 1,
-    text: `"We had a wonderful consultation with Dr Shivanga Bora at
-            BabyMD HSR Layout, for my son&apos;s wheezing issue. She was
-            incredibly patient, listened to all our concerns, and provided a
-            clear effective treatment plan. Her friendly approach and expertise
-            made us feel reassured and confident in the care my son received.
-            Highly recommend her for pediatric care!"`,
+    text: `"We had a wonderful consultation with Dr Shivangi Bora at BabyMD, HSR Layout, for my son's wheezing issue. She was incredibly patient, listened to all our concerns, and provided a clear, effective treatment plan. Her friendly approach and expertise made us feel reassured and confident in the care my son received. Highly recommend her for paediatric care!"`,
     name: "Keerthana A",
     location: "BabyMD HSR Layout",
     image: keerthana,
   },
   {
     id: 2,
-    text: `"We had a wonderful consultation with Dr Shivanga Bora at
-            BabyMD HSR Layout, for my son&apos;s wheezing issue. She was
-            incredibly patient, listened to all our concerns, and provided a
-            clear effective treatment plan. Her friendly approach and expertise
-            made us feel reassured and confident in the care my son received.
-            Highly recommend her for pediatric care!"`,
-    name: "Amit S",
-    location: "BabyMD Koramangala",
+    text: `"I visited BabyMD for a developmental assessment for my son — and I’m so glad I took that step. The doctors took the time to help me understand the challenges he might be facing and guided me on the corrective steps I can take now. Thank you, BabyMD!"`,
+    name: "Madhavi Murlidhar",
+    location: "BabyMD Hosa Road",
+    image: keerthana,
+  },
+  {
+    id: 2,
+    text: `"We visited BabyMD in Varthur, Bengaluru, for our child’s vaccinations, and Dr Anamika Krishnan was amazing! The way she handled our baby — with such care and professionalism — was truly impressive. I can confidently say Dr Anamika Krishnan is one of the best paediatricians in Bengaluru. We highly recommend BabyMD for all your child’s healthcare needs."`,
+    name: "Ajay Antony",
+    location: "BabyMD Varthur",
     image: keerthana,
   }
 ];
