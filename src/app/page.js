@@ -69,6 +69,7 @@ import MilestoneAssessmentSection from "../../components/MilestoneAssessmentSect
 import HeroSection from "../../components/HeroSection";
 import StatsSection from "../../components/StatsSection";
 import SymptomCarousel from "../../components/SymptomCarousel";
+import StackingCards from "../../components/StackingCards";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -647,6 +648,7 @@ export default function Home() {
         {/* New Section: More Than Symptoms */}
         <SymptomCarousel symptomRows={symptoms} />
       </div>
+      
 
         <MilestoneAssessmentSection /> 
         <ClinicCarousel clinics={clinics} />
