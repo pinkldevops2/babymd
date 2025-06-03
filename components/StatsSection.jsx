@@ -26,7 +26,7 @@ const StatsSection = ({
     <>
       <div className="container">
       <div className="w-full mt-8 md:mt-0 px-6 pt-10 relative">
-        <SpringPathReveal className={"absolute left-[-266px] top-[323px]"} />
+        <SpringPathReveal className={"absolute left-[-266px] top-[323px] md:left-1/2  md:-translate-x-1/2"} />
         <SubHeading
           mainText={<> You don&apos;t have to<br /></>}
           highlightText={<>figure it out</>}
