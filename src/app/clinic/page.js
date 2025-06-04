@@ -95,18 +95,13 @@ useEffect(() => {
           <div className="flex flex-col justify-center items-center md:flex-row">
             <div className="w-full md:w-2/3">
               <div className="relative px-8 md:px-0 md:w-3/4">
-                <h1 className="text-2xl font-bold text-[34px] fade-in">
+                <h1 className="text-2xl font-bold text-[34px] fade-in pb-[12px]">
                   Care that feels{" "}
                   <span className="text-[#5943A5]">like your second </span>
-                  <span className="relative">
+                  <span className="relative clinic_border">
                     <i className="font-normal text-[#5943A5] z-2 relative">
                       home
                     </i>
-                    <img
-                      className="absolute top-[13px] right-0 z-0"
-                      src="/images/Vector 2.svg"
-                      alt="Vector 2"
-                    />
                   </span>
                 </h1>
                 <p className="fade-in">
@@ -159,12 +154,12 @@ useEffect(() => {
                     <i className="font-normal text-[#5943A5] z-2">care</i>
                   </span>
                   <img
-                    className="swing w-[80px] absolute right-[40px] top-[-20px]"
+                    className="swing w-[80px] absolute right-[10px] top-[-40px]"
                     src="/images/4be6e5c41183d4eea09865755fb1b63ab0582ac3.png"
                     alt="Map"
                   />
                   <img
-                    className="absolute right-[30px] top-[50px]"
+                    className="absolute right-[10px] top-[60px]"
                     src="/images/Group 427319502.svg"
                     alt="Decorative"
                   />
@@ -248,15 +243,10 @@ useEffect(() => {
                     <br />
                     We’ve{" "}
                   </span>
-                  <span className="relative">
+                  <span className="relative clinic_border_bottom">
                     <i className="font-normal text-[#5943A5] z-10 relative">
                       got you.
                     </i>
-                    <img
-                      className="absolute top-[5px] right-0 z-0 w-full"
-                      src="/images/Vector 2.svg"
-                      alt="Vector 2"
-                    />
                   </span>
                 </h2>
               </div>

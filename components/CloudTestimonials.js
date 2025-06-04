@@ -31,7 +31,7 @@ const testimonials = [
     image: keerthana,
   },
   {
-    id: 2,
+    id: 3,
     text: `"We visited BabyMD in Varthur, Bengaluru, for our child’s vaccinations, and Dr Anamika Krishnan was amazing! The way she handled our baby — with such care and professionalism — was truly impressive. I can confidently say Dr Anamika Krishnan is one of the best paediatricians in Bengaluru. We highly recommend BabyMD for all your child’s healthcare needs."`,
     name: "Ajay Antony",
     location: "BabyMD Varthur",

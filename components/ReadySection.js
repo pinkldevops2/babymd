@@ -5,7 +5,7 @@ const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
   return (
     <div className="px-6 py-6 md:pt-2 md:px-6">
       {/* Parent container: relative for button positioning on mobile */}
-      <div className="relative bg-[#5943A5] text-white rounded-2xl px-6 pt-10 lg:p-6 w-full mx-auto">
+      <div className="relative overflow-hidden bg-[#5943A5] text-white rounded-2xl px-6 pt-10 lg:p-6 w-full mx-auto">
         <div className="flex flex-col lg:flex-row items-start lg:items-end gap-0">
           {/* Left: Text Content (60% on desktop) */}
           <div className="w-full lg:w-3/5 space-y-6">
@@ -26,12 +26,12 @@ const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
           {/* Right: Image (40% on desktop) */}
           <div className="w-full lg:w-2/5 relative lg:mt-0 md:h-[300px] lg:h-[300px]">
             <div className="flex justify-center lg:justify-end items-end">
-              <div className="relative w-[100%] lg:w-full h-[300px] mx-auto lg:mx-0 lg:h-[430px]">
+              <div className="relative w-[100%] lg:w-full h-[270px] md:h-[270px] mx-auto lg:mx-0 lg:h-[430px]">
                 <Image
                   src={readyvectorImg}
                   alt="Family"
                   fill
-                  className="object-contain fade-in"
+                  className="fade-in object-contain"
                   priority
                 />
               </div>

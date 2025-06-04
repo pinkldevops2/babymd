@@ -25,11 +25,20 @@ export default function StackingCards() {
         gsap.set(card, {
           y: 0,
           opacity: 1,
+          duration: 0.1
         });
+      } if (index === 1) {
+        gsap.set(card, {
+        y: cardHeight,
+        backgroundColor: "transparent",
+        opacity: 1,
+        duration: 1
+      });
       } else {
         gsap.set(card, {
           y: cardHeight * index,
           opacity: 1,
+          duration: 1
         });
       }
 

@@ -80,7 +80,7 @@ export default function Clinic() {
                       home
                     </i>
                     <img
-                      className="absolute top-[13px] right-0 z-0"
+                      className="absolute top-[-13px] right-0 z-0 transform translate-x-1/2 -translate-y-1/2"
                       src="/images/Vector 2.svg"
                       alt="Vector 2"
                     />

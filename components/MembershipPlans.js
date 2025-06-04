@@ -11,7 +11,7 @@ const MembershipPlans = ({
     <div className="px-6 md:px-6">
       <div className="relative bg-[#FF9A6C] text-white mt-6 mb-4 pt-10 rounded-2xl space-y-4 w-full mx-auto overflow-hidden flex flex-col md:flex-row md:p-6">
         {/* Heading */}
-        <div className="px-4 md:w-1/2 md:px-0">
+        <div className="px-6 md:w-1/2 md:px-0">
           <h2 className="text-[28px] leading-[30px] font-bold fade-in">
             Because <span className="text-white purple_circle">Parenting</span> Shouldn&apos;t Cost a{' '}
             <span className="italic font-normal">

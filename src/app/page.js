@@ -155,9 +155,9 @@ export default function Home() {
   ];
 
   const symptoms = [
-    ['Fever', 'Cough', 'Rashes', 'Ear Pain'],
-    ['Irritability', 'Not Eating', 'Sleep Issues'],
-    ['Delayed', 'Vaccination', 'Milestones', 'Doubts']
+    ['Fever', 'Cough', 'Rashes', 'Ear Pain','Fever', 'Cough', 'Rashes', 'Ear Pain','Fever', 'Cough', 'Rashes', 'Ear Pain'],
+    ['Irritability', 'Not Eating', 'Sleep Issues','Irritability', 'Not Eating', 'Sleep Issues','Irritability', 'Not Eating', 'Sleep Issues'],
+    ['Delayed', 'Vaccination', 'Milestones', 'Doubts','Delayed', 'Vaccination', 'Milestones', 'Doubts','Delayed', 'Vaccination', 'Milestones', 'Doubts']
   ];
 
   const faqData = [

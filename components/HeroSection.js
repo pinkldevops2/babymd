@@ -24,8 +24,8 @@ const HeroSection = ({
         </h2>
 
         <h3 className="text-[#5943A5] fade-in spansidecour text-[42px] leading-[38px] mb-[20px] font-baloo2 relative pb-3 inline-block">
-          <MaskReveal4 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-          yours
+          <MaskReveal4 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-1" />
+          <span className='relative z-3'>yours</span>
         </h3>
 
         {/* White Text Frame */}
