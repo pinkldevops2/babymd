@@ -158,19 +158,7 @@ const BabyMDCampaignForm = () => {
       <main className="flex items-center justify-center">
         <div className="w-full max-w-6xl bg-white relative rounded-lg">
           {/* Header Title */}
-          <div className="mb-6 relative pt-8">
-            <h1 className="text-xl md:text-2xl font-bold leading-tight text-black contactSub">
-              Join Our <span className="text-[#5d3fd3] decoration-[#5d3fd3]">Campaign</span>
-            </h1>
-            <svg className="absolute top-0 right-0 swing" width="33" height="29" viewBox="0 0 33 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.62805 12.8662L8.1579 9.88482L13.5854 13.2672L13.367 19.5468L7.83714 22.5281L2.63519 19.1708L2.62805 12.8662Z" stroke="#FF9A6C" strokeWidth="2.5"/>
-              <path d="M23.022 20.161L26.9255 18.0566L30.6533 20.2524L30.3982 24.4978L26.4948 26.6023L22.9237 24.4197L23.022 20.161Z" stroke="#FF9A6C" strokeWidth="2.5"/>
-              <path d="M8.91809 4.48676L14.4479 1.50543L19.6997 4.56195L19.3098 10.5232L13.7799 13.5046L8.74955 10.4656L8.91809 4.48676Z" stroke="#5943A5" strokeWidth="2.5"/>
-            </svg>
-            <p className="text-gray-700 mt-2 md:text-lg">
-              Fill out the form below to participate in our campaign
-            </p>
-          </div>
+          
 
           <div className="flex flex-col gap-8">
             <form onSubmit={handleSubmit} className="space-y-4 pt-4 pb-8">
