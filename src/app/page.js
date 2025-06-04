@@ -222,7 +222,7 @@ export default function Home() {
     },
     {
       question: "My baby isn’t talking yet. Is that normal?",
-      answer: "Every child develops differently, but if your baby isn’t babbling by 12 months or saying a few words by 18 months, a pediatric consult is a good next step.",
+      answer: "Every child develops differently, but if your baby isn’t babbling by 12 months or saying a few words by 18 months, a paediatric consult is a good next step.",
     },
     {
       question: "What should I do if my baby has a fever?",
