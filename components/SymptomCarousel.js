@@ -39,8 +39,8 @@ const SymptomMarquees = ({ symptomRows }) => {
           </h2>
           <p className="pt-2">
             Because every child is a miracle, and every concern deserves real
-            attention. Whether it's just a feeling, your tiny tot's in a fever, a
-            delay, or just a feeling, we're here with expert eyes, kind hearts,
+            attention. Whether it&#39;s just a feeling, your tiny tot&#39;s in a fever, a
+            delay, or just a feeling, we&#39;re here with expert eyes, kind hearts,
             and real answers.
           </p>
         </div>
