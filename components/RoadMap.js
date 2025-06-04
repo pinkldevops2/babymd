@@ -13,14 +13,11 @@ import assessmentIcon from '../public/images/Icon6.png'
 import SubHeading from './SubHeading';
 import SuperDocButton from './SuperDocButton';
 
-const RoadMap = () => {
-  const [openSections, setOpenSections] = useState({})
+const Roadmap = () => {
+  const [openSection, setOpenSection] = useState(0) // First section open by default
 
   const toggleSection = (index) => {
-    setOpenSections(prev => ({
-      ...prev,
-      [index]: !prev[index]
-    }))
+    setOpenSection(prev => prev === index ? -1 : index) // Close if same section, otherwise open new one
   }
 
   const roadmapData = [
@@ -104,7 +101,6 @@ const RoadMap = () => {
             subText={<><i>we&#39;re on it!</i></>}
           />
         <p className='pb-6 pt-3 fade-in'>Our BabyMD clinics offer comprehensive paediatric care with a team of doctors, therapists, and specialists. From check-ups and vaccinations to speech therapy and allergy management, everything your child needs is available in one convenient location.</p>
-
           {roadmapData.map((section, index) => (
             <div key={index} className="relative mb-6">
               {/* Vertical Timeline Line - only show if not the last item */}
@@ -115,34 +111,32 @@ const RoadMap = () => {
               {/* Clickable Timeline Icon */}
               <button
                 onClick={() => toggleSection(index)}
-                className="absolute left-2 w-12 h-12 bg-white rounded-full border-2 border-gray-200 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110 z-10 cursor-pointer"
+                className={`absolute left-2 w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110 z-10 cursor-pointer ${
+                  openSection === index 
+                    ? section.color 
+                    : 'bg-white border-2 border-gray-200'
+                }`}
               >
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center shadow-inner border border-gray-100 transition-all duration-200 ${
-                  openSections[index] 
-                    ? `${section.color} bg-opacity-20` 
-                    : 'bg-gradient-to-br from-white to-gray-50'
-                }`}>
-                  <Image 
-                    src={section.icon} 
-                    alt={section.title}
-                    width={24}
-                    height={24}
-                    className={`object-contain drop-shadow-sm transition-all duration-200 ${
-                      openSections[index] ? 'scale-110' : ''
-                    }`}
-                  />
-                </div>
+                <Image 
+                  src={section.icon} 
+                  alt={section.title}
+                  width={24}
+                  height={24}
+                  className={`object-contain drop-shadow-sm transition-all duration-200 ${
+                    openSection === index ? 'scale-110' : ''
+                  }`}
+                />
               </button>
               
               {/* Content Card */}
-              <div className="ml-16">
+              <div className="ml-20">
                 <button
                   onClick={() => toggleSection(index)}
                   className={`w-full ${section.color} text-white rounded-full px-6 py-3 flex items-center justify-between transition-all duration-200 hover:shadow-lg hover:scale-105`}
                 >
-                  <span className="font-medium">{section.title}</span>
+                  <span className="font-medium text-left">{section.title}</span>
                   <svg 
-                    className={`w-5 h-5 transition-transform duration-200 ${openSections[index] ? 'rotate-180' : ''}`}
+                    className={`w-5 h-5 transition-transform duration-200 ${openSection === index ? 'rotate-180' : ''}`}
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -152,18 +146,19 @@ const RoadMap = () => {
                 </button>
                 
                 {/* Dropdown Content */}
-                {openSections[index] && (
+                {openSection === index && (
                   <div className="mt-2 bg-white rounded-lg shadow-lg border border-gray-200 p-4 animate-in slide-in-from-top-2 duration-200">
                     <ul className="space-y-2">
                       {section.content.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start">
-                          <span className="w-2 h-2 bg-gray-400  rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          <span className="text-gray-700 text-sm ">{item}</span>
+                          <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                          <span className="text-gray-700 text-sm">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 )}
+				
               </div>
             </div>
           ))}
@@ -171,7 +166,7 @@ const RoadMap = () => {
           <SuperDocButton
             href="#"
             label="Get your appointment today"
-            className="fade-in text-center uppercase"
+            className="fade-in text-center uppercase w-[350px] mx-auto"
             variant="purple"
           />
           </div>
@@ -181,4 +176,4 @@ const RoadMap = () => {
   )
 }
 
-export default RoadMap;
+export default Roadmap;
