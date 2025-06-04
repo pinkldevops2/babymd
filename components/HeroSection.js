@@ -71,7 +71,7 @@ const HeroSection = ({
         <div className='absolute left-1/2 bottom-[40px] translate-x-[-50%] z-12'>
             <SuperDocButton
               href="#"
-              label="WHERE IS MY SUPERDOC?"
+              label="WHERE&#39;S MY SUPERDOC?"
               className="fade-in md:z-10 relative"
               variant="pink"
             />

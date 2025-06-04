@@ -181,7 +181,7 @@ const BabyMDCampaignForm = () => {
 
               {/* Baby DOB Field */}
               <div>
-                <label className="block mb-1 md:text-lg">Baby D.O.B</label>
+                <label className="block mb-1 md:text-lg">Baby&#39;s Date of Birth</label>
                 <input
                   type="date"
                   name="babyDOB"
@@ -231,7 +231,7 @@ const BabyMDCampaignForm = () => {
               </div>
 
               {/* Form Location Field */}
-              <div>
+              <div className='hidden'>
                 <label className="block mb-1 md:text-lg">Form Location</label>
                 <input
                   type="text"
@@ -245,7 +245,7 @@ const BabyMDCampaignForm = () => {
               </div>
 
               {/* Additional Fields */}
-              <div className="space-y-4 pt-4">
+              <div className="space-y-4 pt-4 hidden">
                 {[
                   { name: 'leadSource', label: 'Lead Source' },
                   { name: 'leadStatus', label: 'Lead Status' },

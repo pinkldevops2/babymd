@@ -185,7 +185,7 @@ ScrollTrigger.create({
                                 />
                               </div>
             <h2 className="text-black text-[20px] font-lato font-bold pt-3 pb-4">Vaccinations</h2>
-            <p>Vaccine day doesn&#39;t have to mean tears. We turn it into a fun experience — with gentle doctors, a cozy environment, and growth assessments built into every visit.
+            <p>Vaccine day doesn&#39;t have to mean tears. We turn it into a fun experience — with gentle doctors, a cosy environment, and growth assessments built into every visit.
 </p>
           </div>
         </div>
@@ -228,7 +228,7 @@ ScrollTrigger.create({
                                 />
                               </div>
             <h2 className="text-black text-[20px] font-lato font-bold pt-3 pb-4">Developmental Assessments and Therapies</h2>
-            <p>Our developmental paediatricians and certified therapists go beyond symptoms to create personalized plans that address your little one&#39;s unique needs — from speech delays to behavioural challenges.</p>
+            <p>Our developmental paediatricians and certified therapists go beyond symptoms to create personalised plans that address your little one&#39;s unique needs — from speech delays to behavioural challenges.</p>
           </div>
         </div>
       </div>

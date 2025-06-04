@@ -6,6 +6,7 @@ import Image from 'next/image';
 import beeimage from "../assets/contactpagebee.png";
 import contactbaby from "../assets/contactbaby.png";
 import contactbb from "../assets/contactbb.png";
+import office from "../../../public/images/office.png";
 import BabyMDCampaignForm from '../../../components/BabyMDCampaignForm';
 
 import gsap from "gsap";
@@ -73,7 +74,7 @@ export default function Contact() {
               Grow <span className="spansidecour text-[#5d3fd3]">with us</span>
 			  <Image 
 				src={beeimage}
-				className="absolute right-0 top-0 swing fastbeecontact fade-in"
+				className="absolute right-[10px] m-[-30px] swing fastbeecontact fade-in"
 				alt="Bee" 
 				width={134} // adjust as needed
 				height={134} // adjust as needed
@@ -112,9 +113,24 @@ export default function Contact() {
 </span>
 
                 <p>
-                  Address: Wework, Prestige Atlanta,<br />
-                  80 Feet Road, Koramangala,<br />
-                  Bengaluru, Karnataka-560034
+                  Corporate Address: Wework, Prestige Atlanta, 80 Feet Road,
+Koramangala, Bengaluru, Karnataka-560034
+
+                </p>
+              </div>
+              <div className="flex items-start gap-2 pb-4 fade-in">
+			  <span>
+                <Image
+                src={office}
+                width={56}
+                height={56}
+                />
+</span>
+
+                <p>
+                  Office Address: #99, 11th Main road, HSR Layout, 
+Bangalore, Karnataka-560102
+
                 </p>
               </div>
               <div className="flex items-center gap-2 pb-4 fade-in">

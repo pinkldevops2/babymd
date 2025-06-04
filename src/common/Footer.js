@@ -147,8 +147,8 @@ export default function Footer() {
                     fill="#5943A5"
                   />
                 </svg>
-                WeWork, Prestige Atlanta, 80 Feet Road, Bengaluru-560034,
-                Karnataka, India
+                Wework, Prestige Atlanta, 80 Feet Road, 
+Koramangala, Bengaluru, Karnataka-560034
               </li>
             </ul>
           </div>
@@ -220,8 +220,8 @@ export default function Footer() {
                     fill="#5943A5"
                   />
                 </svg>
-                WeWork, Prestige Atlanta, 80 Feet Road, Bengaluru-560034,
-                Karnataka, India
+                Wework, Prestige Atlanta, 80 Feet Road, 
+Koramangala, Bengaluru, Karnataka-560034
               </li>
             </ul>
           </div>
@@ -288,7 +288,7 @@ export default function Footer() {
                 Privacy Policy
               </Link>
               <Link href="/terms-conditions" className="hover:text-[#FF6F61]">
-                Terms & Conditions
+                Terms and Conditions
               </Link>
             </div>
           </div>

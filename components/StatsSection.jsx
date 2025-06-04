@@ -28,7 +28,7 @@ const StatsSection = ({
       <div className="w-full mt-8 md:mt-0 px-6 pt-10 relative">
         <SpringPathReveal className={"absolute left-[-266px] top-[323px] md:left-1/2  md:-translate-x-1/2"} />
         <SubHeading
-          mainText={<> You don&apos;t have to<br /></>}
+          mainText={<> But you don&apos;t have to<br /></>}
           highlightText={<>figure it out</>}
           subText={<><i>all alone</i></>}
           className={"fade-in"}
@@ -42,7 +42,7 @@ const StatsSection = ({
         />
 
         <p className="pt-3 fade-in">
-          Behind our every mark is a parent who found clarity and a child who felt better, safer, and happier. From midnight fevers to milestone check-ups, these stats reflect a story of care that goes beyond treatment — it’s about peace of mind and trust.
+          Behind our every mark is a parent who found clarity and a child who felt better, safer, and happier. From midnight fevers to milestone<br/>check-ups, these stats reflect a story of care that goes beyond treatment &mdash; it&#39;s about peace of mind and trust.
         </p>
       </div>
 
@@ -110,7 +110,7 @@ const StatsSection = ({
               {inView4 ? <CountUp start={0} end={30} duration={2} suffix="+" /> : "30+"}
             </h2>
             <p className="w-fit text-[#ED750F] text-[20px] relative whitespace-nowrap left-[130px] fade-in">
-              Years of Pediatric <br /> Wisdom
+              Years of Paediatric <br /> Expertise
             </p>
           </div>
         </div>

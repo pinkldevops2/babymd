@@ -77,8 +77,8 @@ const MilestoneAssessmentSection = () => {
                 className="absolute right-0 top-0"
               />
             </div>
-            <p className="text-gray-700 leading-relaxed mb-1 mt-2 fade-in">
-              You&#39;re the expert when it comes to your child — but sometimes, it helps to have an extra pair of professional eyes. Our free, online milestone assessment tool lets you easily track their development, from physical growth to behavioural needs. In just a few simple steps, you&#39;ll get the clarity you need to understand where they stand and feel confident in their progress.
+            <p className="leading-relaxed mb-1 mt-2 fade-in">
+              You&#39;re the expert when it comes to your child — but sometimes, it helps to have an extra pair of professional eyes. Our <b>free, online</b> milestone assessment tool lets you easily track their development, from physical growth to behavioural needs. In just a few simple steps, you&#39;ll get the clarity you need to understand where they stand and feel confident in their progress.
             </p>
           </div>
 

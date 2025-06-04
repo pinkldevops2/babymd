@@ -234,7 +234,7 @@ export default function Home() {
     },
     {
       question: "What if my baby is a fussy eater or not gaining weight?",
-      answer: "Feeding concerns are common in toddlers. Our pediatrician and nutritionist will evaluate its normal behaviour, sensory issues, or other medical issues, and help build a plan.",
+      answer: "Feeding concerns are common in toddlers. Our paediatrician and nutritionist will evaluate its normal behaviour, sensory issues, or other medical issues, and help build a plan.",
     },
     {
       question: "How frequent colds or coughs in toddlers normal?",
@@ -436,8 +436,8 @@ export default function Home() {
       <div className="bg-linear-to-t from-[#F0EBFF] to-[#FDF8DB] relative z-5">
         <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-6 md:pb-0 ">
           <div className="relative fade-in"><SubHeading
-            mainText={<>Every child is a miracle - <br /> a unique story</>}
-            highlightText={<>we&#39;re here<br />to care for.</>}
+            mainText={<>Every child is a miracle &mdash; <br /> a unique story</>}
+            highlightText={<>we&#39;re here<br />to care for</>}
             /* subText={<><i>care for</i></>} */
           />
           <Image
@@ -452,7 +452,7 @@ export default function Home() {
             Each moment of your child&#39;s growth is worth celebrating, from first steps to first words. But parenting isn&#39;t always magical, with midnight fevers, stubborn coughs, and moments of doubt.
           </p>
           <p className="leading-relaxed mb-4 fade-in">
-            That&#39;s where we come in; your trusted partner in ensuring nothing stands in the way of your child&#39;s health and well-being. We go beyond treating symptoms, offering holistic care that nurtures their physical, emotional, mental, and social development. From personalized growth assessments to making every clinic visit a positive experience, we&#39;re here with expert care, joy, and compassion.
+            That&#39;s where we come in; your trusted partner in ensuring nothing stands in the way of your child&#39;s health and well-being. We go beyond treating symptoms, offering <b>holistic care</b> that nurtures their physical, emotional, mental, and social development. From personalised growth assessments to making every clinic visit a positive experience, we&#39;re here with expert care, joy, and compassion.
           </p>
         </div>
 
@@ -548,8 +548,8 @@ export default function Home() {
                       className="absolute right-[0px] top-[90px]"
                     />   
           </div>        
-          <p className="text-[16px] mt-3 fade-in">
-            Some days you&#39;re celebrating first steps. <br /> Other days, you&#39;re
+          <p className="text-[16px] mt-3 fade-in w-[80%]">
+            Some days you&#39;re celebrating first steps. Other days, you&#39;re
             worried about a fever at 2 AM. We are here for it all. Whether it&#39;s a
             quick check-up, a vaccine visit, or something that needs a deeper
             look, we offer the kind of care that listens, explains, and walks the

@@ -13,9 +13,9 @@ const MembershipPlans = ({
         {/* Heading */}
         <div className="px-6 md:w-1/2 md:px-0">
           <h2 className="text-[28px] leading-[30px] font-bold fade-in">
-            Because <span className="text-white purple_circle">Parenting</span> Shouldn&apos;t Cost a{' '}
+            Because <span className="text-white purple_circle">parenting</span> shouldn&apos;t cost a{' '}
             <span className="italic font-normal">
-              <i>Fortune</i>
+              <i>fortune</i>
             </span>
           </h2>
           <p className="mt-2 fade-in pb-3" style={{ fontFamily: 'Baloo 2, sans-serif', fontSize: '16px', lineHeight: '22px' }}>
