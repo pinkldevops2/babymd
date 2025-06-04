@@ -1,6 +1,7 @@
 ﻿"use client";
 import { useEffect } from "react";
 import Image from "next/image";
+import RoadMap from '../../../components/RoadMap';
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -16,7 +17,7 @@ export default function Clinic() {
       hours: [
         {
           days: "Monday to Saturday",
-          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "9 AM to 8:00 PM",
         },
         { days: "Sunday", time: "9 AM to 12 PM" },
       ],
@@ -28,7 +29,7 @@ export default function Clinic() {
       hours: [
         {
           days: "Monday to Saturday",
-          time: " 8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "9 AM to 8:00 PM",
         },
         { days: "Sunday", time: " 9 AM to 12 PM" },
       ],
@@ -40,7 +41,7 @@ export default function Clinic() {
       hours: [
         {
           days: "Monday to Saturday",
-          time: " 8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
         },
         { days: "Sunday", time: "9 AM to 12 PM" },
       ],
@@ -52,7 +53,7 @@ export default function Clinic() {
       hours: [
         {
           days: "Monday to Saturday",
-          time: " 8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
         },
         { days: "Sunday", time: "9 AM to 12 PM" },
       ],
@@ -64,11 +65,23 @@ export default function Clinic() {
       hours: [
         {
           days: "Monday to Saturday",
-          time: " 8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
         },
         { days: "Sunday", time: "9 AM to 12 PM" },
       ],
     },
+    {
+      image: "/images/ballandur.png",
+      title: "BabyMD – Bellandur",
+      location: "locate clinic",
+      hours: [
+        {
+          days: "Monday to Saturday",
+          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+        },
+        { days: "Sunday", time: "9 AM to 12 PM" },
+      ],
+    }
   ];
 
 useEffect(() => {
@@ -96,7 +109,7 @@ useEffect(() => {
             <div className="w-full md:w-2/3">
               <div className="relative px-8 md:px-0 md:w-3/4">
                 <h1 className="text-2xl font-bold text-[34px] fade-in pb-[12px]">
-                  Care that feels{" "}
+                  Clinics that feels{" "}
                   <span className="text-[#5943A5]">like your second </span>
                   <span className="relative clinic_border">
                     <i className="font-normal text-[#5943A5] z-2 relative">
@@ -105,9 +118,7 @@ useEffect(() => {
                   </span>
                 </h1>
                 <p className="fade-in">
-                  Got a sniffle, stumble, or question that can’t wait? We’re
-                  just down the road, stocked with smiles, support, and
-                  paediatric pros who get it.
+                  Got a sniffle, stumble, or question that can&#39;t wait? Designed to be the Disneyland of clinics, we&#39;re just down the road, stocked with smiles, support, and paediatric pros who get it.
                 </p>
                 <img
                   className="absolute top-[-40px] right-[30px] fade-in"
@@ -166,8 +177,8 @@ useEffect(() => {
                 </h2>
                 <p className="fade-in">
                   Whether you&#39;re in HSR, Hosa Road, Whitefield, or wherever life
-                  takes you, we’re all set with our warm spaces and caring faces
-                  for your tiny superstar. And yep, we’re popping up in even
+                  takes you, we&#39;re all set with our warm spaces and caring faces
+                  for your tiny superstar. And yep, we&#39;re popping up in even
                   more neighbourhoods.
                 </p>
               </div>
@@ -218,7 +229,7 @@ useEffect(() => {
             ))}
           </div>
 
-          <div className="w-full my-2 flex justify-center flex-row gap-2 fade-in">
+          <div className="w-full my-2 flex justify-center flex-row gap-2 fade-in hidden">
             <h2 className="text-2xl font-bold text-[23px]">
               <a href="#" className="relative cursor-pointer">
                 <i className="font-normal text-[#5943A5] z-2">... and more !</i>
@@ -232,16 +243,16 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="py-6 bg-[#FFF2EF] ">
+      <div className="py-6 bg-[#FFF2EF] hidden">
         <div className="container mx-auto">
           <div className="flex flex-col relative justify-center items-center md:flex-row bg-[#DBFFCC] rounded-[20px] mx-4 md:mx-0 overflow-hidden pt-8">
             <div className="w-full md:w-2/3 px-2 py-2 md:p-4 md:pl-12">
               <div className="relative px-8 md:px-0">
                 <h2 className="font-bold text-[28px] leading-[26px] fade-in">
                   <span className="text-[#5943A5]">
-                    You’ve got this.
+                    You&#39;ve got this.
                     <br />
-                    We’ve{" "}
+                    We&#39;ve{" "}
                   </span>
                   <span className="relative clinic_border_bottom">
                     <i className="font-normal text-[#5943A5] z-10 relative">
@@ -275,6 +286,7 @@ useEffect(() => {
           </div>
         </div>
       </div>
+      <RoadMap />
       </div>
     </>
   );
