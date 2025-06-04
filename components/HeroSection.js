@@ -68,7 +68,7 @@ const HeroSection = ({
           className="absolute bottom-24 left-1/2 transform -translate-x-1/2 lg:bottom-[30px] z-7 fade-in"
         />
         <SpringHome1 className="absolute bottom-22 left-14 transform -translate-x-1/2 z-2" />
-        <div className='absolute left-1/2 bottom-[40px] translate-x-[-50%] z-3'>
+        <div className='absolute left-1/2 bottom-[40px] translate-x-[-50%] z-12'>
             <SuperDocButton
               href="#"
               label="WHERE IS MY SUPERDOC?"

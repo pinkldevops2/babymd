@@ -5,17 +5,17 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <div className="container">
-      <footer className="bg-[#FFFBE6] p-4 text-[#4B3A8F] text-sm p-5">
+      <footer className="bg-[#FFFBE6] p-4 text-[#4B3A8F] text-sm p-5  fade-in">
         {/* Top section with Company and Services */}
         <Image
           src={flogo}
           alt="babyMD Logo"
           width={155}
           height={45}
-          className="object-contain mb-5 mt-7 fade-in"
+          className="object-contain mb-5 mt-7"
         />
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-          <div className="fade-in">
+          <div className="">
             <h3 className="font-bold uppercase mb-2">Company</h3>
             <ul className="space-y-1 footerULline">
               <li className="hidden">
@@ -50,7 +50,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="fade-in">
+          <div className="">
             <h3 className="font-bold uppercase mb-2">Services</h3>
             <ul className="space-y-1 footerULline">
               <li>
@@ -87,7 +87,7 @@ export default function Footer() {
           <div className="hidden md:block">
             <h3 className="font-bold uppercase mb-4">Contact Us</h3>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 fade-in">
+              <li className="flex items-center gap-3">
                 <svg
                   width="17"
                   height="17"
@@ -134,7 +134,7 @@ export default function Footer() {
                 </svg>
                 7070708220
               </li>
-              <li className="flex items-start gap-3 fade-in">
+              <li className="flex items-start gap-3">
                 <svg
                   className="max-w-[15px] w-full"
                   height="20"
@@ -207,7 +207,7 @@ export default function Footer() {
                 </svg>
                 7070708220
               </li>
-              <li className="flex items-start gap-3 fade-in">
+              <li className="flex items-start gap-3">
                 <svg
                   className="max-w-[15px] w-full"
                   height="20"
@@ -228,7 +228,7 @@ export default function Footer() {
 
           {/* Social Media Column */}
           <div className="pt-12">
-            <div className="flex justify-end space-x-4 fade-in">
+            <div className="flex justify-end space-x-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -280,7 +280,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom section with copyright and links */}
-        <div className="mt-8 pt-4 fade-in">
+        <div className="mt-8 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex space-x-5 fontSmallTem">
               <p>© {currentYear} babyMD All Rights Reserved</p>
