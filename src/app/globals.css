@@ -278,61 +278,27 @@ footer h3{
 .privacy_login p{
 	margin-bottom: 20px;
 }
-#cardsx {
-  list-style: none;
-  padding-left: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(var(--cards), var(--cardHeight));
-  gap: var(--cardMargin);
-  padding-bottom: calc(var(--cards) * var(--cardTopPadding));
-  margin-bottom: var(--cardMargin);
+.cards-section {
   position: relative;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 200px auto;
 }
 
-#card1 {
-  --index: 1;
-}
-#card2 {
-  --index: 2;
-}
-#card3 {
-  --index: 3;
-}
-#card4 {
-  --index: 4;
+.cards {
+  display: grid;
+  margin-top: 3.5rem;
+  > * {
+    grid-area: 1 / 1 / 2 / 2;
+  }
 }
 
-.cardx {
-  position: sticky;
-  top: 0;
-  padding-top: calc(var(--index) * var(--cardTopPadding));
-}
-
-#card1 .card-body {
-  background-color: #ddd0ff;
-}
-#card2 .card-body {
-  /* background-color: #7EC4CF; */
-  background-color: #a3e48a;
-}
-#card3 .card-body {
-  background-color: #fbe38f;
-}
-#card4 .card-body {
-  background-color: #d6f4fa;
-}
-
-.card-body {
-  box-sizing: border-box;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-  transition: all .5s;
-  display: flex;
-  box-shadow: 0 0 5px #00000023;
-  flex-direction: column;
+.card {
+  width: 300px;
+  height: 250px;
+  background-color: red;
+  border-radius: 8px;
+  border: 2px solid red;
 }
 .lightergreen{
     background-color: #FBE38F;
