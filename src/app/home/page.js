@@ -504,7 +504,7 @@ export default function Home() {
           <h3 className="md:text-2xl mb-16 md:mt-4 fade-in">
             Here&#39;s how we support you and your child - every step of the way:
           </h3>
-          <div className="relative z-10 -mt-12 max-w-md mx-auto">
+          <div className="relative z-10 -mt-12 mx-auto">
             <div className="container">
         <StackingCards />
       </div>

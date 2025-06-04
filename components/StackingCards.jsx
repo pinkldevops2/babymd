@@ -23,8 +23,8 @@ const time = 0.5; // animation duration
 let animating = false; // state
 
 // Progressive enhancement
-gsap.set(".cardx", {
-  y: (index) => 100 * index,
+gsap.set(".card", {
+  y: (index) => 140 * index,
   transformOrigin: "center top"
 });
 
@@ -36,13 +36,12 @@ const tl = gsap.timeline({
 });
 
 tl.add("card2");
-tl.to(".cardx:nth-child(1)", {
+tl.to(".card:nth-child(1)", {
   scale: 1,
-  duration: time,
-  backgroundColor: "#3498db"
+  duration: time
 });
 tl.from(
-  ".cardx:nth-child(2)",
+  ".card:nth-child(2)",
   {
     y: () => window.innerHeight,
     duration: time
@@ -51,13 +50,12 @@ tl.from(
 );
 
 tl.add("card3");
-tl.to(".cardx:nth-child(2)", {
+tl.to(".card:nth-child(2)", {
   scale: 1,
-  duration: time,
-  backgroundColor: "#3498db"
+  duration: time
 });
 tl.from(
-  ".cardx:nth-child(3)",
+  ".card:nth-child(3)",
   {
     y: () => window.innerHeight,
     duration: time
@@ -66,13 +64,12 @@ tl.from(
 );
 
 tl.add("card4");
-tl.to(".cardx:nth-child(3)", {
+tl.to(".card:nth-child(3)", {
   scale: 1,
-  duration: time,
-  backgroundColor: "#3498db"
+  duration: time
 });
 tl.from(
-  ".cardx:nth-child(4)",
+  ".card:nth-child(4)",
   {
     y: () => window.innerHeight,
     duration: time
@@ -132,7 +129,7 @@ ScrollTrigger.create({
   trigger: ".cards-section",
   pin: true,
   start: "top 20%",
-  markers: true,
+  markers: false,
   end: "+=100",
   onEnter: (self) => {
     if (cardsObserver.isEnabled) return;
@@ -148,8 +145,8 @@ ScrollTrigger.create({
 
   return (
     <div className="cards-section">
-      <div id="cardsx">
-        <div className="cardx" id="card1">
+      <div class="cardsx">
+        <div className="card bg-[#DDD0FF]" id="card1">
           <div className="card-body">
             <div className="relative w-14 h-14 flex-shrink-0">
                                 <Image
@@ -166,12 +163,11 @@ ScrollTrigger.create({
                                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                                 />
                               </div>
-            <h2 className="text-black text-lg font-bold">General Consultations</h2>
-            <p>Comprehensive health check-ups and consultations for your
-                  child&#39;s everyday needs.</p>
+            <h2 className="text-black text-[20px] font-lato font-bold pt-3 pb-4">General Consultations</h2>
+            <p>You shouldn&#39;t have to choose between being heard and being helped. Our paediatricians take the time to listen to your concerns, check thoroughly, and explain clearly.</p>
           </div>
         </div>
-        <div className="cardx" id="card2">
+        <div className="card bg-[#A3E48A]" id="card2">
           <div className="card-body">
             <div className="relative w-14 h-14 flex-shrink-0">
                                 <Image
@@ -188,12 +184,12 @@ ScrollTrigger.create({
                                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                                 />
                               </div>
-            <h2 className="text-black text-lg font-bold">Vaccinations</h2>
-            <p>Timely vaccinations to protect your child from preventable
-                  diseases.</p>
+            <h2 className="text-black text-[20px] font-lato font-bold pt-3 pb-4">Vaccinations</h2>
+            <p>Vaccine day doesn&#39;t have to mean tears. We turn it into a fun experience — with gentle doctors, a cozy environment, and growth assessments built into every visit.
+</p>
           </div>
         </div>
-        <div className="cardx" id="card3">
+        <div className="card bg-[#FBE38F]" id="card3">
           <div className="card-body">
             <div className="relative w-14 h-14 flex-shrink-0">
                                 <Image
@@ -210,12 +206,11 @@ ScrollTrigger.create({
                                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                                 />
                               </div>
-            <h2 className="text-black text-lg font-bold">Super Specialist Consultations</h2>
-            <p>Expert consultations with top specialists for complex medical
-                  conditions.</p>
+            <h2 className="text-black text-[20px] font-lato font-bold pt-3 pb-4">Super Specialist Consultations</h2>
+            <p>With 15+ paediatric specialties under one roof — from allergies and asthma to skin, hormones, and behaviour — you get trusted expert advice without the hospital runaround.</p>
           </div>
         </div>
-        <div className="cardx" id="card4">
+        <div className="card bg-[#CDE6F3]" id="card4">
           <div className="card-body">
             <div className="relative w-14 h-14 flex-shrink-0">
                                 <Image
@@ -232,11 +227,8 @@ ScrollTrigger.create({
                                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                                 />
                               </div>
-            <h2 className="text-black text-lg font-bold">Developmental Assessments and Therapies</h2>
-            <p>Our developmental pediatricians and certified therapists go
-                  beyond symptoms to create personalized plans that address your
-                  little one&#39;s unique needs from speech delays to behavioral
-                  challenges.</p>
+            <h2 className="text-black text-[20px] font-lato font-bold pt-3 pb-4">Developmental Assessments and Therapies</h2>
+            <p>Our developmental paediatricians and certified therapists go beyond symptoms to create personalized plans that address your little one&#39;s unique needs — from speech delays to behavioural challenges.</p>
           </div>
         </div>
       </div>
