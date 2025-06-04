@@ -31,7 +31,7 @@ const HeroSection = ({
         {/* White Text Frame */}
         <div className="md:mt-7 mb-8 pt-4 fade-in">
           <p>
-            You deserve care that&apos;s as thoughtful as your parenting. From cozy clinics to expert pediatricians and holistic support, we&apos;re here for every milestone, worry, and wonder.
+            You deserve care that&apos;s as thoughtful as your parenting. From cosy clinics to expert paediatricians and holistic support, we&apos;re here for every milestone, worry, and wonder.
           </p>
         </div>
       </div>

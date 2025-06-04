@@ -78,12 +78,7 @@ const MilestoneAssessmentSection = () => {
               />
             </div>
             <p className="text-gray-700 leading-relaxed mb-1 mt-2 fade-in">
-              You&apos;re the expert when it comes to your child but sometimes,
-              it helps to have an extra pair of professional eyes. Our free,
-              online <span className="font-semibold">milestone assessment tool</span> lets you easily track their
-              development, from physical growth to behavioral needs. In just a
-              few simple steps, you&apos;ll get the clarity you need to
-              understand where they stand and feel confident in their progress.
+              You&#39;re the expert when it comes to your child — but sometimes, it helps to have an extra pair of professional eyes. Our free, online milestone assessment tool lets you easily track their development, from physical growth to behavioural needs. In just a few simple steps, you&#39;ll get the clarity you need to understand where they stand and feel confident in their progress.
             </p>
           </div>
 

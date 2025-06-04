@@ -10,16 +10,14 @@ const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
           {/* Left: Text Content (60% on desktop) */}
           <div className="w-full lg:w-3/5 space-y-6">
             <h2 className="fade-in font-baloo2 text-[28px] md:text-[28px] leading-[30px] font-bold pb-2">
-              Whenever you need us, we’re here &mdash; with<br/>care{' '}
+              Whenever you need us, we&#39;re here &mdash; with<br/>care{' '}
               <span className="italic font-light text-white px-1 yellow_circle">
-                <i>that’s ready</i>
+                <i>that&#39;s ready</i>
               </span>
             </h2>
 
-            <p className="fade-in md:text-base lg:text-lg leading-relaxed font-lato text-[#FFFFFF]">
-              Babies don’t come with instructions, but we do. Whether it’s a
-              routine check-up, a fever that won’t quit, or just a little peace
-              of mind — pick a time, choose a clinic, and we’ll handle the rest.
+            <p className="fade-in leading-relaxed font-lato text-[#FFFFFF]">
+              Just pick a time and choose a clinic. We will handle the rest, so you can focus on the moments that matter.
             </p>
           </div>
 

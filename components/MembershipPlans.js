@@ -18,11 +18,8 @@ const MembershipPlans = ({
               <i>Fortune</i>
             </span>
           </h2>
-          <p className="mt-2 fade-in" style={{ fontFamily: 'Baloo 2, sans-serif', fontSize: '16px', lineHeight: '22px' }}>
-            Midnight fevers, last-minute travel checkups, vaccine days— we know parenting comes with curveballs. Our membership plans are here to make expert care simpler, smoother, and more affordable all year round.
-          </p>
-          <p className="mt-2 mb-4 fade-in">
-            Choose from our plans and save up to &#8377;10,000 annually.
+          <p className="mt-2 fade-in pb-3" style={{ fontFamily: 'Baloo 2, sans-serif', fontSize: '16px', lineHeight: '22px' }}>
+            We know how much you already carry as a parent. That&#39;s why our membership plans are designed to ease a little of that load with expert paediatric care, thoughtful savings of up to ₹10,000 a year, and small comforts that make a big difference.
           </p>
         
 

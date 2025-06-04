@@ -54,11 +54,8 @@ const ClinicCarousel = ({ clinics }) => {
             />
           </div>
           <p className="leading-relaxed mt-4 fade-in">
-            Late-night worries or last-minute scrambles shouldn&apos;t mean a long
-            drive or endless queues. We&apos;re all about making care easy and
-            accessible, so you can feel confident even on your toughest days.
-            That&apos;s why our clinics are right in your neighborhood—cozy,
-            colourful, and designed with your little one in mind.
+            Late-night worries or last-minute scrambles shouldn&#39;t mean a long drive or endless queues. We&#39;re all about making care easy and accessible, so you can feel confident even on your toughest days. That&#39;s why our clinics are right in your neighborhood — cosy, colourful, and designed with your little one in mind. 
+
           </p>
           <p className="mb-2 fade-in">
             Call us, book online, or just walk in—we&apos;ll be ready.
@@ -93,31 +90,29 @@ const ClinicCarousel = ({ clinics }) => {
         <div className="relative max-w-md mx-auto md:max-w-6xl rounded-2xl bg-white p-4">
           <div ref={sliderRef} className="keen-slider">
             {clinics.map((clinic, index) => (
-              <div key={index} className="keen-slider__slide">
-                <div className="relative w-full h-[300px] mb-6 rounded-xl overflow-hidden fade-in">
-                  <Image
-                    width={350}
-                    height={300}
+  <div key={index} className="keen-slider__slide">
+    <div className="relative w-full h-[300px] mb-6 rounded-xl overflow-hidden fade-in">
+      <img
+                    className="mx-auto rounded-[20px] min-h-[205px] object-cover"
                     src={clinic.image}
-                    alt={clinic.name}
-                    className="w-full h-full object-cover"
+                    alt={clinic.title}
                   />
-                </div>
-                <div className="mb-4 px-4">
-                  <h4 className="text-[20px] font-[700] text-gray-800 mb-1 font-lato fade-in">
-                    {clinic.name}
-                  </h4>
-                  <p
-                    className="text-sm text-gray-600 mb-2 font-baloo2 fade-in"
-                    dangerouslySetInnerHTML={{ __html: clinic.address }}
-                  />
-                  <p
-                    className="text-sm text-gray-600 font-baloo2 fade-in"
-                    dangerouslySetInnerHTML={{ __html: clinic.hours }}
-                  />
-                </div>
-              </div>
-            ))}
+    </div>
+    <div className="mb-4 px-4">
+      <h4 className="text-[20px] font-[700] text-gray-800 mb-1 font-lato fade-in">
+        {clinic.title}
+      </h4>
+      <p className="text-sm text-blue-600 underline cursor-pointer font-baloo2 fade-in hidden">
+        {clinic.location}
+      </p>
+      {clinic.hours.map((hour, idx) => (
+        <p key={idx} className="text-sm text-gray-600 font-baloo2 fade-in">
+          {hour.days}: {hour.time}
+        </p>
+      ))}
+    </div>
+  </div>
+))}
           </div>
 
           {/* Arrows */}

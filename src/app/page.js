@@ -86,25 +86,79 @@ const Util = {
 
 export default function Home() {
   // Clinic data
-  const clinics = [
+  const clinics =  [
     {
-      name: "BabyMD, HSR Clinic",
-      address: "99, 11<sup>th</sup> Main Rd, Sector 5, Sector 6, HSR Layout, Bengaluru, Karnataka 560068",
-      hours: "Mon-Sat: 8AM - 1:30PM | 4PM - 8:30PM<br />Sundays: 9AM - 12PM",
-      image: Nearbyclinic,
+      image: "/images/f599ef5c0bc6b9e548520dd4c3c29270435d932e.jpg",
+      title: "BabyMD – Hosa Road",
+      location: "locate clinic",
+      hours: [
+        {
+          days: "Monday to Saturday",
+          time: "9 AM to 8:00 PM",
+        },
+        { days: "Sunday", time: "9 AM to 12 PM" },
+      ],
     },
     {
-      name: "BabyMD, Koramangala Clinic",
-      address: "123, 5<sup>th</sup> Cross, Koramangala, Bengaluru, Karnataka 560034",
-      hours: "Mon-Fri: 9AM - 2PM | 3PM - 7PM<br />Sundays: 10AM - 1PM",
-      image: Nearbyclinic2,
+      image: "/images/351beb004171eecf5fa8fcabcad24c88067fc6d4.jpg",
+      title: "BabyMD – Whitefield",
+      location: "locate clinic",
+      hours: [
+        {
+          days: "Monday to Saturday",
+          time: "9 AM to 8:00 PM",
+        },
+        { days: "Sunday", time: " 9 AM to 12 PM" },
+      ],
     },
     {
-      name: "BabyMD, Whitefield Clinic",
-      address: "45, Whitefield Main Rd, Bengaluru, Karnataka 560066",
-      hours: "Mon-Sat: 7AM - 12PM | 5PM - 9PM<br />Sundays: 8AM - 11AM",
-      image: Nearbyclinic3,
+      image: "/images/bd6e88dec0f434f565572c1a818fb23885fb5b33.jpg",
+      title: "BabyMD – Electronic City",
+      location: "locate clinic",
+      hours: [
+        {
+          days: "Monday to Saturday",
+          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+        },
+        { days: "Sunday", time: "9 AM to 12 PM" },
+      ],
     },
+    {
+      image: "/images/39e64f6c9f643abdd21ece3b69668b9b60b15dfe.jpg",
+      title: "BabyMD – HSR Layout",
+      location: "locate clinic",
+      hours: [
+        {
+          days: "Monday to Saturday",
+          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+        },
+        { days: "Sunday", time: "9 AM to 12 PM" },
+      ],
+    },
+    {
+      image: "/images/c340ff5accd3a76b9824168ee4a673930fbf9234.jpg",
+      title: "BabyMD – Varthur",
+      location: "locate clinic",
+      hours: [
+        {
+          days: "Monday to Saturday",
+          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+        },
+        { days: "Sunday", time: "9 AM to 12 PM" },
+      ],
+    },
+    {
+      image: "/images/ballandur.png",
+      title: "BabyMD – Bellandur",
+      location: "locate clinic",
+      hours: [
+        {
+          days: "Monday to Saturday",
+          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+        },
+        { days: "Sunday", time: "9 AM to 12 PM" },
+      ],
+    }
   ];
 
   // Workshop data

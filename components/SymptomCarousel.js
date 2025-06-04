@@ -38,10 +38,7 @@ const SymptomMarquees = ({ symptomRows }) => {
             More than symptoms, <br />we see the <span className="text-purple-800">bigger</span> <i>picture</i>
           </h2>
           <p className="pt-2">
-            Because every child is a miracle, and every concern deserves real
-            attention. Whether it&#39;s just a feeling, your tiny tot&#39;s in a fever, a
-            delay, or just a feeling, we&#39;re here with expert eyes, kind hearts,
-            and real answers.
+            We know it&#39;s difficult when your little one isn&#39;t feeling their best. From mild coughs and stubborn fevers to tummy troubles and skin rashes, we handle it all with kindness and expertise. Our team is well-equipped to tackle asthma, allergies, growth or speech delays, and even complex challenges like ADHD or sleep troubles — whatever brings you through our doors.
           </p>
         </div>
 

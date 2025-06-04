@@ -42,10 +42,7 @@ const StatsSection = ({
         />
 
         <p className="pt-3 fade-in">
-          Behind our every mark is a parent who found clarity and a child who
-          felt better, safer, and happier. From midnight fevers to milestone
-          check-ups, these stats reflect a story of care that goes beyond
-          treatment – it&apos;s about peace of mind and trust.
+          Behind our every mark is a parent who found clarity and a child who felt better, safer, and happier. From midnight fevers to milestone check-ups, these stats reflect a story of care that goes beyond treatment — it’s about peace of mind and trust.
         </p>
       </div>
 
@@ -68,8 +65,8 @@ const StatsSection = ({
             <Image src={Vector} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover fade-in" />
             <Image src={Vector1} alt="overlay" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 fade-in" />
             <div>
-              <h2 className="w-fit text-[#5943A5] text-[60px] font-bold absolute left-[70px] top-[40px] z-5">
-                {inView1 ? <CountUp start={0} end={5000} duration={2} suffix="+" /> : "5000+"}
+              <h2 className="w-fit text-[#5943A5] text-[50px] font-bold absolute left-[70px] top-[40px] z-5">
+                {inView1 ? <CountUp start={0} end={20000} duration={2} suffix="+" /> : "20000+"}
               </h2>
               <p className="fade-in w-fit text-[#5943A5] absolute left-[170px] top-[120px] leading-[20px] text-[20px] md:leading-[24px]">
                 Happy <br />Families <br />and <br />Counting
@@ -82,7 +79,7 @@ const StatsSection = ({
             <Image src={Vector2} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover fade-in" />
             <Image src={Vector2a} alt="overlay" className="absolute bottom-0 fade-in left-1/2 transform -translate-x-1/2" />
             <div>
-              <h2 className="w-fit text-[#E3B200] relative font-bold text-[60px] left-[140px]">
+              <h2 className="w-fit text-[#E3B200] relative font-bold text-[50px] left-[140px]">
                 {inView2 ? <CountUp start={0} end={4.9} decimals={1} duration={2} suffix="+" /> : "4.9+"}
               </h2>
               <p className="fade-in w-fit text-[#E3B200] text-[20px] relative left-[150px] top-[-25px]">
@@ -96,7 +93,7 @@ const StatsSection = ({
             <Image src={Vector3} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover fade-in" />
             <Image src={Vector3a} alt="overlay" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 fade-in" />
             <div>
-              <h2 className="w-fit text-[#269BD9] text-[60px] relative font-bold left-[130px] top-[25px]">
+              <h2 className="w-fit text-[#269BD9] text-[50px] relative font-bold left-[130px] top-[25px]">
                 {inView3 ? <CountUp start={0} end={2500} duration={2} suffix="+" /> : "2500+"}
               </h2>
               <p className="w-fit text-[#269BD9] text-[20px] relative left-[190px] fade-in">
@@ -109,7 +106,7 @@ const StatsSection = ({
           <div className="relative w-80 h-[320px]" ref={ref4}>
             <Image src={Vector4} alt="bg" fill className="absolute top-0 left-0 h-full w-full object-cover fade-in" />
             <Image src={Vector4a} alt="overlay" className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2 fade-in" />
-            <h2 className="w-fit text-[#ED750F] text-[60px] relative font-bold left-[130px] top-[25px]">
+            <h2 className="w-fit text-[#ED750F] text-[50px] relative font-bold left-[130px] top-[25px]">
               {inView4 ? <CountUp start={0} end={30} duration={2} suffix="+" /> : "30+"}
             </h2>
             <p className="w-fit text-[#ED750F] text-[20px] relative whitespace-nowrap left-[130px] fade-in">
