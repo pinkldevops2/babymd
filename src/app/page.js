@@ -70,6 +70,10 @@ import HeroSection from "../../components/HeroSection";
 import StatsSection from "../../components/StatsSection";
 import SymptomCarousel from "../../components/SymptomCarousel";
 import StackingCards from "../../components/StackingCards";
+import HandIconSVG from "../../components/anime/HandIconSVG";
+import CheckIconSVG from "../../components/anime/CheckIconSVG";
+import CapIconSVG from "../../components/anime/CapIconSVG";
+ 
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -467,13 +471,9 @@ export default function Home() {
               <div className="space-y-6 md:flex md:flex-row md:flex-wrap md:justify-between gap-4">
                 {/* Expert care section */}
                 <div className="flex items-start gap-4 fade-in md:w-[32%] w-full">
-                  <Image
-                    src={PromiseIcon1}
-                    alt="Empathy Icon"
-                    width={45}
-                    height={40}
-                    className="flex-shrink-0 fade-in"
-                  />
+                  <div className="w-[55px] pt-2">
+                    <HandIconSVG />
+                  </div>
                   <div>
                     <h4 className="text-lg font-semibold font-lato text-gray-900">
                       Expert care, built on empathy:
@@ -487,13 +487,9 @@ export default function Home() {
 
                 {/* Attention to detail section */}
                 <div className="flex items-start gap-4 fade-in md:w-[32%]  w-full">
-                  <Image
-                    src={PromiseIcon2}
-                    alt="Checklist Icon"
-                    width={45}
-                    height={40}
-                    className="flex-shrink-0 fade-in"
-                  />
+                  <div className="w-[55px] pt-2">
+                    <CheckIconSVG />
+                  </div>
                   <div>
                     <h4 className="text-lg font-semibold font-lato text-gray-900">
                       Attention to every detail:
@@ -507,13 +503,9 @@ export default function Home() {
 
                 {/* Joy section */}
                 <div className="flex items-start gap-4 fade-in md:w-[32%]  w-full">
-                  <Image
-                    src={PromiseIcon3}
-                    alt="Play Icon"
-                    width={45}
-                    height={40}
-                    className="flex-shrink-0 fade-in"
-                  />
+                  <div className="w-[55px] pt-2">
+                    <CapIconSVG />
+                  </div>
                   <div>
                     <h4 className="text-lg font-semibold font-lato text-gray-900 fade-in">
                       Joy, every step of the way:
