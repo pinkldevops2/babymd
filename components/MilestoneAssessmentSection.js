@@ -16,6 +16,7 @@ import beehive6 from "@/app/assets/beehive6.png";
 import beehive7 from "@/app/assets/beehive7.png";
 import beehive8 from "@/app/assets/beehive8.png";
 import SpringHome3 from "./anime/SpringHome3";
+import SuperDocButton from './SuperDocButton';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -167,10 +168,13 @@ const MilestoneAssessmentSection = () => {
       </div>
 
       {/* CTA Button */}
-      <div className="flex justify-center mt-6 mb-12 hidden">
-        <button className="text-lg font-medium underline hover:text-[#3A2A7F] transition-colors duration-300">
-          Take our milestone assessment test
-        </button>
+      <div className="flex justify-center mt-0 mb-12 block">
+        <SuperDocButton
+            href="#"
+            label="milestone assessment test"
+            className="w-80 text-center fade-in uppercase"
+            variant="pink"
+          />
       </div>
     </>
   );

@@ -9,9 +9,9 @@ export default function Contact() {
       <Head>
         <title>Terms & Conditions | BabyMD</title>
       </Head>
-      <main className="container min-h-screen bg-[#ffffff] px-6 privacy_login">
-        <h1 className="text-xl font-bold leading-tight text-black contactSub mt-8">
-              BabyMDs Terms & Conditions 
+      <main className="container min-h-screen butter_yellow px-6 privacy_login">
+        <h1 className="text-xl font-bold leading-tight text-black contactSub pt-8 pb-3">
+              BabyMD&#39;s<br/>Terms & Conditions 
               <br />
               <span className="text-[#5d3fd3] decoration-[#5d3fd3]"></span>
             </h1>

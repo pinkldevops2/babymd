@@ -303,3 +303,29 @@ footer h3{
     border-radius: 24px;
     color: #5943A5;
 }
+.fixedNavbar ul li a{
+    padding: 10px 0;
+    font-size: 18px;
+    transition: all linear 0.3s;
+}
+.fixedNavbar ul li a:hover{
+    background-color: #f8f3da;
+    padding-left: 15px;
+}
+.fixedNavbar ul li{
+    margin-bottom: 0px;
+    position: relative;
+}
+.dividerpex{
+    content: '';
+    border-image: repeating-linear-gradient(90deg, #ffd3c4 0 10px, transparent 10px 20px) 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    display: block;
+}
+.butter_yellow{
+  background-color: #faeeb7;
+}

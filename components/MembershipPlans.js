@@ -41,7 +41,7 @@ const MembershipPlans = ({
             <h3 className="font-baloo2 font-[700] text-[#5943A5] leading-[18px] mb-0">
               Gold<br />Membership
             </h3>
-            <p className="text-sm mb-2">Save more on everyday care</p>
+            <p className="text-sm mb-7">Save more on everyday care</p>
             <p className="text-[#5943A5] font-bold text-lg mt-1 package_price_bg mb-2">
               &#8377;699<span className="text-xs">/year</span>
             </p>
@@ -74,7 +74,7 @@ const MembershipPlans = ({
             </p>
             <ul className="list-none m-0 p-0 text-sm text-[#4D4D4D] mt-2 memberlisting leading-[32px]">
               <li>15% off consults</li>
-              <li>10% off all services</li>
+              <li><span className="leading-[18px] block pt-2 pb-2">10% off on other services</span></li>
               <li>&#8377;1000 gift card</li>
             </ul>
           </div>

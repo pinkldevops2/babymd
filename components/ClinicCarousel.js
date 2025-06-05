@@ -88,10 +88,10 @@ const ClinicCarousel = ({ clinics }) => {
       {/* SLIDER SECTION */}
       <div className="bg-[#FFF5F5] p-6 md:py-12 md:px-6 pt-0  md:w-1/2">
         <div className="relative max-w-md mx-auto md:max-w-6xl rounded-2xl bg-white p-4">
-          <div ref={sliderRef} className="keen-slider">
+          <div ref={sliderRef} className="keen-slider fade-in">
             {clinics.map((clinic, index) => (
   <div key={index} className="keen-slider__slide">
-    <div className="relative w-full h-[300px] mb-6 rounded-xl overflow-hidden fade-in">
+    <div className="relative w-full mb-6 rounded-xl overflow-hidden">
       <img
                     className="mx-auto rounded-[20px] min-h-[205px] object-cover"
                     src={clinic.image}
@@ -99,14 +99,17 @@ const ClinicCarousel = ({ clinics }) => {
                   />
     </div>
     <div className="mb-4 px-4">
-      <h4 className="text-[20px] font-[700] text-gray-800 mb-1 font-lato fade-in">
+      <h4 className="text-[20px] font-[700] text-gray-800 mb-1 font-lato">
         {clinic.title}
       </h4>
-      <p className="text-sm text-blue-600 underline cursor-pointer font-baloo2 fade-in hidden">
-        {clinic.location}
-      </p>
+      <div className='flex gap-2 pb-3'>
+        <img src="/images/map-pin.svg" alt="Map pin" />
+                      <h5 className="text-[14px] text-[#F8845D] underline uppercase underline-offset-[5px] tracking-[2px]">
+                        {clinic.location}
+                      </h5>
+      </div>
       {clinic.hours.map((hour, idx) => (
-        <p key={idx} className="text-sm text-gray-600 font-baloo2 fade-in">
+        <p key={idx} className="text-sm text-gray-600 font-baloo2">
           {hour.days}: {hour.time}
         </p>
       ))}

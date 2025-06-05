@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <div className="container">
-      <footer className="bg-[#FFFBE6] p-4 text-[#4B3A8F] text-sm p-5  fade-in">
+      <footer className="bg-[#FFFBE6] p-4 text-[#4B3A8F] text-sm p-5">
         {/* Top section with Company and Services */}
         <Image
           src={flogo}
