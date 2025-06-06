@@ -337,11 +337,13 @@ footer h3{
   margin-bottom: 10px;
 }
 .circling_around{
+    font-family: var(--font-courgette);
     background-image: url(./assets/circle_contacts.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
     padding: 10px 15px;
+    font-weight: 400!important;
 }
 .circling_around2{
     background-image: url(./assets/contact_c2.png);
