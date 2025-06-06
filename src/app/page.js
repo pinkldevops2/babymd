@@ -58,6 +58,7 @@ import platinumPackageImg from "../app/assets/platinum_package.svg";
 
 import SuperDocButton from '../../components/SuperDocButton';
 import SubHeading from '../../components/SubHeading';
+import SubHeading2 from '../../components/SubHeading2';
 import ClinicCarousel from '../../components/ClinicCarousel';
 import WorkshopCarousel from '../../components/WorkshopCarousel';
 import CaseStudyCarousel from '../../components/CaseStudyCarousel';
@@ -444,10 +445,10 @@ export default function Home() {
         {/* Every Child is a Miracle Section */}
       <div className="bg-linear-to-t from-[#F0EBFF] to-[#FDF8DB] relative z-5">
         <div className=" rounded-3xl px-6 pb-0 pt-8 md:p-6 md:pb-0 ">
-          <div className="relative fade-in"><SubHeading
+          <div className="relative fade-in"><SubHeading2
             mainText={<>Every child is a miracle &mdash; <br /> a unique story</>}
-            highlightText={<>we&#39;re here<br />to care for</>}
-            /* subText={<><i>care for</i></>} */
+            highlightText={<>we&#39;re here<br />to </>}
+            subText={<><i>care for</i></>}
           />
           <Image
                       src={beehive4}
