@@ -19,6 +19,7 @@ const SuperDocButton = ({
   return (
     <Link
       href={href}
+      target={href}
       className={clsx(
         `whitespace-nowrap text-sm flex items-center gap-2 font-bold py-4 px-10 rounded-full tracking-wide transition-transform duration-300 transform hover:scale-105`,
         bgColors[variant],

@@ -329,3 +329,9 @@ footer h3{
 .butter_yellow{
   background-color: #faeeb7;
 }
+.privacy_login ul{
+  padding-left: 17px;
+}
+.privacy_login ul li{
+  margin-bottom: 10px;
+}

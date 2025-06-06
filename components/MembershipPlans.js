@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import Image from "next/image";
 import SuperDocButton from "./SuperDocButton";
+import FormPopUp from './FormPopUp';
 
 const MembershipPlans = ({
   goldPackageImg,
@@ -7,6 +9,7 @@ const MembershipPlans = ({
   premiumLayerBg,
   premiumLayerImg,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="px-6 md:px-6">
       <div className="relative bg-[#FF9A6C] text-white mt-6 mb-4 pt-10 rounded-2xl space-y-4 w-full mx-auto overflow-hidden flex flex-col md:flex-row md:p-6">
@@ -101,6 +104,7 @@ const MembershipPlans = ({
             className="fade-in"
             variant="purple"
           />
+
           </div>
           <Image
             src={premiumLayerImg}

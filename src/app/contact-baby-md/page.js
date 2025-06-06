@@ -61,7 +61,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <BabyMDCampaignForm />
+          <BabyMDCampaignForm formID={'form'} />
           <Head>
         <title>Join Us | babyMD</title>
       </Head>
