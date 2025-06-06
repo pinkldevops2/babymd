@@ -170,7 +170,7 @@ const MilestoneAssessmentSection = () => {
       {/* CTA Button */}
       <div className="flex justify-center mt-0 mb-12 block">
         <SuperDocButton
-            href="https://babymd.in/pp/development-assessment"
+            href={"https://babymd.in/pp/development-assesment"}
             target={"_blank"}
             label="milestone assessment test"
             className="w-80 text-center fade-in uppercase"

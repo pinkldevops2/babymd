@@ -23,7 +23,7 @@ export default function Contact() {
     <li>You acknowledge that You are providing Your Personal Information out of Your free will and that the collection of Your Personal Information is necessary for the purposes identified here under. You hereby consent that the collection, storage, processing, disclosure and transfer of any Personal Information shall not cause any wrongful loss to You if it is done in accordance with the provisions of this Privacy Policy.</li>
   </ul>
 <ul>
-    <li>You have the option not to provide us the Personal Information sought to be collected. You will also have an option to withdraw Your consent at any point, provided such withdrawal of the consent is intimated to us in writing. If you wish to withdraw your consent, please write to us at chelp@babymd.in. If you do not provide us Your Personal Information or if You withdraw the consent to provide us Personal Information at any point in time, We shall have the option not to fulfill the purposes for which the said Personal Information was sought and We may restrict You from using the Website, Application or Services.</li>
+    <li>You have the option not to provide us the Personal Information sought to be collected. You will also have an option to withdraw Your consent at any point, provided such withdrawal of the consent is intimated to us in writing. If you wish to withdraw your consent, please write to us at <a href='mailto:chelp@babymd.in'>chelp@babymd.in</a>. If you do not provide us Your Personal Information or if You withdraw the consent to provide us Personal Information at any point in time, We shall have the option not to fulfill the purposes for which the said Personal Information was sought and We may restrict You from using the Website, Application or Services.</li>
 </ul>
 
 
@@ -224,7 +224,7 @@ export default function Contact() {
   
     <h2 className="text-[24px] mt-4 mb-3 font-bold leading-tight text-black contactSub mt-8">ACCESS</h2>
 <ul>
-      <li>If You need to update or correct your Personal Information or have any grievance with respect to the processing or use of Your Personal Information, for any reason, You may send updates and corrections to us at care@BabyMDcare.com and we will take all reasonable efforts to incorporate the changes within a reasonable period of time.</li>
+      <li>If You need to update or correct your Personal Information or have any grievance with respect to the processing or use of Your Personal Information, for any reason, You may send updates and corrections to us at <a href="mailto:care@BabyMDcare.com">care@BabyMDcare.com</a> and we will take all reasonable efforts to incorporate the changes within a reasonable period of time.</li>
 </ul>
   
   

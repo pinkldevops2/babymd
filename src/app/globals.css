@@ -331,7 +331,22 @@ footer h3{
 }
 .privacy_login ul{
   padding-left: 17px;
+  list-style: disc;
 }
 .privacy_login ul li{
   margin-bottom: 10px;
+}
+.circling_around{
+    background-image: url(./assets/circle_contacts.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding: 10px 15px;
+}
+.circling_around2{
+    background-image: url(./assets/contact_c2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding: 10px 15px;
 }

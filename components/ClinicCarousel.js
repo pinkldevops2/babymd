@@ -153,7 +153,7 @@ const ClinicCarousel = ({ clinics }) => {
         {/* CTA Button */}
         <div className="flex justify-center items-center mt-6">
           <SuperDocButton
-            href="#"
+            href="/clinic"
             label="VISIT YOUR NEAREST BABYMD"
             className="w-80 text-center fade-in"
             variant="pink"

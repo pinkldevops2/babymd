@@ -606,7 +606,7 @@ export default function BabyMDCampaignForm({formID}) {
               <div className="zf-clearBoth clear-both"></div>
             </li>
 
-            <li className="zf-tempFrmWrapper mb-4">
+            <li className="zf-tempFrmWrapper mb-4 hidden">
               <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
                 Form Location
               </label>
@@ -629,7 +629,7 @@ export default function BabyMDCampaignForm({formID}) {
               <div className="zf-clearBoth clear-both"></div>
             </li>
 
-            <li className="zf-tempFrmWrapper mb-4">
+            <li className="zf-tempFrmWrapper mb-4 hidden">
               <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] mb-1">
                 Lead Source
               </label>
@@ -656,7 +656,7 @@ export default function BabyMDCampaignForm({formID}) {
               <div className="zf-clearBoth clear-both"></div>
             </li>
 
-            <li className="zf-tempFrmWrapper mb-4">
+            <li className="zf-tempFrmWrapper mb-4 hidden">
               <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
                 Lead Status
               </label>
@@ -683,7 +683,7 @@ export default function BabyMDCampaignForm({formID}) {
               <div className="zf-clearBoth clear-both"></div>
             </li>
 
-            <li className="zf-tempFrmWrapper mb-4">
+            <li className="zf-tempFrmWrapper mb-4 hidden">
               <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
                 Lead Sub Status
               </label>
@@ -710,7 +710,7 @@ export default function BabyMDCampaignForm({formID}) {
               <div className="zf-clearBoth clear-both"></div>
             </li>
 
-            <li className="zf-tempFrmWrapper mb-4">
+            <li className="zf-tempFrmWrapper mb-4 hidden">
               <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] mb-1">
                 Redirection Check Name
               </label>
@@ -735,7 +735,7 @@ export default function BabyMDCampaignForm({formID}) {
               <div className="zf-clearBoth clear-both"></div>
             </li>
 
-            <li className="zf-tempFrmWrapper mb-4">
+            <li className="zf-tempFrmWrapper mb-4 hidden">
               <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] mb-1">
                 Lead Sub Source
               </label>
@@ -760,7 +760,7 @@ export default function BabyMDCampaignForm({formID}) {
               <div className="zf-clearBoth clear-both"></div>
             </li>
 
-            <li className="zf-tempFrmWrapper mb-4">
+            <li className="zf-tempFrmWrapper mb-4 hidden">
               <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] mb-1">
                 First Enquired Service
               </label>
@@ -785,7 +785,7 @@ export default function BabyMDCampaignForm({formID}) {
               <div className="zf-clearBoth clear-both"></div>
             </li>
 
-            <li className="zf-tempFrmWrapper mb-4">
+            <li className="zf-tempFrmWrapper mb-4 hidden">
               <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
                 Channel
               </label>
@@ -810,7 +810,7 @@ export default function BabyMDCampaignForm({formID}) {
               <div className="zf-clearBoth clear-both"></div>
             </li>
 
-            <li className="zf-tempFrmWrapper mb-4">
+            <li className="zf-tempFrmWrapper mb-4 hidden">
               <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] mb-1">
                 Reward Claimed
               </label>

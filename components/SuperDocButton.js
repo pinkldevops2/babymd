@@ -13,7 +13,7 @@ const SuperDocButton = ({
   const bgColors = {
     pink: 'bg-[#F8845D] hover:bg-[#5943A5]',
     purple: 'bg-[#5943A5] hover:bg-[#F8845D]',
-    yellow: 'bg-[#F0CB46] hover:bg-[#5943A5]'
+    yellow: 'bg-[#F0CB46] hover:bg-[#F8845D]'
   };
 
   return (
