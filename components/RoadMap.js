@@ -11,7 +11,7 @@ import therapyIcon from '../public/images/Icon4.png'
 import immunisationIcon from '../public/images/Icon5.png'
 import assessmentIcon from '../public/images/Icon6.png'
 import SubHeading from './SubHeading';
-import SuperDocButton from './SuperDocButton';
+import SuperDocButton from './SuperDocButton2';
 
 const Roadmap = ({onClick}) => {
   const [openSection, setOpenSection] = useState(0) // First section open by default
@@ -165,7 +165,6 @@ const Roadmap = ({onClick}) => {
           <div className='pt-3 pb-3'>
           <SuperDocButton
             onClick={onClick }
-            href=""
             label="Get your appointment today"
             className="fade-in text-center uppercase w-[350px] mx-auto"
             variant="purple"

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import SuperDocButton from './SuperDocButton';
+import SuperDocButton from './SuperDocButton2';
 import { gsap } from "gsap";
 
 const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow, onClick }) => {
@@ -74,7 +74,7 @@ const pathRef = useRef(null);
 
         {/* Button: absolute on mobile (20px from bottom), static on desktop */}
         <div className="absolute  bottom-[20px] left-1/2 transform -translate-x-1/2 w-full px-6 lg:transform-none lg:px-0 lg:w-auto lg:mt-8 lg:w-fit lg:relative lg:left-[152px]">
-          <SuperDocButton href="" onClick={onClick } label="BOOK YOUR APPOINTMENT" className="text-center justify-center fade-in" variant="yellow" textColor="#5943A5"/>
+          <SuperDocButton href="" onClick={ onClick } label="BOOK YOUR APPOINTMENT" className="text-center justify-center fade-in" variant="yellow" textColor="#5943A5"/>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { useState, useRef,useEffect } from 'react';
 import Image from "next/image";
-import SuperDocButton from "./SuperDocButton";
+import SuperDocButton from "./SuperDocButton2";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -133,7 +133,6 @@ const pathRef = useRef(null);
         <div className="mt-2 pl-6 pb-2 relative md:w-1/2">
         <div className="absolute bottom-[30px] left-1/2 transform -translate-x-1/2 z-10 px-[20px]">
         <SuperDocButton
-            href="" 
             onClick={onClick }
             label="PICK A PLAN, START SAVING"
             className="fade-in"
