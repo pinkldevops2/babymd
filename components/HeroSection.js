@@ -39,12 +39,12 @@ const HeroSection = ({
       {/* Image Section */}
       <div className="relative w-full md:w-5/12 h-[420px] md:h-auto md:mb-12">
         <Image
-          width={800}
-          height={200}
+          width={390}
+          height={420}
           sizes="100vw"
           src={i1}
           alt="Layer 1"
-          className="absolute top-6 left-0 h-full z-1   md:hidden"
+          className="absolute top-6 left-0 z-1 md:hidden"
         />
         <Image
           width={56}
@@ -68,11 +68,11 @@ const HeroSection = ({
           className="absolute bottom-24 left-1/2 transform -translate-x-1/2 lg:bottom-[30px] z-7  "
         />
         <SpringHome1 className="absolute bottom-22 left-14 transform -translate-x-1/2 z-2" />
-        <div className='absolute left-1/2 bottom-[40px] translate-x-[-50%] z-12'>
+        <div className='absolute left-1/2 bottom-[0px] translate-x-[-50%] z-12'>
             <SuperDocButton
               href="/clinic"
               label="WHERE&#39;S MY SUPERDOC?"
-              className="  md:z-10 relative"
+              className="  md:z-10 relative hidden"
               variant="pink"
             />
         </div>

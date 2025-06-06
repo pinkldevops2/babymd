@@ -13,7 +13,7 @@ import assessmentIcon from '../public/images/Icon6.png'
 import SubHeading from './SubHeading';
 import SuperDocButton from './SuperDocButton';
 
-const Roadmap = () => {
+const Roadmap = ({onClick}) => {
   const [openSection, setOpenSection] = useState(0) // First section open by default
 
   const toggleSection = (index) => {
@@ -164,7 +164,8 @@ const Roadmap = () => {
           ))}
           <div className='pt-3 pb-3'>
           <SuperDocButton
-            href="#"
+            onClick={onClick }
+            href=""
             label="Get your appointment today"
             className="fade-in text-center uppercase w-[350px] mx-auto"
             variant="purple"

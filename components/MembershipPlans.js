@@ -76,7 +76,7 @@ const MembershipPlans = ({
             </p>
             <ul className="list-none m-0 p-0 text-sm text-[#4D4D4D] mt-2 memberlisting leading-[32px]">
               <li>15% off consults</li>
-              <li><span className="leading-[18px] block pt-2 pb-2">10% off on other services</span></li>
+              <li><span className="leading-[18px] block pt-2 pb-2">10% off other services</span></li>
               <li>&#8377;1000 gift card</li>
             </ul>
           </div>

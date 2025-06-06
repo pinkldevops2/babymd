@@ -220,7 +220,7 @@ Koramangala, Bengaluru, Karnataka-560034
                     fill="#5943A5"
                   />
                 </svg>
-                Wework, Prestige Atlanta, 80 Feet Road, 
+                WeWork, Prestige Atlanta, 80 Feet Road, 
 Koramangala, Bengaluru, Karnataka-560034
               </li>
             </ul>
@@ -230,7 +230,7 @@ Koramangala, Bengaluru, Karnataka-560034
           <div className="pt-12">
             <div className="flex justify-end space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1AfFWo5PEg/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#FF6F61]"
@@ -249,7 +249,7 @@ Koramangala, Bengaluru, Karnataka-560034
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/babymd.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#FF6F61]"

@@ -1,7 +1,9 @@
 ﻿"use client";
-import { useEffect } from "react";
+import { useState,useEffect } from "react";
 import Image from "next/image";
 import RoadMap from '../../../components/RoadMap';
+import Modal from '../../../components/FormPopUp';
+import BabyMDCampaignForm from '../../../components/BabyMDCampaignForm';
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,77 +11,78 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Clinic() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const clinics = [
     {
-      image: "/images/f599ef5c0bc6b9e548520dd4c3c29270435d932e.jpg",
+      image: "/clinic/f599ef5c0bc6b9e548520dd4c3c29270435d932e.jpg",
       title: "BabyMD – Hosa Road",
       location: "https://maps.app.goo.gl/yiQnHGHKYxLK7kF56",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "9 AM to 8:00 PM",
+          time: "9:00 AM to 8:00 PM",
         },
-        { days: "Sunday", time: "9 AM to 12 PM" },
+        { days: "Sunday", time: "9:00 AM to 12:00 PM" },
       ],
     },
     {
-      image: "/images/351beb004171eecf5fa8fcabcad24c88067fc6d4.jpg",
+      image: "/clinic/351beb004171eecf5fa8fcabcad24c88067fc6d4.jpg",
       title: "BabyMD – Whitefield",
-      location: "#",
+      location: "https://maps.app.goo.gl/mCpiktpusP9V3Crt7",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "9 AM to 8:00 PM",
+          time: "9:00 AM to 8:00 PM",
         },
-        { days: "Sunday", time: " 9 AM to 12 PM" },
+        { days: "Sunday", time: " 9:00 AM to 12:00 PM" },
       ],
     },
     {
-      image: "/images/bd6e88dec0f434f565572c1a818fb23885fb5b33.jpg",
+      image: "/clinic/bd6e88dec0f434f565572c1a818fb23885fb5b33.jpg",
       title: "BabyMD – Electronic City",
       location: "https://maps.app.goo.gl/YsmHaMG3rq29G5CA6",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "8:00 AM to 1:30 PM | 4:00 PM to 8:30 PM",
         },
-        { days: "Sunday", time: "9 AM to 12 PM" },
+        { days: "Sunday", time: "9:00 AM to 12:00 PM" },
       ],
     },
     {
-      image: "/images/39e64f6c9f643abdd21ece3b69668b9b60b15dfe.jpg",
+      image: "/clinic/39e64f6c9f643abdd21ece3b69668b9b60b15dfe.jpg",
       title: "BabyMD – HSR Layout",
       location: "https://maps.app.goo.gl/4n2TAFAhGebGy8nJ8",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "8:00 AM to 1:30 PM | 4:00 PM to 8:30 PM",
         },
-        { days: "Sunday", time: "9 AM to 12 PM" },
+        { days: "Sunday", time: "9:00 AM to 12:00 PM" },
       ],
     },
     {
-      image: "/images/c340ff5accd3a76b9824168ee4a673930fbf9234.jpg",
+      image: "/clinic/c340ff5accd3a76b9824168ee4a673930fbf9234.jpg",
       title: "BabyMD – Varthur",
       location: "https://maps.app.goo.gl/9DzJ1XLWuh3zbZ8cA",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "8:00 AM to 1:30 PM | 4:00 PM to 8:30 PM",
         },
-        { days: "Sunday", time: "9 AM to 12 PM" },
+        { days: "Sunday", time: "9:00 AM to 12:00 PM" },
       ],
     },
     {
-      image: "/images/ballandur.png",
+      image: "/clinic/ballandur.png",
       title: "BabyMD – Bellandur",
       location: "https://maps.app.goo.gl/wrFkjX7sgjEuDzfD7",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "8:00 AM to 1:30 PM | 4:00 PM to 8:30 PM",
         },
-        { days: "Sunday", time: "9 AM to 12 PM" },
+        { days: "Sunday", time: "9:00 AM to 12:00 PM" },
       ],
     }
   ];
@@ -108,7 +111,7 @@ useEffect(() => {
           <div className="flex flex-col justify-center items-center md:flex-row">
             <div className="w-full md:w-2/3">
               <div className="relative px-8 md:px-0 md:w-3/4">
-                <h1 className="text-2xl font-bold text-[34px] fade-in pb-[12px]">
+                <h1 className="text-2xl font-bold text-[34px] pb-[12px]">
                   Clinics that feels{" "}
                   <span className="text-[#5943A5]">like your second </span>
                   <span className="relative clinic_border">
@@ -117,16 +120,16 @@ useEffect(() => {
                     </i>
                   </span>
                 </h1>
-                <p className="fade-in">
+                <p className="">
                   Got a sniffle, stumble, or question that can&#39;t wait? Designed to be the Disneyland of clinics, we&#39;re just down the road, stocked with smiles, support, and paediatric pros who get it.
                 </p>
                 <img
-                  className="absolute top-[-40px] right-[30px] fade-in"
+                  className="absolute top-[-40px] right-[30px]"
                   src="/images/Group 427319502.svg"
                   alt="Decorative"
                 />
                 <img
-                  className="absolute bottom-[-60px] left-[20px] fade-in"
+                  className="absolute bottom-[-60px] left-[20px]"
                   src="/images/Group 427319515.svg"
                   alt="Decorative"
                 />
@@ -137,7 +140,7 @@ useEffect(() => {
               <img className="mx-auto" src="/images/Vector.svg" alt="Vector" />
               <img
                 className="mx-auto absolute absolute-center"
-                src="/images/clinic_listing_banner.png"
+                src="/clinic/clinic_listing_banner.png"
                 alt="Mask group"
               />
             </div>
@@ -286,8 +289,10 @@ useEffect(() => {
           </div>
         </div>
       </div>
-      <RoadMap />
-      
+      <RoadMap onClick={() => setIsModalOpen(true)}/>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                  <BabyMDCampaignForm formID="hp_book_appointment_1" />
+            </Modal>
       </div>
     </>
   );

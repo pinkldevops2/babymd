@@ -88,9 +88,9 @@ const ClinicCarousel = ({ clinics }) => {
       {/* SLIDER SECTION */}
       <div className="bg-[#FFF5F5] p-6 md:py-12 md:px-6 pt-0  md:w-1/2">
         <div className="relative max-w-md mx-auto md:max-w-6xl rounded-2xl bg-white p-4">
-          <div ref={sliderRef} className="keen-slider fade-in">
+          <div ref={sliderRef} className="keen-slider">
             {clinics.map((clinic, index) => (
-  <div key={index} className="keen-slider__slide">
+  <div key={index} className="keen-slider__slide fade-in">
     <div className="relative w-full mb-6 rounded-xl overflow-hidden">
       <img
                     className="mx-auto rounded-[20px] min-h-[205px] object-cover"

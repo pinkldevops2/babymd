@@ -97,75 +97,75 @@ export default function Home() {
   // Clinic data
   const clinics =  [
     {
-      image: "/images/f599ef5c0bc6b9e548520dd4c3c29270435d932e.jpg",
+      image: "/clinic/f599ef5c0bc6b9e548520dd4c3c29270435d932e.jpg",
       title: "BabyMD – Hosa Road",
       location: "https://maps.app.goo.gl/yiQnHGHKYxLK7kF56",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "9 AM to 8:00 PM",
+          time: "9:00 AM to 8:00 PM",
         },
-        { days: "Sunday", time: "9 AM to 12 PM" },
+        { days: "Sunday", time: "9:00 AM to 12:00 PM" },
       ],
     },
     {
-      image: "/images/351beb004171eecf5fa8fcabcad24c88067fc6d4.jpg",
+      image: "/clinic/351beb004171eecf5fa8fcabcad24c88067fc6d4.jpg",
       title: "BabyMD – Whitefield",
-      location: "#",
+      location: "https://maps.app.goo.gl/mCpiktpusP9V3Crt7",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "9 AM to 8:00 PM",
+          time: "9:00 AM to 8:00 PM",
         },
-        { days: "Sunday", time: " 9 AM to 12 PM" },
+        { days: "Sunday", time: " 9:00 AM to 12:00 PM" },
       ],
     },
     {
-      image: "/images/bd6e88dec0f434f565572c1a818fb23885fb5b33.jpg",
+      image: "/clinic/bd6e88dec0f434f565572c1a818fb23885fb5b33.jpg",
       title: "BabyMD – Electronic City",
       location: "https://maps.app.goo.gl/YsmHaMG3rq29G5CA6",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "8:00 AM to 1:30 PM | 4:00 PM to 8:30 PM",
         },
-        { days: "Sunday", time: "9 AM to 12 PM" },
+        { days: "Sunday", time: "9:00 AM to 12:00 PM" },
       ],
     },
     {
-      image: "/images/39e64f6c9f643abdd21ece3b69668b9b60b15dfe.jpg",
+      image: "/clinic/39e64f6c9f643abdd21ece3b69668b9b60b15dfe.jpg",
       title: "BabyMD – HSR Layout",
       location: "https://maps.app.goo.gl/4n2TAFAhGebGy8nJ8",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "8:00 AM to 1:30 PM | 4:00 PM to 8:30 PM",
         },
-        { days: "Sunday", time: "9 AM to 12 PM" },
+        { days: "Sunday", time: "9:00 AM to 12:00 PM" },
       ],
     },
     {
-      image: "/images/c340ff5accd3a76b9824168ee4a673930fbf9234.jpg",
+      image: "/clinic/c340ff5accd3a76b9824168ee4a673930fbf9234.jpg",
       title: "BabyMD – Varthur",
       location: "https://maps.app.goo.gl/9DzJ1XLWuh3zbZ8cA",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "8:00 AM to 1:30 PM | 4:00 PM to 8:30 PM",
         },
-        { days: "Sunday", time: "9 AM to 12 PM" },
+        { days: "Sunday", time: "9:00 AM to 12:00 PM" },
       ],
     },
     {
-      image: "/images/ballandur.png",
+      image: "/clinic/ballandur.png",
       title: "BabyMD – Bellandur",
       location: "https://maps.app.goo.gl/wrFkjX7sgjEuDzfD7",
       hours: [
         {
           days: "Monday to Saturday",
-          time: "8 AM to 1:30 PM | 4 PM to 8:30 PM",
+          time: "8:00 AM to 1:30 PM | 4:00 PM to 8:30 PM",
         },
-        { days: "Sunday", time: "9 AM to 12 PM" },
+        { days: "Sunday", time: "9:00 AM to 12:00 PM" },
       ],
     }
   ];
