@@ -105,7 +105,7 @@ const ClinicCarousel = ({ clinics }) => {
       <div className='flex gap-2 pb-3'>
         <img src="/images/map-pin.svg" alt="Map pin" />
                       <h5 className="text-[14px] text-[#F8845D] underline uppercase underline-offset-[5px] tracking-[2px]">
-                        {clinic.location}
+                        <a href={clinic.location} target="_blank">locate clinic</a>
                       </h5>
       </div>
       {clinic.hours.map((hour, idx) => (

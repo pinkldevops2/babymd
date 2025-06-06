@@ -13,7 +13,7 @@ export default function Clinic() {
     {
       image: "/images/f599ef5c0bc6b9e548520dd4c3c29270435d932e.jpg",
       title: "BabyMD – Hosa Road",
-      location: "locate clinic",
+      location: "https://maps.app.goo.gl/yiQnHGHKYxLK7kF56",
       hours: [
         {
           days: "Monday to Saturday",
@@ -25,7 +25,7 @@ export default function Clinic() {
     {
       image: "/images/351beb004171eecf5fa8fcabcad24c88067fc6d4.jpg",
       title: "BabyMD – Whitefield",
-      location: "locate clinic",
+      location: "#",
       hours: [
         {
           days: "Monday to Saturday",
@@ -37,7 +37,7 @@ export default function Clinic() {
     {
       image: "/images/bd6e88dec0f434f565572c1a818fb23885fb5b33.jpg",
       title: "BabyMD – Electronic City",
-      location: "locate clinic",
+      location: "https://maps.app.goo.gl/YsmHaMG3rq29G5CA6",
       hours: [
         {
           days: "Monday to Saturday",
@@ -49,7 +49,7 @@ export default function Clinic() {
     {
       image: "/images/39e64f6c9f643abdd21ece3b69668b9b60b15dfe.jpg",
       title: "BabyMD – HSR Layout",
-      location: "locate clinic",
+      location: "https://maps.app.goo.gl/4n2TAFAhGebGy8nJ8",
       hours: [
         {
           days: "Monday to Saturday",
@@ -61,7 +61,7 @@ export default function Clinic() {
     {
       image: "/images/c340ff5accd3a76b9824168ee4a673930fbf9234.jpg",
       title: "BabyMD – Varthur",
-      location: "locate clinic",
+      location: "https://maps.app.goo.gl/9DzJ1XLWuh3zbZ8cA",
       hours: [
         {
           days: "Monday to Saturday",
@@ -73,7 +73,7 @@ export default function Clinic() {
     {
       image: "/images/ballandur.png",
       title: "BabyMD – Bellandur",
-      location: "locate clinic",
+      location: "https://maps.app.goo.gl/wrFkjX7sgjEuDzfD7",
       hours: [
         {
           days: "Monday to Saturday",
@@ -196,21 +196,21 @@ useEffect(() => {
                     alt="Clinic"
                   />
                   <div className="p-4">
-                    <h4 className="text-[20px] font-bold my-1 font-lato fade-in">
+                    <h4 className="text-[20px] font-bold my-1 font-lato">
                       {clinic.title}
                     </h4>
-                    <div className="flex flex-row gap-3 fade-in">
+                    <div className="flex flex-row gap-3">
                       <img src="/images/map-pin.svg" alt="Map pin" />
                       <h5 className="text-[14px] text-[#F8845D] underline uppercase underline-offset-[5px] tracking-[2px]">
-                        {clinic.location}
+                        <a href={clinic.location} target="_blank">locate clinic</a>
                       </h5>
                     </div>
                     <div className="clinic-hrs mt-6">
-                      <h4 className="text-[14px] font-bold font-lato fade-in">
+                      <h4 className="text-[14px] font-bold font-lato">
                         Clinic Hours:
                       </h4>
                       {clinic.hours.map((hour, idx) => (
-                        <h4 key={idx} className="text-[14px] font-lato fade-in">
+                        <h4 key={idx} className="text-[14px] font-lato">
                           <span className="font-bold">{hour.days} </span> –{" "}
                           {hour.time}
                         </h4>
