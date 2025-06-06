@@ -18,7 +18,8 @@ export default function Header() {
 
   return (
     <div className="container sticky top-0 z-50 pt-[87px]">
-    <header className="bg-white p-4 fixed top-0 left-0 w-full bg-white z-50">
+      <div className=" fixed top-0 left-0 w-full z-50">
+    <header className="bg-white p-4 container bg-white">
       <div className="flex justify-between items-center px-1 py-2">
       <Link href="/" passHref>
         <div className="flex items-center space-x-2 cursor-pointer">
@@ -123,6 +124,7 @@ export default function Header() {
         </nav>
       )}
     </header>
+    </div>
     </div>
   );
 }
