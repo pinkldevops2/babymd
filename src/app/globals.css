@@ -182,9 +182,8 @@ footer h3{
     background-position: left 30px;
 }
 .yellow_circle{
-	background-image: url(assets/yellow_circle.png);
     background-repeat: no-repeat;
-    display: inline-flex;
+    display: inline-block;
     background-size: contain;
     align-items: center;
     justify-content: center;
@@ -193,6 +192,12 @@ footer h3{
     padding: 3px 15px 7px;
     background-position: center center;
 }
+.yellow_circle svg{
+    position: absolute;
+    top: 0px;
+    width: 172px;
+    left: 0;
+}    
 .package_price_bg{
 	background-image: url(assets/package_price_bg.png);
     background-repeat: no-repeat;
@@ -205,15 +210,15 @@ footer h3{
 	font-size: 150%;
 }
 .purple_circle{
-	background-image: url(assets/purple_circle.png);
     background-repeat: no-repeat;
-    display: inline-flex;
+    display: inline-block;
     padding: 5px 20px 8px;
     background-size: contain;
     align-items: center;
     justify-content: center;
     background-position: center center;
     margin-bottom: -5px;
+    position: relative;
 }
 .clinic_border{
 	background-image: url(../../public/images/drawing001.png);
@@ -338,7 +343,6 @@ footer h3{
 }
 .circling_around{
     font-family: var(--font-courgette);
-    background-image: url(./assets/circle_contacts.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -346,12 +350,40 @@ footer h3{
     font-weight: 400!important;
 }
 .circling_around2{
-    background-image: url(./assets/contact_c2.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    padding: 10px 15px;
+    position: relative;
+    padding: 10px 5px;
+    display: inline-block;
+}
+.circling_around2 svg{
+    position: absolute;
+    top: 12px;
+    width: 150px;
+    left: -25px;
 }
 #hp_book_appointment_1 form{
   font-size: 16px;
+}
+.glass-effect {
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px); /* Safari support */
+  background-color: rgba(255, 255, 255, 0.4); /* semi-transparent bg */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.purple_circle svg{
+  width: 108%;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+}
+.circling_around svg{
+    position: absolute;
+    left: 0;
+    top: 11px;
+    z-index: 2;
 }
