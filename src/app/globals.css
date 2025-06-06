@@ -22,7 +22,7 @@
   }
 }
 body{
-	overflow: hidden;
+	overflow-x: hidden;
 }
 html{
 	overflow-x: hidden;
@@ -351,4 +351,7 @@ footer h3{
     background-position: center center;
     background-size: contain;
     padding: 10px 15px;
+}
+#hp_book_appointment_1 form{
+  font-size: 16px;
 }

@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import Image from "next/image";
 import SuperDocButton from "./SuperDocButton";
-import FormPopUp from './FormPopUp';
 
 const MembershipPlans = ({
   goldPackageImg,
   platinumPackageImg,
   premiumLayerBg,
   premiumLayerImg,
+  onClick
 }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="px-6 md:px-6">
       <div className="relative bg-[#FF9A6C] text-white mt-6 mb-4 pt-10 rounded-2xl space-y-4 w-full mx-auto overflow-hidden flex flex-col md:flex-row md:p-6">
@@ -99,7 +98,8 @@ const MembershipPlans = ({
         <div className="mt-2 pl-6 pb-2 relative md:w-1/2">
         <div className="absolute bottom-[30px] left-1/2 transform -translate-x-1/2 z-10 px-[20px]">
         <SuperDocButton
-            href="/superdoc"
+            href="" 
+            onClick={onClick }
             label="PICK A PLAN, START SAVING"
             className="fade-in"
             variant="purple"
@@ -115,7 +115,7 @@ const MembershipPlans = ({
           />
         </div>
       </div>
-    </div>
+    </div>    
   );
 };
 

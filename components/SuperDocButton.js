@@ -3,7 +3,8 @@ import Link from 'next/link';
 import clsx from 'clsx'; // Optional: for cleaner conditional class handling
 
 const SuperDocButton = ({
-  href,
+  onClick = false,
+  href = false,
   label,
   variant = 'pink', // 'pink', 'purple', or 'yellow'
   className = '',
@@ -20,6 +21,7 @@ const SuperDocButton = ({
     <Link
       href={href}
       target={href}
+      onClick={onClick}
       className={clsx(
         `whitespace-nowrap text-sm flex items-center gap-2 font-bold py-4 px-10 rounded-full tracking-wide transition-transform duration-300 transform hover:scale-105`,
         bgColors[variant],

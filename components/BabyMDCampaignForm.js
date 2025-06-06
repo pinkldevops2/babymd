@@ -499,7 +499,7 @@ export default function BabyMDCampaignForm({formID}) {
         <div className="zf-subContWrap flex flex-col items-start">
           <ul className="m-0 p-0 w-full">
             <li className="zf-tempFrmWrapper mb-4">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] text-[16px] mb-1">
                 Name <em className="zf-important text-red-500">*</em>
               </label>
               <div className="zf-tempContDiv ">
@@ -510,7 +510,7 @@ export default function BabyMDCampaignForm({formID}) {
                     checktype="c1"
                     maxLength="255"
                     fieldtype="1"
-                    className=" zf-input-underline w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                    className=" zf-input-underline w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                   />
                 </span>
                 <p id="SingleLine1_error_mandatory" className=" mt-[-7px]  text-red-500 text-xs mt-1 hidden">
@@ -524,7 +524,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] text-[16px] mb-1">
                 Baby&apos;s Date Of Birth
               </label>
               <div className="zf-tempContDiv relative">
@@ -534,7 +534,7 @@ export default function BabyMDCampaignForm({formID}) {
                     name="Date"
                     checktype="c4"
                     maxLength="25"
-                    className="w-full zf-input-underline py-2  focus:outline-none text-16px md:text-[20px] border-b mb-4 "
+                    className="w-full zf-input-underline  py-1  focus:outline-none text-16px   border-b mb-4 "
                   />                
                 </span>
                 <div className="zf-clearBoth clear-both"></div>
@@ -549,7 +549,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] text-[16px] mb-1">
                 Phone <em className="zf-important text-red-500">*</em>
               </label>
               <div className="zf-tempContDiv zf-phonefld">
@@ -567,7 +567,7 @@ export default function BabyMDCampaignForm({formID}) {
                       id="international_PhoneNumber_countrycode"
                       valtype="number"
                       phoneformattype="2"
-                      className="l zf-input-underline w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                      className="l zf-input-underline w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                     />
                   </span>
                   <div className="zf-clearBoth clear-both"></div>
@@ -583,7 +583,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] text-[16px] mb-1">
                 Email
               </label>
               <div className="zf-tempContDiv">
@@ -593,7 +593,7 @@ export default function BabyMDCampaignForm({formID}) {
                     name="Email"
                     checktype="c5"
                     maxLength="255"
-                    className="zf-input-underline w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                    className="zf-input-underline w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                   />
                 </span>
                 <p id="Email_error_mandatory" className="mt-[-7px] text-red-500 text-xs mt-1 hidden">
@@ -607,7 +607,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4 hidden">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] text-[16px] mb-1">
                 Form Location
               </label>
               <div className="zf-tempContDiv">
@@ -616,7 +616,7 @@ export default function BabyMDCampaignForm({formID}) {
                     type="text"
                     name="SingleLine"
                     checktype="c1"
-                    className=" zf-input-underline w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                    className=" zf-input-underline w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                   />
                 </span>
                 <p id="SingleLine_error_mandatory" className="mt-[-7px] text-red-500 text-xs mt-1 hidden">
@@ -630,7 +630,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4 hidden">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] mb-1">
                 Lead Source
               </label>
               <div className="zf-tempContDiv">
@@ -643,7 +643,7 @@ export default function BabyMDCampaignForm({formID}) {
                     maxLength="255"
                     fieldtype="1"
                     readOnly
-                    className=" w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                    className=" w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                   />
                 </span>
                 <p id="SingleLine2_error_mandatory" className="mt-[-7px] text-red-500 text-xs mt-1 hidden">
@@ -657,7 +657,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4 hidden">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] text-[16px] mb-1">
                 Lead Status
               </label>
               <div className="zf-tempContDiv">
@@ -670,7 +670,7 @@ export default function BabyMDCampaignForm({formID}) {
                     maxLength="255"
                     fieldtype="1"
                     readOnly
-                    className="zf-input-underline w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                    className="zf-input-underline w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                   />
                 </span>
                 <p id="SingleLine3_error_mandatory" className="mt-[-7px] text-red-500 text-xs mt-1 hidden">
@@ -684,7 +684,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4 hidden">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] text-[16px] mb-1">
                 Lead Sub Status
               </label>
               <div className="zf-tempContDiv">
@@ -697,7 +697,7 @@ export default function BabyMDCampaignForm({formID}) {
                     maxLength="255"
                     fieldtype="1"
                     readOnly
-                    className="zf-input-underline w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                    className="zf-input-underline w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                   />
                 </span>
                 <p id="SingleLine4_error_mandatory" className="mt-[-7px] text-red-500 text-xs mt-1 hidden">
@@ -711,7 +711,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4 hidden">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] mb-1">
                 Redirection Check Name
               </label>
               <div className="zf-tempContDiv">
@@ -722,7 +722,7 @@ export default function BabyMDCampaignForm({formID}) {
                     checktype="c1"
                     maxLength="255"
                     fieldtype="1"
-                    className=" zf-input-underline w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                    className=" zf-input-underline w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                   />
                 </span>
                 <p id="SingleLine7_error_mandatory" className="mt-[-7px] text-red-500 text-xs mt-1 hidden">
@@ -736,7 +736,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4 hidden">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] mb-1">
                 Lead Sub Source
               </label>
               <div className="zf-tempContDiv">
@@ -747,7 +747,7 @@ export default function BabyMDCampaignForm({formID}) {
                     checktype="c1"
                     maxLength="255"
                     fieldtype="1"
-                    className="zf-input-underline w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                    className="zf-input-underline w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                   />
                 </span>
                 <p id="SingleLine8_error_mandatory" className="mt-[-7px] text-red-500 text-xs mt-1 hidden">
@@ -761,7 +761,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4 hidden">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] mb-1">
                 First Enquired Service
               </label>
               <div className="zf-tempContDiv">
@@ -772,7 +772,7 @@ export default function BabyMDCampaignForm({formID}) {
                     checktype="c1"
                     maxLength="255"
                     fieldtype="1"
-                    className=" zf-input-underline w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                    className=" zf-input-underline w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                   />
                 </span>
                 <p id="SingleLine9_error_mandatory" className="mt-[-7px] text-red-500 text-xs mt-1 hidden">
@@ -786,7 +786,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4 hidden">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] text-[16px] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] text-[16px] mb-1">
                 Channel
               </label>
               <div className="zf-tempContDiv">
@@ -797,7 +797,7 @@ export default function BabyMDCampaignForm({formID}) {
                     checktype="c1"
                     maxLength="255"
                     fieldtype="1"
-                    className=" zf-input-underline w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                    className=" zf-input-underline w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                   />
                 </span>
                 <p id="SingleLine10_error_mandatory" className="mt-[-7px] text-red-500 text-xs mt-1 hidden">
@@ -811,7 +811,7 @@ export default function BabyMDCampaignForm({formID}) {
             </li>
 
             <li className="zf-tempFrmWrapper mb-4 hidden">
-              <label className="zf-labelName block text-16px md:text-[20px] text-[#2E2E2E] mb-1">
+              <label className="zf-labelName block text-16px   text-[#2E2E2E] mb-1">
                 Reward Claimed
               </label>
               <div className="zf-tempContDiv">
@@ -822,7 +822,7 @@ export default function BabyMDCampaignForm({formID}) {
                     checktype="c1"
                     maxLength="255"
                     fieldtype="1"
-                    className="zf-input-underline w-full text-16px md:text-[20px] border-b mb-4 py-2 focus:outline-none"
+                    className="zf-input-underline w-full text-16px   border-b mb-4  py-1 focus:outline-none"
                   />
                 </span>
                 <p id="SingleLine11_error_mandatory" className="mt-[-7px] text-red-500 text-xs mt-1 hidden">

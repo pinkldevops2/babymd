@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SuperDocButton from './SuperDocButton';
 
-const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
+const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow, onClick }) => {
   return (
     <div className="px-6 py-6 md:pt-2 md:px-6">
       {/* Parent container: relative for button positioning on mobile */}
@@ -39,7 +39,7 @@ const ReadySection = ({ readyvector, readyvectorImg, bluebtnarrow }) => {
 
         {/* Button: absolute on mobile (20px from bottom), static on desktop */}
         <div className="absolute  bottom-[20px] left-1/2 transform -translate-x-1/2 w-full px-6 lg:transform-none lg:px-0 lg:w-auto lg:mt-8 lg:w-fit lg:relative lg:left-[152px]">
-          <SuperDocButton href="#" label="BOOK YOUR APPOINTMENT" className="text-center justify-center fade-in" variant="yellow" textColor="#5943A5"/>
+          <SuperDocButton href="" onClick={onClick } label="BOOK YOUR APPOINTMENT" className="text-center justify-center fade-in" variant="yellow" textColor="#5943A5"/>
         </div>
       </div>
     </div>

@@ -73,6 +73,9 @@ import StackingCards from "../../components/StackingCards";
 import HandIconSVG from "../../components/anime/HandIconSVG";
 import CheckIconSVG from "../../components/anime/CheckIconSVG";
 import CapIconSVG from "../../components/anime/CapIconSVG";
+import Modal from '../../components/FormPopUp';
+import Modal2 from '../../components/FormPopUp';
+import BabyMDCampaignForm from '../../components/BabyMDCampaignForm';
  
 
 import gsap from "gsap";
@@ -89,6 +92,8 @@ const Util = {
 };
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen2, setIsModalOpen2] = useState(false);
   // Clinic data
   const clinics =  [
     {
@@ -587,16 +592,24 @@ export default function Home() {
         platinumPackageImg={platinumPackageImg}
         premiumLayerBg={premiumLayer}
         premiumLayerImg={PremiumlayerImg}
+        onClick={() => setIsModalOpen(true)}
         />       
 <ReadySection 
         readyvector={readyvector} 
         readyvectorImg={readyvectorImg}  
         bluebtnarrow={bluebtnarrow} 
+        onClick={() => setIsModalOpen2(true)}
         />
 <FaqSection 
         faqs={faqData} 
         />
 </div></div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+            <BabyMDCampaignForm formID="hp_book_appointment_1" />
+      </Modal>
+      <Modal2 isOpen={isModalOpen2} onClose={() => setIsModalOpen2(false)}>
+            <BabyMDCampaignForm formID="cl_get_appointment_today" />
+      </Modal2>
 </div>
   );
 }
