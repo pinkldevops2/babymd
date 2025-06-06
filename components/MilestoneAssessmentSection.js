@@ -17,6 +17,7 @@ import beehive7 from "@/app/assets/beehive7.png";
 import beehive8 from "@/app/assets/beehive8.png";
 import SpringHome3 from "./anime/SpringHome3";
 import SuperDocButton from './SuperDocButton';
+import SubHeading2 from "./SubHeading2";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +55,7 @@ const MilestoneAssessmentSection = () => {
           {/* Left Column: Text Section */}
           <div className="w-full md:w-1/2">
             <div className="relative">
-              <SubHeading
+              <SubHeading2
                 mainText={
                   <>
                     Curious about your

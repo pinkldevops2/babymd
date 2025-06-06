@@ -11,6 +11,7 @@ import next_bees_sleeping from "@/app/assets/next_bees_sleeping.png";
 import beehive2 from "@/app/assets/beehive2.png";
 import beehive_cloud from "@/app/assets/beehive_cloud.png";
 import keerthana from "@/app/assets/keerthana.png";
+import ContactSubC from './anime/ContactSubD';
 
 const testimonials = [
   {
@@ -106,8 +107,9 @@ const CloudTestimonials = () => {
       <h2 className="text-[28px] leading-[32px] font-bold mb-2 px-6 md:px-6 fade-in">
         Don&apos;t just <span className="text-[#5943A5]">take</span>
         <br />
-        <span className="text-[#5943A5] italic font-medium">
-          <i>our word </i>
+        <span className="text-[#5943A5] italic font-medium relative circling_around2 adjusters">
+          <i className="relative z-5">our word </i>
+          <ContactSubC />
         </span>{" "}
         for it
       </h2>

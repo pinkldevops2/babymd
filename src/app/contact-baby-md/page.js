@@ -43,7 +43,7 @@ export default function Contact() {
         <div className="w-full bg-white p-5  relative">
           {/* Header Title */}
           <div className="mb-6 relative pt-8">
-            <h1 className="text-xl font-bold leading-tight text-black contactSub mt-8 fade-in">
+            <h1 className="text-xl font-bold leading-tight text-black contactSub mt-8">
               Guidance? Concerns?
               <br />
               <span className="text-[#5d3fd3] decoration-[#5d3fd3] circling_around relative"><span className="relative z-4">Appointments?</span>
@@ -52,7 +52,7 @@ export default function Contact() {
             </h1>
 			
 
-            <p className=" text-gray-700 mt-2 fade-in">
+            <p className=" text-gray-700 mt-2">
 			  Reach out anytime, we&rsquo;ve got the time and the team!
             </p>
 

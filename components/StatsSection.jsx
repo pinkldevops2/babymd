@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import CountUp from 'react-countup';
-import SubHeading from './SubHeading'; // Adjust the path
+import SubHeading2 from './SubHeading2'; // Adjust the path
 import { useInView } from 'react-intersection-observer';
 import SpringPathReveal from './anime/SpringPathReveal';
 
@@ -27,7 +27,7 @@ const StatsSection = ({
       <div className="container">
       <div className="w-full mt-8 md:mt-0 px-6 pt-10 relative">
         <SpringPathReveal className={"absolute left-[-266px] top-[323px] md:left-1/2  md:-translate-x-1/2"} />
-        <SubHeading
+        <SubHeading2
           mainText={<> But you don&apos;t have to<br /></>}
           highlightText={<>figure it out</>}
           subText={<><i>all alone</i></>}

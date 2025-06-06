@@ -221,7 +221,6 @@ footer h3{
     position: relative;
 }
 .clinic_border{
-	background-image: url(../../public/images/drawing001.png);
     background-repeat: no-repeat;
     display: inline-flex;
     padding: 5px 20px 8px;
@@ -356,6 +355,7 @@ footer h3{
     position: relative;
     padding: 10px 5px;
     display: inline-block;
+    margin-top: -14px;
 }
 .circling_around2 svg{
     position: absolute;
@@ -386,4 +386,16 @@ footer h3{
     left: 0;
     top: 11px;
     z-index: 2;
+}
+.adjusters.circling_around2 svg {
+    width: 150px;
+    position: absolute;
+    top: 9px;
+    left: -14px;
+}
+.adjusters2.circling_around2 svg {
+    width: 150px;
+    position: absolute;
+    top: 9px;
+    left: -20px;
 }

@@ -4,8 +4,9 @@ import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import Image from 'next/image';
 import SuperDocButton from './SuperDocButton';
-import SubHeading from './SubHeading';
+import SubHeading3 from './SubHeading3';
 import beehive4 from '@/app/assets/beehive4.png';
+
 
 const ClinicCarousel = ({ clinics }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,7 +41,7 @@ const ClinicCarousel = ({ clinics }) => {
       <div className="bg-[#FFF5F5] p-6 md:py-12 md:px-6  md:w-1/2">
         <div className="max-w-2xl">
           <div className="relative">
-            <SubHeading
+            <SubHeading3
               mainText={<>All of this,<br /></>}
               highlightText={<>just around</>}
               subText={<><i>the corner</i></>}

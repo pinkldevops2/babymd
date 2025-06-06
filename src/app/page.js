@@ -59,6 +59,7 @@ import platinumPackageImg from "../app/assets/platinum_package.svg";
 import SuperDocButton from '../../components/SuperDocButton';
 import SubHeading from '../../components/SubHeading';
 import SubHeading2 from '../../components/SubHeading2';
+import SubHeading3 from '../../components/SubHeading3';
 import ClinicCarousel from '../../components/ClinicCarousel';
 import WorkshopCarousel from '../../components/WorkshopCarousel';
 import CaseStudyCarousel from '../../components/CaseStudyCarousel';
@@ -526,7 +527,7 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-4 pr-[70px] relative fade-in">
-            <SubHeading
+            <SubHeading3
             mainText={<>We&#39;re here for the</>}
             highlightText={<>giggles, sniffles, and everything in</>}
             subText={<><i>between!</i></>}
