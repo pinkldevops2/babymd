@@ -230,7 +230,7 @@ Koramangala, Bengaluru, Karnataka-560034
           <div className="pt-12">
             <div className="flex justify-end space-x-4">
               <a
-                href="https://www.facebook.com/share/1AfFWo5PEg/?mibextid=wwXIfr"
+                href="https://www.facebook.com/babymd.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#FF6F61]"
