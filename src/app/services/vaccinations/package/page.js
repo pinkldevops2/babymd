@@ -120,7 +120,7 @@ export default function Package() {
 
       {/* Footer Text */}
       <p className="text-[16px] pb-4">
-        Because when it comes to your baby's health, planning ahead should come with perks.
+        Because when it comes to your baby&#39;s health, planning ahead should come with perks.
       </p>
        <div className="flex justify-center pt-6">
               <button
