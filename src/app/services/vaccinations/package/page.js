@@ -24,7 +24,7 @@ export default function Package() {
         />
 
       <p className="text-[16px] text-black text-xs mb-4 mt-2">
-        Stay ahead of your baby's vaccine schedule with our pre-purchase packages and big savings.
+        Stay ahead of your baby&#39;s vaccine schedule with our pre-purchase packages and big savings.
       </p>
         </div>
 
@@ -113,7 +113,7 @@ export default function Package() {
         
           <ul className='list-disc text-[16px]'>
             <li>No repeated payments or billing</li>
-            <li>Just show up — everything's already taken care of</li>
+            <li>Just show up — everything&#39;s already taken care of</li>
           </ul>
       
       </div>
