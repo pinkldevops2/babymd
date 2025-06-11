@@ -8,7 +8,7 @@ import Membership from './schedule/page';
 
 import ThirdParagraph from './thirdparagraph/page';
 import VaccineCarousel from './vaccinecarousel/page';
-import CloudTestimonials from './CloudTestimonials//CloudTestimonials';
+import CloudTestimonials from '../../../../components/CloudTestimonials';
 import Questions from './questions/page';
 import Rectangle from './rectangle/page';
 import GeneralConsults from './generalconsult/page';
