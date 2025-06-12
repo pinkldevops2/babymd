@@ -76,7 +76,7 @@ const RoadMapDoctors = ({onClick}) => {
             <div key={index} className="relative mb-6">
               {/* Vertical Timeline Line - only show if not the last item */}
               {index < roadmapData.length - 1 && (
-                <div className="absolute left-6 top-8 w-0.5 h-full bg-purple-300"></div>
+                <div key={index} className="absolute left-6 top-8 w-0.5 h-full bg-purple-300"></div>
               )}
               
               {/* Clickable Timeline Icon */}
@@ -121,7 +121,7 @@ const RoadMapDoctors = ({onClick}) => {
                   <div className="roadmap mt-2 bg-white rounded-lg shadow-lg border border-gray-200 p-4 animate-in slide-in-from-top-2 duration-200">  
                       <h5>{section.heading}</h5>
                       {section.content.map((item, itemIndex) => (                        
-                        <p className="space-y-2">
+                        <p key={itemIndex} className="space-y-2">
                           <span className="text-gray-700 text-sm">{item}</span>
                         </p>
                       ))}   
