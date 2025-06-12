@@ -64,7 +64,7 @@ export default function DoctorTeam() {
               />
             </div>
             <div className="py-2 md:py-4">
-              <h3 className="text-[16px] leading-[20px] font-lato font-bold text-[#2E2E2E] mb-0">
+              <h3 className="text-[16px] leading-[20px] font-lato font-bold text-[#2E2E2E] mb-1">
                 <em>{doctor.name}</em>
               </h3>
 
@@ -75,7 +75,7 @@ export default function DoctorTeam() {
               <p className="mb-1 leading-relaxed">
                 <a
                   href="#"
-                  className="flex gap-2 items-center text-[12px] font-lato font-bold  text-[#5943A5] underline tracking-[2px] underline-offset-[5px]"
+                  className="flex gap-2 items-center text-[12px] font-lato font-bold  text-[#5943A5] underline uppercase tracking-[2px] underline-offset-[5px]"
                 >
                   Know More
                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none">

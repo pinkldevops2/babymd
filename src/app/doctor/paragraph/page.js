@@ -21,7 +21,7 @@ export default function Paragraph() {
                 className="absolute right-[20px] top-[65px]"
                 />
 
-                <p className="pt-8">
+                <p className="pt-1 pr-8">
                 Our doctors bring decades of experience and training from some of India’s top medical institutes. But what truly sets them apart is their passion for paediatrics and their commitment to making every child (and parent) feel heard, safe, and cared for.
 
                 </p>

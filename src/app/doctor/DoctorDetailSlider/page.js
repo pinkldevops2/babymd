@@ -3,7 +3,10 @@ import Image from 'next/image';
 import { useKeenSlider } from "keen-slider/react"; // Import keen-slider hook
 import "keen-slider/keen-slider.min.css"; // Import keen-slider styles
 import whitebtnarrow from "../../assets/btnwhitearrow.png";
+import arrow from "../../../../public/images/Group 2349.png";
 import Nearbyclinic from "../../../../public/images/doctorassets/doc1.png";
+import quate from "../../../../public/images/doctorassets/quate.png";
+import bee2 from "../../../../public/images/doctorassets/bee2.png";
 import SubHeading from '../../../../components/SubHeading';
 import beehive2 from '../../../../public/images/serviceassets/beehive2.png';
 
@@ -43,7 +46,7 @@ export default function DoctorSlider() {
   return (
 
           <div className="bg-[#E1F5FF]">
-             <div className="w-full mt-0 px-6 pb-5 pt-7 relative">
+             <div className="w-full mt-0 px-6 pb-3 pt-7 relative">
         <SubHeading
           mainText={<>From White Coats,</>}
           highlightText={<>With</>}
@@ -57,42 +60,44 @@ export default function DoctorSlider() {
           className="absolute right-[20px] top-[65px]"
         />
 
-        <p className="pt-8">
+        <p className="pt-5">
          Read our care team’s little love notes.
         </p>
       </div>
              
 
-
-
-
-
-        <div className="p-6">
+        <div className="p-6 pt-2 pb-25 relative">
           <div className="relative max-w-md mx-auto rounded-2xl ">
             <div ref={clinicSliderRef} className="keen-slider">
               {clinics.map((clinic, index) => (
                 <div key={index} className="keen-slider__slide">
 
-                <div className="relative h-[300px] w-full imageoverlay">
+                <div className="relative h-[350px] w-full imageoverlay">
                     <Image
                       width={350}
-                      height={300}
+                      height={350}
                       src={clinic.image}
                       alt={clinic.name}
                       className="w-full h-full object-cover rounded-2xl"
                     />
+                    <Image
+                      src={quate}
+                      alt={quate}
+                      className="w-[40px] absolute top-0 right-5  object-cover"
+                    />
                      
-                      <div className="absolute bottom-2 left-0 right-0 flex flex-wrap gap-1 px-2 z-10">
-                         <p className="text-xs md:text-sm text-white mb-2 md:mb-3 leading-relaxed"  dangerouslySetInnerHTML={{ __html: clinic.about }}>
+                      <div className="absolute bottom-4 left-0 right-0 flex flex-wrap gap-1 px-6 z-10">
+                         <p className="text-[16px] font-lato text-white mb-2 leading-[20px]"  dangerouslySetInnerHTML={{ __html: clinic.about }}>
                          
                           </p>
-                         <h3 className="text-sm md:text-lg font-bold text-white mb-0">
-                           {clinic.name}
+                         <h3 className="text-[16px] font-lato font-bold text-white mb-0">
+                           <em>{clinic.name}</em>
                           </h3>
                           <span
-                            className=" bg-opacity-20 backdrop-blur-sm text-white px-2 py-0.5 rounded-full text-[10px] font-medium"
+                            className="text-[12px]  font-lato text-white rounded-full font-medium"
+                            dangerouslySetInnerHTML={{ __html: clinic.specialist }} 
                           >
-                           <p dangerouslySetInnerHTML={{ __html: clinic.specialist }} />
+                          
                           </span>
                       </div>
                     </div>
@@ -140,19 +145,13 @@ export default function DoctorSlider() {
               </svg>
             </button>
           </div>
-          <div className="flex justify-center items-center mt-6">
-            <button className="flex items-center bg-[#F9825F] hover:bg-[#f86f47] text-white font-bold py-3 px-10 rounded-full text-sm tracking-wide transition-transform duration-300 transform hover:scale-105">
-              VISIT YOUR NEAREST BABYMD
-              <span className="text-white text-base ml-2">
-              <Image
-                src={whitebtnarrow}
-                alt="Layer 1"
-                className="w-full min-w-[15px]"
-              />
+        
 
-              </span>
-            </button>
-          </div>
+          <Image
+                      src={bee2}
+                      alt={bee2}
+                      className="w-[100px] absolute bottom-0 right-0  object-cover"
+                    />
         </div>
 
         </div>
