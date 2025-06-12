@@ -3,6 +3,7 @@ import Banner from "../doctor/banner/page";
 import Paragraph from "../doctor/paragraph/page";
 import Locationform from "../doctor/LocationForm/page";
 import CaseStudyCarousel from "../../../components/CaseStudyCarousel";
+import SuperDocButton from "../../../components/SuperDocButton";
 import casestudy from "../assets/casestudy.png";
 import casestudy2 from "../assets/casestudy2.png";
 import DoctorTeam from "../doctor/DoctorTeam/page";
@@ -55,13 +56,7 @@ export default function Doctor() {
           <div>
             <Paragraph />
             <div className="hidden justify-center  md:flex pt-2">
-              <button className="bg-[#F8845D] text-white text-sm px-6 py-3 rounded-full flex items-center gap-2">
-                Book an Appointment{" "}
-                <img
-                  className="w-[20px] object-contain"
-                  src="/images/Group 2349.png"
-                />
-              </button>
+              <SuperDocButton href="#" label="Book an Appointment" className="w-70 text-center uppercase hidden md:flex" variant="pink"/>
             </div>
           </div>
         </div>

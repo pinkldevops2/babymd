@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import beehive2 from '../../../../public/images/doctorassets/beedoc.png';
 import arrow from "../../../../public/images/Group 2349.png";
+import SuperDocButton from "../../../../components/SuperDocButton";
+
 
 export default function Locationform() {
   return (
@@ -37,15 +39,8 @@ export default function Locationform() {
                     </div>
                   </div>
                   <div className="flex justify-center pt-6">
-                          <button
-                            type="button"
-                            className="flex items-center justify-center gap-3 px-5 py-5 text-white bg-[#F8845D] hover:bg-[#4a3794] transition-colors duration-200 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200 min-w-[300px]"
-                          >
-                            <span className="uppercase tracking-[2px] text-sm">
-                              Book an Appointment
-                            </span>
-                            <Image src={arrow} alt="Arrow" width={20} height={10} />
-                          </button>
+                          <SuperDocButton href="#" label="Book an Appointment" className="w-70 text-center uppercase md:hidden" variant="pink"/>
+                
                         </div>
         </div>
   );
