@@ -1,82 +1,130 @@
+'use client';
+import Banner from "../doctor/banner/page";
+import Paragraph from "../doctor/paragraph/page";
+import Locationform from "../doctor/LocationForm/page";
+import CaseStudyCarousel from '../../../components/CaseStudyCarousel';
+import casestudy from "../assets/casestudy.png";
+import casestudy2 from "../assets/casestudy2.png";
+import DoctorTeam from "../doctor/DoctorTeam/page";
+import DoctorSlider from "./DoctorDetailSlider/page";
+
 export default function Doctor() {
+
+    // Case study data
+    const caseStudies = [
+      {
+        title: "Pediatric Care Online Workshop",
+        image: casestudy,
+        category: "Case Study",
+      },
+      {
+        title: "Behavioral Milestones Insights",
+        image: casestudy2,
+        category: "Case Study",
+      },
+      {
+        title: "Nutrition for Toddlers Guide",
+        image: casestudy,
+        category: "Case Study",
+      },
+    ];
+
+  // Navigation functions for case study carousel
+  const prevCaseStudySlide = () => {
+    setCurrentCaseStudySlide((prev) =>
+      prev === 0 ? caseStudies.length - 1 : prev - 1
+    );
+    caseStudyInstanceRef.current?.prev();
+  };
+
+  const nextCaseStudySlide = () => {
+    setCurrentCaseStudySlide((prev) =>
+      prev === caseStudies.length - 1 ? 0 : prev + 1
+    );
+    caseStudyInstanceRef.current?.next();
+  };
+
   return (
-    <section>
-      <div className="banner-box bg-[#F9EEB6] relative z-2 pt-12 pb-6">
-    <div className="container mx-auto px-4">
-      <div className="flex flex-col md:flex-row items-center justify-center">
-        <div className="w-full md:w-1/2 relative">
-          <h2 className="text-[42px] leading-[40px] font-bold ">
-            <span className="text-[#5943A5]"> Meet the </span>
-            <span className="relative inline-block relative">
-              <i className="text-[#5943A5] relative z-10 font-normal"> superheroes </i>
-              <img className="absolute top-[3] right-0 z-0" src="/images/solvingcirc.png" />
-            </span>
-             <span> behind your child’s care</span>
-          </h2>
-          <p className="mt-4 mb-8">
-          From tantrums to teething, our pediatricians are on-call, on-point and, honestly, a bit obsessed with tiny humans.
-          </p>
-          <img className="absolute top-[-40px] right-0" src="/images/Group 427319502.svg" />
-          <img className="absolute bottom-[-42px] left-0" src="/images/Group 427319515.svg" />
-          
-        </div>
-
-        <div className="w-full md:w-1/2 relative">
-          <img className="mx-auto" src="/images/Vector copy.svg" />
-          <img className="mx-auto absolute top-0 left-1/2 transform -translate-x-1/2" src="/images/doctorbg.png" />
-        </div>
+    <section className="container">
+      <div className="bg-white">
+      <Banner />
       </div>
-    </div>
-    </div>
-    <img
-        className="w-full relative z-0 bg-[#ffffff]"
-        src="/images/Vector 141.svg"
-        alt="Vector 141"
-      />
 
-       <div className="w-full md:w-1/2">
-                  <div className="relative px-6 md:px-0 flex items-baseline pt-4">
+
+       <div className="w-full md:flex md:justify-center">
+                  <div className="relative bg-white flex items-baseline md:w-1/2">
                     <div>
-                    <h2 className="text-[28px] leading-[26px] font-bold pb-0 mb-0 pt-8">
-                    Care that 
-                    <span className="text-[#5943A5]">feels like<br/>in</span>
-                      <span className="relative">
-                        <i className="font-normal text-[#5943A5] z-2">  a hug</i>
-                      </span>
-                    </h2>
-                    <p className="mt-4 mb-8">
-                    Think of us as your baby’s cheerleaders,
-                    late-night worriers, and milestone high-fivers. Blending years of expertise, we provide your precious one with the kind of care that feels more like family than a clinic.
-                      </p>
+                       <Paragraph />
+                      <div className="hidden justify-center  md:flex pt-2">
+                        <button className="bg-[#F8845D] text-white text-sm px-6 py-3 rounded-full flex items-center gap-2">
+                          Book an Appointment <img className="w-[20px] object-contain" src="/images/Group 2349.png" />
+                        </button>
+                      </div>
                     </div>
-                   {/*  <Image
-                      src="/images/Group 427319502.svg"
-                      alt="Illustration"
-                      width={40}
-                      height={40}
-                      className="absolute right-[30px]  top-[60px]"
-                    /> */}
                   </div>
-                
-            <div className="max-w-md mx-5 my-6 bg-white rounded-[20px] shadow-md p-6 border" style={{ borderColor: '#91CFDA80' }}>
-              <h2 className="text-lg font-large text-gray-800 font-semibold">
-                Browse by <span className="text-[#5943A5]">specialty</span> or <span className="text-[#5943A5]">location</span>
-              </h2>
-              <input type="text" placeholder="Doctor Name" className="w-full mt-4 px-4 py-2 border border-[#91CFDA80] bg-[#F4F4F4] rounded-lg focus:ring-2 focus:ring-purple-500" />
-              <select className="w-full mt-4 px-4 py-2 border border-[#91CFDA80] bg-[#F4F4F4] rounded-lg focus:ring-2 focus:ring-purple-500">
-                <option>Types of Specialty</option>
-              </select>
-              <select className="w-full mt-4 px-4 py-2 border border-[#91CFDA80] bg-[#F4F4F4] rounded-lg focus:ring-2 focus:ring-purple-500">
-                <option>Location</option>
-              </select>
-              <p className="text-sm text-gray-600 mt-4">Popular Search</p>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {['General', 'Lactation', 'Allergy', 'Development', 'Vaccines'].map(term => (
-                  <span key={term} className="bg-purple-50 text-[#9C7EEB] text-600 px-3 py-1 rounded-full text-sm font-medium">{term}</span>
-                ))}
+                <div className="md:w-1/2 py-6 px-6 bg-white">
+                   <Locationform />
+                </div>
+           
+          </div>
+         
+        <DoctorTeam />
+      
+      <DoctorSlider />
+ 
+
+    <div className="py-6 bg-white ">
+        <div className="container mx-auto">
+          <div className="flex flex-col relative justify-center items-center md:flex-row bg-[#DBFFCC] rounded-[20px] mx-4 md:mx-0 overflow-hidden pt-8">
+            <div className="w-full md:w-2/3 px-2 py-2 md:p-4 md:pl-12">
+              <div className="relative px-8 md:px-0">
+                <h2 className="font-bold text-[28px] leading-[26px]">
+                  <span className="text-[#5943A5]">
+                    You’ve got this.
+                    <br />
+                    We’ve{" "}
+                  </span>
+                  <span className="relative">
+                    <i className="font-normal text-[#5943A5] z-10 relative">
+                      got you.
+                    </i>
+                    <img
+                      className="absolute top-[5px] right-0 z-0 w-full"
+                      src="/images/Vector 2.svg"
+                      alt="Vector 2"
+                    />
+                  </span>
+                </h2>
               </div>
+              <button
+                type="button"
+                className="text-white bg-[#5943A5] hover:bg-[#F8845D] transition-all focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-4 text-center mt-12 mx-auto md:mx-0 flex flex-row gap-2 justify-center middlingbtns"
+              >
+                <span>Care? Right This Way </span>
+                <img src="/images/Group 2349.png" alt="Arrow" />
+              </button>
+            </div>
+
+            <div className="w-full md:w-1/3 relative md:px-0 pt-4">
+              <img
+                className="mx-auto"
+                src="/images/Vector 3.svg"
+                alt="Vector 3"
+              />
+              <img
+                className="mx-auto absolute bottom-0 w-[400px]"
+                src="/images/6725559f65e92e9a71cddc105d37d087dc44f123.png"
+                alt="Decorative"
+              />
             </div>
           </div>
+        </div>
+      </div>
+       <CaseStudyCarousel 
+        caseStudies={caseStudies} 
+        />
+ 
+
   </section>
   
   );

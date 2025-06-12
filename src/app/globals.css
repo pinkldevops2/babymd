@@ -399,3 +399,27 @@ footer h3{
     top: 9px;
     left: -20px;
 }
+.imageoverlay{
+  position: relative;
+}
+.imageoverlay::after{
+    content: "";
+    opacity: 1;
+    z-index: 1;
+    background: linear-gradient(#0b0b0b00 0%, #5943a5 100%);
+    border-radius: 0px 0px 15px 15px;
+    position: absolute;
+    inset: 0;
+    height: 60%;
+    top: 40%;
+}
+.roadmap h5, .courgette-ll{
+    font-family: var(--font-courgette);
+    margin-bottom: 10px;
+}
+.baby_cart_pattern{
+	background-image: url(../../public/images/baby_cart.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
