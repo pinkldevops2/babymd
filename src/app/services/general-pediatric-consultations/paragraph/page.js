@@ -22,7 +22,7 @@ export default function Paragraph() {
         />
 
         <p className="pt-8">
-          At BabyMD, we’re that go-to kids’ clinic right around the corner — open all 7 days because we know fevers and falls don’t wait for weekdays. No long queues, no hospital chaos — just friendly faces, expert care, and doctors who actually listen. Whether it’s a rash, a runny nose, or just something that’s been bugging you, no question is too small. We treat every child like the little miracle they are, and keep track of everything so you don’t have to.
+          At BabyMD, we’re that go-to kid’s clinic right around the corner — open all 7 days because we know fevers and falls don’t wait for weekdays. No long queues, no hospital chaos — just friendly faces, expert care, and doctors who actually listen. Whether it’s a rash, a runny nose, or just something that’s been bugging you, no question is too small. We treat every child like the little miracle they are, and keep track of everything so you don’t have to.
 
         </p>
       </div>

@@ -82,7 +82,7 @@ export default function Banner() {
                   <h2 className="text-[34px] leading-[34px] max-w-[300px] font-bold font-baloo2 mt-2">
                     A shot of 
                      <span className=" text-[#4B3A8F]">
-                        good <i className="relative z-[2] font-light"> 
+                         good <i className="relative z-[2] font-light"> 
                         health
                          <div className='absolute z-[-1] left-[-5px] top-1' >
                           <svg

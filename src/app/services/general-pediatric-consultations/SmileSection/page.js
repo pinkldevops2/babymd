@@ -39,7 +39,7 @@ function SmileSection() {
       <div className="pt-6 px-6">
         <div className="container">
           <div className="flex flex-col relative justify-center items-end md:flex-row bg-[#DBFFCC] rounded-[20px] md:mx-0 overflow-hidden pt-8">
-            <div className="w-full md:w-2/3 px-2 py-2 md:p-4 md:pl-12">
+            <div className="w-full md:w-2/3 px-2 py-2 md:p-4 md:pl-6">
               <div className="relative px-8 md:px-0">
                 <h2 className="font-bold text-[28px] leading-[26px]">
                   <span className="text-[#5943A5] ">
@@ -67,7 +67,7 @@ function SmileSection() {
                   </span>
       
                 </h2>
-                <p className="text-[#2E2E2E] text-base md:text-lg leading-relaxed mt-4">
+                <p className="text-base leading-relaxed mt-4">
                   No long waits, no rushed visits, and no cold hospital vibes –
                   just a warm welcome, a listening ear, and the kind of care
                   that treats every child like the miracle they are. Be it their
