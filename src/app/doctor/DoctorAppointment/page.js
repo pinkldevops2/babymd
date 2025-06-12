@@ -6,37 +6,38 @@ import beehive2 from '../../../../public/images/serviceassets/beehive2.png';
 import docsmile from '../../../../public/images/doctorassets/docchild.png';
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function DoctorAppointment() {
       const pathRef = useRef(null);
-      
-        useEffect(() => {
-          const path = pathRef.current;
-          const length = path.getTotalLength();
-      
-          gsap.set(path, {
-            strokeDasharray: length,
-            strokeDashoffset: length,
-          });
-      
-          gsap.fromTo(
-            path,
-            { strokeDashoffset: length },
-            {
-              strokeDashoffset: 0,
-              duration: 2,
-              ease: "power1.inOut",
-              scrollTrigger: {
-                trigger: path,
-                start: "top 80%", // animate when path enters 80% of viewport height
-                toggleActions: "play none none reverse",
-                // scrub: true, // if you want scroll-progress-based drawing
-                // markers: true, // uncomment for debugging
-              },
-            }
-          );
-        }, []);
+
+  useEffect(() => {
+    const path = pathRef.current;
+    const length = path.getTotalLength();
+
+    gsap.set(path, {
+      strokeDasharray: length,
+      strokeDashoffset: length,
+    });
+
+    gsap.fromTo(
+      path,
+      { strokeDashoffset: length },
+      {
+        strokeDashoffset: 0,
+        duration: 2,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: path,
+          start: "top 80%", // animate when path enters 80% of viewport height
+          toggleActions: "play none none reverse",
+          // scrub: true, // if you want scroll-progress-based drawing
+          // markers: true, // uncomment for debugging
+        },
+      }
+    );
+  }, []);
   return (
 
          <div className="bg-white py-6 px-6">
