@@ -1,11 +1,11 @@
 "use client";
-import SubHeading from '../../../../../components/SubHeading';
+import SubHeading2 from '../../../../../components/SubHeading2';
 
 export default function SecondParagraph() {
   return (
     <div className=" bg-white   ">
-      <div className="py-4 px-6 mt-3">
-        <SubHeading
+      <div className="py-4 px-6 mt-3 smallsubheads">
+        <SubHeading2
           mainText={<>Experts</>}
           highlightText={<>who are all</>}
           subText={<><i> ears </i></>}

@@ -2,6 +2,8 @@
 
 import React, { useState , useEffect, useRef} from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import Image from "next/image";
 import beehive4 from "@/app/assets/beehive4.png";
 import smilevectorange from "../../../../../public/images/serviceassets/smilevectorange.png";
@@ -10,11 +12,12 @@ import smilevectorimg from "../../../../../public/images/serviceassets/smileimg.
 import arrow from "../../../../../public/images/Group 2349.png";
 
 function SmileSection() {
+const pathRef = useRef(null);
 
-  const pathRef = useRef(null);
-
-  useEffect(() => {
+   useEffect(() => {
     const path = pathRef.current;
+    if (!path) return;
+
     const length = path.getTotalLength();
 
     gsap.set(path, {
@@ -28,10 +31,19 @@ function SmileSection() {
       {
         strokeDashoffset: 0,
         duration: 3,
-        //repeat: -1,
         ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: path,
+          start: "top 80%", // adjust as needed
+          end: "bottom 50%",
+          toggleActions: "play none none reverse",
+        },
       }
     );
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   return (

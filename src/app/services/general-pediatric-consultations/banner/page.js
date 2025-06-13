@@ -40,7 +40,7 @@ export default function Banner() {
       <div className="relative flex flex-col md:flex-row items-center px-6 py-4 md:p-6">
         {/* Text Content */}
         <div className="md:w-1/2">
-          <p className="text-base md:text-lg lg:text-xl font-lato mb-2">
+          <p className="font-lato mb-2">
             General Pediatric Consultations
           </p>
           <div className="relative flex items-center">
@@ -79,7 +79,7 @@ export default function Banner() {
               alt="Beehive 2"
             />
           </div>
-          <p className=" md:text-base lg:text-lg text-black mt-4 leading-relaxed font-lato">
+          <p className="text-black mt-4 leading-relaxed font-lato">
             For tummy aches, pesky rashes, and every 3AM worry, we&apos;re here{" "}
             <span className="italic text-[#4B3A8F]"><i>7 days a week</i></span> — with
             smiles, solutions, and lots of patience

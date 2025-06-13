@@ -7,7 +7,7 @@ import facilitiesImage2 from '../../../../../public/images/serviceassets/facilit
 import facilitiesImage3 from '../../../../../public/images/serviceassets/facilitiesImage3.png';
 import facilitiesImage4 from '../../../../../public/images/serviceassets/facilitiesImage4.png';
 import facilitiesImage5 from '../../../../../public/images/serviceassets/facilitiesImage5.png';
-import SubHeading from '../../../../../components/SubHeading';
+import SubHeading2 from '../../../../../components/SubHeading2';
 
 export default function Facilities() {
   return (
@@ -15,7 +15,7 @@ export default function Facilities() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-col lg:items-start lg:gap-8 ">
         {/* Heading */}
 
-        <SubHeading
+        <SubHeading2
           mainText={<>Convenient care.</>}
           highlightText={<>Compassionate</>}
           subText={<><i> hearts. </i></>}

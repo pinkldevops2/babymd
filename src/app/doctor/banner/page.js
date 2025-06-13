@@ -76,7 +76,7 @@ export default function Banner() {
               alt="Beehive 2 "
             />
           </div>
-          <p className=" md:text-base lg:text-lg text-black mt-4 leading-relaxed font-lato">
+          <p className="text-black mt-4 leading-relaxed font-lato">
             From tantrums to teething, our pediatricians are on-call, on-point and, honestly, a bit obsessed with tiny humans.
           </p>
         </div>

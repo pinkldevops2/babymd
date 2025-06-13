@@ -7,7 +7,7 @@ import arrow from "../../../../public/images/Group 2349.png";
 import Nearbyclinic from "../../../../public/images/doctorassets/doc1.png";
 import quate from "../../../../public/images/doctorassets/quate.png";
 import bee2 from "../../../../public/images/doctorassets/bee2.png";
-import SubHeading from '../../../../components/SubHeading';
+import SubHeading from '../../../../components/SubHeading2';
 import beehive2 from '../../../../public/images/serviceassets/beehive2.png';
 
 export default function DoctorSlider() {
@@ -46,7 +46,7 @@ export default function DoctorSlider() {
   return (
 
           <div className="bg-[#E1F5FF]">
-             <div className="w-full mt-0 px-6 pb-3 pt-7 relative">
+             <div className="w-full mt-0 px-6 pb-3 pt-7 relative smallsubheads">
         <SubHeading
           mainText={<>From White Coats,</>}
           highlightText={<>With</>}

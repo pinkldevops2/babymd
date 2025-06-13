@@ -1,14 +1,14 @@
 'use client';
 import Image from 'next/image';
-import SubHeading from '../../../../../components/SubHeading';
+import SubHeading2 from '../../../../../components/SubHeading2';
 
 import beehive2 from '../../../../../public/images/serviceassets/beehive2.png';
 
 export default function Paragraph() {
   return (
 
-          <div className="w-full mt-0 px-6 pb-5 pt-7 relative">
-        <SubHeading
+          <div className="w-full mt-0 px-6 pb-5 pt-7 relative smallsubheads">
+        <SubHeading2
           mainText={<>Care that</>}
           highlightText={<>feels like</>}
           subText={<><i>home</i></>}

@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Banner from "../general-pediatric-consultations/banner/page";
 import Paragraph from "../general-pediatric-consultations/paragraph/page";
 import GeneralConsults from "../general-pediatric-consultations/generalconsult/page";
@@ -10,7 +10,9 @@ import Facilities from "../general-pediatric-consultations/facilities/page";
 //import FaqSection from "../general-pediatric-consultations/FAQSection/page";
 import FaqSection from "../../../../components/FaqSection";
 import SmileSection from "../general-pediatric-consultations/SmileSection/page";
-import CloudTestimonials from './CloudTestimonials/CloudTestimonials';
+import CloudTestimonials from '../../../../components/CloudTestimonials';
+import curvedBottom from "../../assets/curved-bottom.png";
+import curvedTop from "../../assets/curved-top.png";
 
 export default function GeneralPediatricConsultations() {
     const faqData = [
@@ -44,7 +46,21 @@ export default function GeneralPediatricConsultations() {
       <GeneralConsults />
       <SecondParagraph />      
       <DoctorsTeam />
-      <CloudTestimonials/>   
+      <div className="relative w-full bg-[#FFFFFF]">
+                       <Image
+                         src={curvedTop}
+                         alt="Layer 1"
+                         className=" mx-auto w-full"
+                       />
+                     </div>
+           <CloudTestimonials/>
+           <div className="relative w-full bg-[#FFFFFF] z-0">
+                       <Image
+                         src={curvedBottom}
+                         alt="Layer 1"
+                         className=" mx-auto w-full relative  top[-30px]"
+                       />
+                     </div>   
       <ThirdParagraph />  
       <Facilities />
       <SmileSection />      

@@ -438,3 +438,7 @@ footer h3{
     background-size: contain;
     background-position: center center;
 }
+.smallsubheads svg{
+  width: 80px!important;
+  left: 0px!important;
+}

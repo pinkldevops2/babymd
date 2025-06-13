@@ -1,11 +1,11 @@
 "use client";
-import SubHeading from '../../../../../components/SubHeading';
+import SubHeading4 from '../../../../../components/SubHeading4';
 
 export default function ThirdParagraph() {
   return (
     <div className=" px-6 py-4  ">
       <div className=" mx-auto ">
-        <SubHeading
+        <SubHeading4
           mainText={<>More than medicine</>}
           highlightText={<>offer</>}
           subText={<><i> peace of mind </i></>}

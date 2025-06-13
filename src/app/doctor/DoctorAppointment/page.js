@@ -7,13 +7,16 @@ import docsmile from '../../../../public/images/doctorassets/docchild.png';
 import SuperDocButton from '../../../../components/SuperDocButton';
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function DoctorAppointment() {
-      const pathRef = useRef(null);
+  const pathRef = useRef(null);
 
-  useEffect(() => {
+   useEffect(() => {
     const path = pathRef.current;
+    if (!path) return;
+
     const length = path.getTotalLength();
 
     gsap.set(path, {
@@ -27,10 +30,19 @@ export default function DoctorAppointment() {
       {
         strokeDashoffset: 0,
         duration: 3,
-        //repeat: -1,
         ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: path,
+          start: "top 80%", // adjust as needed
+          end: "bottom 50%",
+          toggleActions: "play none none reverse",
+        },
       }
     );
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
   return (
 
