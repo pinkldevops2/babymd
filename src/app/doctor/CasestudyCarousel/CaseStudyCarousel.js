@@ -3,48 +3,31 @@ import React, { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import Image from 'next/image';
 import 'keen-slider/keen-slider.min.css';
-import SuperDocButton from './SuperDocButton';
-import SubHeading from './SubHeading';
+import SuperDocButton from '../../../../components/SuperDocButton';
+import SubHeading from '../../../../components/SubHeading';
 import beehive_22a from "@/app/assets/beehive_22a.png";
 
-const CaseStudyCarousel = ({ caseStudies, className }) => {
+const CaseStudyCarousel = ({ caseStudies }) => {
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     slides: {
       perView: 1.2,
       spacing: 16,
     },
-    breakpoints: {
-      "(min-width: 640px)": {
-        slides: {
-          perView: 1.3,
-          spacing: 16,
-        },
-      },
-      "(min-width: 1024px)": {
-        slides: {
-          perView: 1.3,
-          spacing: 16,
-        },
-      },
-      "(min-width: 1280px)": {
-        slides: {
-          perView: 1.3,
-          spacing: 16,
-        },
-      },
-    },
   });
 
   return (
-    <div className="bg-[#FDF8DB] pt-6 pb-6 px-6 md:px-4 flex flex-col md:flex-row rounded-2xl">
+    <div className="bg-white pt-6 pb-6 flex flex-col md:flex-row">
           {/* Heading */}
-          <div className="text-[#231F20] pt-6 pb-6 md:w-1/2">
+          <div className="text-[#231F20] p-6 md:w-1/2">
             <div className='relative'>
-            <SubHeading
-            mainText={<>Parenting</>}
-            subText={<><i>unplugged!</i></>}
-          />
+              <div className='pr-[40px]'>
+                <SubHeading
+                    mainText={<>Helpful reads for </>}
+                    subText={<><i>confident parenting</i></>}
+                  />
+              </div>
+            
             <Image
                 src={beehive_22a}
                 width={35}
@@ -52,13 +35,11 @@ const CaseStudyCarousel = ({ caseStudies, className }) => {
                 className='absolute top-[-15px] right-0'
                 />
             </div>
-            <p className="mt-2 text-[#231F20] fade-in">
-              Juggling work, family, and endless advice on parenting? We&apos;ve got
-              you covered. Delve into our expert insights, practical tips, and
-              the latest updates curated exclusively for you.
+            <p className="mt-2 text-[#231F20]">
+              When it comes to raising happy, healthy kids, knowledge is powerful (and a little reassurance goes a long way). Read our blog to stay informed, confident, and ready for whatever parenthood throws your way.
             </p>
           </div>
-    <div className="relative rounded-2xl overflow-hidden bg-[#FDF8DB] md:pl-6 md:w-1/2">
+    <div className="relative rounded-2xl overflow-hidden bg-white pl-6 md:w-1/2">
       {/* Left Arrow */}
       <button
         onClick={() => instanceRef.current?.prev()}
@@ -83,21 +64,21 @@ const CaseStudyCarousel = ({ caseStudies, className }) => {
       <div ref={sliderRef} className="keen-slider p-0">
         {caseStudies.map((caseStudy, index) => (
           <div key={index} className="keen-slider__slide pb-12">
-            <div className="bg-[#FDF8DB] rounded-2xl w-full">
+            <div className="bg-white rounded-2xl w-full">
               <div className="relative h-[200px] w-full rounded-2xl">
                 <Image
                 src={caseStudy.image}
                 alt={caseStudy.title}
                 fill
-                className="object-cover max-h-[200px] fade-in"
+                className="object-cover max-h-[200px]"
                 sizes="100vw"
                 />
               </div>
               <div className="mt-3">
-                <p className="text-[10px] font-bold text-[#EB5A44] uppercase font-baloo2 fade-in">
+                <p className="text-[10px] font-bold text-[#EB5A44] uppercase font-baloo2">
                   {caseStudy.category}
                 </p>
-                <p className="font-semibold text-[20px] leading-[25px] text-[#231F20] font-lato fade-in">
+                <p className="font-semibold text-[20px] leading-[25px] text-[#231F20] font-lato">
                   {caseStudy.title}
                 </p>
               </div>
@@ -105,7 +86,7 @@ const CaseStudyCarousel = ({ caseStudies, className }) => {
           </div>
         ))}
       </div><div className="flex justify-center pr-6">
-            <SuperDocButton href="/superdoc" label="STAY INFORMED" className="my-5 fade-in" variant="purple"/>
+            <SuperDocButton href="/superdoc" label="STAY INFORMED" className="my-5" variant="purple"/>
           </div>
     </div>
     {/* CTA Button */}

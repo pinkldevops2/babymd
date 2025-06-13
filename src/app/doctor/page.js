@@ -2,13 +2,13 @@
 import Banner from "../doctor/banner/page";
 import Paragraph from "../doctor/paragraph/page";
 import Locationform from "../doctor/LocationForm/page";
-import CaseStudyCarousel from "../../../components/CaseStudyCarousel";
-import SuperDocButton from "../../../components/SuperDocButton";
+import CaseStudyCarousel from "../doctor/CasestudyCarousel/CaseStudyCarousel";
 import casestudy from "../assets/casestudy.png";
 import casestudy2 from "../assets/casestudy2.png";
 import DoctorTeam from "../doctor/DoctorTeam/page";
 import DoctorSlider from "./DoctorDetailSlider/page";
 import DoctorAppointment from "./DoctorAppointment/page";
+import SuperDocButton from "../../../components/SuperDocButton";
 
 export default function Doctor() {
   // Case study data

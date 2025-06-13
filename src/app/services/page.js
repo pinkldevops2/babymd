@@ -134,10 +134,10 @@ useEffect(() => {
     <>
       <div className="container">
       <div className="banner-box bg-[#F9EEB6] relative z-2 py-14 pb-6">
-        <div className="md:px-3">
+        <div className="md:px-6">
           <div className="flex flex-col justify-center items-center md:flex-row">
             <div className="w-full md:w-2/3">
-              <div className="relative px-8 md:px-0 md:w-3/4">
+              <div className="relative px-6 md:px-0 md:w-3/4">
                 <h1 className="text-2xl font-bold text-[34px] pb-[12px]">
                   Care that celebrates{" "}
                   <span className="text-[#5943A5]">every tiny</span>

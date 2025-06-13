@@ -1,5 +1,6 @@
 "use client";
 import SubHeading from '../../../../../components/SubHeading';
+
 export default function SecondParagraph() {
   return (
     <div className=" bg-white   ">

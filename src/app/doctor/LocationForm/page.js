@@ -2,8 +2,7 @@
 import Image from 'next/image';
 import beehive2 from '../../../../public/images/doctorassets/beedoc.png';
 import arrow from "../../../../public/images/Group 2349.png";
-import SuperDocButton from "../../../../components/SuperDocButton";
-
+import SuperDocButton from '../../../../components/SuperDocButton';
 
 export default function Locationform() {
   return (
@@ -39,8 +38,7 @@ export default function Locationform() {
                     </div>
                   </div>
                   <div className="flex justify-center pt-6">
-                          <SuperDocButton href="#" label="Book an Appointment" className="w-70 text-center uppercase md:hidden" variant="pink"/>
-                
+       <SuperDocButton href="#" label="Book an Appointment" className="w-60 text-center uppercase md:hidden" variant="pink"/>
                         </div>
         </div>
   );

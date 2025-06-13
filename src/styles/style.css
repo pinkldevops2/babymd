@@ -39,6 +39,10 @@ i {
     width: 226px;
 	bottom:20px;
 }
+.middlingbtns-fullwidth{
+     width: calc(100% - 20px);
+     max-width: 300px;
+}
 @media screen and (max-width: 768px) {
     .resp-btn.absolute-bottom-center {
         bottom: 40px;

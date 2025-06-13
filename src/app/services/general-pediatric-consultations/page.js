@@ -10,7 +10,7 @@ import Facilities from "../general-pediatric-consultations/facilities/page";
 //import FaqSection from "../general-pediatric-consultations/FAQSection/page";
 import FaqSection from "../../../../components/FaqSection";
 import SmileSection from "../general-pediatric-consultations/SmileSection/page";
-import CloudTestimonials from '../../../../components/CloudTestimonials';
+import CloudTestimonials from './CloudTestimonials/CloudTestimonials';
 
 export default function GeneralPediatricConsultations() {
     const faqData = [

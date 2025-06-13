@@ -37,9 +37,9 @@ function Questions() {
   return (
     <div className="py-6 px-6">
       <div className="container mx-auto">
-        <div className="flex flex-col relative justify-center items-center md:flex-row bg-[#DBFFCC] rounded-[20px] mx-4 md:mx-0 overflow-hidden pt-8">
+        <div className="flex flex-col relative justify-center items-center md:flex-row bg-[#DBFFCC] rounded-[20px] overflow-hidden pt-8">
           <div className="w-full md:w-2/3 px-2 py-2 md:p-4 md:pl-12">
-            <div className="relative px-8 md:px-0">
+            <div className="relative px-4 md:px-0">
               <h2 className="font-bold text-[28px] leading-[26px]">
                 <span className="text-[#5943A5]">
                   Got Questions?  

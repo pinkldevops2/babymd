@@ -4,7 +4,7 @@
 export default function Rectangle() {
   return (
     <div className="px-6">
-    <div className="relative bg-[#F8845D] text-white rounded-2xl p-10 mb-6">
+    <div className="relative bg-[#F8845D] text-white rounded-2xl py-10 px-6 mb-6">
 
   
 

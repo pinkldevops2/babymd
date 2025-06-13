@@ -12,7 +12,7 @@ import SubHeading from '../../../../../components/SubHeading';
 export default function Facilities() {
   return (
     <div className="py-10  px-6 bg-[#FFEBB5]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row lg:items-start lg:gap-8 ">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-col lg:items-start lg:gap-8 ">
         {/* Heading */}
 
         <SubHeading
@@ -22,7 +22,7 @@ export default function Facilities() {
         />
 
         {/* List of Items */}
-        <div className="space-y-4  mt-8 lg:mx-0 md:w-1/2">
+        <div className="space-y-4  mt-4  md:w-full md:max-w-[668px] md:mx-auto md:mt-4">
           {/* Item 1 */}
           <div className="flex items-stretch  bg-white rounded-2xl shadow-md overflow-hidden">
             <div className="w-1/3">
@@ -31,7 +31,7 @@ export default function Facilities() {
                 alt="7-day availability"
                 width={150}
                 height={100}
-                className="object-cover w-full h-full max-w-[200px]"
+                className="object-cover w-full h-full"
               />
             </div>
             <div className="w-2/3 p-4">

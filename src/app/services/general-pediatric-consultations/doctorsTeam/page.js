@@ -25,8 +25,8 @@ export default function DoctorsTeam() {
             />
           </div>
           {/* Doctor Information */}
-          <div className="p-2 mt-2 md:p-4">
-            <h3 className="text-[16px] leading-[20px] text-[#2E2E2E] font-Lato font-semibold font-italic">
+          <div className="py-2 mt-2 ">
+            <h3 className="text-[16px] font-lato font-Lato font-bold leading-[20px] text-[#2E2E2E] font-Lato font-bold  font-italic">
               <em>Dr Shivangi Bora</em>
             </h3>
             <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
@@ -53,9 +53,9 @@ export default function DoctorsTeam() {
             />
           </div>
           {/* Doctor Information */}
-          <div className="p-2 mt-2 md:p-4">
-            <h3 className="text-[16px] leading-[20px] text-[#2E2E2E] font-Lato font-semibold font-italic">
-              Dr Sampat Kumar Shettagar
+          <div className="py-2 mt-2 ">
+             <h3 className="text-[16px] font-lato font-Lato font-bold leading-[20px] text-[#2E2E2E] font-Lato font-bold  font-italic">
+             <em>Dr Sampat Kumar Shettagar</em> 
             </h3>
             <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
               Pediatric Pulmonologist
@@ -80,9 +80,9 @@ export default function DoctorsTeam() {
             />
           </div>
           {/* Doctor Information */}
-          <div className="p-2 mt-2 md:p-4">
-            <h3 className="text-[16px] leading-[20px] text-[#2E2E2E] font-Lato font-semibold font-italic">
-              Dr Indu S Nair
+          <div className="py-2 mt-2 ">
+             <h3 className="text-[16px] font-lato font-Lato font-bold leading-[20px] text-[#2E2E2E] font-Lato font-bold  font-italic">
+              <em>Dr Indu S Nair</em>
             </h3>
             <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
               Paediatrician
@@ -106,9 +106,9 @@ export default function DoctorsTeam() {
             />
           </div>
           {/* Doctor Information */}
-          <div className="p-2 mt-2 md:p-4">
-            <h3 className="text-[16px] leading-[20px] text-[#2E2E2E] font-Lato font-semibold font-italic">
-              Dr Bhaskar MV
+          <div className="py-2 mt-2 ">
+             <h3 className="text-[16px] font-lato font-Lato font-bold leading-[20px] text-[#2E2E2E] font-Lato font-bold  font-italic">
+              <em>Dr Bhaskar MV</em>
             </h3>
             <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
               Paediatrician

@@ -10,7 +10,7 @@ import Dat from '../public/images/serviceassets/dat.png'
 import Ssc from '../public/images/serviceassets/ssc.png'
 import immunisationIcon from '../public/images/Icon5.png'
 import assessmentIcon from '../public/images/Icon6.png'
-import SubHeading from './SubHeading';
+import SubHeading from './SubHeading4';
 import SuperDocButton from './SuperDocButton2';
 import SuperDocBtnSM from './SuperDocBtnSM';
 
