@@ -4,7 +4,7 @@ import Banner from "../vaccinations/banner/page";
 import Paragraph from "./paragraph/page";
 import Tablecarosual from './tablecarosual/page';
 import SecondParagraph from './secondparagraph/page';
-import Membership from './Schedule/page';
+import Schedule from './Schedule/page';
 
 import ThirdParagraph from './thirdparagraph/page';
 import VaccineCarousel from './vaccinecarousel/page';
@@ -51,7 +51,7 @@ export default function Vaccinations() {
            <GeneralConsults />
            {/* <Tablecarosual/> */}
            <SecondParagraph/>
-           <Membership/>
+           <Schedule/>
            <CloudTestimonials/>
            {/* <ThirdParagraph/> */}
            {/* <VaccineCarousel/> */}
