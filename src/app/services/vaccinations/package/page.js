@@ -73,7 +73,7 @@ export default function Package() {
         </h2>
 
         <p className="text-[16px] text-black text-xs mb-4 mt-2">
-          Stay ahead of your baby's vaccine schedule with our pre-purchase
+          Stay ahead of your baby&#39;s vaccine schedule with our pre-purchase
           packages and big savings.
         </p>
       </div>
@@ -177,13 +177,13 @@ export default function Package() {
         <div className="py-4 px-4">
           <ul className="list-disc text-[16px]">
             <li>No repeated payments or billing</li>
-            <li>Just show up — everything's already taken care of</li>
+            <li>Just show up — everything&#39;s already taken care of</li>
           </ul>
         </div>
 
         {/* Footer Text */}
         <p className="text-[16px] pb-4">
-          Because when it comes to your baby's health, planning ahead should
+          Because when it comes to your baby&#39;s health, planning ahead should
           come with perks.
         </p>
         <div className="flex justify-center pt-6">

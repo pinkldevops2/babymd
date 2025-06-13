@@ -1,10 +1,12 @@
 "use client";
+import { useEffect, useRef } from "react";
+
 import Image from "next/image";
 import scheduleIcon1 from "../../../../../public/images/serviceassets/scheduleIcon1.png";
 import scheduleIcon2 from "../../../../../public/images/serviceassets/scheduleIcon2.png";
 import SubHeading from '../../../../../components/SubHeading';
 import arrow from "../../../../../public/images/Group 2349.png";
-import { useEffect, useRef } from "react";
+
 import { gsap } from "gsap";
 
 export default function schedule() {
