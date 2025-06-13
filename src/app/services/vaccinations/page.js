@@ -5,7 +5,7 @@ import Paragraph from "./paragraph/page";
 import Tablecarosual from './tablecarosual/page';
 import SecondParagraph from './secondparagraph/page';
 import Schedules from './schedules/page';
-
+import Image from "next/image";
 import ThirdParagraph from './thirdparagraph/page';
 import VaccineCarousel from './vaccinecarousel/page';
 import CloudTestimonials from '../../../../components/CloudTestimonials';
@@ -16,6 +16,8 @@ import Facilities from './facilities/page';
 //import FaqSection from './FAQSection/page';
 import Package from './package/page';
 import FaqSection from "../../../../components/FaqSection";
+import curvedBottom from "../../assets/curved-bottom.png";
+import curvedTop from "../../assets/curved-top.png";
 
 
 
@@ -52,7 +54,21 @@ export default function Vaccinations() {
            {/* <Tablecarosual/> */}
            <SecondParagraph/>
            <Schedules />
+           <div className="relative w-full bg-[#FFFFFF]">
+                       <Image
+                         src={curvedTop}
+                         alt="Layer 1"
+                         className=" mx-auto w-full"
+                       />
+                     </div>
            <CloudTestimonials/>
+           <div className="relative w-full bg-[#FFFFFF] z-0">
+                       <Image
+                         src={curvedBottom}
+                         alt="Layer 1"
+                         className=" mx-auto w-full relative  top[-30px]"
+                       />
+                     </div> 
            {/* <ThirdParagraph/> */}
            {/* <VaccineCarousel/> */}
            <Facilities/>

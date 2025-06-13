@@ -33,7 +33,6 @@ export default function Banner() {
     );
   }, []);
   return (
-
     <div className="bg-white">
       {/* <div className="relative flex flex-col md:flex-row items-center px-6 py-4 md:p-6">
         <div className="md:w-1/2">
@@ -75,12 +74,12 @@ export default function Banner() {
 
             <div className="relative flex flex-col md:flex-row items-center px-6 py-4 md:p-6">
               <div className="md:w-1/2">
-                <p className="text-base md:text-lg lg:text-xl font-lato mb-2">
+                <p className="font-lato mb-0">
                   Vaccinations
                 </p>
                 <div className="relative flex items-center">
                   <h2 className="text-[34px] leading-[34px] max-w-[300px] font-bold font-baloo2 mt-2">
-                    A shot of 
+                    A shot of &nbsp;
                      <span className=" text-[#4B3A8F]">
                         good <i className="relative z-[2] font-light"> 
                         health
@@ -113,7 +112,7 @@ export default function Banner() {
                     alt="Beehive 2"
                   />
                 </div>
-                <p className=" md:text-base lg:text-lg text-black mt-4 leading-relaxed font-lato">
+                <p className="text-black mt-4 leading-relaxed font-lato">
                  Every tiny jab is our promise of protection, health, and hope for a healthier future
                 </p>
               </div>

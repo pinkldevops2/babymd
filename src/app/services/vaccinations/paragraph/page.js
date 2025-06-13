@@ -2,14 +2,17 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SubHeading from "../../../../../components/SubHeading";
 import beehive2 from "../../../../../public/images/serviceassets/beehive2.png";
-
+gsap.registerPlugin(ScrollTrigger);
 export default function Paragraph() {
   const pathRef = useRef(null);
 
-  useEffect(() => {
+   useEffect(() => {
     const path = pathRef.current;
+    if (!path) return;
+
     const length = path.getTotalLength();
 
     gsap.set(path, {
@@ -23,11 +26,21 @@ export default function Paragraph() {
       {
         strokeDashoffset: 0,
         duration: 3,
-        //repeat: -1,
         ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: path,
+          start: "top 80%", // adjust as needed
+          end: "bottom 50%",
+          toggleActions: "play none none reverse",
+        },
       }
     );
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
+  
   return (
     <div className=" bg-white ">
       <div className="w-full mt-0 px-6 pb-5 pt-7 relative  ">

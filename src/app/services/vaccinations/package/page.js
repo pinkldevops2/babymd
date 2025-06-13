@@ -5,7 +5,8 @@ import SubHeading from "../../../../../components/SubHeading";
 import arrow from "../../../../../public/images/Group 2349.png";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 export default function Package() {
   const [isDurationOpen, setIsDurationOpen] = useState(false);
   const [selectedDuration, setSelectedDuration] = useState("6 Week - 14 Week");
@@ -21,8 +22,11 @@ export default function Package() {
 
 
   const pathRef = useRef(null);
-  useEffect(() => {
+
+   useEffect(() => {
     const path = pathRef.current;
+    if (!path) return;
+
     const length = path.getTotalLength();
 
     gsap.set(path, {
@@ -36,10 +40,19 @@ export default function Package() {
       {
         strokeDashoffset: 0,
         duration: 3,
-        //repeat: -1,
         ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: path,
+          start: "top 80%", // adjust as needed
+          end: "bottom 50%",
+          toggleActions: "play none none reverse",
+        },
       }
     );
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   return (
