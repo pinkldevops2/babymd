@@ -9,7 +9,7 @@ import arrow from "../../../../../public/images/Group 2349.png";
 
 import { gsap } from "gsap";
 
-export default function Schedule() {
+export default function Schedules() {
    const pathRef = useRef(null);
 
   useEffect(() => {

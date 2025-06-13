@@ -4,11 +4,11 @@ import Banner from "../vaccinations/banner/page";
 import Paragraph from "./paragraph/page";
 import Tablecarosual from './tablecarosual/page';
 import SecondParagraph from './secondparagraph/page';
-import Schedule from './Schedule/page';
+import Schedules from './schedules/page';
 
 import ThirdParagraph from './thirdparagraph/page';
 import VaccineCarousel from './vaccinecarousel/page';
-import CloudTestimonials from './CloudTestimonials//CloudTestimonials';
+import CloudTestimonials from '../../../../components/CloudTestimonials';
 import Questions from './questions/page';
 import Rectangle from './rectangle/page';
 import GeneralConsults from './generalconsult/page';
@@ -51,7 +51,7 @@ export default function Vaccinations() {
            <GeneralConsults />
            {/* <Tablecarosual/> */}
            <SecondParagraph/>
-           <Schedule/>
+           <Schedules />
            <CloudTestimonials/>
            {/* <ThirdParagraph/> */}
            {/* <VaccineCarousel/> */}
