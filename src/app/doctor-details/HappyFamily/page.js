@@ -28,7 +28,7 @@ function HappyFamily() {
             <div className="w-full md:w-2/3 px-2 py-2 md:pb-10 md:px-6">
               <div className="relative px-4 md:px-0">
                 <p className="text-white text-[16px] leading-[20px] mt-4 font-lato">
-                  "Dr Bhaskar is not just an expert in his field — he’s also a
+                  "Dr Bhaskar is not just an expert in his field — he&#39;s also a
                   wonderful person. He avoids unnecessary medication and offers
                   thoughtful, practical suggestions instead. I truly value his
                   approach and look forward to consulting him for my son
