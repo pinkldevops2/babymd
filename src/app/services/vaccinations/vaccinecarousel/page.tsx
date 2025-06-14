@@ -1,40 +1,49 @@
 'use client';
+
 import React, { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import 'keen-slider/keen-slider.min.css';
 import vaccinecarouseal from '../../../../../public/images/serviceassets/vaccinecarouseal.png';
 
-const sampleVaccines = [
+// Define the vaccine item type
+interface Vaccine {
+  name: string;
+  image: StaticImageData;
+  age: string;
+}
+
+interface VaccineCarouselProps {
+  vaccines?: Vaccine[];
+}
+
+// Sample vaccine data
+const sampleVaccines: Vaccine[] = [
   {
     name: "MMR",
     image: vaccinecarouseal,
     age: "12-15 months",
-   
   },
   {
     name: "DTaP",
     image: vaccinecarouseal,
     age: "2, 4, 6 months",
-   
   },
   {
     name: "Hepatitis B",
     image: vaccinecarouseal,
     age: "Birth, 1-2 months",
-  
   },
   {
     name: "Varicella",
     image: vaccinecarouseal,
     age: "12-15 months",
-
   },
 ];
 
-const VaccineCarousel = ({ vaccines = sampleVaccines }) => {
+const VaccineCarousel: React.FC<VaccineCarouselProps> = ({ vaccines = sampleVaccines }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     slides: {
       perView: 1.2,
@@ -62,7 +71,7 @@ const VaccineCarousel = ({ vaccines = sampleVaccines }) => {
                     className="w-full h-full object-cover rounded-2xl"
                   />
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-lg ">
+                    <h3 className="text-lg">
                       Administered only by<br />doctors
                     </h3>
                   </div>
@@ -71,6 +80,7 @@ const VaccineCarousel = ({ vaccines = sampleVaccines }) => {
             </div>
           ))}
         </div>
+
         {/* Dots / Pagination */}
         <div className="flex justify-center items-center pt-2 mt-4 gap-2">
           {vaccines.map((_, index) => (
@@ -80,6 +90,7 @@ const VaccineCarousel = ({ vaccines = sampleVaccines }) => {
               className={`w-2 h-2 rounded-full ${
                 currentSlide === index ? 'bg-[#FC9127]' : 'bg-[#FFD6C6]'
               }`}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
