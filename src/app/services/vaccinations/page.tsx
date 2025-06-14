@@ -13,7 +13,6 @@ import Questions from './questions/page';
 import Rectangle from './rectangle/page';
 import GeneralConsults from './generalconsult/page';
 import Facilities from './facilities/page';
-//import FaqSection from './FAQSection/page';
 import Package from './package/page';
 import FaqSection from "../../../components/FaqSection";
 import curvedBottom from "../../assets/curved-bottom.png";
