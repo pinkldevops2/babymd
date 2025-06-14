@@ -55,8 +55,8 @@ export default function ClinicInner() {
 
   // Autoplay for Slider 3
   useEffect(() => {
-let autoplayTimeout;
 
+    let autoplayTimeout: ReturnType<typeof setTimeout>;
     const clear = () => clearTimeout(autoplayTimeout);
 
     const startAutoplay = () => {
