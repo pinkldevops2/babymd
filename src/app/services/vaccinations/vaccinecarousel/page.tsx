@@ -4,21 +4,15 @@ import React, { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import Image, { StaticImageData } from 'next/image';
 import 'keen-slider/keen-slider.min.css';
-import vaccinecarouseal from '../../../../../public/images/serviceassets/vaccinecarouseal.png';
+import vaccinecarouseal from '@/public/images/serviceassets/vaccinecarouseal.png'; // make sure this path is correct
 
-// Define the vaccine item type
 interface Vaccine {
   name: string;
   image: any;
   age: string;
 }
 
-interface VaccineCarouselProps {
-  vaccines?: Vaccine[];
-}
-
-// Sample vaccine data
-const sampleVaccines: Vaccine[] = [
+const vaccines: Vaccine[] = [
   {
     name: "MMR",
     image: vaccinecarouseal,
@@ -41,7 +35,7 @@ const sampleVaccines: Vaccine[] = [
   },
 ];
 
-const VaccineCarousel: React.FC<VaccineCarouselProps> = ({ vaccines = sampleVaccines }) => {
+const VaccineCarousel: React.FC<{ vaccines: Vaccine[] }> = ({ vaccines }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
@@ -56,7 +50,6 @@ const VaccineCarousel: React.FC<VaccineCarouselProps> = ({ vaccines = sampleVacc
 
   return (
     <div className="bg-opacity-80 space-y-4">
-      {/* Carousel */}
       <div className="relative w-full mx-auto pl-7">
         <div ref={sliderRef} className="keen-slider">
           {vaccines.map((vaccine, index) => (
@@ -81,7 +74,6 @@ const VaccineCarousel: React.FC<VaccineCarouselProps> = ({ vaccines = sampleVacc
           ))}
         </div>
 
-        {/* Dots / Pagination */}
         <div className="flex justify-center items-center pt-2 mt-4 gap-2">
           {vaccines.map((_, index) => (
             <button
@@ -99,4 +91,6 @@ const VaccineCarousel: React.FC<VaccineCarouselProps> = ({ vaccines = sampleVacc
   );
 };
 
-export default VaccineCarousel;
+export default function VaccineCarouselPage() {
+  return <VaccineCarousel vaccines={vaccines} />;
+}
