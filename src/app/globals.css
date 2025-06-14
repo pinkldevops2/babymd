@@ -363,6 +363,21 @@ footer h3{
     width: 150px;
     left: -25px;
 }
+.circling_around4{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: relative;
+    padding: 10px 5px;
+    display: inline-block;
+    margin-top: -14px;
+}
+.circling_around4 svg{
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 100%;
+}
 #hp_book_appointment_1 form{
   font-size: 16px;
 }
@@ -410,8 +425,8 @@ footer h3{
     border-radius: 0px 0px 15px 15px;
     position: absolute;
     inset: 0;
-    height: 60%;
-    top: 40%;
+    height: 80%;
+    top: 20%;
 }
 .roadmap h5, .courgette-ll{
     font-family: var(--font-courgette);
@@ -422,4 +437,8 @@ footer h3{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+}
+.smallsubheads svg{
+  width: 80px!important;
+  left: 0px!important;
 }
