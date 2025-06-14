@@ -9,7 +9,7 @@ import vaccinecarouseal from '../../../../../public/images/serviceassets/vaccine
 // Define the vaccine item type
 interface Vaccine {
   name: string;
-  image: StaticImageData;
+  image: any;
   age: string;
 }
 
