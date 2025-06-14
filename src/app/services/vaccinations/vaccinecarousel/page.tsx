@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import Image, { StaticImageData } from 'next/image';
 import 'keen-slider/keen-slider.min.css';
-import vaccinecarouseal from '@/public/images/serviceassets/vaccinecarouseal.png'; // make sure this path is correct
+import vaccinecarouseal from '../../../../../public/images/serviceassets/vaccinecarouseal.png'; // make sure this path is correct
 
 interface Vaccine {
   name: string;
