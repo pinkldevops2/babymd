@@ -4,6 +4,13 @@ import { useKeenSlider,KeenSliderInstance, KeenSliderPlugin } from 'keen-slider/
 import React, { useEffect,useRef, useState } from "react"
 import Image from 'next/image';
 import docImg from '../assets/doc.png'
+
+interface SlideItem {
+  title: string;
+  items: string[];
+  icon: string;
+}
+
 export default function ClinicInner() {
  // Slider 1 (e.g., Hero or General Slider)
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -70,7 +77,8 @@ export default function ClinicInner() {
 
     return clear;
   }, [keenInstanceRef]);
-  const slides = Array(5).fill({
+
+  const slides: SlideItem[] = Array(5).fill({
     title: 'Clinic Consultations',
     items: [
       'General Pediatric Consultations',
