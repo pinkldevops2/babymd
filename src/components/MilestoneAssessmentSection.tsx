@@ -6,8 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
 import SubHeading from "./SubHeading";
-import Rectangle from "../app/assets/rectangle.png";
-import RectangleImg from "../app/assets/rectangleImg.png";
+import MRectangle from "../app/assets/Mrectangle.png";
+import MRectangleImg from "../app/assets/MrectangleImg.png";
 import topright from "../app/assets/topright.png";
 import bottomleft from "../app/assets/bottomleft.png";
 import dotearrow from "../app/assets/dotearrow.png";
@@ -104,14 +104,14 @@ const MilestoneAssessmentSection = () => {
               <Image
                 width={300}
                 height={300}
-                src={Rectangle}
+                src={MRectangle}
                 alt="Background"
                 className="mx-auto max-w-[250px]"
               />
               <Image
                 width={255}
                 height={255}
-                src={RectangleImg}
+                src={MRectangleImg}
                 alt="Overlay"
                 className="absolute absolute-center mx-auto fade-in"
               />
