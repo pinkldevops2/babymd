@@ -91,26 +91,30 @@ export default function Services() {
     }
   ];
  
-useEffect(() => {
-    gsap.utils.toArray(".fade-in").forEach((el) => {
-      gsap.from(el, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 80%", // when element top hits 80% of viewport
-          toggleActions: "play none none none", // onEnter, onLeave, onEnterBack, onLeaveBack
-        },
-      });
-    });
-  }, []);
+ useEffect(() => {
+  const elements = gsap.utils.toArray<HTMLElement>(".fade-in");
 
-  const pathRef = useRef(null);
+  elements.forEach((el) => {
+    gsap.from(el, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+  });
+}, []);
+
+
+  const pathRef = useRef<SVGPathElement | null>(null);
 
   useEffect(() => {
     const path = pathRef.current;
+    if(!path) return;
     const length = path.getTotalLength();
 
     gsap.set(path, {
