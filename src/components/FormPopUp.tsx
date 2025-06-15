@@ -1,4 +1,12 @@
-export default function FormPopUp({ isOpen, onClose, children }) {
+import React from "react";
+
+type FormPopUpProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+};
+
+export default function FormPopUp({ isOpen, onClose, children }: FormPopUpProps) {
   if (!isOpen) return null;
 
   return (
