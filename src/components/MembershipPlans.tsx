@@ -10,10 +10,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 type MembershipPlansProps = {
-  goldPackageImg: StaticImageData;
-  platinumPackageImg: StaticImageData;
-  premiumLayerBg?: StaticImageData; // Unused in current layout, keep optional
-  premiumLayerImg: StaticImageData;
+  goldPackageImg: any;
+  platinumPackageImg: any;
+  premiumLayerBg?: any; // Unused in current layout, keep optional
+  premiumLayerImg: any;
   onClick: () => void;
 };
 
