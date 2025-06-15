@@ -2,31 +2,70 @@
 
 import React, { useEffect, useState } from "react";
 
-const ArticlesGrid = () => {
-  const [articles, setArticles] = useState([]);
+interface ImageFormat {
+  url: string;
+}
+
+interface CoverAttributes {
+  url: string;
+  formats?: {
+    medium?: ImageFormat;
+  };
+}
+
+interface CoverData {
+  attributes: CoverAttributes;
+}
+
+interface ArticleAttributes {
+  title: string;
+  description: string;
+  cover?: {
+    data?: CoverData;
+  };
+}
+
+interface Article {
+  id: number;
+  attributes: ArticleAttributes;
+}
+
+interface ApiResponse {
+  data: Article[];
+  meta: {
+    pagination: {
+      pageCount: number;
+    };
+  };
+}
+
+const ArticlesGrid: React.FC = () => {
+  const [articles, setArticles] = useState<Article[]>([]);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [isSearching, setIsSearching] = useState(false);
+
   const pageSize = 6;
 
-  const fetchArticles = async (pageNumber, search = "") => {
+  const fetchArticles = async (pageNumber: number, search = "") => {
     try {
       const query = new URLSearchParams({
-        "pagination[page]": pageNumber,
-        "pagination[pageSize]": pageSize,
+        "pagination[page]": pageNumber.toString(),
+        "pagination[pageSize]": pageSize.toString(),
         populate: "cover",
         sort: "publishedAt:desc",
       });
 
-      // Only add filters if searching
       if (search) {
         query.append("filters[$or][0][title][$containsi]", search);
         query.append("filters[$or][1][description][$containsi]", search);
       }
 
-      const res = await fetch(`http://localhost:1337/api/articles??populate=cover&${query.toString()}`);
-      const data = await res.json();
+      const res = await fetch(
+        `http://localhost:1337/api/articles?${query.toString()}`
+      );
+      const data: ApiResponse = await res.json();
 
       if (!data?.data) return;
 
@@ -44,7 +83,6 @@ const ArticlesGrid = () => {
   };
 
   useEffect(() => {
-    // Fetch all articles initially
     fetchArticles(1);
   }, []);
 
@@ -53,7 +91,7 @@ const ArticlesGrid = () => {
       setIsSearching(!!searchTerm);
       fetchArticles(1, searchTerm);
       setPage(1);
-    }, 300); // debounce
+    }, 300);
 
     return () => clearTimeout(delaySearch);
   }, [searchTerm]);
@@ -66,7 +104,7 @@ const ArticlesGrid = () => {
 
   return (
     <div className="space-y-6">
-      {/* 🔍 Search */}
+      {/* Search */}
       <div className="flex items-center justify-center">
         <input
           type="text"
@@ -77,16 +115,18 @@ const ArticlesGrid = () => {
         />
       </div>
 
-      {/* 📰 Articles Grid */}
+      {/* Articles Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles.map((article) => {
-          const attrs = article?.attributes;
+          const attrs = article.attributes;
           if (!attrs) return null;
 
           const imageUrl =
-            attrs?.cover?.data?.attributes?.formats?.medium?.url ||
-            attrs?.cover?.data?.attributes?.url;
-          const imageSrc = imageUrl ? `http://localhost:1337${imageUrl}` : null;
+            attrs.cover?.data?.attributes?.formats?.medium?.url ||
+            attrs.cover?.data?.attributes?.url;
+          const imageSrc = imageUrl
+            ? `http://localhost:1337${imageUrl}`
+            : null;
 
           return (
             <div
@@ -96,7 +136,7 @@ const ArticlesGrid = () => {
               {imageSrc ? (
                 <img
                   src={imageSrc}
-                  alt={attrs?.title || "Cover image"}
+                  alt={attrs.title || "Cover image"}
                   className="w-full aspect-[4/3] object-cover rounded-lg"
                 />
               ) : (
@@ -112,10 +152,10 @@ const ArticlesGrid = () => {
               </div>
 
               <h4 className="font-semibold text-gray-900">
-                {attrs?.title || "Untitled"}
+                {attrs.title || "Untitled"}
               </h4>
               <p className="text-sm text-gray-600">
-                {attrs?.description || "No description available."}
+                {attrs.description || "No description available."}
               </p>
 
               <button className="bg-orange-600 text-white text-sm px-4 py-2 rounded-full flex items-center gap-2">
@@ -126,7 +166,7 @@ const ArticlesGrid = () => {
         })}
       </div>
 
-      {/* 🔄 View More */}
+      {/* View More */}
       {hasMore && (
         <div className="flex justify-center pt-6">
           <button
