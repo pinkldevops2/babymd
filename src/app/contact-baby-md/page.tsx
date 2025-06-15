@@ -18,20 +18,22 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Contact() {
 
   useEffect(() => {
-    gsap.utils.toArray(".fade-in").forEach((el) => {
-      gsap.from(el, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 80%", // when element top hits 80% of viewport
-          toggleActions: "play none none none", // onEnter, onLeave, onEnterBack, onLeaveBack
-        },
-      });
+  const elements = gsap.utils.toArray<HTMLElement>(".fade-in");
+
+  elements.forEach((el) => {
+    gsap.from(el, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
     });
-  }, []);
+  });
+}, []);
 
   return (
     <>
@@ -122,7 +124,7 @@ Koramangala, Bengaluru, Karnataka-560034
               </div>
               <div className="flex items-start gap-2 pb-4 fade-in">
 			  <span>
-                <svg class="w-[26px]" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-[26px]" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.5 19H9.5C9.78 19 10 18.78 10 18.5V14.5C10 14.22 9.78 14 9.5 14H5.5C5.22 14 5 14.22 5 14.5V18.5C5 18.78 5.22 19 5.5 19ZM6 15H9V18H6V15Z" fill="black"/>
 <path d="M15.5 19H19.5C19.78 19 20 18.78 20 18.5V14.5C20 14.22 19.78 14 19.5 14H15.5C15.22 14 15 14.22 15 14.5V18.5C15 18.78 15.22 19 15.5 19ZM16 15H19V18H16V15Z" fill="black"/>
 <path d="M28.5 11H32.5C32.78 11 33 10.78 33 10.5V6.5C33 6.22 32.78 6 32.5 6H28.5C28.22 6 28 6.22 28 6.5V10.5C28 10.78 28.22 11 28.5 11ZM29 7H32V10H29V7Z" fill="black"/>
