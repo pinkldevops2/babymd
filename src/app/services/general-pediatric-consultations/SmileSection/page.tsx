@@ -12,12 +12,11 @@ import smilevectorimg from "../../../../../public/images/serviceassets/smileimg.
 import arrow from "../../../../../public/images/Group 2349.png";
 
 function SmileSection() {
-const pathRef = useRef(null);
+const pathRef = useRef<SVGPathElement | null>(null);
 
    useEffect(() => {
     const path = pathRef.current;
     if (!path) return;
-
     const length = path.getTotalLength();
 
     gsap.set(path, {

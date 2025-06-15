@@ -10,10 +10,11 @@ import HexagonBlue from "../../../../../public/images/serviceassets/HexagonBlue.
 import BannerGroupHexagon from "../../../../../public/images/serviceassets/BannerGroupHexagon.png";
 
 export default function Banner() {
-    const pathRef = useRef(null);
+  const pathRef = useRef<SVGPathElement | null>(null);
 
   useEffect(() => {
     const path = pathRef.current;
+    if(!path) return;
     const length = path.getTotalLength();
 
     gsap.set(path, {

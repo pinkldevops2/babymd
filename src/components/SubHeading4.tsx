@@ -1,9 +1,9 @@
 import ContactC from './anime/ContactMainC';
 
 type SubHeading4Props = {
-  mainText: string;
-  highlightText: string;
-  subText: string;
+  mainText: any;
+  highlightText: any;
+  subText: any;
 };
 
 const SubHeading4: React.FC<SubHeading4Props> = ({ mainText, highlightText, subText }) => {

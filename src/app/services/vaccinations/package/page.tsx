@@ -21,7 +21,7 @@ export default function Package() {
 
 
 
-  const pathRef = useRef(null);
+  const pathRef = useRef<SVGPathElement | null>(null);
 
    useEffect(() => {
     const path = pathRef.current;

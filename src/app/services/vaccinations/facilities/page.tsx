@@ -15,7 +15,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 export default function Facilities() {
-  const pathRef = useRef(null);
+  const pathRef = useRef<SVGPathElement | null>(null);
 
    useEffect(() => {
     const path = pathRef.current;

@@ -7,7 +7,7 @@ import SubHeading from "../../../../components/SubHeading";
 import beehive2 from "../../../../../public/images/serviceassets/beehive2.png";
 gsap.registerPlugin(ScrollTrigger);
 export default function Paragraph() {
-  const pathRef = useRef(null);
+  const pathRef = useRef<SVGPathElement | null>(null);
 
    useEffect(() => {
     const path = pathRef.current;

@@ -11,7 +11,7 @@ import babyInject from '../../../../../public/images/serviceassets/babyInject.pn
 import arrow from "../../../../../public/images/Group 2349.png";
 
 function Questions() {
-const pathRef = useRef(null);
+const pathRef = useRef<SVGPathElement | null>(null);
 
    useEffect(() => {
     const path = pathRef.current;

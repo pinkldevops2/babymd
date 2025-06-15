@@ -9,35 +9,39 @@ import tablecarosualIcon1 from "../../../../../public/images/serviceassets/table
 import tablecarosualIcon2 from "../../../../../public/images/serviceassets/tablecarosualIcon2.png";
 import tablecarosualIcon3 from "../../../../../public/images/serviceassets/tablecarosualIcon3.png";
 
-// Card component (updated to accept heading and body class names for styling)
-function TableCard({ 
-  heading, 
-  body, 
-  iconSrc, 
-  iconWidth = 40, 
+interface TableCardProps {
+  heading?: string;
+  body?: string;
+  iconSrc?: any;
+  iconWidth?: number;
+  iconHeight?: number;
+  headingClassName?: string;
+  bodyClassName?: string;
+}
+
+const TableCard: React.FC<TableCardProps> = ({
+  heading,
+  body,
+  iconSrc,
+  iconWidth = 40,
   iconHeight = 48,
-  headingClassName = "text-xl font-bold mb-2", // Default heading style
-  bodyClassName = "text-lg font-semibold leading-relaxed" // Default body style
-}) {
-  // Calculate container size to be slightly larger than the icon
+  headingClassName = "text-xl font-bold mb-2",
+  bodyClassName = "text-lg font-semibold leading-relaxed",
+}) => {
+  // Container size (not used directly but could be used for styling logic)
   const containerWidth = iconWidth + 24;
   const containerHeight = iconHeight + 32;
 
   return (
     <div className="relative bg-[#D8FBCA] h-full text-gray-800 rounded-2xl p-10 shadow-md overflow-hidden keen-slider__slide">
-      {/* Main content container */}
       <div className="flex justify-between items-center h-full">
-        {/* Text content */}
+        {/* Text Section */}
         <div className="flex-1 pr-8">
-          {heading && (
-            <h3 className={headingClassName}>{heading}</h3>
-          )}
-          {body && (
-            <p className={bodyClassName}>{body}</p>
-          )}
+          {heading && <h3 className={headingClassName}>{heading}</h3>}
+          {body && <p className={bodyClassName}>{body}</p>}
         </div>
 
-        {/* Icon */}
+        {/* Icon Section */}
         {iconSrc && (
           <div className="flex-shrink-0">
             <Image
@@ -86,7 +90,7 @@ export default function Tablecarosual() {
   });
 
   // Function to handle dot click
-  const handleDotClick = (index) => {
+  const handleDotClick = (index: number) => {
     instanceRef.current?.moveToIdx(index);
   };
 
