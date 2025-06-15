@@ -1,21 +1,35 @@
-import { useState, useRef,useEffect } from 'react';
-import Image from "next/image";
+"use client";
+
+import { useState, useRef, useEffect } from "react";
+import Image, { StaticImageData } from "next/image";
 import SuperDocButton from "./SuperDocButton2";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const MembershipPlans = ({
+// Register ScrollTrigger once
+gsap.registerPlugin(ScrollTrigger);
+
+type MembershipPlansProps = {
+  goldPackageImg: StaticImageData;
+  platinumPackageImg: StaticImageData;
+  premiumLayerBg?: StaticImageData; // Unused in current layout, keep optional
+  premiumLayerImg: StaticImageData;
+  onClick: () => void;
+};
+
+const MembershipPlans: React.FC<MembershipPlansProps> = ({
   goldPackageImg,
   platinumPackageImg,
   premiumLayerBg,
   premiumLayerImg,
-  onClick
+  onClick,
 }) => {
-
-const pathRef = useRef(null);
+  const pathRef = useRef<SVGPathElement | null>(null);
 
   useEffect(() => {
     const path = pathRef.current;
+    if (!path) return;
+
     const length = path.getTotalLength();
 
     gsap.set(path, {
@@ -28,15 +42,14 @@ const pathRef = useRef(null);
       { strokeDashoffset: length },
       {
         strokeDashoffset: 0,
-        duration:1.7,
+        duration: 1.7,
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: path,
-          start: "top 80%", // when the top of path hits 80% of viewport height
-          end: "bottom 60%", // optional, for scrub
-          toggleActions: "play none none reverse", // customize as needed
-          // scrub: true, // if you want scroll-linked animation
-        }
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none reverse",
+        },
       }
     );
   }, []);
