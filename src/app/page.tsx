@@ -321,17 +321,17 @@ const [isSuperSpecialistOpen, setIsSuperSpecialistOpen] = useState<boolean>(fals
 const [isDevelopmentalTherapiesOpen, setIsDevelopmentalTherapiesOpen] = useState<boolean>(false);
 
 // Refs for each dropdown to access their DOM elements
-const generalConsultationsRef = useRef<HTMLDivElement | null>(null);
-const vaccinationsRef = useRef<HTMLDivElement | null>(null);
-const superSpecialistRef = useRef<HTMLDivElement | null>(null);
-const developmentalTherapiesRef = useRef<HTMLDivElement | null>(null);
+const generalConsultationsRef = useRef<HTMLElement | null>(null);
+const vaccinationsRef = useRef<HTMLElement | null>(null);
+const superSpecialistRef = useRef<HTMLElement | null>(null);
+const developmentalTherapiesRef = useRef<HTMLElement | null>(null);
 
 // State to track scroll direction
 const [scrollDirection, setScrollDirection] = useState<"up" | "down" | null>(null);
 const lastScrollY = useRef<number>(0);
 
 // Function to check if an element crosses the adjusted center of the viewport
-const isElementCrossingCenter = (elementRef: React.RefObject<HTMLElement>): boolean => {
+const isElementCrossingCenter = (elementRef: React.RefObject<HTMLElement | null>): boolean => {
   if (!elementRef.current) return false;
 
   const rect = elementRef.current.getBoundingClientRect();
