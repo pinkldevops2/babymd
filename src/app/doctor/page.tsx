@@ -1,4 +1,6 @@
 "use client";
+import { useState, useRef } from "react";
+
 import Banner from "../doctor/banner/page";
 import Paragraph from "../doctor/paragraph/page";
 import Locationform from "../doctor/LocationForm/page";
@@ -29,21 +31,6 @@ export default function Doctor() {
       category: "Case Study",
     },
   ];
-
-  // Navigation functions for case study carousel
-  const prevCaseStudySlide = () => {
-    setCurrentCaseStudySlide((prev) =>
-      prev === 0 ? caseStudies.length - 1 : prev - 1
-    );
-    caseStudyInstanceRef.current?.prev();
-  };
-
-  const nextCaseStudySlide = () => {
-    setCurrentCaseStudySlide((prev) =>
-      prev === caseStudies.length - 1 ? 0 : prev + 1
-    );
-    caseStudyInstanceRef.current?.next();
-  };
 
   return (
     <section className="container">
