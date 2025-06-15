@@ -20,7 +20,7 @@ declare const zf_FieldArray: string[];
 
 export default function BabyMDCampaignForm({ formID }: BabyMDCampaignFormProps) {
   useEffect(() => {
-    const dateAndMonthRegexFormatArray = zf_SetDateAndMonthRegexBasedOnDateFormate("yyyy-MM-dd");
+    const dateAndMonthRegexFormatArray: RegExp[] = zf_SetDateAndMonthRegexBasedOnDateFormate("yyyy-MM-dd");
     const zf_DateRegex: RegExp = new RegExp(dateAndMonthRegexFormatArray[0]);
     const zf_MonthYearRegex: RegExp = new RegExp(dateAndMonthRegexFormatArray[1]);
     var zf_MandArray = ["SingleLine1", "PhoneNumber_countrycode"];
@@ -64,7 +64,9 @@ window.zf_ValidateAndSubmit = function (): boolean {
 
     function zf_CheckMandatory() {
       for (let i = 0; i < zf_MandArray.length; i++) {
-        var fieldObj = document.forms.form[zf_MandArray[i]];
+        const form = document.forms.namedItem("form") as HTMLFormElement | null;
+        if (!form) return;
+        const fieldObj = form[zf_MandArray[i] as keyof typeof form];
         if (fieldObj) {
           if (fieldObj.nodeName != null) {
             if (fieldObj.nodeName == 'OBJECT') {
@@ -228,29 +230,32 @@ function zf_ValidCheck(): boolean {
 }
 
 
-    function zf_ValidateNumber(elem:HTMLInputElement) {
-      var validChars = "-0123456789";
-      var numValue = elem.value.replace(/^\s+|\s+$/g, '');
-      if (numValue != null && !numValue == "") {
-        var strChar;
-        var result = true;
-        if (numValue.charAt(0) == "-" && numValue.length == 1) {
-          return false;
-        }
-        for (let i = 0; i < numValue.length && result == true; i++) {
-          strChar = numValue.charAt(i);
-          if ((strChar == "-") && (i != 0)) {
-            return false;
-          }
-          if (validChars.indexOf(strChar) == -1) {
-            result = false;
-          }
-        }
-        return result;
-      } else {
-        return true;
+ function zf_ValidateNumber(elem: HTMLInputElement): boolean {
+  const validChars = "-0123456789";
+  const numValue = elem.value.trim();
+
+  if (numValue !== "") {
+    if (numValue.charAt(0) === "-" && numValue.length === 1) {
+      return false;
+    }
+
+    for (let i = 0; i < numValue.length; i++) {
+      const strChar = numValue.charAt(i);
+
+      if (strChar === "-" && i !== 0) {
+        return false;
+      }
+
+      if (!validChars.includes(strChar)) {
+        return false;
       }
     }
+
+    return true;
+  } else {
+    return true; // Empty input is considered valid
+  }
+}
 
     function zf_ValidateDateFormat(inpElem:HTMLInputElement) {
       var dateValue = inpElem.value.replace(/^\s+|\s+$/g, '');
