@@ -7,8 +7,21 @@ import SuperDocButton from './SuperDocButton';
 import SubHeading3 from './SubHeading3';
 import beehive4 from '@/app/assets/beehive4.png';
 
+type Clinic = {
+  image: string;
+  title: string;
+  location: string;
+  hours: {
+    days: string;
+    time: string;
+  }[];
+};
 
-const ClinicCarousel = ({ clinics }) => {
+type ClinicCarouselProps = {
+  clinics: Clinic[];
+};
+
+const ClinicCarousel = ({ clinics  } : ClinicCarouselProps ) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [totalSlides, setTotalSlides] = useState(0);
 
