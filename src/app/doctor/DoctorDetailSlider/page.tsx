@@ -80,7 +80,7 @@ export default function DoctorSlider() {
                     />
                     <Image
                       src={quate}
-                      alt={quate}
+                      alt={"Doctors"}
                       className="w-[40px] absolute top-0 right-5  object-cover"
                     />
                      
