@@ -62,7 +62,7 @@ export default function Banner() {
             </div>
             <Image
               src={bee}
-              alt={docprofileback}
+              alt={"Bee"}
               className="absolute top-[10px] right-[0px] md:top-[-150%] md:right-[-50%]"
             />
             <div className="absolute top-[70px] right-[20px] md:top-[-90%] md:right-[-47%]">
@@ -84,13 +84,13 @@ export default function Banner() {
           <div className="w-full md:w-4/5 relative md:px-5 pt-4 md:pt-[60px]">
             <Image
               src={docprofileback}
-              alt={docprofileback}
+              alt={"BabyMD Doctors Profile"}
               className="mx-auto w-[260px]"
             />
 
             <Image
               src={docprofile}
-              alt={docprofile}
+              alt={"BabyMD Doctors Profile"}
               className="mx-auto absolute absolute-bottom-center  w-[300px]"
             />
           </div>
