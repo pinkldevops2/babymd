@@ -9,9 +9,9 @@ import SuperDocButton from './SuperDocButton2'
 gsap.registerPlugin(ScrollTrigger)
 
 interface ReadySectionProps {
-  readyvector: string // Not used in your code but declared in props
+  readyvector: any // Not used in your code but declared in props
   readyvectorImg: any
-  bluebtnarrow?: string // Optional since it's not used
+  bluebtnarrow?: any // Optional since it's not used
   onClick: () => void
 }
 

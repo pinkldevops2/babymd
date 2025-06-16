@@ -400,7 +400,7 @@ useEffect(() => {
       <div>
         {/* Purple Splash Frame */}
         
-        <HeroSection
+      <HeroSection
         i1={i1}
         i1a={i1a}
         beehive_full={beehive_full}

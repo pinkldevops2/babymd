@@ -5,11 +5,11 @@ import MaskReveal4 from './anime/MaskReveal4';
 import React from 'react';
 
 interface HeroSectionProps {
-  i1: string;
-  i1a: string;
-  beehive_full: string;
-  beehive9: string;
-  spring: string; // Currently unused, but typed for completeness
+  i1: any;
+  i1a: any;
+  beehive_full: any;
+  beehive9: any;
+  spring: any; // Currently unused, but typed for completeness
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
