@@ -95,10 +95,10 @@ export default function DoctorAppointment() {
               />
               
               <Image
-                                    src={docsmile}
-                                    alt={docsmile}
-                                    className="mx-auto absolute absolute-bottom-center  w-[350px]"
-                                  />
+                  src={docsmile}
+                  alt={"BabyMD Doctors"}
+                  className="mx-auto absolute absolute-bottom-center  w-[350px]"
+              />
 
                                 <div className='absolute top-[-30px] left-[58%]'>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="71" viewBox="0 0 24 71" fill="none">
