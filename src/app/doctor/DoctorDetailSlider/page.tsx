@@ -147,7 +147,7 @@ export default function DoctorSlider() {
 
           <Image
                       src={bee2}
-                      alt={bee2}
+                      alt={"Bee"}
                       className="w-[100px] absolute bottom-0 right-0  object-cover"
                     />
         </div>
