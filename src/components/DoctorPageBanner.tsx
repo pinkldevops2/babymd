@@ -41,9 +41,9 @@ export default function DoctorPageBanner() {
             <Image
               src={bee}
               alt={"Bee"}
-              className="absolute top-[10px] right-[0px] md:top-[-150%] md:right-[-50%]"
+              className="absolute top-[10px] right-[0px] md:top-[-140px] md:right-[-50%]"
             />
-            <div className="absolute top-[70px] right-[20px] md:top-[-90%] md:right-[-47%]">
+            <div className="absolute top-[70px] right-[20px] md:top-[-80] md:right-[-47%]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="74"
