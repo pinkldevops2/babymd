@@ -97,6 +97,9 @@ footer h3{
 	font-family: var(--font-lato);
 	font-weight:500!important;
 }
+.spansidelatonormal{
+	font-family: var(--font-lato);
+}
 .customtenight{
 	font-size:28px;
 }

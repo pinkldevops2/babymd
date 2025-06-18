@@ -10,14 +10,26 @@ import DropDown from "@/components/DropDown";
 import blog_list from "public/images/blog_list.svg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { calculateReadTime } from "@/components/calculateReadTime";
 
 gsap.registerPlugin(ScrollTrigger);
+
+interface Category {
+  id: number;
+  name: string;
+  slug: string;
+  description: string | null;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+}
 
 // Article interface matching your JSON
 interface Article {
   id: number;
   title: string;
-  description?: string;
+  description: string;
+  category: Category;
   slug?: string;
   cover?: {
     url?: string;
@@ -27,7 +39,6 @@ interface Article {
       thumbnail?: { url: string };
     };
   };
-  category?: string;
   readTime?: number;
 }
 
@@ -40,6 +51,7 @@ const ArticlesGrid: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [articles, setArticles] = useState<Article[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
+  
 
   useEffect(() => {
   const elements = gsap.utils.toArray<HTMLElement>(".fade-in");
@@ -64,41 +76,39 @@ const ArticlesGrid: React.FC = () => {
     setIsVisible((prev) => !prev);
   };
 
-  const fetchArticles = async (search = "") => {
-    const query = new URLSearchParams({
-      sort: "publishedAt:desc",
-      "pagination[pageSize]": "100",
-      "populate":"cover"
+const fetchArticles = async (search = "") => {
+  let baseUrl = "https://thoughtful-freedom-78af04f032.strapiapp.com/api/articles";
+  let query = "";
+
+  if (search) {
+    query = [
+      `filters[$or][0][title][$containsi]=${encodeURIComponent(search)}`,
+      `filters[$or][1][description][$containsi]=${encodeURIComponent(search)}`
+    ].join("&");
+  }
+
+  const fullUrl = `${baseUrl}?populate=cover&sort=publishedAt:desc&pagination[pageSize]=100${search ? `&${query}` : ""}`;
+
+  try {
+    const res = await fetch(fullUrl, {
+      headers: {
+        Authorization:
+          "Bearer 8a159d391debafc3d5a8878af65c8359e1122f0ad3389864b8c2b68c342fcab92aa73ee8ea4265befa11c383a4e8ed703fb6596d724dabc688e2aeb3c520196d93215cca054a98e8c40245a0d0452a0bc636fc5c9a4a1ce9d35327172d7a53caa1effbe9edbcd0dece38c87a57a569aee5566e7858d3b1d61c1d23cd9f5cf331",
+      },
     });
 
-    if (search) {
-      query.append("filters[$or][0][title][$containsi]", search);
-      query.append("filters[$or][1][description][$containsi]", search);
+    if (!res.ok) {
+      console.error("Failed to fetch articles:", res.statusText);
+      return;
     }
 
-    try {
-      const res = await fetch(
-        `https://thoughtful-freedom-78af04f032.strapiapp.com/api/articles?${query.toString()}`,
-        {
-          headers: {
-            Authorization:
-              "Bearer 8a159d391debafc3d5a8878af65c8359e1122f0ad3389864b8c2b68c342fcab92aa73ee8ea4265befa11c383a4e8ed703fb6596d724dabc688e2aeb3c520196d93215cca054a98e8c40245a0d0452a0bc636fc5c9a4a1ce9d35327172d7a53caa1effbe9edbcd0dece38c87a57a569aee5566e7858d3b1d61c1d23cd9f5cf331",
-          },
-        }
-      );
+    const json: ApiResponse = await res.json();
+    setArticles(json.data || []);
+  } catch (error) {
+    console.error("Error fetching articles:", error);
+  }
+};
 
-      if (!res.ok) {
-        console.error("Failed to fetch articles:", res.statusText);
-        return;
-      }
-
-      const json: ApiResponse = await res.json();
-      //console.log(json.data);
-      setArticles(json.data || []);
-    } catch (error) {
-      console.error("Error fetching articles:", error);
-    }
-  };
 
   useEffect(() => {
     fetchArticles();
@@ -110,8 +120,15 @@ const ArticlesGrid: React.FC = () => {
     }, 300);
     return () => clearTimeout(to);
   }, [searchTerm]);
+// State holds the category slug directly (not an object)
+const [selectedCategory, setSelectedCategory] = useState<string>("");
+// Filtering by comparing slugs
+const filteredArticles = selectedCategory
+  ? articles.filter((article) => article.category?.slug === selectedCategory)
+  : articles;
 
   return (
+    
     <div className="bg-white p-4 container">
       {/* Featured Section */}
       <section className="fade-in">
@@ -163,7 +180,11 @@ const ArticlesGrid: React.FC = () => {
 </svg>
 
       </button>
-      <DropDown />
+      <DropDown
+  onChange={(slug) => setSelectedCategory(slug)}
+  category={selectedCategory}
+/>
+
 </div>
 
 </div>
@@ -184,7 +205,7 @@ const ArticlesGrid: React.FC = () => {
       {/* Blog Posts List */}
       <section className="py-6">
         <div className="max-w-7xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-3">
-          {articles.map((article) => {
+          {filteredArticles.map((article) => {
             const { id, title, description, cover, category, readTime, slug } =
               article;
 
@@ -195,21 +216,21 @@ const ArticlesGrid: React.FC = () => {
               "https://via.placeholder.com/400x200";
 
               //console.log(description);
-
+            const readTimes = calculateReadTime(description,10);
             return (
               <div
                 key={id}
                 className="border border-[#393939] rounded-[15px] overflow-hidden bg-white flex flex-col  fade-in"
-              >
+               >
                 <img
                   src={imgUrl}
                   alt={title}
                   className="w-full h-48 object-cover rounded-[15px]"
                 />
                 <div className="mt-4 w-fit mx-4 inline-flex items-center px-3 py-1 bg-gray-100 border border-[#393939] text-[10px] uppercase rounded-full">
-                  <span>{category || "General"}</span>
+                  <span>{category?.name || "General"}</span>
                   <span className="mx-2">|</span>
-                  <span>{readTime ?? 1} min read</span>
+                  <span>{readTimes ?? 1} min read</span>
                 </div>
                 <div className="mt-4 mx-4 flex-1">
                   <h3 className="text-[20px] font-lato font-bold mb-2">{title}</h3>

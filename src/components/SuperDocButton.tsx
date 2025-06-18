@@ -9,6 +9,7 @@ interface SuperDocButtonProps {
   variant?: 'pink' | 'purple' | 'yellow';
   className?: string;
   textColor?: string;
+  onClick?: () => void; // <-- add this
 }
 
 const SuperDocButton: React.FC<SuperDocButtonProps> = ({
@@ -18,6 +19,7 @@ const SuperDocButton: React.FC<SuperDocButtonProps> = ({
   variant = 'pink',
   className = '',
   textColor = '#FFFFFF',
+  onClick, // <-- receive it
 }) => {
   const bgColors: Record<string, string> = {
     pink: 'bg-[#F8845D] hover:bg-[#5943A5]',
@@ -29,6 +31,12 @@ const SuperDocButton: React.FC<SuperDocButtonProps> = ({
     <Link
       href={href}
       target={target}
+      onClick={(e) => {
+        if (onClick) {
+          e.preventDefault(); // prevent default anchor behavior
+          onClick();
+        }
+      }}
       className={clsx(
         'whitespace-nowrap text-sm flex items-center gap-2 font-bold py-4 px-10 rounded-full tracking-wide transition-transform duration-300 transform hover:scale-105',
         bgColors[variant],
