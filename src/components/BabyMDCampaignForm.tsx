@@ -62,7 +62,7 @@ window.zf_ValidateAndSubmit = function (): boolean {
   }
 };
 
-    function zf_CheckMandatory() {
+   window.zf_CheckMandatory = function (): any {
       for (let i = 0; i < zf_MandArray.length; i++) {
         const form = document.forms.namedItem("form") as HTMLFormElement | null;
         if (!form) return;
@@ -122,9 +122,9 @@ window.zf_ValidateAndSubmit = function (): boolean {
         }
       }
       return true;
-    }    
+    };
 
-function zf_ValidCheck(): boolean {
+window.zf_ValidCheck = function (): boolean {
   let isValid = true;
   const form = document.getElementById("form") as HTMLFormElement | null;
 
@@ -211,7 +211,7 @@ function zf_ValidCheck(): boolean {
   }
 
   return isValid;
-}
+};
 
     function zf_ShowErrorMsg(uniqName: string, errorType: 'mandatory' | 'format') {
   for (let errInd = 0; errInd < zf_FieldArray.length; errInd++) {
@@ -480,7 +480,7 @@ function zf_ValidatePhone(inpElem: HTMLInputElement): boolean {
 }
 
 
-    function zf_SetDateAndMonthRegexBasedOnDateFormate(dateFormat: string): [RegExp, RegExp] | [] {
+function zf_SetDateAndMonthRegexBasedOnDateFormate(dateFormat: string): [RegExp, RegExp] | [] {
   let dateFormatRegExp: RegExp | null = null;
   let monthYearFormatRegExp: RegExp | null = null;
 
@@ -529,25 +529,67 @@ function zf_ValidatePhone(inpElem: HTMLInputElement): boolean {
 
   return (dateFormatRegExp && monthYearFormatRegExp) ? [dateFormatRegExp, monthYearFormatRegExp] : [];
 }
+const interval = setInterval(() => {
+    if (
+      typeof window.zf_CheckMandatory === "function" &&
+      typeof window.zf_ValidCheck === "function"
+    ) {
+window.zf_ValidateAndSubmit = function (): boolean {
+  if (window.zf_CheckMandatory()) {
+    if (window.zf_ValidCheck()) {
+      if (window.isSalesIQIntegrationEnabled) {
+        window.zf_addDataToSalesIQ();
+      }
+      console.log("Validation passed, submitting form...");
+      return true;
+    } else {
+      console.log("Validation failed in zf_ValidCheck");
+      return false;
+    }
+  } else {
+    console.log("Validation failed in zf_CheckMandatory");
+    return false;
+  }
+};clearInterval(interval);
+    }
+  }, 100);
+
+  return () => clearInterval(interval);
 
 }, []);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
+
   const form = event.currentTarget;
 
-  if (typeof window.zf_ValidateAndSubmit === "function" && window.zf_ValidateAndSubmit()) {
-    console.log("Submitting form to Zoho...");
-    form.submit();
-  } else {
-    console.warn("Form submission blocked due to validation failure.");
+  const honeypot = form.elements.namedItem("verifyfld") as HTMLInputElement;
+  if (honeypot && honeypot.value.trim() !== "") {
+    console.warn("Bot submission detected via honeypot");
+    return false; // Stop processing the form
+  }
+
+  if (typeof window.zf_ValidateAndSubmit !== "function") {
+    console.error("Zoho validation function is not available (zf_ValidateAndSubmit)");
+    return;
+  }
+
+  try {
+    const isValid = window.zf_ValidateAndSubmit();
+    if (isValid) {
+      console.log("Zoho validation passed, submitting form...");
+      form.submit();
+    } else {
+      console.warn("Form submission blocked due to Zoho validation failure.");
+    }
+  } catch (err) {
+    console.error("Error during Zoho form validation:", err);
   }
 };
 
 
   return (
     <div className=" py-6">
-
       <form
         action="https://forms.zohopublic.in/babymd/form/BabyMDAllCampaignsCopy/formperma/RMfHwDcwoS7zp-F4irz4qypI3-gc2RoNtfBHy_YO9-Q/htmlRecords/submit"
         name="form"
@@ -953,6 +995,14 @@ function zf_ValidatePhone(inpElem: HTMLInputElement): boolean {
             </button>
           </li>
         </ul>
+        <input
+          type="text"
+          name="verifyfld"
+          id="verifyfld"
+          style={{ display: 'none' }}
+          tabIndex={-1}
+          autoComplete="off"
+        />
       </form>
     </div>
   );
