@@ -7,19 +7,35 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Define allowed durations
+type DurationKey =
+  | "6 Week - 14 Week"
+  | "2 Month - 6 Month"
+  | "6 Month - 12 Month"
+  | "1 Year - 2 Year";
+
+// Package type
+interface Package {
+  name: string;
+  price: number;
+  originalPrice: number;
+  features: string[];
+}
+
 export default function Package() {
   const [isDurationOpen, setIsDurationOpen] = useState(false);
-  const [selectedDuration, setSelectedDuration] = useState("6 Week - 14 Week");
+  const [selectedDuration, setSelectedDuration] =
+    useState<DurationKey>("6 Week - 14 Week");
   const pathRef = useRef<SVGPathElement | null>(null);
 
-  const durationOptions = [
+  const durationOptions: DurationKey[] = [
     "6 Week - 14 Week",
     "2 Month - 6 Month",
     "6 Month - 12 Month",
     "1 Year - 2 Year",
   ];
 
-  const packagesByDuration = {
+  const packagesByDuration: Record<DurationKey, Package[]> = {
     "6 Week - 14 Week": [
       {
         name: "Value Package",
@@ -39,13 +55,25 @@ export default function Package() {
         name: "Value Package",
         price: 22403,
         originalPrice: 24893,
-        features: ["Typbar", "Fluquadri", "Tresivac", "Menactra", "Biovac A and Jeev"],
+        features: [
+          "Typbar",
+          "Fluquadri",
+          "Tresivac",
+          "Menactra",
+          "Biovac A and Jeev",
+        ],
       },
       {
         name: "Premium Package",
         price: 23598,
         originalPrice: 26051,
-        features: ["Typbar", "Influvac Tetra", "Tresivac", "Menactra", "Havrix 720 and Jenvac"],
+        features: [
+          "Typbar",
+          "Influvac Tetra",
+          "Tresivac",
+          "Menactra",
+          "Havrix 720 and Jenvac",
+        ],
       },
     ],
     "6 Month - 12 Month": [
@@ -182,7 +210,7 @@ export default function Package() {
                     setSelectedDuration(option);
                     setIsDurationOpen(false);
                   }}
-                  className="w-full px-4 lg:px-6 py-3 lg:py-3 text-sm lg:text-base text-gray-800 hover:bg-gray-50 first:rounded-t-lg first:lg:rounded-t-xl last:rounded-b-lg last:lg:rounded-b-xl text-center border-b border-[#5943A5] last:border-0"
+                  className="w-full px-4 lg:px-6 py-3 text-sm lg:text-base text-gray-800 hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg text-center border-b border-[#5943A5] last:border-0"
                 >
                   {option}
                 </button>
@@ -195,7 +223,7 @@ export default function Package() {
           </div>
         </div>
 
-        {/* Dynamic Packages Grid */}
+        {/* Dynamic Packages */}
         <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
           {packagesByDuration[selectedDuration]?.map((pkg, index) => (
             <div
@@ -211,7 +239,6 @@ export default function Package() {
               >
                 {pkg.name}
               </div>
-
               <div className="text-center py-3 rounded-lg lg:rounded-xl">
                 <div className="flex justify-center items-baseline space-x-2">
                   <span className="text-[16px] text-[#5943A5]">
@@ -222,9 +249,8 @@ export default function Package() {
                   </span>
                 </div>
               </div>
-
               <div
-                className={`text-white py-4 px-2 text-[12px] min-h-[68px] flex items-center rounded-2xl mx-2 ${
+                className={`text-white py-4 px-2 text-[12px] min-h-[80px] flex items-center rounded-2xl mx-2 ${
                   pkg.name === "Value Package"
                     ? "bg-[#67AFBC]"
                     : "bg-[#76A861]"
@@ -250,7 +276,7 @@ export default function Package() {
           come with perks.
         </p>
 
-        {/* CTA Button */}
+        {/* CTA */}
         <div className="flex justify-center pt-6">
           <button
             type="button"
