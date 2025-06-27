@@ -2,8 +2,9 @@
 import { useEffect, useRef } from "react";
 
 import Image from "next/image";
-import scheduleIcon1 from "../../../../../public/images/serviceassets/scheduleIcon1.png";
-import scheduleIcon2 from "../../../../../public/images/serviceassets/scheduleIcon2.png";
+import scheduleIcon1 from "public/icons/vaccination7.png";
+import scheduleIcon2 from "public/icons/vaccination8.png";
+import scheduleIcon3 from "public/icons/vaccination9.png";
 import SubHeading from '../../../../components/SubHeading';
 import arrow from "../../../../../public/images/Group 2349.png";
 
@@ -115,7 +116,7 @@ export default function Schedules() {
       {/* 2 */}
       <div className="bg-[#FF9A6C] rounded-2xl py-10 px-6 shadow-md">
         <div className="mb-4">
-          <Image src={scheduleIcon2} alt="Toddler to Preschool Immunizations" />
+          <Image src={scheduleIcon3} alt="Toddler to Preschool Immunizations" />
         </div>
         <h2 className="text-[28px] leading-[30px] font-bold text-[#4B3A8F]">
           Adolescent and Pre- Teen{" "}

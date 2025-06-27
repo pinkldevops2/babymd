@@ -95,10 +95,10 @@ export default function Package() {
         {/* Title Section */}
 
         {/* Duration Section */}
-        <div className="relative bg-[#DDD0FF73] rounded-t-[25px] rounded-b-[10px]">
+        <div className="relative bg-[#FF9A6C] rounded-[25px] mb-4">
           <button
             onClick={() => setIsDurationOpen(!isDurationOpen)}
-            className="w-full text-white text-center text-[16px] bg-[#5943A5] py-4 px-4 rounded-full flex justify-center items-center gap-x-2"
+            className="w-full text-white text-center text-[16px] bg-[#D06433] py-4 px-4 rounded-full flex justify-center items-center gap-x-2"
           >
             <span className="text-[16px] leading-[20px] font-bold">
               Duration
@@ -108,7 +108,7 @@ export default function Package() {
                 isDurationOpen ? "rotate-180" : ""
               }`}
               fill="none"
-              stroke="#5943A5"
+              stroke="#D06433"
               strokeWidth="2"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,7 @@ export default function Package() {
           </button>
 
           {isDurationOpen && (
-            <div className="absolute top-[125px] left-0 right-0 bg-white rounded-lg lg:rounded-xl shadow-lg border border-gray-200 z-10 mt-1">
+            <div className="absolute top-[47px] left-0 right-0 bg-[#D9D9D9] rounded-[20px] lg:rounded-xl shadow-lg border border-gray-200 z-10 mt-1">
               {durationOptions.map((option, index) => (
                 <button
                   key={index}
@@ -130,7 +130,7 @@ export default function Package() {
                     setSelectedDuration(option);
                     setIsDurationOpen(false);
                   }}
-                  className="w-full text-left px-4 lg:px-6 py-2 lg:py-3 text-sm lg:text-base text-gray-800 hover:bg-gray-50 first:rounded-t-lg first:lg:rounded-t-xl last:rounded-b-lg last:lg:rounded-b-xl"
+                  className="w-full px-4 lg:px-6 py-3 lg:py-3 text-sm lg:text-base text-[gray-800] hover:bg-gray-50 first:rounded-t-lg first:lg:rounded-t-xl last:rounded-b-lg last:lg:rounded-b-xl text-center border-b border-[#5943A5] last:border-0"
                 >
                   {option}
                 </button>
@@ -138,53 +138,49 @@ export default function Package() {
             </div>
           )}
 
-          <div className="text-center py-7  px-4 text-[#2E2E2E] text-[16px]">
+          <div className="text-center py-7  px-4 text-white text-[16px]">
             {selectedDuration}
           </div>
         </div>
 
-        {/* Value Package */}
-        <div className="relative bg-[#DDD0FF73] rounded-t-[25px] rounded-b-[10px] pb-8">
-          <div className="w-full text-white text-center text-[16px] bg-[#5943A5] py-4 px-4 rounded-full">
-            Value Package
-          </div>
-          <div className="text-center py-3  rounded-lg lg:rounded-xl">
-            <div className="flex justify-center items-baseline space-x-2">
-              <span
-                className="text-[16px] text-[#5943A5]"
-                style={{ color: "#5943A5" }}
-              >
-                <i>₹15,819</i>
-              </span>
-              <span className="text-[16px] text-black line-through">
-                ₹17,577
-              </span>
-            </div>
-          </div>
-          <div className="text-white text-center bg-[#8B7DB8] text-[16px] py-4  px-3 rounded-2xl text-xs  mx-8 ">
-            <i>Easy Six, Pneumoshield 14%, and Rotavac</i>
-          </div>
-        </div>
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
+  {/* Value Package */}
+  <div className="relative bg-[#DDD0FF73] rounded-t-[25px] rounded-b-[10px] pb-0">
+    <div className="w-full text-white text-center text-[16px] bg-[#67AFBC] py-4 px-4 rounded-full">
+      Value Package
+    </div>
+    <div className="text-center py-3 rounded-lg lg:rounded-xl">
+      <div className="flex justify-center items-baseline space-x-2">
+        <span className="text-[16px] text-[#5943A5]">
+          <i>₹15,819</i>
+        </span>
+        <span className="text-[16px] text-black line-through">₹17,577</span>
+      </div>
+    </div>
+    <div className="text-white bg-[#67AFBC] py-4 px-2 text-[12px] rounded-2xl mx-2">
+      <i>Easy Six, Pneumoshield 14%, and Rotavac</i>
+    </div>
+  </div>
 
-        {/* Premium Package */}
-        <div className="relative bg-[#DDD0FF73] rounded-t-[25px] rounded-b-[10px] pb-8">
-          <div className="w-full text-white text-center text-[16px] bg-[#5943A5] py-4 px-4 rounded-full">
-            Premium Package
-          </div>
-          <div className="text-center py-3  rounded-lg lg:rounded-xl">
-            <div className="flex justify-center items-baseline space-x-2">
-              <span className="text-[16px] text-[#5943A5]">
-                <i>₹28,780</i>
-              </span>
-              <span className="text-[16px] text-black line-through">
-                ₹29,754
-              </span>
-            </div>
-          </div>
-          <div className="text-white text-center bg-[#8B7DB8] py-4  px-3 text-[16px] rounded-2xl mx-8 ">
-            <i>Hexaxim, Prevenar, and Rotosill</i>
-          </div>
-        </div>
+  {/* Premium Package */}
+  <div className="relative bg-[#DDD0FF73] rounded-t-[25px] rounded-b-[10px] pb-0">
+    <div className="w-full text-white text-center text-[16px] bg-[#76A861] py-4 px-4 rounded-full">
+      Premium Package
+    </div>
+    <div className="text-center py-3 rounded-lg lg:rounded-xl">
+      <div className="flex justify-center items-baseline space-x-2">
+        <span className="text-[16px] text-[#5943A5]">
+          <i>₹28,780</i>
+        </span>
+        <span className="text-[16px] text-black line-through">₹29,754</span>
+      </div>
+    </div>
+    <div className="text-white bg-[#76A861] py-4 px-2 text-[12px] rounded-2xl mx-2">
+      <i>Hexaxim, Prevenar, and Rotosill</i>
+    </div>
+  </div>
+</div>
+
 
         {/* Bullet Points */}
         <div className="py-4 px-4">

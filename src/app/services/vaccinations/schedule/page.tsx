@@ -4,6 +4,7 @@ import scheduleIcon1 from "../../../../../public/images/serviceassets/scheduleIc
 import scheduleIcon2 from "../../../../../public/images/serviceassets/scheduleIcon2.png";
 import SubHeading from '../../../../components/SubHeading';
 import arrow from "../../../../../public/images/Group 2349.png";
+import FirstYear from "public/icons/vaccination7.png";
 
 export default function schedule() {
   return (

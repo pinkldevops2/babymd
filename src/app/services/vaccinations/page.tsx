@@ -23,26 +23,42 @@ import curvedTop from "../../assets/curved-top.png";
 export default function Vaccinations() {
       const faqData = [
     {
-      question: "Are these therapies invasive?",
-      answer: "No, these therapies are non-invasive and absolutely safe for your child.",
+      question: "What vaccinations do you provide?",
+      answer: "We follow the IAP-recommended schedule and provide all essential and optional vaccines from birth onwards.",
       open: true,
     },
     {
-      question: "When does my child need occupational therapy?",
-      answer: "When they face challenges in daily routines, motor skills, or sensory processing.",
+      question: "Are vaccines administered by doctors?",
+      answer: "Yes, every vaccine is administered by a qualified paediatrician.",
     },
     {
-      question: "What are the advantages of speech therapy for kids?",
-      answer: "Improved communication, articulation, comprehension, and confidence.",
+      question: "Do you offer needle-free options?",
+      answer: "Yes, needle-free vaccines are available for certain age groups and vaccines.",
     },
     {
-      question: "What kind of issues can be managed by family therapy?",
-      answer: "Behavioral concerns, parenting challenges, siblings rivalry, and emotional conflicts.",
+      question: "Can I get a vaccination schedule for my child?",
+      answer: "Absolutely! We provide a personalized vaccine chart and send reminders before each due date.",
     },
     {
-      question: "What kind of techniques are used for CBT treatment?",
-      answer: "Techniques like cognitive restructuring, exposure therapy, and behavior activation.",
+      question: "Do you offer vaccination packages?",
+      answer: "Yes, we offer pre-paid vaccination bundles with a 10% discount for select age groups. Ask our care manager for details.",
     },
+    {
+      question: "Are combination vaccines safe?",
+      answer: "Yes. Combination vaccines are safe, effective, and reduce the number of injections. They’re widely recommended by the IAP and WHO.",
+    },
+    {
+      question: "Can my child be vaccinated during a mild illness?",
+      answer: "Yes, children with mild colds, cough, or low-grade fever can safely receive vaccines unless advised otherwise by the paediatrician.",
+    },
+    {
+      question: "What are common side effects of vaccines?",
+      answer: "Most side effects are mild — fever, swelling at the injection site, and fussiness — and resolve in 1–2 days. Severe reactions are extremely rare.",
+    },
+    {
+      question: "How do I prepare my child for a vaccine visit?",
+      answer: "Dress them in loose, comfortable clothing, explain it in simple terms, and bring a comfort item (toy, pacifier) if needed. Feeding is fine before the visit.",
+    }
   ];
   return (
      

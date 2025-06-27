@@ -2,13 +2,13 @@
 
 import Image from 'next/image';
 
-import facilitiesImage1 from '../../../../../public/images/serviceassets/facilitie1.png';
-import facilitiesImage2 from '../../../../../public/images/serviceassets/facilitie2.png';
-import facilitiesImage3 from '../../../../../public/images/serviceassets/facilitie3.png';
-import facilitiesImage4 from '../../../../../public/images/serviceassets/facilitie4.png';
-import facilitiesImage5 from '../../../../../public/images/serviceassets/facilitie5.png';
-import facilitiesImage6 from '../../../../../public/images/serviceassets/facilitie6.png';
-import facilitiesImage7 from '../../../../../public/images/serviceassets/facilitie7.png';
+import facilitiesImage1 from "public/icons/vaccination10.png";
+import facilitiesImage2 from "public/icons/vaccination11.png";
+import facilitiesImage3 from "public/icons/vaccination12.png";
+import facilitiesImage4 from "public/icons/vaccination13.png";
+import facilitiesImage5 from "public/icons/vaccination14.png";
+import facilitiesImage6 from "public/icons/vaccination15.png";
+import facilitiesImage7 from "public/icons/vaccination16.png";
 import SubHeading from '../../../../components/SubHeading';
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -87,16 +87,16 @@ export default function Facilities() {
         <div className="space-y-4 mt-4  md:w-full md:max-w-[668px] md:mx-auto md:mt-4">
           {/* Item 1 */}
           <div className="flex items-stretch bg-[#DBFFCC] rounded-lg shadow-md overflow-hidden">
-            <div className="w-1/3">
+            <div className="w-1/4 flex items-center justify-center">
               <Image
                 src={facilitiesImage1}
                 alt="7-day availability"
-                width={150}
-                height={100}
-                className="object-cover w-full h-full md:h-[140px]"
+                width={55}
+                height={55}
+                className="object-cover"
               />
             </div>
-            <div className="w-2/3 p-4">
+            <div className="w-3/4 p-4 min-h-[100px] flex items-center">
                <p className="text-[16px] text-black">
                 Open all 7 days (yes, even weekends!)
               </p>
@@ -105,16 +105,17 @@ export default function Facilities() {
 
           {/* Item 2 */}
           <div className="flex items-stretch bg-[#E1F5FF] rounded-lg shadow-md overflow-hidden">
-            <div className="w-1/3">
+            <div className="w-1/4 flex items-center justify-center
+">
               <Image
                 src={facilitiesImage2}
                 alt="Integrated pharmacy"
-                width={150}
+                width={55}
                 height={100}
-                className="object-cover w-full h-full md:h-[140px]"
+                className="object-cover"
               />
             </div>
-            <div className="w-2/3 p-4">
+            <div className="w-3/4 p-4 min-h-[100px] flex items-center">
                <p className="text-[16px] text-black">
                 Separate space for well-baby visits
               </p>
@@ -123,16 +124,17 @@ export default function Facilities() {
 
           {/* Item 3 */}
           <div className="flex items-stretch bg-[#FFD6C6] rounded-lg shadow-md overflow-hidden">
-            <div className="w-1/3">
+            <div className="w-1/4 flex items-center justify-center
+">
               <Image
                 src={facilitiesImage3}
                 alt="Child-friendly spaces"
-                width={150}
+                width={55}
                 height={100}
-                className="object-cover w-full h-full md:h-[140px]"
+                className="object-cover"
               />
             </div>
-            <div className="w-2/3 p-4">
+            <div className="w-3/4 p-4 min-h-[100px] flex items-center">
               <p className="text-[16px] text-black">
                 Fun, friendly vibe — not scary or stressful
               </p>
@@ -141,16 +143,17 @@ export default function Facilities() {
 
           {/* Item 4 */}
           <div className="flex items-stretch bg-[#FBE38F] rounded-lg shadow-md overflow-hidden">
-            <div className="w-1/3">
+            <div className="w-1/4 flex items-center justify-center
+">
               <Image
                 src={facilitiesImage4}
                 alt="30+ years experience"
-                width={150}
+                width={55}
                 height={100}
-                className="object-cover w-full h-full md:h-[140px]"
+                className="object-cover"
               />
             </div>
-            <div className="w-2/3 p-4">
+            <div className="w-3/4 p-4 min-h-[100px] flex items-center">
                <p className="text-[16px] text-black">
                 Doctors-only for every shot
               </p>
@@ -159,16 +162,17 @@ export default function Facilities() {
 
           {/* Item 5 */}
           <div className="flex items-stretch bg-[#FF9A6C] rounded-lg shadow-md overflow-hidden">
-            <div className="w-1/3">
+            <div className="w-1/4 flex items-center justify-center
+">
               <Image
                 src={facilitiesImage5}
                 alt="Trusted by families"
-                width={150}
+                width={55}
                 height={100}
-                className="object-cover w-full h-full md:h-[140px]"
+                className="object-cover"
               />
             </div>
-            <div className="w-2/3 p-4">
+            <div className="w-3/4 p-4 min-h-[100px] flex items-center">
                <p className="text-[16px] text-black">
                 Your choice of vaccine brands
               </p>
@@ -177,16 +181,17 @@ export default function Facilities() {
 
           {/* Item 6 */}
           <div className="flex items-stretch bg-[#E2B40EAD] rounded-lg shadow-md overflow-hidden">
-            <div className="w-1/3">
+            <div className="w-1/4 flex items-center justify-center
+">
               <Image
                 src={facilitiesImage6}
                 alt="Trusted by families"
-                width={150}
+                width={55}
                 height={100}
-                className="object-cover w-full h-full md:h-[140px]"
+                className="object-cover"
               />
             </div>
-            <div className="w-2/3 p-4">
+            <div className="w-3/4 p-4 min-h-[100px] flex items-center">
                <p className="text-[16px] text-black">
                 Needle-free options available
               </p>
@@ -195,16 +200,17 @@ export default function Facilities() {
 
           {/* Item 7 */}
           <div className="flex items-stretch bg-[#B6694687] rounded-lg shadow-md overflow-hidden">
-            <div className="w-1/3">
+            <div className="w-1/4 flex items-center justify-center
+">
               <Image
                 src={facilitiesImage7}
                 alt="Trusted by families"
-                width={150}
+                width={55}
                 height={100}
-                className="object-cover w-full h-full md:h-[140px]"
+                className="object-cover"
               />
             </div>
-            <div className="w-2/3 p-4">
+            <div className="w-3/4 p-4 min-h-[100px] flex items-center">
               <p className="text-[16px] text-black">
                 Growth tracked at every visit
               </p>
