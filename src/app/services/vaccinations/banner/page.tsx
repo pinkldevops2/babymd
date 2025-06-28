@@ -75,11 +75,9 @@ export default function Banner() {
 
             <div className="relative flex flex-col md:flex-row items-center px-6 py-4 md:p-6">
               <div className="md:w-1/2">
-                <p className="font-lato mb-0">
-                  Vaccinations
-                </p>
+                <h2 className="text-[#E3B200] text-[34px] leading-[34px] font-bold font-baloo2 pt-6">Vaccinations</h2>
                 <div className="relative flex items-center">
-                  <h2 className="text-[34px] leading-[34px] max-w-[300px] font-bold font-baloo2 mt-2">
+                  <h2 className="text-[34px] leading-[34px] max-w-[300px] font-bold font-baloo2 pt-4">
                     A shot of &nbsp;
                      <span className=" text-[#4B3A8F]">
                         good <i className="relative z-[2] font-light"> 

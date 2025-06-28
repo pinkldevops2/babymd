@@ -16,26 +16,42 @@ import curvedTop from "../../assets/curved-top.png";
 export default function GeneralPediatricConsultations() {
     const faqData = [
     {
-      question: "Are these therapies invasive?",
-      answer: "No, these therapies are non-invasive and absolutely safe for your child.",
+      question: "What do general paediatric consultations cover?",
+      answer: "Everything from fevers and coughs to growth concerns, rashes, digestion, feeding, and routine check-ups.",
       open: true,
     },
     {
-      question: "When does my child need occupational therapy?",
-      answer: "When they face challenges in daily routines, motor skills, or sensory processing.",
+      question: "How long is a typical consultation?",
+      answer: "Consultations usually last 15–20 minutes, giving you and your child enough time to be heard.",
     },
     {
-      question: "What are the advantages of speech therapy for kids?",
-      answer: "Improved communication, articulation, comprehension, and confidence.",
+      question: "Will I get a prescription and follow-up advice?",
+      answer: "Yes, all consultations include digital prescriptions, treatment plans, and follow-up instructions.",
     },
     {
-      question: "What kind of issues can be managed by family therapy?",
-      answer: "Behavioral concerns, parenting challenges, siblings rivalry, and emotional conflicts.",
+      question: "Can I consult the same doctor each time?",
+      answer: "Yes, you can request to see the same paediatrician based on availability.",
     },
     {
-      question: "What kind of techniques are used for CBT treatment?",
-      answer: "Techniques like cognitive restructuring, exposure therapy, and behavior activation.",
+      question: "Do you offer video consultations?",
+      answer: "Yes, video consultations are available for non-emergency concerns.",
     },
+    {
+      question: "What is a well-baby or well-child visit?",
+      answer: "These are routine check-ups to monitor growth, development, and overall health — even when your child isn’t sick. They help with early detection of issues.",
+    },
+    {
+      question: "When should I worry about my child’s growth?",
+      answer: "If your child’s weight, height, or head circumference is falling below normal growth charts, a paediatrician should evaluate the cause.",
+    },
+    {
+      question: "Can paediatricians treat skin issues, allergies, or digestion problems?",
+      answer: "Yes, general paediatricians treat a wide range of concerns — and refer to specialists when needed.",
+    },
+    {
+      question: "What should I bring to a paediatric consultation?",
+      answer: "Bring your child’s immunisation record, list of medications, previous prescriptions (if any), and any notes on symptoms or concerns.",
+    }
   ];
   return (
      

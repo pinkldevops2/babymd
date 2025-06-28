@@ -55,10 +55,10 @@ export default function DoctorsTeam() {
           {/* Doctor Information */}
           <div className="py-2 mt-2 ">
              <h3 className="text-[16px] font-lato font-Lato font-bold leading-[20px] text-[#2E2E2E] font-Lato font-bold  font-italic">
-             <em>Dr Sampat Kumar Shettagar</em> 
+             <em>Dr Sampat Kumar Shettigar</em> 
             </h3>
             <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
-              Pediatric Pulmonologist
+              Paediatrician
             </p>
             <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
               (MBBS, MD Paediatrics, Fellowship in Neonatology [NNF], Fellowship

@@ -91,7 +91,7 @@ export default function Facilities() {
               <Image
                 src={facilitiesImage1}
                 alt="7-day availability"
-                width={55}
+                width={44}
                 height={55}
                 className="object-cover"
               />
@@ -110,8 +110,8 @@ export default function Facilities() {
               <Image
                 src={facilitiesImage2}
                 alt="Integrated pharmacy"
-                width={55}
-                height={100}
+                width={44}
+                height={45}
                 className="object-cover"
               />
             </div>
@@ -129,8 +129,8 @@ export default function Facilities() {
               <Image
                 src={facilitiesImage3}
                 alt="Child-friendly spaces"
-                width={55}
-                height={100}
+                width={44}
+                height={45}
                 className="object-cover"
               />
             </div>
@@ -142,14 +142,14 @@ export default function Facilities() {
           </div>
 
           {/* Item 4 */}
-          <div className="flex items-stretch bg-[#FBE38F] rounded-lg shadow-md overflow-hidden">
+          <div className="flex items-stretch bg-[#DBFFCC] rounded-lg shadow-md overflow-hidden">
             <div className="w-1/4 flex items-center justify-center
 ">
               <Image
                 src={facilitiesImage4}
                 alt="30+ years experience"
-                width={55}
-                height={100}
+                width={44}
+                height={45}
                 className="object-cover"
               />
             </div>
@@ -167,8 +167,8 @@ export default function Facilities() {
               <Image
                 src={facilitiesImage5}
                 alt="Trusted by families"
-                width={55}
-                height={100}
+                width={44}
+                height={45}
                 className="object-cover"
               />
             </div>
@@ -180,14 +180,14 @@ export default function Facilities() {
           </div>
 
           {/* Item 6 */}
-          <div className="flex items-stretch bg-[#E2B40EAD] rounded-lg shadow-md overflow-hidden">
+          <div className="flex items-stretch bg-[#E1F5FF] rounded-lg shadow-md overflow-hidden">
             <div className="w-1/4 flex items-center justify-center
 ">
               <Image
                 src={facilitiesImage6}
                 alt="Trusted by families"
-                width={55}
-                height={100}
+                width={44}
+                height={45}
                 className="object-cover"
               />
             </div>
@@ -205,8 +205,8 @@ export default function Facilities() {
               <Image
                 src={facilitiesImage7}
                 alt="Trusted by families"
-                width={55}
-                height={100}
+                width={44}
+                height={45}
                 className="object-cover"
               />
             </div>
