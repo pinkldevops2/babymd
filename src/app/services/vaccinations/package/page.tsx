@@ -5,6 +5,10 @@ import arrow from "../../../../../public/images/Group 2349.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import SuperDocButton2 from '../../../../components/SuperDocButton2';
+import Modal from '../../../../components/FormPopUp';
+import BabyMDCampaignForm from '../../../../components/BabyMDCampaignForm';
+
 gsap.registerPlugin(ScrollTrigger);
 
 // Define allowed durations
@@ -23,6 +27,8 @@ interface Package {
 }
 
 export default function Package() {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDurationOpen, setIsDurationOpen] = useState(false);
   const [selectedDuration, setSelectedDuration] =
     useState<DurationKey>("6 Week - 14 Week");
@@ -278,7 +284,7 @@ export default function Package() {
 
         {/* CTA */}
         <div className="flex justify-center pt-6">
-          <button
+          {/* <button
             type="button"
             className="flex items-center justify-center gap-3 px-8 py-5 text-white bg-[#F8845D] hover:bg-[#4a3794] transition-colors duration-200 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200 min-w-[300px]"
           >
@@ -286,7 +292,17 @@ export default function Package() {
               Get your vaccine package
             </span>
             <Image src={arrow} alt="Arrow" width={20} height={10} />
-          </button>
+          </button> */}
+
+           <SuperDocButton2
+            onClick={() => setIsModalOpen(true)}
+            label="Get your vaccine package"
+            className="w-80 text-center fade-in uppercase"
+            variant="pink"
+          />
+          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                  <BabyMDCampaignForm formID="services-vaccination-package" />
+            </Modal>
         </div>
       </div>
     </>

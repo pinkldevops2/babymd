@@ -4,7 +4,9 @@ import scheduleIcon1 from "../../../../../public/images/serviceassets/scheduleIc
 import scheduleIcon2 from "../../../../../public/images/serviceassets/scheduleIcon2.png";
 import SubHeading from '../../../../components/SubHeading';
 import arrow from "../../../../../public/images/Group 2349.png";
-import FirstYear from "public/icons/vaccination7.png";
+//import FirstYear from "public/icons/vaccination7.png";
+//import FirstYear from "../../../doctor/page";
+import SuperDocButton from '../../../../components/SuperDocButton';
 
 export default function schedule() {
   return (
@@ -108,7 +110,7 @@ export default function schedule() {
           </p>
         </div>
           <div className="flex justify-center py-6">
-                <button
+                 {/* <button
                   type="button"
                   className="flex items-center mx-2 gap-3 px-10 py-5 text-white bg-[#5943A5] hover:bg-[#4a3794] transition-colors duration-200 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200"
                 >
@@ -119,8 +121,17 @@ export default function schedule() {
              width={20}
              height={10} 
              />
-                </button>
+                </button>  */}
+
+                <SuperDocButton
+                  href={"https://babymd-vizz.vercel.app/doctor"}
+                  target={"_blank"}
+                  label="Consult our experts"
+                  className="w-80 text-center fade-in uppercase"
+                  variant="purple"
+                />
               </div>
+
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import scheduleIcon2 from "public/icons/vaccination8.png";
 import scheduleIcon3 from "public/icons/vaccination9.png";
 import SubHeading from '../../../../components/SubHeading';
 import arrow from "../../../../../public/images/Group 2349.png";
+import SuperDocButton from '../../../../components/SuperDocButton';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -168,7 +169,7 @@ export default function Schedules() {
           </p>
         </div>
           <div className="flex justify-center py-6">
-                <button
+              {/*   <button
                   type="button"
                   className="flex items-center mx-2 gap-3 px-10 py-5 text-white bg-[#5943A5] hover:bg-[#4a3794] transition-colors duration-200 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200"
                 >
@@ -179,7 +180,14 @@ export default function Schedules() {
              width={20}
              height={10} 
              />
-                </button>
+                </button> */}
+                 <SuperDocButton
+                  href={"https://babymd-vizz.vercel.app/doctor"}
+                  target={"_blank"}
+                  label="Consult our experts"
+                  className="w-80 text-center fade-in uppercase"
+                  variant="purple"
+                />
               </div>
       </div>
     </div>
