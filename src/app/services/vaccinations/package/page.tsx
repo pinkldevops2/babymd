@@ -151,7 +151,7 @@ export default function Package() {
           Big protection,{" "}
           <span className="text-[#4B3A8F]">
             <i className="relative z-[2] font-light whitespace-nowrap">
-              smaller bill
+              smaller build
               <div className="absolute z-[-1] left-[-5px] top-[-2px]">
                 <svg
                   viewBox="0 0 137 47"
