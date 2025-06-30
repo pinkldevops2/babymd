@@ -9,8 +9,14 @@ import beehive4 from '@/app/assets/beehive4.png';
 
 import babyInject from '../../../../../public/images/serviceassets/babyInject.png';
 import arrow from "../../../../../public/images/Group 2349.png";
+import SuperDocButton2 from '../../../../components/SuperDocButton2';
+import Modal from '../../../../components/FormPopUp';
+import BabyMDCampaignForm from '../../../../components/BabyMDCampaignForm';
 
 function Questions() {
+
+const [isModalOpen, setIsModalOpen] = useState(false);
+
 const pathRef = useRef<SVGPathElement | null>(null);
 
    useEffect(() => {
@@ -96,7 +102,7 @@ const pathRef = useRef<SVGPathElement | null>(null);
         </div>
       </div>
         <div className="flex justify-center pt-6">
-                      <button
+                     {/*  <button
                         type="button"
                         className="flex items-center mx-2 gap-3 px-10 py-5 text-white bg-[#5943A5] hover:bg-[#4a3794] transition-colors duration-200 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200"
                       >
@@ -107,7 +113,18 @@ const pathRef = useRef<SVGPathElement | null>(null);
                    width={20}
                    height={10} 
                    />
-                      </button>
+                      </button> */}
+
+ <SuperDocButton2
+            onClick={() => setIsModalOpen(true)}
+            label="Schedule immunisation visit"
+            className="w-80 text-center fade-in uppercase"
+            variant="purple"
+          />
+          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                  <BabyMDCampaignForm formID="services-vaccination-appointment" />
+            </Modal>
+
                     </div>
     </div>
   );
