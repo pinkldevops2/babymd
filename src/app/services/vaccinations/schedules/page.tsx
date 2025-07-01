@@ -142,11 +142,11 @@ export default function Schedules() {
             {" "}your{" "}
             <i className="relative z-[2] font-light">
               schedule?
-              <div className="absolute z-[-1] left-[-5px] top-0">
+              <div className="absolute z-[-1] left-[40px] top-0">
                 <svg
                   viewBox="0 0 137 47"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[110px] h-auto overflow-visible "
+                  className="w-[110px] h-auto overflow-visible rotate-180"
                 >
                   <path
                     ref={pathRef}

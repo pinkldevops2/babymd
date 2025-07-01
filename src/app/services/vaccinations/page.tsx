@@ -8,7 +8,7 @@ import Schedules from './schedules/page';
 import Image from "next/image";
 import ThirdParagraph from './thirdparagraph/page';
 import VaccineCarousel from './vaccinecarousel/page';
-import CloudTestimonials from '../../../components/CloudTestimonials';
+import CloudTestimonials from '../../../components/CloudTestimonialsVaccinations';
 import Questions from './questions/page';
 import Rectangle from './rectangle/page';
 import GeneralConsults from './generalconsult/page';

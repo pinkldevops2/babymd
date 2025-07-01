@@ -43,7 +43,16 @@ body {
 label {
   color:#000;
 }
-
+.location-select label{
+  color:#9c7eeb;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  gap: 10px;
+}
+.location-select input[type='radio'] {
+    accent-color: #5943A5;
+}
 h1, h2 {
   font-family: var(--font-baloo2), cursive;
   margin: 0;
@@ -432,6 +441,10 @@ footer h3{
     position: absolute;
     top: 9px;
     left: -20px;
+}
+.adjusters2.circling_around2.general-circal svg{
+  width: 180px;
+  top: 2px;
 }
 .imageoverlay{
   position: relative;

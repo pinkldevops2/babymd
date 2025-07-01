@@ -125,7 +125,7 @@ const CaseStudyCarousel: FC<Props> = ({ caseStudies }) => {
         </div>
 
         <div className="flex justify-center pr-6">
-          <SuperDocButton href="/superdoc" label="STAY INFORMED" className="my-5 fade-in" variant="purple" />
+          <SuperDocButton href="https://babymd.in/blog" label="STAY INFORMED" className="my-5 fade-in" variant="purple" />
         </div>
       </div>
     </div>

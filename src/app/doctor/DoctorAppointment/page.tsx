@@ -1,16 +1,23 @@
 'use client';
+import { useEffect, useRef, useState} from "react";
 import Image from 'next/image';
 import SubHeading from '../../../components/SubHeading';
 
 import beehive2 from '../../../../public/images/serviceassets/beehive2.png';
 import docsmile from '../../../../public/images/doctorassets/docchild.png';
 import SuperDocButton from '../../../components/SuperDocButton';
-import { useEffect, useRef } from "react";
+
+import SuperDocButton2 from '../../../components/SuperDocButton2';
+import Modal from '../../../components/FormPopUp';
+import BabyMDCampaignForm from '../../../components/BabyMDCampaignForm';
+
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function DoctorAppointment() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const pathRef = useRef<SVGPathElement | null>(null);
 
    useEffect(() => {
@@ -83,8 +90,26 @@ export default function DoctorAppointment() {
                            One click, and we’re part of your superteam.
                           </p>
                         </div>
-<SuperDocButton href="#" label="Schedule your appointment" className="w-80 text-center uppercase" variant="pink"/>
+{/* <SuperDocButton href="#" label="Schedule your appointment" className="w-80 text-center uppercase" variant="pink"/> */}
 
+
+<div className="absolute bottom-[20px] z-[2] absolute-bottom-center" style={{bottom:'20px'}}>
+    <SuperDocButton2
+            onClick={() => setIsModalOpen(true)}
+            label="Schedule your appointment"
+            className="w-80 text-center fade-in uppercase"
+            variant="purple"
+          />
+         
+</div>
+
+{/*  <button
+                type="button"
+                className="text-[16px] font-lato text-white bg-[#5943A5] hover:bg-[#F8845D] transition-all focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-7 py-5 text-center mt-12 mx-auto md:mx-0 flex flex-row gap-2 justify-center middlingbtns middlingbtns-fullwidth"
+              >
+                <span>Schedule your appointment </span>
+                <img src="/images/Group 2349.png" alt="Arrow" />
+              </button> */}
             </div>
 
             <div className="w-full md:w-1/3 relative md:px-0 pt-4">
@@ -106,7 +131,11 @@ export default function DoctorAppointment() {
 </svg>
                                 </div>
             </div>
+             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                  <BabyMDCampaignForm formID="doctor-appointment" />
+            </Modal>
           </div>
+          
             </div>
   );
 }

@@ -9,7 +9,7 @@ import ThirdParagraph from "./ThirdParagraph/page";
 import Facilities from "./facilities/page";
 import FaqSection from "../../../components/FaqSection";
 import SmileSection from "./SmileSection/page";
-import CloudTestimonials from '../../../components/CloudTestimonials';
+import CloudTestimonials from '../../../components/CloudTestimonialsGeneral';
 import curvedBottom from "../../assets/curved-bottom.png";
 import curvedTop from "../../assets/curved-top.png";
 
