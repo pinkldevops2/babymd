@@ -16,19 +16,7 @@ export default function DoctorSlider() {
       about: `“Parents come to us with questions, fears, and hopes. Our job is to meet them with answers, calm, and care.”`,
       specialist: "Paediatrician, Allergy and Asthma Specialist, and Paediatric Sleep Specialist",
       image: Nearbyclinic,
-    },
-    {
-      name: "Dr Shivangi Bora",
-      about: `“Parents come to us with questions, fears, and hopes. Our job is to meet them with answers, calm, and care.”`,
-    specialist: "Paediatrician, Allergy and Asthma Specialist, and Paediatric Sleep Specialist",
-      image: Nearbyclinic,
-    },
-    {
-      name: "Dr Shivangi Bora",
-      about: `“Parents come to us with questions, fears, and hopes. Our job is to meet them with answers, calm, and care.”`,
-      specialist: "Paediatrician, Allergy and Asthma Specialist, and Paediatric Sleep Specialist",
-      image: Nearbyclinic,
-    },
+    }
   ];
 
       // Keen-slider setup for clinic carousel with free mode
