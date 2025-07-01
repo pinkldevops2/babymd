@@ -77,7 +77,7 @@ function HappyFamily() {
     href="https://maps.app.goo.gl/yiQnHGHKYxLK7kF56"
     target="_blank"
     label="Click here for reviews"
-    className="md:z-10 relative uppercase"
+    className="md:z-10 relative uppercase md:w-[30%] md:mx-auto"
     variant="pink"
   />
 </div>
