@@ -7,10 +7,14 @@ import familysmile from "../../../../../public/images/doctorassets/happyfamily.p
 import smilevectorimg from "../../../../public/images/serviceassets/smileimg.png";
 import SubHeading3 from '../../../../components/SubHeading3';
 import bee from "../../../../../public/images/doctorassets/bee.png";
+import SuperDocButton from "@/components/SuperDocButton";
+import Modal from '@/components/FormPopUp';
+import BabyMDCampaignForm from '@/components/BabyMDCampaignForm';
 
 import arrow from "../../../../../public/images/Group 2349.png";
 
 function HappyFamily() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div>
       <div className="pt-0 px-6">
@@ -64,12 +68,18 @@ function HappyFamily() {
             </div>
           </div>
         </div>
-        <div className="mt-6 ">
-          <i className=" text-[16px] leading-[20px] font-normal">Check out what other parents are saying about Dr Bhaskar on Google Reviews!
+        <div className="mt-6 bg-[#DBFFCC] p-6 text-center rounded-[20px]">
+          <span className=" text-[16px] leading-[20px] font-normal">Check out what other parents are saying about Dr Bhaskar on Google Reviews!
 
-</i>
-<div className="mt-2 ">
-  <a href="https://maps.app.goo.gl/bdRpcj5N9uN6fuNi7" className="text-[16px] leading-[20px] font-bold underline decoration-solid underline-offset-[4px]">https://maps.app.goo.gl/bdRpcj5N9uN6fuNi7</a>
+</span>
+<div className="pt-4 px-2">
+  <SuperDocButton
+    href="https://maps.app.goo.gl/yiQnHGHKYxLK7kF56"
+    target="_blank"
+    label="Click here for reviews"
+    className="md:z-10 relative uppercase"
+    variant="pink"
+  />
 </div>
 
         </div>
@@ -79,6 +89,7 @@ function HappyFamily() {
       <div className="flex justify-center py-9">
         <button
           type="button"
+          onClick={() => setIsModalOpen(true)}
           className="flex items-center mx-2 gap-3 px-8 py-5 text-white bg-[#5943A5] hover:bg-[#4a3794] transition-colors duration-200 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200"
         >
           <span className="uppercase tracking-wide text-sm">
@@ -87,6 +98,9 @@ function HappyFamily() {
           <Image src={arrow} alt="Arrow" width={20} height={10} />
         </button>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+             <BabyMDCampaignForm formID="doctor-details-appointment" />
+      </Modal>
     </div>
   );
 }

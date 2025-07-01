@@ -15,7 +15,13 @@ export default function BrowseSpecialty() {
                     {/* <select className="w-full mt-4 px-4 py-2 border border-[#91CFDA80] bg-[#F4F4F4] rounded-lg focus:ring-2 focus:ring-purple-500">
                       <option>Types of Specialty</option>
                     </select> */}
-                    <input type="text" placeholder="Types of Specialty " className="w-full mt-4 px-4 py-2 border border-[#91CFDA80] bg-[#F4F4F4] rounded-lg focus:ring-2 focus:ring-purple-500" />
+                    <select className="w-full mt-4 px-4 py-2 border border-[#91CFDA80] bg-[#F4F4F4] rounded-lg focus:ring-2 focus:ring-purple-500">
+                      <option>Types of Speciality</option>
+                      <option>General Paediatrics</option>
+                      <option>Paediatric Specialities</option>
+                      <option>Clinical Psychology</option>
+                      <option>Therapy</option>
+                    </select>
                   </div>
                 {/*   <div className="flex justify-center pt-6">
                           <button
