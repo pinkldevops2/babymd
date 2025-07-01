@@ -30,7 +30,7 @@ const SuperDocBtnSM: React.FC<SuperDocBtnSMProps> = ({
       href={href}
       target={target}
       className={clsx(
-        'whitespace-nowrap text-[8px] flex items-center gap-2 font-bold py-2 px-4 rounded-full tracking-wide transition-transform duration-300 transform hover:scale-105',
+        'whitespace-nowrap text-[12px] flex items-center gap-2 font-bold py-2 px-6 rounded-full tracking-wide transition-transform duration-300 transform hover:scale-105',
         bgColors[variant],
         className
       )}
