@@ -18,6 +18,7 @@ interface RoadmapSection {
   title: string;
   color: string;
   heading: string;
+  href: string,
   icon: any;
   content: string[];
 }
@@ -36,9 +37,10 @@ const RoadMapDoctors: FC<RoadMapDoctorsProps> = ({ onClick }) => {
 
   const roadmapData: RoadmapSection[] = [
     {
-      title: 'General Pediatric Consultations',
+      title: 'General Pediatrics Consultation',
       color: 'bg-[#5943A5]',
       heading: 'For all the everyday bumps',
+      href: 'services/general-pediatrics-consultation',
       icon: GPCIcon,
       content: [
         "Whether it’s your baby’s first fever, a cranky tummy, or simply a growth check, our pediatricians offer gentle, thorough care without the long hospital waits. Come in any day of the week — we’re ready with expert advice and a warm smile.",
@@ -48,6 +50,7 @@ const RoadMapDoctors: FC<RoadMapDoctorsProps> = ({ onClick }) => {
       title: 'Vaccinations',
       color: 'bg-[#7CB2BC]',
       heading: 'For all the everyday bumps',
+      href: 'services/vaccinations',
       icon: Vaccinations,
       content: [
         "Whether it’s your baby’s first fever, a cranky tummy, or simply a growth check, our pediatricians offer gentle, thorough care without the long hospital waits. Come in any day of the week — we’re ready with expert advice and a warm smile.",
@@ -57,6 +60,7 @@ const RoadMapDoctors: FC<RoadMapDoctorsProps> = ({ onClick }) => {
       title: 'Developmental Assessments and Therapies',
       color: 'bg-[#7CB367]',
       heading: 'For all the everyday bumps',
+      href: '/',
       icon: Dat,
       content: [
         "Whether it’s your baby’s first fever, a cranky tummy, or simply a growth check, our pediatricians offer gentle, thorough care without the long hospital waits. Come in any day of the week — we’re ready with expert advice and a warm smile.",
@@ -66,6 +70,7 @@ const RoadMapDoctors: FC<RoadMapDoctorsProps> = ({ onClick }) => {
       title: 'Super Specialist Consultations',
       color: 'bg-[#E1556E]',
       heading: 'For all the everyday bumps',
+      href: '/',
       icon: Ssc,
       content: [
         "Whether it’s your baby’s first fever, a cranky tummy, or simply a growth check, our pediatricians offer gentle, thorough care without the long hospital waits. Come in any day of the week — we’re ready with expert advice and a warm smile.",
@@ -157,7 +162,7 @@ const RoadMapDoctors: FC<RoadMapDoctorsProps> = ({ onClick }) => {
                       </p>
                     ))}
                     <SuperDocBtnSM
-                      href=""
+                      href={section.href}
                       target="_self"
                       label="LEARN MORE"
                       variant="pink"
