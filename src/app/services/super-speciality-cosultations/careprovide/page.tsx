@@ -7,7 +7,7 @@ import LactationIcon from "public/icons/gpc9.png";
 import SickVisitIcon from "public/icons/vaccination4.png";
 import HandIcon from "public/icons/gpc10.png";
 import NewbornIcon from "public/icons/gpc8.png";
-import GeneralConsults from "../generalconsult/page";
+import GeneralConsults from "../Generalconsult/page";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 

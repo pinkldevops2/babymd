@@ -1,18 +1,18 @@
 "use client";
 import Image from "next/image";
-import Banner from "./banner/page";
-import Paragraph from "./paragraph/page";
-import CareProvide from "./careprovide/page";
-import DoctorDetail from "./secondparagraph/page";
-import ThirdParagraph from './thirdparagraph/page';
+import Banner from "./Banner/page";
+import Paragraph from "./Paragraph/page";
+import CareProvide from "./Careprovide/page";
+import DoctorDetail from "./Secondparagraph/page";
+import ThirdParagraph from './Thirdparagraph/page';
 
 import SmileSection from "./SmileSection/page";
 import SearchBox from "./SearchBox/page";
-import Facilities from './facilities/page';
+import Facilities from './Facilities/page';
 import CloudTestimonials from '../../../components/CloudTestimonialsSuper';
 import curvedBottom from "../../assets/curved-bottom.png";
 import curvedTop from "../../assets/curved-top.png";
-import DoctorsTeam from "./doctorsTeam/page";
+import DoctorsTeam from "./DoctorsTeam/page";
 
 
 
