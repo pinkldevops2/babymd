@@ -441,49 +441,54 @@ export default function ClinicInner() {
       <div className="bg-white">
         <div className=" mx-auto pb-6 px-6">
           <div className="grid grid-cols-2 gap-4 md:gap-8 md:grid-cols-3">
-            {docSlides.map((docSlides) => (
-              <div
-                className={`${docSlides.bgColor} keen-slider__slide rounded-2xl`}
-              >
-                <div className="flex flex-col  gap-1 items-start justify-between h-full">
-                  <div className="w-full ">
-                    <div className="relative flex items-start">
-                      <div className="text-[#000] text-[16px] p-4">
-                        <h3 className="text-2xl font-lato font-bold text-[12px] leading-tight pb-3">
-                          {docSlides.name}
-                        </h3>
-                        <p className="text-[12px]">
-                          <i className="font-normal z-2">{docSlides.title}</i>
-                        </p>
-                        <p className="text-[12px]">{docSlides.experience}</p>
-                      </div>
-                      <img
-                        className="absolute right-[0px] top-[0px] w-10 h-10"
-                        src="/images/bee.png"
-                        alt="bee"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full  relative">
-                    <img
-                      className="mx-auto"
-                      src="/images/Vector.png"
-                      alt="Vector background"
-                    />
-                    <img
-                      className="mx-auto absolute bottom-[0px] left-1/2 transform -translate-x-1/2"
-                      src="/images/doc.png"
-                      alt="Doctor"
-                    />
-                    <img
-                      className="mx-auto absolute right-[20px] top-[-20px] w-[30px]"
-                      src="/images/Vector 107.png"
-                      alt="Decorative vector"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
+            {docSlides.map((slide, index) => (
+  <div
+    key={index}
+    className={`${slide.bgColor} keen-slider__slide rounded-2xl`}
+  >
+    <div className="flex flex-col gap-1 items-start justify-between h-full">
+      {/* Top Content */}
+      <div className="w-full">
+        <div className="relative flex items-start">
+          <div className="text-[#000] text-[16px] p-4">
+            <h3 className="text-2xl font-lato font-bold text-[12px] leading-tight pb-3">
+              {slide.name}
+            </h3>
+            <p className="text-[12px]">
+              <i className="font-normal">{slide.title}</i>
+            </p>
+            <p className="text-[12px]">{slide.experience}</p>
+          </div>
+          <img
+            className="absolute right-0 top-0 w-10 h-10"
+            src="/images/bee.png"
+            alt="bee"
+          />
+        </div>
+      </div>
+
+      {/* Bottom Images */}
+      <div className="w-full relative">
+        <img
+          className="mx-auto"
+          src="/images/Vector.png"
+          alt="Vector background"
+        />
+        <img
+          className="mx-auto absolute bottom-0 left-1/2 transform -translate-x-1/2"
+          src="/images/doc.png"
+          alt="Doctor"
+        />
+        <img
+          className="mx-auto absolute right-5 -top-5 w-[30px]"
+          src="/images/Vector 107.png"
+          alt="Decorative vector"
+        />
+      </div>
+    </div>
+  </div>
+))}
+
           </div>
         </div>
       </div>
