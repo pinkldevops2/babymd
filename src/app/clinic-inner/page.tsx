@@ -629,7 +629,7 @@ export default function ClinicInner() {
 
           {/* Navigation Dots */}
           <div className="flex justify-center mt-6 gap-2">
-        {testimonials.map((_, idx) => (
+        {testimonials.map((index, idx) => (
           <button
             key={idx}
             onClick={() => slider.current?.moveToIdx(idx)}
