@@ -8,7 +8,7 @@ import FourthParagraph from "./FourthParagraph/page";
 import CloudTestimonials from "./CloudTestimonials/CloudTestimonials";
 import FifthParagraph from "./FifthParagraph/page";
 import SmileSection from "./SmileSection/page";
-import Membership from './schedule/page';
+import Membership from './Schedule/page';
 import StepsCare from './StepsCare/page';
 import DoctorsTeam from "./doctorsTeam/page";
 import FaqSection from "../../../components/FaqSection";
