@@ -7,7 +7,7 @@ import DoctorDetail from "./secondparagraph/page";
 import ThirdParagraph from './thirdparagraph/page';
 
 import SmileSection from "./SmileSection/page";
-import SearchBox from "./searchBox/page";
+import SearchBox from "./SearchBox/page";
 import Facilities from './facilities/page';
 import CloudTestimonials from '../../../components/CloudTestimonialsSuper';
 import curvedBottom from "../../assets/curved-bottom.png";

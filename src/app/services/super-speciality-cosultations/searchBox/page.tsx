@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-export default function searchBox() {
+export default function SearchBox() {
 
       const pathRef = useRef<SVGPathElement | null>(null);
 
