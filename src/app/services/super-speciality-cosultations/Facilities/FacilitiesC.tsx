@@ -8,7 +8,7 @@ import facilitiesImage3 from 'public/icons/serviceicon3.png';
 import facilitiesImage4 from 'public/icons/vaccination12.png';
 import SubHeading2 from '../../../../components/SubHeading2';
 
-export default function Facilities() {
+export default function FacilitiesC() {
   return (
     <div className="py-10  px-6 bg-white">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-col lg:items-start lg:gap-8 ">

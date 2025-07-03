@@ -8,7 +8,7 @@ import DoctorImg4 from "../../../../../public/images/serviceassets/DoctorImg4.pn
 import arrow from "../../../../../public/images/Group 2349.png";
 import SuperDocButton from '../../../../components/SuperDocButton';
 
-export default function DoctorsTeam() {
+export default function DoctorsT() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-4 ">
       {/* Grid Layout - 2x2 */}

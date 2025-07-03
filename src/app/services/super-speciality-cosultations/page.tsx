@@ -7,11 +7,11 @@ import ThirdParagraph from "./Thirdparagraph/Thirdpara"
 
 import SmileSection from "./SmileSection/page";
 import SearchBox from "./SearchBox/page";
-import Facilities from './Facilities/page';
+import Facilities from './Facilities/FacilitiesC';
 import CloudTestimonials from '../../../components/CloudTestimonialsSuper';
 import curvedBottom from "../../assets/curved-bottom.png";
 import curvedTop from "../../assets/curved-top.png";
-import DoctorsTeam from "./DoctorsTeam/page";
+import DoctorsTeam from "./DoctorsTeam/DoctorsT";
 
 
 
