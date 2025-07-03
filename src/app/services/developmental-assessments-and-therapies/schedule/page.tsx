@@ -7,7 +7,7 @@ import arrow from "../../../../../public/images/Group 2349.png";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-export default function schedule() {
+export default function Schedule() {
   const pathRef = useRef<SVGPathElement | null>(null);
 
   useEffect(() => {
