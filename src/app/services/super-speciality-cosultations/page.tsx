@@ -3,8 +3,7 @@ import Image from "next/image";
 import Banner from "./Banner/BannerComponent";
 import Paragraph from "./Paragraph/ParagraphComponent";
 import CareProvide from "./Careprovide/CareprovideComp";
-import ThirdParagraph from "./Thirdparagraph/Thirdpara"
-
+import ThirdParagraph from "./Thirdparagraph/Thirdpara";
 import SmileSection from "./SmileSection/page";
 import SearchBox from "./SearchBox/page";
 import Facilities from './Facilities/FacilitiesC';
