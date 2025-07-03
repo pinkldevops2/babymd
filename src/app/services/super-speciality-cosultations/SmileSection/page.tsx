@@ -34,7 +34,7 @@ function SmileSection() {
     );
   }, []);
   return (
-    <div className="pb-6 bg-white mx-6">
+    <div className="pb-6 bg-white md:mx-6">
       <div className="container mx-auto">
         <div className="flex flex-col relative justify-center items-center md:flex-row bg-[#DBFFCC] rounded-[20px] mx-4 md:mx-0 overflow-hidden pt-8">
           <div className="w-full md:w-2/3 px-2 py-2 md:p-4 md:pl-12">
