@@ -207,7 +207,7 @@ const accordionData: AccordionItem[] = [
 
 const bgColors = ['bg-[#D7CCE2]', 'bg-[#FFD6C6]', 'bg-[#F9EEB6]'];
 
-export default function CareProvide() {
+export default function CareprovideComp() {
 
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);

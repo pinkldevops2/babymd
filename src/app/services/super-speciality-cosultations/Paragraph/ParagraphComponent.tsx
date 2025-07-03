@@ -5,7 +5,7 @@ import beehive2 from '../../../../../public/images/serviceassets/beehive2.png';
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-export default function Thirdparagraph() {
+export default function ParagraphComponent() {
 
   const pathRef = useRef<SVGPathElement | null>(null);
   useEffect(() => {
@@ -43,11 +43,11 @@ export default function Thirdparagraph() {
         />
 
          <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
-          EThe special heroes for {" "}
+          Expert eyes for {" "}
           <span className=" text-[#4B3A8F]">
-            your extra -  {" "}
+            every childhood {" "}
             <i className="relative z-[2] font-light whitespace-nowrap">
-              special one
+              twist and turn
               <div className="absolute z-[-1] left-[-5px] top-[-7px]">
                 <svg
                   viewBox="0 0 137 47"
@@ -68,6 +68,11 @@ export default function Thirdparagraph() {
             </i>
           </span>
         </h2> 
+
+        <p className="pt-8">
+          At BabyMD, our specialists are here to support you through every phase of parenting — from newborn feeding struggles to teenage hormonal shifts. Explore our super-specialities, grouped by age and stage.
+
+        </p>
       </div>
   );
 }

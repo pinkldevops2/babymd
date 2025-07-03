@@ -4,7 +4,7 @@ import { useState } from "react";
 import doctor from '../../../../../public/images/serviceassets/DoctorImg.png';
 
 
-export default function DoctorDetail() {
+export default function Secondpara() {
 
   const doctors = [
   {
