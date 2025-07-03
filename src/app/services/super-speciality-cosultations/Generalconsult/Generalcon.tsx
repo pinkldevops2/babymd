@@ -10,7 +10,7 @@ import BeeIcon from "../../../../../public/images/serviceassets/BeeIcon.png";
 import BeeTail from "../../../../../public/images/serviceassets/BeeTail.png";
 
 
-export default function GeneralConsults() {
+export default function Generalcon() {
 
   return (
     <div className='overflow-hidden'>
