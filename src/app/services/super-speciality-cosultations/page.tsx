@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import Banner from "./Banner/page";
+import Banner from "@/app/services/super-speciality-cosultations/Banner/page";
 import Paragraph from "./Paragraph/page";
 import CareProvide from "./Careprovide/page";
 import DoctorDetail from "./Secondparagraph/page";
-import ThirdParagraph from './Thirdparagraph/page';
+import ThirdParagraph from "./Thirdparagraph/page"
 
 import SmileSection from "./SmileSection/page";
 import SearchBox from "./SearchBox/page";
