@@ -9,7 +9,7 @@ import BannerGroupHexagon from "../../../../../public/images/serviceassets/Banne
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-export default function Banner() {
+export default function BannerComponent() {
 
     const pathRef = useRef<SVGPathElement | null>(null);
 
