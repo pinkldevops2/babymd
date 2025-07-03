@@ -5,7 +5,7 @@ import Paragraph from "./Paragraph/ParagraphComponent";
 import CareProvide from "./Careprovide/CareprovideComp";
 import ThirdParagraph from "./Thirdparagraph/Thirdpara";
 import SmileSection from "./SmileSection/page";
-import SearchBox from "./SearchBox/page";
+import SearchBox from "./SearchBox/SearchB";
 import Facilities from './Facilities/FacilitiesC';
 import CloudTestimonials from '../../../components/CloudTestimonialsSuper';
 import curvedBottom from "../../assets/curved-bottom.png";
