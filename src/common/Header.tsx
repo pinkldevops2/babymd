@@ -67,8 +67,8 @@ export default function Header() {
             </li>
             <li>
               <div className="border dividerpex"></div>
-              <Link href="/clinic" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
-                Clinic
+              <Link href="/clinics" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                Clinics
               </Link>
             </li>
             <li className="hidden">
@@ -80,13 +80,7 @@ export default function Header() {
               <Link href="/about-us" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                 About Us
               </Link>
-            </li>
-            <li>
-              <div className="border dividerpex"></div>
-              <Link href="/contact-baby-md" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
-                Contact Us
-              </Link>
-            </li>
+            </li>            
               <li className="hidden">
               <Link href="/resources" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                 Resources
@@ -106,27 +100,33 @@ export default function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services/general-pediatric-consultations" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                    <Link href="/service/general-pediatric-consultations" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                       General Pediatric Consultations
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services/vaccinations" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                    <Link href="/service/vaccinations" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                       Vaccinations
                     </Link>
                   </li>
                   <li className="hidden">
-                    <Link href="/services/super-special-consultations" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+                    <Link href="/service/super-special-consultations" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
                       Super Special Consultations
                     </Link>
                   </li>
                   <li className="hidden">
-                    <Link href="/services/da-and-t" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+                    <Link href="/service/developmental-assessments-and-therapies" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
                       DA&T
                     </Link>
                   </li>
                 </ul>
               </details>
+            </li>
+            <li>
+              <div className="border dividerpex"></div>
+              <Link href="/contact-baby-md" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                Contact Us
+              </Link>
             </li>
           </ul>
         </nav>

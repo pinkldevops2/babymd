@@ -7,10 +7,18 @@ import beehive2 from '../../public/images/bee.png';
 type FormPopUpProps = {
   isOpen: boolean;
   onClose: () => void;
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  mainText: React.ReactNode;
+  highlightText: React.ReactNode;
+  subText: React.ReactNode;
 };
 
-export default function FormPopUp({ isOpen, onClose, children }: FormPopUpProps) {
+export default function FormPopUp({ isOpen,
+  onClose,
+  children,
+  mainText,
+  highlightText,
+  subText, }: FormPopUpProps) {
   if (!isOpen) return null;
 
   return (
@@ -24,9 +32,9 @@ export default function FormPopUp({ isOpen, onClose, children }: FormPopUpProps)
         </button>
         <div className="flex items-center relative top-[34px]">
             <SubHeading
-              mainText={<>Book an</>}
-              highlightText={<> </>}
-              subText={<><i>appointment</i></>}
+              mainText={<>{mainText}</>}
+              highlightText={<>{highlightText}</>}
+              subText={<><i>{subText}</i></>}
             />
                 <Image
               width={83}

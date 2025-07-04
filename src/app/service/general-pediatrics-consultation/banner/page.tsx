@@ -41,7 +41,7 @@ export default function Banner() {
       <div className="relative flex flex-col md:flex-row items-center px-6 py-4 md:p-6">
         {/* Text Content */}
         <div className="md:w-1/2">
-        <h2 className="text-[#E3B200] text-[34px] leading-[34px] font-bold font-baloo2 pt-6">General Pediatrics Consultation</h2>
+        <h2 className="text-[#E3B200] text-[34px] leading-[34px] font-bold font-baloo2 pt-6">General Paediatric Consultation</h2>
           <div className="relative flex items-center">
             
             <h2 className="text-[34px] leading-[34px] max-w-[400px] font-bold font-baloo2 pt-4">

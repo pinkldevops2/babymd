@@ -46,12 +46,12 @@ export default function Banner() {
             <h2 className="text-[34px] leading-[34px] text-[#4B3A8F] max-w-[400px] font-bold font-baloo2 mt-2">
               Meet the &nbsp;
               <i className="relative z-[2] font-light text-[#4B3A8F]"> 
-                   superheroes &nbsp;
-                   <div className='absolute z-[-1] left-[-7px] top-[-2px]' >
+                   paediatricians &nbsp;
+                   <div className='absolute z-[-1] left-[-7px] top-[-4px]' >
                     <svg
                       viewBox="0 0 137 47"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-[140px] h-auto overflow-visible "
+                      className="w-[160px] h-auto overflow-visible "
                     >
                       <path
                         ref={pathRef}

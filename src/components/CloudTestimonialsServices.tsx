@@ -104,9 +104,8 @@ const CloudTestimonials = () => {
       {/* Heading */}
       <h2 className="text-[28px] leading-[32px] font-bold mb-2 px-6 md:px-6 fade-in">
         Heartfelt stories from  <span className="text-[#5943A5]">parents </span>
-        <br />
         <span className="text-[#5943A5] italic font-medium relative circling_around2 adjusters">
-          <i className="relative z-5">{" "}like you {" "}</i>
+          <i className="relative z-5">like you </i>
           <ContactSubC />
         </span>{" "}
         for it

@@ -122,7 +122,7 @@ export default function Schedules() {
         <h2 className="text-[28px] leading-[30px] font-bold text-[#4B3A8F]">
           Adolescent and Pre- Teen{" "}
           <span className="text-[28px] leading-[30px] relative inline-block text-[#4B3A8F] font-light">
-             <span className="font-light"> <i>(1–5 Years)</i></span>
+             <span className="font-light"> <i>(9-12 Years)</i></span>
             <span className="absolute left-0 bottom-0 h-[8px] w-full bg-[#F6908B] rounded-full -z-10 opacity-70 translate-y-1" />
           </span>
         </h2>

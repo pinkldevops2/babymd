@@ -38,7 +38,7 @@ const SuperDocButton: React.FC<SuperDocButtonProps> = ({
         }
       }}
       className={clsx(
-        'whitespace-nowrap text-sm flex justify-center items-center gap-2 font-bold py-4 px-10 rounded-full tracking-wide transition-transform duration-300 transform hover:scale-105',
+        'whitespace-nowrap text-sm flex justify-center items-center gap-2 uppercase font-bold py-4 px-10 rounded-full tracking-wide transition-transform duration-300 transform hover:scale-105',
         bgColors[variant],
         className
       )}

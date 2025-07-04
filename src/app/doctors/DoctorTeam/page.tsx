@@ -7,7 +7,7 @@ import arrow from "../../../../public/images/Group 2349.png";
 const doctors = [
   {
     name: 'Dr Vidisha Kumari',
-    specialty: 'Pediatric Pulmonologist',
+    specialty: 'Paediatric Pulmonologist',
     image: '/images/doc.png',
     bgColor: '#F0CB46',
   },

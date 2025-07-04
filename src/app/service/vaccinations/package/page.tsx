@@ -5,18 +5,18 @@ import arrow from "../../../../../public/images/Group 2349.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import SuperDocButton2 from '../../../../components/SuperDocButton2';
-import Modal from '../../../../components/FormPopUp';
-import BabyMDCampaignForm from '../../../../components/BabyMDCampaignForm';
+import SuperDocButton2 from "../../../../components/SuperDocButton2";
+import Modal from "../../../../components/FormPopUp";
+import BabyMDCampaignForm from "../../../../components/BabyMDCampaignForm";
 
 gsap.registerPlugin(ScrollTrigger);
 
 // Define allowed durations
 type DurationKey =
   | "6 Week - 14 Week"
-  | "2 Month - 6 Month"
-  | "6 Month - 12 Month"
-  | "1 Year - 2 Year";
+  | "6 Month - 1 Year"
+  | "1 - 2 Years"
+  | "10 - 12 Years";
 
 // Package type
 interface Package {
@@ -27,7 +27,6 @@ interface Package {
 }
 
 export default function Package() {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDurationOpen, setIsDurationOpen] = useState(false);
   const [selectedDuration, setSelectedDuration] =
@@ -36,9 +35,9 @@ export default function Package() {
 
   const durationOptions: DurationKey[] = [
     "6 Week - 14 Week",
-    "2 Month - 6 Month",
-    "6 Month - 12 Month",
-    "1 Year - 2 Year",
+    "6 Month - 1 Year",
+    "1 - 2 Years",
+    "10 - 12 Years",
   ];
 
   const packagesByDuration: Record<DurationKey, Package[]> = {
@@ -56,7 +55,7 @@ export default function Package() {
         features: ["Hexaxim", "Prevenar", "Rotosiil"],
       },
     ],
-    "2 Month - 6 Month": [
+    "6 Month - 1 Year": [
       {
         name: "Value Package",
         price: 22403,
@@ -82,7 +81,7 @@ export default function Package() {
         ],
       },
     ],
-    "6 Month - 12 Month": [
+    "1 - 2 Years": [
       {
         name: "Value Package",
         price: 14650,
@@ -96,7 +95,7 @@ export default function Package() {
         features: ["Nexipox", "Havrix 720", "Pentaxim and Jenvac"],
       },
     ],
-    "1 Year - 2 Year": [
+    "10 - 12 Years": [
       {
         name: "Value Package",
         price: 10995,
@@ -151,7 +150,7 @@ export default function Package() {
           Big protection,{" "}
           <span className="text-[#4B3A8F]">
             <i className="relative z-[2] font-light whitespace-nowrap">
-              smaller build
+              smaller bill
               <div className="absolute z-[-1] left-[-5px] top-[-2px]">
                 <svg
                   viewBox="0 0 137 47"
@@ -238,9 +237,7 @@ export default function Package() {
             >
               <div
                 className={`w-full text-white text-center text-[16px] py-4 px-4 rounded-full ${
-                  pkg.name === "Value Package"
-                    ? "bg-[#67AFBC]"
-                    : "bg-[#76A861]"
+                  pkg.name === "Value Package" ? "bg-[#67AFBC]" : "bg-[#76A861]"
                 }`}
               >
                 {pkg.name}
@@ -257,9 +254,7 @@ export default function Package() {
               </div>
               <div
                 className={`text-white py-4 px-2 text-[12px] min-h-[80px] flex items-center rounded-2xl mx-2 ${
-                  pkg.name === "Value Package"
-                    ? "bg-[#67AFBC]"
-                    : "bg-[#76A861]"
+                  pkg.name === "Value Package" ? "bg-[#67AFBC]" : "bg-[#76A861]"
                 }`}
               >
                 <i>{pkg.features.join(", ")}</i>
@@ -294,15 +289,22 @@ export default function Package() {
             <Image src={arrow} alt="Arrow" width={20} height={10} />
           </button> */}
 
-           <SuperDocButton2
+          <SuperDocButton2
             onClick={() => setIsModalOpen(true)}
             label="Get your vaccine package"
             className="w-80 text-center fade-in uppercase"
             variant="pink"
           />
-          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-                  <BabyMDCampaignForm formID="services-vaccination-package" />
-            </Modal>
+
+          <Modal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            mainText={<>Contact for Your </>}
+            highlightText={<span> Child's </span>}
+            subText={<i>Immunisation</i>}
+          >
+            <BabyMDCampaignForm formID="services-vaccination-package" />
+          </Modal>
         </div>
       </div>
     </>

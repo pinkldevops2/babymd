@@ -12,9 +12,21 @@ export default function DoctorSlider() {
       // Clinic data
   const clinics = [
     {
+      name: "Dr Bhaskar MV",
+      about: `“There’s nothing more fulfilling than seeing a child walk out of our clinic smiling and a parent walking out reassured.”`,
+      specialist: "Paediatrician and Neonatologist",
+      image: Nearbyclinic,
+    },
+     {
       name: "Dr Shivangi Bora",
       about: `“Parents come to us with questions, fears, and hopes. Our job is to meet them with answers, calm, and care.”`,
-      specialist: "Paediatrician, Allergy and Asthma Specialist, and Paediatric Sleep Specialist",
+      specialist: "Paediatrician, Allergy, Asthma and Paediatric Sleep Consultant",
+      image: Nearbyclinic,
+    },
+    {
+      name: "Ms Neelam Verma",
+      about: `“We’re not just building healthier kids, we’re building trusting relationships with families that last for years.”`,
+      specialist: "Clinical Psychologist",
       image: Nearbyclinic,
     }
   ];
@@ -80,7 +92,7 @@ export default function DoctorSlider() {
                            <em>{clinic.name}</em>
                           </h3>
                           <span
-                            className="text-[12px]  font-lato text-white rounded-full font-medium"
+                            className="text-[12px] block w-full font-lato text-white rounded-full font-medium"
                             dangerouslySetInnerHTML={{ __html: clinic.specialist }} 
                           >
                           

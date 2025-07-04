@@ -98,9 +98,16 @@ function HappyFamily() {
           <Image src={arrow} alt="Arrow" width={20} height={10} />
         </button>
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-             <BabyMDCampaignForm formID="doctor-details-appointment" />
-      </Modal>
+
+       <Modal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                mainText={<>Contact for </>}
+                highlightText={<span> </span>}
+                subText={<i>Appointment</i>}
+              >
+               <BabyMDCampaignForm formID="doctor-details-appointment" />
+              </Modal>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import Banner from "../vaccinations/banner/page";
+import Banner from "./banner/page";
 import Paragraph from "./paragraph/page";
 import Tablecarosual from './tablecarosual/page';
 import SecondParagraph from './secondparagraph/page';

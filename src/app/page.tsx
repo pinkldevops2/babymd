@@ -585,12 +585,26 @@ useEffect(() => {
         faqs={faqData} 
         />
 </div></div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-            <BabyMDCampaignForm formID="hp_book_appointment_1" />
-      </Modal>
-      <Modal2 isOpen={isModalOpen2} onClose={() => setIsModalOpen2(false)}>
-            <BabyMDCampaignForm formID="hp_book_appointment_2" />
-      </Modal2>
+  
+       <Modal
+                              isOpen={isModalOpen}
+                              onClose={() => setIsModalOpen(false)}
+                              mainText={<>Enquire for     </>}
+                              highlightText={<span> BabyMD </span>}
+                              subText={<i>Membership</i>}
+                            >
+                             <BabyMDCampaignForm formID="hp_book_appointment_1" />
+                            </Modal>
+    
+       <Modal
+                              isOpen={isModalOpen}
+                              onClose={() => setIsModalOpen(false)}
+                              mainText={<>Contact for   </>}
+                              highlightText={<span>  </span>}
+                              subText={<i>Appointment</i>}
+                            >
+                             <BabyMDCampaignForm formID="hp_book_appointment_2" />
+                            </Modal>
 </div>
   );
 }

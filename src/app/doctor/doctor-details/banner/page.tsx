@@ -57,7 +57,7 @@ export default function Banner() {
                 </h2>
               </div>
               <p className=" text-[16px] leading-[20px] text-black mt-0 mb-0 px-4 leading-relaxed font-lato">
-                15+ years of Experience
+                15+ years of experience
               </p>
             </div>
             <Image

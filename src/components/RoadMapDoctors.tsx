@@ -8,7 +8,7 @@ import Vaccinations from '../../public/images/serviceassets/vaccination.png';
 import Dat from '../../public/images/serviceassets/dat.png';
 import Ssc from '../../public/images/serviceassets/ssc.png';
 import immunisationIcon from '../../public/images/Icon5.png';
-import assessmentIcon from '../../public/images/Icon6.png';
+//import assessmentIcon from '../../public/images/Icon6.png';
 import SubHeading from './SubHeading';
 import SuperDocButton from './SuperDocButton2';
 import SuperDocBtnSM from './SuperDocBtnSM';
@@ -37,43 +37,44 @@ const RoadMapDoctors: FC<RoadMapDoctorsProps> = ({ onClick }) => {
 
   const roadmapData: RoadmapSection[] = [
     {
-      title: 'General Pediatrics Consultation',
+      title: 'General Pediatric Consultation',
       color: 'bg-[#5943A5]',
       heading: 'For all the everyday bumps',
-      href: 'services/general-pediatrics-consultation',
+      href: 'https://babymd.in/',
       icon: GPCIcon,
       content: [
-        "Whether it’s your baby’s first fever, a cranky tummy, or simply a growth check, our pediatricians offer gentle, thorough care without the long hospital waits. Come in any day of the week — we’re ready with expert advice and a warm smile.",
+        "Whether it’s your baby’s first fever, a cranky tummy, or simply a growth check, our paediatricians offer gentle, thorough care without the long hospital waits. Come in any day of the week — we’re ready with expert advice and a warm smile.",
       ],
     },
     {
       title: 'Vaccinations',
       color: 'bg-[#7CB2BC]',
-      heading: 'For all the everyday bumps',
-      href: 'services/vaccinations',
+      heading: 'A little prick, a lot of love',
+      href: 'https://babymd.in/',
       icon: Vaccinations,
       content: [
-        "Whether it’s your baby’s first fever, a cranky tummy, or simply a growth check, our pediatricians offer gentle, thorough care without the long hospital waits. Come in any day of the week — we’re ready with expert advice and a warm smile.",
+        `We know vaccination days can bring a few jitters, for both you and your little one.
+That’s why we keep things calm, caring, and child-first. Our doctors take time to help your baby feel safe, offer gentle reassurance throughout, and make sure you’re informed every step of the way. With minimal wait times, needle-free options, and thoughtful aftercare, we turn it into a fun yet comfortable experience.`,
       ],
     },
     {
       title: 'Developmental Assessments and Therapies',
       color: 'bg-[#7CB367]',
-      heading: 'For all the everyday bumps',
-      href: '/',
+      heading: 'Helping their little hearts and minds soar',
+      href: 'https://babymd.in/',
       icon: Dat,
       content: [
-        "Whether it’s your baby’s first fever, a cranky tummy, or simply a growth check, our pediatricians offer gentle, thorough care without the long hospital waits. Come in any day of the week — we’re ready with expert advice and a warm smile.",
+       `Whether it’s tiny speech delays, sensory challenges, or big emotions that feel too big, we work with you, playfully and patiently, to unlock your child’s brightest potential. Our RCI-certified experts offer developmental screenings, early intervention plans, and personalised therapies (speech, occupational, and behavioural).`,
       ],
     },
     {
       title: 'Super Specialist Consultations',
       color: 'bg-[#E1556E]',
-      heading: 'For all the everyday bumps',
-      href: '/',
+      heading: 'Helping their little hearts and minds soar',
+      href: 'https://babymd.in/',
       icon: Ssc,
       content: [
-        "Whether it’s your baby’s first fever, a cranky tummy, or simply a growth check, our pediatricians offer gentle, thorough care without the long hospital waits. Come in any day of the week — we’re ready with expert advice and a warm smile.",
+       `Parenting comes with all kinds of curveballs — from allergies and asthma to skin flare-ups, weight worries, and behavioural quirks. We’ve brought together 15+ paediatric specialties all under one roof. Whether it’s a Pulmonologist, Endocrinologist, Dermatologist, or Child Psychologist, our super specialist team offers deeper insights and personalised care, so your child gets exactly what they need, when they need it.`,
       ],
     },
   ];
