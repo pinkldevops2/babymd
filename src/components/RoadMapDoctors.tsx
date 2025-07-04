@@ -40,7 +40,7 @@ const RoadMapDoctors: FC<RoadMapDoctorsProps> = ({ onClick }) => {
       title: 'General Pediatric Consultation',
       color: 'bg-[#5943A5]',
       heading: 'For all the everyday bumps',
-      href: 'https://babymd.in/',
+      href: 'service/general-pediatrics-consultation',
       icon: GPCIcon,
       content: [
         "Whether it’s your baby’s first fever, a cranky tummy, or simply a growth check, our paediatricians offer gentle, thorough care without the long hospital waits. Come in any day of the week — we’re ready with expert advice and a warm smile.",
@@ -50,7 +50,7 @@ const RoadMapDoctors: FC<RoadMapDoctorsProps> = ({ onClick }) => {
       title: 'Vaccinations',
       color: 'bg-[#7CB2BC]',
       heading: 'A little prick, a lot of love',
-      href: 'https://babymd.in/',
+      href: 'service/vaccinations',
       icon: Vaccinations,
       content: [
         `We know vaccination days can bring a few jitters, for both you and your little one.

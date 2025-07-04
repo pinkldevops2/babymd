@@ -100,7 +100,7 @@ export default function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/general-pediatric-consultations" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                    <Link href="/service/general-pediatrics-consultation" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                       General Pediatric Consultations
                     </Link>
                   </li>
