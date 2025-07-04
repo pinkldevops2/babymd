@@ -1,18 +1,18 @@
 "use client";
 import { useState, useRef } from "react";
 
-import Banner from "../doctor/banner/page";
-import Paragraph from "../doctor/paragraph/page";
-import Locationform from "../doctor/LocationForm/page";
+import Banner from "../doctors/banner/page";
+import Paragraph from "../doctors/paragraph/page";
+import Locationform from "../doctors/LocationForm/page";
 import CaseStudyCarousel from "../../components/CaseStudyCarousel";
 import casestudy from "../assets/casestudy.png";
 import casestudy2 from "../assets/casestudy2.png";
-import DoctorTeam from "../doctor/DoctorTeam/page";
+import DoctorTeam from "../doctors/DoctorTeam/page";
 import DoctorSlider from "./DoctorDetailSlider/page";
 import DoctorAppointment from "./DoctorAppointment/page";
 import SuperDocButton from "../../components/SuperDocButton";
 
-export default function Doctor() {
+export default function Doctors() {
   // Case study data
   const caseStudies = [
     {

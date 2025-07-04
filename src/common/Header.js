@@ -58,10 +58,11 @@ export default function Header() {
               <Link href="/" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                 Home
               </Link>
-            </li>
-            <li className="hidden">
-              <Link href="/doctor" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
-                Doctor
+            </li> 
+            <li>
+              <div className="border dividerpex"></div>
+              <Link href="/doctors" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                Doctors
               </Link>
             </li>
             <li>
@@ -91,28 +92,35 @@ export default function Header() {
                 Resources
               </Link>
             </li>
-            <li className="hidden">
+            <li>
+              <div className="border dividerpex"></div>
               <details className="group">
+                <div className="border dividerpex"></div>
                 <summary className="text-[#4B3A8F] hover:text-[#FF6F61] cursor-pointer">
                   Services
                 </summary>
                 <ul className="pl-4 mt-2 space-y-1">
                   <li>
-                    <Link href="/services/general-pediatric-consultations" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+                    <Link href="/services" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                      All Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/general-pediatric-consultations" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                       General Pediatric Consultations
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services/vaccinations" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+                    <Link href="/services/vaccinations" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                       Vaccinations
                     </Link>
                   </li>
-                  <li>
+                  <li className="hidden">
                     <Link href="/services/super-special-consultations" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
                       Super Special Consultations
                     </Link>
                   </li>
-                  <li>
+                  <li className="hidden">
                     <Link href="/services/da-and-t" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
                       DA&T
                     </Link>
