@@ -300,7 +300,7 @@ export default function Package() {
             isOpen={isModalOpen}
             onClose={() => setIsModalOpen(false)}
             mainText={<>Contact for Your </>}
-            highlightText={<span> Child's </span>}
+            highlightText={<span> Child&#39;s </span>}
             subText={<i>Immunisation</i>}
           >
             <BabyMDCampaignForm formID="services-vaccination-package" />
