@@ -6,10 +6,11 @@ import Modal from '../../components/FormPopUp';
 import BabyMDCampaignForm from '../../components/BabyMDCampaignForm';
 import baby_about from "public/images/baby_about.png";
 import SubHeading2 from "@/components/SubHeading2";
-import Empathy from "public/icons/Empathy.svg"; // Replace with actual SVGs
-import Doctor from "public/icons/Doctor.svg";
-import Expert from "public/icons/Expert.svg";
-import Holistic from "public/icons/Holistic.svg";
+import Empathy from "public/icons/a1.svg"; // Replace with actual SVGs
+import Doctor from "public/icons/a4.svg";
+import Expert from "public/icons/a2.svg";
+import Accessible from "public/icons/a5.svg";
+import Holistic from "public/icons/gpc5.png";
 import dr_deeksha from "public/images/dr_deeksha.png";
 import DoctorPageBanner from "@/components/DoctorPageBanner";
 import BeeAbout from "public/images/BeeAbout.png";
@@ -46,6 +47,12 @@ const cardData = [
     icon: <Image src={Doctor} alt=""/>,
     title: "Joy in the Little Moments",
     description: "Healthcare shouldn’t feel clinical. We make every visit a little more playful, positive, and something your child doesn’t dread.",
+    bgColor: "bg-[#FFD6C6]",
+  },
+  {
+    icon: <Image src={Accessible} alt=""/>,
+    title: "Always Accessible, Always Nearby",
+    description: "We’re open 7 days, right in your neighbourhood, with all your records and follow-ups managed seamlessly, because parenting doesn’t work 9 to 5.",
     bgColor: "bg-[#FFD6C6]",
   },
 ];

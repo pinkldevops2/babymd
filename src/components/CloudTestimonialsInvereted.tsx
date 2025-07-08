@@ -42,19 +42,19 @@ const CloudTestimonialsInvereted = () => {
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     slides: { 
-      perView: 1.2,
+      perView: 1,
       spacing: 16 
     },
     breakpoints: {
       "(min-width: 640px)": {
         slides: {
-          perView: 1.2,
+          perView: 2,
           spacing: 16,
         },
       },
       "(min-width: 1024px)": {
         slides: {
-          perView: 2.2,
+          perView: 3.2,
           spacing: 16,
         },
       },
