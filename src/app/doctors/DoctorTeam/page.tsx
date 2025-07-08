@@ -14,25 +14,25 @@ const doctors = [
   {
     name: 'Dr Amit Sharma',
     specialty: 'Cardiologist',
-    image: '/images/doc.png',
+    image: '/images/doc1.png',
     bgColor: '#5943A5',
   },
   {
     name: 'Dr Neha Sinha',
     specialty: 'Dermatologist',
-    image: '/images/doc.png',
+    image: '/images/doc2.png',
     bgColor: '#F6835D',
   },
   {
     name: 'Dr Ramesh Gupta',
     specialty: 'Orthopedic Surgeon',
-    image: '/images/doc.png',
+    image: '/images/doc3.png',
     bgColor: '#269BD9',
   },
   {
     name: 'Dr Priya Malhotra',
     specialty: 'Neurologist',
-    image: '/images/doc.png',
+    image: '/images/doc4.png',
     bgColor: '#F0CB46',
   },
   {
