@@ -1,12 +1,13 @@
 'use client';
 import Image from 'next/image';
+
+import beehive2 from '../../../../../public/images/serviceassets/beehive2.png';
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-export default function Paragraph() {
+export default function Thirdpara() {
 
-    const pathRef = useRef<SVGPathElement | null>(null);
-
+  const pathRef = useRef<SVGPathElement | null>(null);
   useEffect(() => {
     const path = pathRef.current;
     if(!path) return;
@@ -31,18 +32,27 @@ export default function Paragraph() {
 
   return (
 
-          <div className="w-full mt-0 px-6 pb-5  relative bg-white">
+          <div className="w-full mt-0 px-6 pb-5 pt-7 relative bg-white">
+       
+        <Image
+          width={33}
+          height={30}
+          src={beehive2}
+          alt="Beehive"
+          className="absolute right-[20px] top-[65px]"
+        />
+
          <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
-          Personalised, {" "}
+          EThe special heroes for {" "}
           <span className=" text-[#4B3A8F]">
-               play-based therapy plans, backed by  {" "}
+            your extra -  {" "}
             <i className="relative z-[2] font-light whitespace-nowrap">
-            expert care
-              <div className="absolute z-[-1] left-[-5px] top-[-3px]">
+              special one
+              <div className="absolute z-[-1] left-[-5px] top-[-7px]">
                 <svg
                   viewBox="0 0 137 47"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-[120px] h-auto overflow-visible "
+                  className="w-[140px] h-auto overflow-visible "
                 >
                   <path
                     ref={pathRef}
@@ -57,14 +67,7 @@ export default function Paragraph() {
               </div>
             </i>
           </span>
-        </h2>
-
-        <p className="pt-6">
-       At BabyMD, therapy isn’t just about sessions — it’s about building the right foundation for your child’s future. Guided by our developmental paediatrician, each therapy is tailored to your child’s needs, delivered by experienced professionals, and reviewed regularly to track progress. Here are the therapies we offer:
-        </p>
-
-
-     
+        </h2> 
       </div>
   );
 }
