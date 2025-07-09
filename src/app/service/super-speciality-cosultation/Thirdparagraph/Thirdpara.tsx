@@ -43,7 +43,7 @@ export default function Thirdpara() {
         />
 
          <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
-          EThe special heroes for {" "}
+          The special heroes for {" "}
           <span className=" text-[#4B3A8F]">
             your extra -  {" "}
             <i className="relative z-[2] font-light whitespace-nowrap">

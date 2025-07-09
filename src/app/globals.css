@@ -474,6 +474,9 @@ footer h3{
   width: 80px!important;
   left: 0px!important;
 }
+.whitespace-wrap{
+  white-space: wrap;
+}
 @keyframes marqueeLeft {
   0% {
     transform: translateX(0%);
