@@ -95,7 +95,7 @@ function SmileSection() {
       </div>
       <div className="flex justify-center py-6 px-6">
         <SuperDocButton
-                  href={"https://babymd-vizz.vercel.app/doctor"}
+                  href={"https://babymd-vizz.vercel.app/doctors"}
                   target={"_blank"}
                   label="Book a specialist"
                   className="w-80 text-center fade-in uppercase"

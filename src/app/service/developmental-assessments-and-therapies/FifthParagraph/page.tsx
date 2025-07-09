@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import arrow from "../../../../../public/images/Group 2349.png";
+import SuperDocButton from '../../../../components/SuperDocButton';
 
 export default function Paragraph() {
 
@@ -64,7 +65,7 @@ export default function Paragraph() {
        You don’t have to guess, and you don’t have to wait. Our free online milestone assessment is a quick and thoughtful way to check how your little one is developing across speech, motor skills, emotions, and more. Designed by experts, and parent-tested for peace of mind, all from the comfort of your home.
         </p>
 
-       <div className="flex justify-center py-6">
+       {/* <div className="flex justify-center py-6">
                       <button
                         type="button"
                         className="flex items-center mx-2 gap-3 px-10 py-5 text-white bg-[#5943A5] hover:bg-[#4a3794] transition-colors duration-200 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200"
@@ -79,7 +80,16 @@ milestone assessment</span>
                    
                    />
                       </button>
-                    </div>
+                    </div> */}
+                    <div className="flex justify-center py-6">
+                    <SuperDocButton
+                        href={"https://babymd.in/pp/development-assesment"}
+                        target={"_blank"}
+                        label="Start your free milestone assessment"
+                        className="w-80 text-center fade-in uppercase whitespace-wrap"
+                        variant="purple"
+                      />
+      </div>
      
       </div>
   );

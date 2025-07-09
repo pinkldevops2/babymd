@@ -22,25 +22,57 @@ import curvedTop from "../../assets/curved-top.png";
 export default function DevelopmentalAssessmentsandTherapies() {
    const faqData = [
     {
-      question: "Are these therapies invasive?",
-      answer: "No, these therapies are non-invasive and absolutely safe for your child.",
+      question: "What are early signs of developmental delays?",
+      answer: "Some signs include no babbling by 12 months, not walking by 18 months, limited eye contact, not responding to names, or delayed social interaction. These may relate to speech issues, motor skills development, or early signs of Autism.",
       open: true,
     },
     {
-      question: "When does my child need occupational therapy?",
-      answer: "When they face challenges in daily routines, motor skills, or sensory processing.",
+      question: "What’s the difference between a developmental delay and a disorder?",
+      answer: "A delay means a child is behind on certain milestones but may catch up. A disorder (like ASD, ADHD, or a specific learning difficulty) involves persistent, diagnosable patterns requiring targeted support.",
     },
     {
-      question: "What are the advantages of speech therapy for kids?",
-      answer: "Improved communication, articulation, comprehension, and confidence.",
+      question: "Can a child outgrow speech or behavioral delays? ",
+      answer: "Some children catch up, but early intervention is key. Delays left unaddressed can lead to learning and social challenges later.",
     },
     {
-      question: "What kind of issues can be managed by family therapy?",
-      answer: "Behavioral concerns, parenting challenges, siblings rivalry, and emotional conflicts.",
+      question: "How soon will therapy show results?",
+      answer: "It varies as some children improve within a few weeks, others need months of consistent therapy. Progress depends on age, diagnosis, and family involvement.",
     },
     {
-      question: "What kind of techniques are used for CBT treatment?",
-      answer: "Techniques like cognitive restructuring, exposure therapy, and behavior activation.",
+      question: "When should I consider a developmental assessment?",
+      answer: "If your child isn’t reaching milestones (like sitting, speaking, or playing), or you’re concerned about their attention, motor development, speech start, or learning skills, start with an assessment.",
+    },
+     {
+      question: "Who will assess my child?",
+      answer: "Our developmental paediatricians lead the assessment, often supported by therapists for further evaluation.",
+    },
+     {
+      question: "What happens after the assessment?",
+      answer: "You will receive a personalised therapy plan, including the type of therapy, weekly frequency, and a timeline for progress reviews. We may even recommend an individual education plan if needed.",
+    },
+     {
+      question: "What types of therapies do you offer?",
+      answer: "We offer Speech Therapy, Occupational Therapy, Applied Behavior Analysis, Behavioral Therapy, Sensory Integration, and support for special needs education — tailored to every child’s profile.",
+    },
+     {
+      question: "Will I get regular updates on progress?",
+      answer: "Yes, we share clear progress reports and conduct regular parent connects to review outcomes and make adjustments.",
+    },
+     {
+      question: "Will my child get a diagnosis after the first visit?",
+      answer: "Not always. Some children may need multiple sessions or further evaluations (like Autism or ADHD assessments) before a diagnosis is made.",
+    },
+     {
+      question: "How do you decide what type of therapy my child needs?",
+      answer: "Our developmental paediatrician screens your child, collaborates with specialists in motor development, speech education, and behavioral therapy, and recommends the most suitable approach.",
+    },
+     {
+      question: "How do I know if therapy is working?",
+      answer: "We share structured progress reports, conduct monthly plan reviews, and keep you informed through regular feedback meetings",
+    },
+     {
+      question: "Can you help if my child already has a diagnosis from another centre?",
+      answer: "Absolutely. We will review previous assessments, conduct our own evaluation if needed, and create a coordinated care plan based on your little one’s current needs.",
     },
   ];
   return (
