@@ -83,7 +83,7 @@ const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
                   <Image
                     src={item.image}
                     alt={item.title}
-                    className="object-cover object-center w-full max-h-[150px]"
+                    className="object-cover aspect-3/2 object-center w-full max-h-[150px]"
                   />
                 </div>
                 <div className="py-2 px-3 mt-4">
