@@ -96,8 +96,8 @@ export default function Banner() {
             className="z-0 w-[330px] md:w-[330px]  h-auto"
           />
           <Image
-            width={150}
-            height={500}
+            width={390}
+            height={411}
             src={serviceVectorimg1}
             alt="Layer 2"
             className="absolute bottom-[-40px] md:bottom-[-30px] lg:bottom-[-30px] w-[385px] md:w-[400px] h-auto"
