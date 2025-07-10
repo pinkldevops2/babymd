@@ -11,7 +11,6 @@ import CloudTestimonials from '../../../components/CloudTestimonialsDev';
 import FifthParagraph from "./FifthParagraph/page";
 import SmileSection from "./SmileSection/page";
 import Membership from './schedule/page';
-import StepsCare from './StepsCare/page';
 import CareSlider from './CareSlider/StepsCare';
 import DoctorsTeam from "./doctorsTeam/page";
 import FaqSection from "../../../components/FaqSection";

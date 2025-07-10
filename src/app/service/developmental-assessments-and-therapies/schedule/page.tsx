@@ -324,7 +324,7 @@ Developmental Paediatricians</span>
             <SuperDocButton2
               onClick={() => setIsModalOpen(true)}
               label="Speak to Our Developmental Paediatricians"
-              className="w-80 text-center fade-in uppercase justify-center whitespace-wrap"
+              className="text-center fade-in uppercase justify-center whitespace-wrap"
               variant="purple"
             />
 

@@ -54,7 +54,7 @@ function SmileSection() {
                         <svg
                           viewBox="0 0 137 47"
                           xmlns="http://www.w3.org/2000/svg"
-                          className="w-[100px] h-auto overflow-visible "
+                          className="w-[100px] h-auto overflow-visible rotate-180 block absolute left-[40px]"
                         >
                           <path
                             ref={pathRef}

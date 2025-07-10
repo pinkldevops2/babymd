@@ -146,83 +146,89 @@ We support your child’s growth at their pace with you, every step of the way.`
         <SubHeading3
           mainText={<>Care journey at</>}
           highlightText={<></>}
-          subText={<i> BabyMD</i>}
+          subText={
+            <>
+              <i> BabyMD</i>
+            </>
+          }
         />
       </div>
 
-      <div className="relative">
-        {/* Slider */}
-        <div ref={sliderRef} className="keen-slider careslider pb-5">
-          {slides.map((item, index) => (
-            <div key={index} className="keen-slider__slide flex flex-col gap-4">
-              {/* Icon */}
-              <div
-                onClick={() => sliderInstanceRef.current?.moveToIdx(index)}
-                className="w-[45px] h-[50px] bg-[#C8E7EC] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transition"
-              >
-                <Image
-                  src={item.icon}
-                  alt={`icon${index + 1}`}
-                  className="w-[25px] h-[25px] object-contain"
-                />
-              </div>
-
-              {/* Slide Content */}
-              <div
-                className="py-10 px-6 shadow-md rounded-lg h-full"
-                style={{ backgroundColor: item.bg }}
-              >
-                <h2 className="text-[28px] leading-[30px] font-bold text-[#4B3A8F] mb-4">
-                  <i className="font-normal block mb-2">{item.step}</i>
-                  {item.title}
-                </h2>
-                <p className="whitespace-pre-line">{item.content}</p>
-              </div>
+        <div className="relative">
+      <div ref={sliderRef} className="keen-slider careslider pb-5">
+        {slides.map((item, index) => (
+          <div key={index} className="keen-slider__slide flex flex-col gap-4">
+            {/* Clickable Icon */}
+            <div
+              onClick={() => sliderInstanceRef.current?.moveToIdx(index)}
+              className="w-[45px] h-[50px] bg-[#C8E7EC] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transition"
+            >
+              <Image
+                src={item.icon}
+                alt={`icon${index + 1}`}
+                className="w-[25px] h-[25px] object-contain"
+              />
             </div>
-          ))}
-        </div>
 
-        {/* Arrow Buttons */}
-        <div className="flex justify-between items-center absolute top-1/2 -translate-y-1/2 w-full px-2 z-10">
-          <button
-            onClick={() => sliderInstanceRef.current?.prev()}
-            className="p-2 rounded-full bg-[#ffffff] hover:bg-[#f4df76] transition shadow-md"
-          >
-            <svg
-              className="w-4 h-4 text-gray-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+            {/* Slide Content */}
+            <div
+              className="py-10 px-6 shadow-md rounded-lg h-full"
+              style={{ backgroundColor: item.bg }}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-
-          <button
-            onClick={() => sliderInstanceRef.current?.next()}
-            className="p-2 rounded-full bg-[#ffffff] hover:bg-[#f4df76] transition shadow-md"
-          >
-            <svg
-              className="w-4 h-4 text-gray-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-        </div>
+              <h2 className="text-[28px] leading-[30px] font-bold text-[#4B3A8F] mb-4">
+                <i className="font-normal block mb-2">{item.step}</i>
+                {item.title}
+              </h2>
+              <p className="whitespace-pre-line">{item.content}</p>
+            </div>
+          </div>
+        ))}
       </div>
+
+
+         <div className="flex justify-between items-center mb-4 absolute top-[50%] w-full">
+        <button
+          onClick={() => sliderInstanceRef.current?.prev()}
+          className="p-2 rounded-full bg-[#f4df76] hover:bg-[#f4df76] transition relative left-[-15px]"
+        >
+           <svg
+                className="w-4 h-4 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+        </button>
+
+        <button
+          onClick={() => sliderInstanceRef.current?.next()}
+          className="p-2 rounded-full bg-[#f4df76] hover:bg-[#f4df76] transition relative right-[-15px]"
+        >
+          <svg
+                className="w-4 h-4 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+        </button>
+        
+      </div>
+     </div>
+
+     
     </div>
   );
 }

@@ -96,7 +96,7 @@ milestone assessment</span>
                         href={"https://babymd.in/pp/free-growth-assessment-for-infants-children"}
                         target={"_blank"}
                         label="Start your free milestone assessment"
-                        className="w-80 text-center fade-in uppercase whitespace-wrap"
+                        className="text-center fade-in uppercase whitespace-wrap"
                         variant="purple"
                       />
       </div>
