@@ -4,6 +4,7 @@ import Banner from "./Banner/BannerComponent";
 import Paragraph from "./Paragraph/ParagraphComponent";
 import CareProvide from "./Careprovide/CareprovideComp";
 import ThirdParagraph from "./Thirdparagraph/Thirdpara";
+import FourthParagraph from "./FourthParagraph/ParagraphComponent";
 import SmileSection from "./SmileSection/page";
 import SearchBox from "./SearchBox/SearchB";
 import Facilities from './Facilities/FacilitiesC';
@@ -23,6 +24,7 @@ export default function SuperSpecialityCosultation() {
            <Banner /> 
            <Paragraph/>
            <CareProvide/>  
+            <FourthParagraph/> 
            <ThirdParagraph/> 
            <DoctorsTeam />
          

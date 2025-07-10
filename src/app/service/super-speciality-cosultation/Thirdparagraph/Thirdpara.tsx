@@ -2,6 +2,7 @@
 import Image from 'next/image';
 
 import beehive2 from '../../../../../public/images/serviceassets/beehive2.png';
+import SubHeading4 from "../../../../components/SubHeading4";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
@@ -42,10 +43,10 @@ export default function Thirdpara() {
           className="absolute right-[20px] top-[65px]"
         />
 
-         <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
+        {/*  <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
           The special heroes for {" "}
           <span className=" text-[#4B3A8F]">
-            your extra -  {" "}
+            your extra- 
             <i className="relative z-[2] font-light whitespace-nowrap">
               special one
               <div className="absolute z-[-1] left-[-5px] top-[-7px]">
@@ -67,7 +68,16 @@ export default function Thirdpara() {
               </div>
             </i>
           </span>
-        </h2> 
+        </h2>  */}
+        <SubHeading4
+            mainText={<>The special heroes for</>}
+            highlightText={<>your extra-</>}
+            subText={
+              <>
+                <i> special one</i>
+              </>
+            }
+          />
       </div>
   );
 }

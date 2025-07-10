@@ -43,7 +43,7 @@ export default function Banner() {
         {/* Text Content */}
         <div className="md:w-1/2">
           <h2 className="text-base text-[34px] leading-[34px] max-w-[400px] font-bold font-baloo2 text-[#E3B200] mb-6">
-            Developmental Assessments and Therapies-
+            Developmental Assessments and Therapies
           </h2>
           <div className="relative flex items-center">
             <h2 className="text-[34px] leading-[34px] max-w-[400px] font-bold font-baloo2 pt-4">

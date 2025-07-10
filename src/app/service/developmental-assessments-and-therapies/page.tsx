@@ -31,7 +31,7 @@ export default function DevelopmentalAssessmentsandTherapies() {
       answer: "A delay means a child is behind on certain milestones but may catch up. A disorder (like ASD, ADHD, or a specific learning difficulty) involves persistent, diagnosable patterns requiring targeted support.",
     },
     {
-      question: "Can a child outgrow speech or behavioral delays? ",
+      question: "Can a child outgrow speech or behavourial delays? ",
       answer: "Some children catch up, but early intervention is key. Delays left unaddressed can lead to learning and social challenges later.",
     },
     {

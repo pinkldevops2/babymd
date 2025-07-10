@@ -6,6 +6,7 @@ import scheduleIcon3 from "../../../../../public/icons/gpc4.png";
 import scheduleIcon4 from "../../../../../public/icons/gpc3.png";
 import SubHeading from "../../../../components/SubHeading";
 import arrow from "../../../../../public/images/Group 2349.png";
+import SubHeading3 from "../../../../components/SubHeading3";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useEffect, useRef } from "react";
@@ -111,14 +112,13 @@ If needed, our expert therapists join in for initial developmental assessments �
       title: "Personalised plan and assessments",
       bg: "#F9EEB6",
       icon: scheduleIcon2,
-      content: `Based on the screening, we create a personalised therapy plan tailored to your child’s age and developmental stage — whether they’re 2 years, 
-3 years, or 5 years old. 
+      content: `Based on the screening, we create a personalised therapy plan tailored to your child’s age and developmental stage — whether they’re 2 years, 3 years, or 5 years old. 
 
 The plan includes the right mix of therapies, session durations, and weekly frequency. If a diagnosis is required (like Autism, ADHD, or special learning difficulties), we recommend detailed assessments.`,
     },
     {
       step: "Step 3",
-      title: "Package and Onboarding",
+      title: "Package and onboarding",
       bg: "#CDE6F3",
       icon: scheduleIcon3,
       content: `We walk you through a therapy package that fits your child’s needs. 
@@ -129,7 +129,7 @@ easy to begin.`,
     },
     {
       step: "Step 4",
-      title: "Ongoing Support and Progress Tracking",
+      title: "Ongoing support and progress tracking",
       bg: "#DBFFCC",
       icon: scheduleIcon4,
       content: `Once therapy starts, we stay connected with you.  
@@ -142,8 +142,8 @@ We support your child’s growth at their pace with you, every step of the way.`
 
   return (
     <div className="bg-white px-6 pt-6">
-      <div className="px-6 py-4">
-        <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
+      <div className="px-0 py-4">
+       {/*  <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
           Care journey at{" "}
           <span className=" text-[#4B3A8F]">
             {" "}
@@ -168,7 +168,16 @@ We support your child’s growth at their pace with you, every step of the way.`
               </div>
             </i>
           </span>
-        </h2>
+        </h2> */}
+        <SubHeading3
+            mainText={<>Care journey at</>}
+            highlightText={<></>}
+            subText={
+              <>
+                <i> BabyMD</i>
+              </>
+            }
+          />
       </div>
 
       <div ref={sliderRef} className="keen-slider careslider pb-5">

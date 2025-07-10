@@ -11,7 +11,7 @@ import next_bees_sleeping from "@/app/assets/next_bees_sleeping.png";
 import beehive2 from "@/app/assets/beehive2.png";
 import beehive_cloud from "@/app/assets/beehive_cloud.png";
 import keerthana from "@/app/assets/keerthana.png";
-import ContactSubC from './anime/ContactSubD';
+import ContactSubC from './anime/ContactSubSmall';
 
 const testimonials = [
   {
@@ -22,13 +22,7 @@ const testimonials = [
     location: "Father of Rehaan (4 years), HSR",
     image: keerthana,
   },
-  {
-    id: 2,
-    text: `"I visited BabyMD for a developmental assessment for my son — and I’m so glad I took that step. The doctors took the time to help me understand the challenges he might be facing and guided me on the corrective steps I can take now. Thank you, BabyMD!"`,
-    name: "Madhavi Murlidhar",
-    location: "BabyMD Hosa Road",
-    image: keerthana,
-  },
+  
   
 ];
 
@@ -100,10 +94,10 @@ const CloudTestimonials = () => {
       />        
       {/* Heading */}
       <h2 className="text-[28px] text-black leading-[32px] font-bold mb-2 px-6 md:px-6 fade-in">
-        Behind every visit, 
+        Behind every visit,{" "}
  <span className="text-[#5943A5]">a story of  </span>
-        <br />
-        <span className="text-[#5943A5] italic font-medium relative circling_around2 adjusters">
+       
+        <span className="text-[#5943A5] italic font-medium relative circling_around-single">
           <i className="relative z-5">care </i>
           <ContactSubC />
         </span>{" "}

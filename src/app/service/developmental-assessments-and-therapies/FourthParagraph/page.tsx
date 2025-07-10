@@ -31,7 +31,7 @@ export default function Paragraph() {
 
   return (
 
-          <div className="w-full mt-0 px-6 pb-5  relative bg-white">
+          <div className="w-full mt-0 px-6 pb-5 pt-0 relative bg-white">
          <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
           Personalised, {" "}
           <span className=" text-[#4B3A8F]">

@@ -133,7 +133,7 @@ export default function DoctorsT() {
         </button> */}
 
         <SuperDocButton
-                  href={"https://babymd-vizz.vercel.app/doctors"}
+                  href={"/doctors"}
                   target={"_blank"}
                   label="EXPLORE MORE  Specialist"
                   className="w-80 text-center fade-in uppercase"

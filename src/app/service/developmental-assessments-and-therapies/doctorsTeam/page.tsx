@@ -6,6 +6,8 @@ import DoctorImg2 from "../../../../../public/images/serviceassets/DoctorImg2.pn
 import DoctorImg3 from "../../../../../public/images/serviceassets/DoctorImg3.png";
 import DoctorImg4 from "../../../../../public/images/serviceassets/DoctorImg4.png";
 import arrow from "../../../../../public/images/Group 2349.png";
+import SubHeading3 from "../../../../components/SubHeading3";
+import SuperDocButton from "../../../../components/SuperDocButton";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
@@ -36,12 +38,12 @@ export default function DoctorsTeam() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-4 bg-white">
       <div className="mb-6">
-       <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
+ {/*       <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
                 Your {" "}
                 <span className=" text-[#4B3A8F]">
                      partners in    {" "}
                   <i className="relative z-[2] font-light whitespace-nowrap">
-                    progressr
+                    progress
                     <div className="absolute z-[-1] left-[-5px] top-[-2px]">
                       <svg
                         viewBox="0 0 137 47"
@@ -61,7 +63,16 @@ export default function DoctorsTeam() {
                     </div>
                   </i>
                 </span>
-              </h2>
+              </h2> */}
+               <SubHeading3
+            mainText={<>Your</>}
+            highlightText={<> partners in</>}
+            subText={
+              <>
+                <i> progress</i>
+              </>
+            }
+          />
             </div>
       {/* Grid Layout - 2x2 */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
@@ -80,16 +91,15 @@ export default function DoctorsTeam() {
           {/* Doctor Information */}
           <div className="py-2 mt-2 ">
             <h3 className="text-[16px] font-lato font-Lato font-bold leading-[20px] text-[#2E2E2E] font-Lato font-bold  font-italic">
-              <em>Dr Shivangi Bora</em>
+              <em>Dr Y Lakshmi Pravallika</em>
             </h3>
-            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
-              Consultant Paediatrician, Allergy and Asthma Specialist,
-              Paediatric Sleep Specialist
+            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mt-3 mb-3">
+              MBBS, MD (Paediatrics), Fellowship in Neuro Developmental Paediatrics
             </p>
-            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
+            {/* <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
               (MBBS, MD in Paediatrics, DAA (CMC Vellore), DPSM (University of
               Colorado))
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -108,15 +118,15 @@ export default function DoctorsTeam() {
           {/* Doctor Information */}
           <div className="py-2 mt-2 ">
              <h3 className="text-[16px] font-lato font-Lato font-bold leading-[20px] text-[#2E2E2E] font-Lato font-bold  font-italic">
-             <em>Dr Sampat Kumar Shettagar</em> 
+             <em>Ms Neelam Verma</em> 
             </h3>
-            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
-              Pediatric Pulmonologist
+            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mt-3 mb-3">
+              MPhil in Clinical Psychology, PGDCP 13+ Years of Experience
             </p>
-            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
+            {/* <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
               (MBBS, MD Paediatrics, Fellowship in Neonatology [NNF], Fellowship
               in Neonatology [RCPCH])
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -135,14 +145,14 @@ export default function DoctorsTeam() {
           {/* Doctor Information */}
           <div className="py-2 mt-2 ">
              <h3 className="text-[16px] font-lato font-Lato font-bold leading-[20px] text-[#2E2E2E] font-Lato font-bold  font-italic">
-              <em>Dr Indu S Nair</em>
+              <em>Ms Liya Jones</em>
             </h3>
-            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
-              Paediatrician
+            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mt-3 mb-3">
+              Bachelor of Audiology and Speech-Language Pathology 5+ Years of Experience
             </p>
-            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
+            {/* <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
               (MBBS, DCH, DNB [Paediatrics], Fellowship in Neonatology)
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -161,27 +171,34 @@ export default function DoctorsTeam() {
           {/* Doctor Information */}
           <div className="py-2 mt-2 ">
              <h3 className="text-[16px] font-lato font-Lato font-bold leading-[20px] text-[#2E2E2E] font-Lato font-bold  font-italic">
-              <em>Dr Bhaskar MV</em>
+              <em>Dr Aziza Habib</em>
             </h3>
-            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
-              Paediatrician
+            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mt-3 mb-3">
+              PT, MPT, Neurology 6+ Years of Experience
             </p>
-            <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
+          {/*   <p className="text-[14px] leading-[18px] font-normal text-[#2E2E2E] font-Lato mb-3">
               (MBBS, MD Paediatrics, Fellowship in Neonatology [NNF])
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
-      <div className="flex justify-center py-6 px-6">
-        <button
+      <div className="flex justify-center py-0 px-6">
+        {/* <button
           type="button"
           className="flex items-center justify-center gap-3 px-8 py-5 text-white bg-[#F8845D] hover:bg-[#4a3794] transition-colors duration-200 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200 min-w-[300px]"
         >
           <span className="uppercase tracking-[2px] text-sm">
-            Explore all doctors
+            View all therapists
           </span>
           <Image src={arrow} alt="Arrow" width={20} height={10} />
-        </button>
+        </button> */}
+         <SuperDocButton
+                      href="/doctors"
+                      label="View all therapists"
+                      className="my-5 fade-in"
+                      variant="pink"
+                      target='_blank'
+                    />
       </div>
     </div>
   );

@@ -430,6 +430,13 @@ footer h3{
     top: 11px;
     z-index: 2;
 }
+.circling_around-single{
+position: relative;
+}
+.circling_around-single svg{
+  position: absolute;
+    z-index: 2;
+}
 .adjusters.circling_around2 svg {
     width: 150px;
     position: absolute;

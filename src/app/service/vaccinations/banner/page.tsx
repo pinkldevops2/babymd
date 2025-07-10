@@ -125,8 +125,8 @@ export default function Banner() {
                   className="z-0 w-[330px] md:w-[330px]  h-auto"
                 />
                 <Image
-                  width={150}
-                  height={500}
+                  width={327}
+                  height={283}
                   src={vaccinationBannerImg}
                   alt="Layer 2"
                   className="absolute bottom-[10px] md:bottom-[-30px] lg:bottom-[10px] w-[340px] md:w-[360px] h-auto"

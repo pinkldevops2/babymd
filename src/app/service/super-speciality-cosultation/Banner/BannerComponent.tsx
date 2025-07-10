@@ -43,7 +43,7 @@ export default function BannerComponent() {
             Super Specialist Consultations-
           </p> */}
            <h2 className="text-[#E3B200] text-[34px] leading-[34px] font-bold font-baloo2 pt-6">
-             Super Specialist Consultations-
+             Super Specialist Consultations
             </h2>
           <div className="relative flex items-center">
             <h2 className="text-[34px] leading-[34px] max-w-[400px] font-bold font-baloo2 pt-4">

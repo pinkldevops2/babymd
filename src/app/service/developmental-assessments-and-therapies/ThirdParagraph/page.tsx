@@ -3,6 +3,7 @@ import Image from 'next/image';
 import SubHeading from '../../../../components/SubHeading';
 
 import beehive2 from '../../../../../public/images/serviceassets/beehive2.png';
+import SubHeading4 from "../../../../components/SubHeading4";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
@@ -35,7 +36,7 @@ export default function Paragraph() {
   return (
 
           <div className="w-full mt-0 px-6 pb-5 pt-7 relative bg-white">
-         <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
+         {/* <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
           Your child’s growth deserves expert care — 
 delivered with  {" "}
           <span className=" text-[#4B3A8F]">
@@ -61,7 +62,16 @@ delivered with  {" "}
               </div>
             </i>
           </span>
-        </h2>
+        </h2> */}
+        <SubHeading4
+            mainText={<>Your child’s growth deserves expert care — delivered with</>}
+            highlightText={<></>}
+            subText={
+              <>
+                <i> empathy and clarity</i>
+              </>
+            }
+          />
 
         <p className="pt-6">
         Every child develops differently. At BabyMD, our developmental paediatrician and therapy team works together to assess, support, and guide your child’s journey — whether it’s a minor delay, a formal diagnosis, or simply a need for early clarity. We support families across a wide range of needs, including areas covered under developmental assessment, special education, and early childhood development.
