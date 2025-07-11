@@ -6,10 +6,14 @@ import beehive4 from '@/app/assets/beehive4.png';
 import smilevectorange from '../../../../../public/images/serviceassets/smilevectorange.png';
 import sscSmilerImg from '../../../../../public/images/serviceassets/smile2.png';
 import arrow from "../../../../../public/images/Group 2349.png";
+import SuperDocButton2 from "../../../../components/SuperDocButton2";
+import Modal from "../../../../components/FormPopUp";
+import BabyMDCampaignForm from "../../../../components/BabyMDCampaignForm";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 function SmileSection() {
+   const [isModalOpen, setIsModalOpen] = useState(false);
  const pathRef = useRef<SVGPathElement | null>(null);
 
   useEffect(() => {
@@ -41,11 +45,11 @@ function SmileSection() {
             <div className="relative px-8 md:px-0">
   
                <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
-                  All the right experts, {" "}
+                   Let’s take the next step, {" "}
                   <span className=" text-[#4B3A8F]">
                     {" "}
                     <i className="relative z-[2] font-light whitespace-nowrap">
-                      right here
+                      together
                       <div className="absolute z-[-1] left-[-5px] top-[0px]">
                         <svg
                           viewBox="0 0 137 47"
@@ -67,12 +71,13 @@ function SmileSection() {
                   </span>
                 </h2>
               <p className="text-[#2E2E2E] text-base md:text-lg leading-relaxed mt-4">
-                Tired of long lines and hospital confusion just to see a specialist for your bub?
-                </p> <br />
+                Done with the milestone check? Great first step. Now let’s go deeper. Whether the results raised a concern or simply gave you more questions, our team is here to help. Meet with our developmental experts to understand your child’s growth, explore personalised support, and create a plan that feels right for your family. From cognitive skills to language development, we’re here to support every step of your child’s journey.
+
+                </p> {/* <br />
                 <p className='text-[#2E2E2E] text-base md:text-lg leading-relaxed '>
                   We believe personalised care shouldn’t come with chaos. That’s why our top pediatric experts are all under one welcoming roof — no department-hopping, no crowded waiting rooms. Just warm, thoughtful consultations that put your child first.
 
-                </p>
+                </p> */}
 
                
             </div>
@@ -92,8 +97,8 @@ function SmileSection() {
           </div>
         </div>
       </div>
-       <div className="flex justify-center py-6">
-                            <button
+       <div className="flex justify-center pt-6">
+                         {/*    <button
                               type="button"
                               className="flex items-center mx-2 gap-3 px-10 py-5 text-white bg-[#5943A5] hover:bg-[#4a3794] transition-colors duration-200 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200"
                             >
@@ -105,7 +110,24 @@ function SmileSection() {
                          height={10} 
                          
                          />
-                            </button>
+                            </button> */}
+
+                             <SuperDocButton2
+            onClick={() => setIsModalOpen(true)}
+            label="Book a consultation"
+            className="w-80 text-center fade-in uppercase justify-center"
+            variant="purple"
+          />
+
+          <Modal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            mainText={<> Book Appointment with </>}
+            highlightText={<span> Developmental</span>}
+            subText={<i> Pediatrician</i>}
+          >
+            <BabyMDCampaignForm formID="developmental-pediatrician-therapy-appointment" />
+          </Modal>
                           </div>
     </div>
   );

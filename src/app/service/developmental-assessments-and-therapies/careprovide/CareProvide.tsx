@@ -290,9 +290,17 @@ const accordionData: AccordionItem[] = [
               </p>
 
               <p>
-                Celebrating small wins, not just big milestones — whether it’s
-                speech start, better spelling, or growing confidence A
-                child-first environment that builds confidence, not anxiety
+                
+                <ul className="pl-4">
+                  <li className="list-disc mb-2">
+                    Celebrating small wins, not just big milestones — whether
+                    it’s speech start, better spelling, or growing confidence
+                  </li>
+                  <li className="list-disc mb-2">
+                    A child-first environment that builds confidence, not
+                    anxiety
+                  </li>
+                </ul>
               </p>
             </div>
           </div>
@@ -302,7 +310,14 @@ const accordionData: AccordionItem[] = [
   },
 ];
 
-const bgColors = ["bg-[#D7CCE2]", "bg-[#FF9A6C]", "bg-[#F9EEB6]", "bg-[#DBFFCC]", "bg-[#CDE6F3]", "bg-[#FFD6C6]"];
+const bgColors = [
+  "bg-[#D7CCE2]",
+  "bg-[#FF9A6C]",
+  "bg-[#F9EEB6]",
+  "bg-[#DBFFCC]",
+  "bg-[#CDE6F3]",
+  "bg-[#FFD6C6]",
+];
 
 export default function CareProvide() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);

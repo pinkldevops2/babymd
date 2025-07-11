@@ -1,17 +1,18 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import SuperDocButton from './SuperDocButton';
+import SuperDocButton from "./SuperDocButton";
 import bluebtnarrow from "@/app/assets/btnBluearrow.png";
 import cloudtext from "@/app/assets/cloud.png";
 import next_bees_sleeping from "@/app/assets/next_bees_sleeping.png";
 import beehive2 from "@/app/assets/beehive2.png";
 import beehive_cloud from "@/app/assets/beehive_cloud.png";
 import keerthana from "@/app/assets/keerthana.png";
-import ContactSubC from './anime/ContactMainGeneral';
+import ContactSubC from "./anime/ContactSubC";
+import SubHeading3 from "../components/SubHeading3";
 
 const testimonials = [
   {
@@ -21,16 +22,15 @@ const testimonials = [
     location: "",
     image: keerthana,
   },
-  
 ];
 
 const CloudTestimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
-    slides: { 
+    slides: {
       perView: 1.2,
-      spacing: 16 
+      spacing: 16,
     },
     breakpoints: {
       "(min-width: 640px)": {
@@ -82,24 +82,37 @@ const CloudTestimonials = () => {
         width={36}
         height={36}
         className="absolute right-[50px] top-[80px]"
-      />  
+      />
       <Image
         src={beehive_cloud}
         alt="Cloud Animation"
         width={56}
         height={59}
         className="absolute right-[70px] top-[410px]"
-      />        
+      />
       {/* Heading */}
-      <h2 className="text-[28px] leading-[32px] font-bold mb-2 px-6 md:px-6 fade-in">
-        Real parents.  {" "} <span className="text-[#5943A5]">Real{" "}</span>
+      {/*   <h2 className="text-[28px] leading-[32px] font-bold mb-2 px-6 md:px-6 fade-in">
+        Proof that a {" "} <span className="text-[#5943A5]">little 
+support goes a{" "}</span>
         <br />
         <span className="text-[#5943A5] italic font-medium relative circling_around2 adjusters">
-          <i className="relative z-5">reassurance. </i>
+          <i className="relative z-5"> long way </i>
           <ContactSubC />
         </span>{" "}
       
-      </h2>
+      </h2> */}
+      <div className="px-6 pt-4">
+         <SubHeading3
+        mainText={<></>}
+        highlightText={<> Proof that a little support goes a</>}
+        subText={
+          <>
+            <i> long way</i>
+          </>
+        }
+      />
+      </div>
+     
 
       {/* Decorative Elements */}
       <div className="absolute top-4 right-6">
@@ -121,11 +134,20 @@ const CloudTestimonials = () => {
 
                 <div className="mt-4 flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden fade-in">
-                    <Image src={item.image} width={36} height={36} alt={item.name}/>
+                    <Image
+                      src={item.image}
+                      width={36}
+                      height={36}
+                      alt={item.name}
+                    />
                   </div>
                   <div>
-                    <p className="font-semibold text-[#EB5A44] text-sm fade-in">{item.name}</p>
-                    <p className="italic text-[#4B3A8F] text-xs fade-in">{item.location}</p>
+                    <p className="font-semibold text-[#EB5A44] text-sm fade-in">
+                      {item.name}
+                    </p>
+                    <p className="italic text-[#4B3A8F] text-xs fade-in">
+                      {item.location}
+                    </p>
                   </div>
                 </div>
 
@@ -152,8 +174,18 @@ const CloudTestimonials = () => {
               className="p-2 rounded-full bg-[#5943A5] hover:bg-[#4B2EB6] transition"
               aria-label="Previous testimonial"
             >
-              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <svg
+                className="w-4 h-4 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
               </svg>
             </button>
 
@@ -175,8 +207,18 @@ const CloudTestimonials = () => {
               className="p-2 rounded-full bg-[#5943A5] hover:bg-[#4B2EB6] transition"
               aria-label="Next testimonial"
             >
-              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="w-4 h-4 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
           </div>
@@ -184,7 +226,12 @@ const CloudTestimonials = () => {
 
         {/* CTA Button */}
         <div className="mt-[0px] px-6 invisible">
-          <SuperDocButton href="#" label="SEE MORE REVIEWS" className="w-60 text-center" variant="purple"/>
+          <SuperDocButton
+            href="#"
+            label="SEE MORE REVIEWS"
+            className="w-60 text-center"
+            variant="purple"
+          />
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@ const cardData = [
   {
     icon: <Image src={Holistic} alt=""/>,
     title: "Holistic, Child-First Approach",
-    description: "We look beyond just symptoms, supporting each child’s physical, emotional, and developmental growth, while empowering parents along the way",
+    description: "We look beyond just symptoms, supporting each child’s physical, emotional, and developmental growth, while empowering parents along the way.",
     bgColor: "bg-[#CDE6F3]",
   },
   {
@@ -108,8 +108,8 @@ const cardData = [
           <div className="flex flex-col justify-center items-center md:flex-row">
             <div className="w-full md:w-2/3">
               <div className="relative px-6 md:px-2 md:w-3/4">
-                <h1 className="text-2xl font-bold text-[34px] pb-[12px]">
-                  Every child is a miracle. We&#39;re 
+                <h2 className="font-bold text-[34px] leading-[34px] pb-[12px]">
+                  Every child is a miracle.<br/>We&#39;re 
 here to{" "}
                   <span className="text-[#5943A5]">nurture their </span>
                   <span className="relative clinic_border relative z-[2]">
@@ -122,11 +122,11 @@ here to{" "}
 </svg>
                     </div>
                   </span>
-                </h1>
+                </h2>
                
 
                 <p className="">
-                  Thoughtfully designed, expert-led, holistic pediatric care — so you can parent with more confidence and less stress
+                  Thoughtfully designed, expert-led, holistic paediatric care, so you can parent with more confidence and less stress
                 </p>
                 <img
                   className="absolute top-[-40px] right-[30px]"
@@ -182,7 +182,7 @@ here to{" "}
                   So in 2024, BabyMD began with one clinic and a simple mission: to make paediatric care feel closer, calmer, and kinder.
                 </p>
                 <p className="fade-in mb-4">
-                  Today, BabyMD is a growing network of neighbourhood clinics offering everything from consultations and vaccinations to developmental assessments and therapy services — all under one roof. We’re proud to be open 7 days a week, backed by a team that listens first, treats with heart, and partners with parents every step of the way.
+                  Today, BabyMD is a growing network of neighbourhood clinics — offering everything from consultations and vaccinations to developmental assessments and therapy, all under one roof. We’re proud to be open 7 days a week, backed by a team that listens first, treats with heart, and partners with parents every step of the way.
                 </p>
               </div>
             </div>

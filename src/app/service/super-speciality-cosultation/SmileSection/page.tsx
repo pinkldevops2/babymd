@@ -6,10 +6,14 @@ import beehive4 from '@/app/assets/beehive4.png';
 import smilevectorange from '../../../../../public/images/serviceassets/smilevectorange.png';
 import sscSmilerImg from '../../../../../public/images/serviceassets/sscSmilerImg.png';
 import SuperDocButton from '../../../../components/SuperDocButton';
+import SuperDocButton2 from "../../../../components/SuperDocButton2";
+import Modal from "../../../../components/FormPopUp";
+import BabyMDCampaignForm from "../../../../components/BabyMDCampaignForm";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 function SmileSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
       const pathRef = useRef<SVGPathElement | null>(null);
 
   useEffect(() => {
@@ -70,7 +74,7 @@ function SmileSection() {
                 Tired of long lines and hospital confusion just to see a specialist for your bub?
                 </p> <br />
                 <p className='text-[#2E2E2E] text-base md:text-lg leading-relaxed '>
-                  We believe personalised care shouldn’t come with chaos. That’s why our top pediatric experts are all under one welcoming roof — no department-hopping, no crowded waiting rooms. Just warm, thoughtful consultations that put your child first.
+                  We believe personalised care shouldn’t come with chaos. That’s why our top paediatric experts are all under one welcoming roof — no department-hopping, no crowded waiting rooms. Just warm, thoughtful consultations that put your child first.
 
                 </p>
 
@@ -94,13 +98,30 @@ function SmileSection() {
        
       </div>
       <div className="flex justify-center py-6 px-6">
-        <SuperDocButton
-                  href={"https://babymd-vizz.vercel.app/doctors"}
+       {/*  <SuperDocButton
+                  href={"/doctors"}
                   target={"_blank"}
                   label="Book a specialist"
                   className="w-80 text-center fade-in uppercase"
                   variant="purple"
-                />
+                /> */}
+
+         <SuperDocButton2
+            onClick={() => setIsModalOpen(true)}
+            label="Book a specialist"
+            className="w-80 text-center fade-in uppercase justify-center"
+            variant="purple"
+          />
+
+          <Modal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            mainText={<> Book Appointment with a </>}
+            highlightText={<span> Super </span>}
+            subText={<i> Specialist</i>}
+          >
+            <BabyMDCampaignForm formID="super-speciality-appointment" />
+          </Modal>
       </div>
     </div>
   );

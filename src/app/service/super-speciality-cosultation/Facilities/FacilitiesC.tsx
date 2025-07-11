@@ -6,7 +6,7 @@ import facilitiesImage1 from 'public/icons/vaccination4.png';
 import facilitiesImage2 from 'public/icons/gpc1.png';
 import facilitiesImage3 from 'public/icons/serviceicon3.png';
 import facilitiesImage4 from 'public/icons/vaccination12.png';
-import SubHeading2 from '../../../../components/SubHeading2';
+import SubHeading3 from '../../../../components/SubHeading3';
 
 export default function FacilitiesC() {
   return (
@@ -14,14 +14,14 @@ export default function FacilitiesC() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-col lg:items-start lg:gap-8 ">
         {/* Heading */}
 
-        <SubHeading2
+        <SubHeading3
           mainText={<>From A to Z: </>}
-          highlightText={<>All pediatric needs in </>}
+          highlightText={<>All paediatric needs in </>}
           subText={<><i> one place </i></>}
         />
 
          <p className="pb-3">
-          Let’s face it — taking your little one to the doctor shouldn’t be a nightmare. We’ve gathered the best pediatric specialists all under one roof. Whether it’s a skin issue, respiratory challenge, or behavioral concern, we’ve got specialists who speak your child’s language.
+          Let’s face it — taking your little one to the doctor shouldn’t be a nightmare. We’ve gathered the best pediatric specialists all under one roof. Whether it’s a skin issue, respiratory challenge, or behavioural concern, we’ve got specialists who speak your child’s language.
         </p>
 
         {/* List of Items */}
@@ -39,7 +39,7 @@ export default function FacilitiesC() {
             </div>
             <div className="w-3/4 p-4 min-h-[100px] flex items-center">
               <p className="text-[16px] text-black">
-                10+ pediatric specialities under one roof
+                10+ paediatric specialities under one roof
               </p>
             </div>
           </div>

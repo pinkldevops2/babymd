@@ -43,7 +43,13 @@ export default function Doctors() {
           <div>
             <Paragraph />
             <div className="hidden justify-center  md:flex pt-2">
-              <SuperDocButton href="#" label="Book an Appointment" className="w-70 text-center uppercase hidden md:flex" variant="pink"/>
+              <SuperDocButton
+                href="https://babymd.in/pp/patient-portal/"
+                label="Book an Appointment"
+                className="w-70 text-center uppercase hidden md:flex"
+                variant="pink"
+                target="_blank"
+              />
             </div>
           </div>
         </div>

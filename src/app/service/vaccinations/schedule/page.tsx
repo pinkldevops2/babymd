@@ -124,7 +124,7 @@ export default function schedule() {
                 </button>  */}
 
                 <SuperDocButton
-                  href={"https://babymd-vizz.vercel.app/doctor"}
+                  href={"/doctor"}
                   target={"_blank"}
                   label="Consult our experts"
                   className="w-80 text-center fade-in uppercase"

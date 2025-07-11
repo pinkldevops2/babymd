@@ -3,11 +3,15 @@ import Image from 'next/image';
 
 import beehive2 from '../../../../../public/images/serviceassets/beehive2.png';
 import SubHeading4 from "../../../../components/SubHeading4";
-import { useEffect, useRef } from "react";
+import SuperDocButton from '../../../../components/SuperDocButton';
+import SuperDocButton2 from "../../../../components/SuperDocButton2";
+import Modal from "../../../../components/FormPopUp";
+import BabyMDCampaignForm from "../../../../components/BabyMDCampaignForm";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
-export default function ParagraphComponent() {
-
+export default function FourthParagraph() {
+const [isModalOpen, setIsModalOpen] = useState(false);
   const pathRef = useRef<SVGPathElement | null>(null);
   useEffect(() => {
     const path = pathRef.current;
@@ -33,16 +37,16 @@ export default function ParagraphComponent() {
 
   return (
 
-          <div className="w-full mt-0 px-6 pb-5 pt-7 relative bg-white">
+          <div className="w-full mt-0 px-6 pb-0 pt-7 relative bg-white">
        
-        <Image
+       {/*  <Image
           width={33}
           height={30}
           src={beehive2}
           alt="Beehive"
           className="absolute right-[20px] top-[65px]"
         />
-
+ */}
         {/*  <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
           Expert eyes for {" "}
           <span className=" text-[#4B3A8F]">
@@ -70,19 +74,55 @@ export default function ParagraphComponent() {
           </span>
         </h2>  */}
         <SubHeading4
-            mainText={<>Expert care for every</>}
-            highlightText={<>stage of your</>}
+            mainText={<>When in doubt, </>}
+            highlightText={<></>}
             subText={
               <>
-                <i> child’s growth</i>
+                <i> start here</i>
               </>
             }
           />
 
-        <p className="pt-8">
-          At BabyMD, our specialists are here to support you through every phase of parenting — from newborn feeding struggles to teenage hormonal shifts. Explore our super-specialities, grouped by age and stage.
+        <p className="pt-0">
+         Not sure who to meet? Begin with a BabyMD Paediatrician. They’ll help assess your concerns and refer you to the right specialist if needed — so you never feel lost or alone in the process.
 
         </p>
+        <div className="flex justify-center py-6 px-6">
+        {/* <button
+          type="button"
+          className="flex items-center justify-center gap-3 px-8 py-5 text-white bg-[#F8845D] hover:bg-[#4a3794] transition-colors duration-200 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200 min-w-[300px]"
+        >
+          <span className="uppercase tracking-[2px] text-sm">
+            Explore all doctors
+          </span>
+          <Image src={arrow} alt="Arrow" width={20} height={10} />
+        </button> */}
+
+       {/*  <SuperDocButton
+                  href={"/doctors"}
+                  target={"_blank"}
+                  label="Schedule a consultation"
+                  className="w-80 text-center fade-in uppercase"
+                  variant="pink"
+                /> */}
+
+                <SuperDocButton2
+            onClick={() => setIsModalOpen(true)}
+            label="Schedule a consultation"
+            className="w-80 text-center fade-in uppercase justify-center"
+            variant="pink"
+          />
+
+          <Modal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            mainText={<> Book Appointment with a </>}
+            highlightText={<span> Super </span>}
+            subText={<i> Specialist</i>}
+          >
+            <BabyMDCampaignForm formID="super-speciality-appointment" />
+          </Modal>
+      </div>
       </div>
   );
 }

@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import arrow from "../../../../../public/images/Group 2349.png";
 import SuperDocButton from '../../../../components/SuperDocButton';
+import SubHeading2 from "../../../../components/SubHeading2";
 
 export default function Paragraph() {
 
@@ -34,7 +35,7 @@ export default function Paragraph() {
   return (
 
           <div className="w-full mt-0 px-6 pb-5 pt-7 relative bg-white">
-         <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
+        {/*  <h2 className="text-[28px] leading-[28px] font-bold font-baloo2 mt-2">
           Wondering if your {" "}
           <span className=" text-[#4B3A8F]">
                child is on   {" "}
@@ -59,7 +60,16 @@ export default function Paragraph() {
               </div>
             </i>
           </span>
-        </h2>
+        </h2> */}
+         <SubHeading2
+            mainText={<>Wondering if your</>}
+            highlightText={<>child is on</>}
+            subText={
+              <>
+                <i> track?</i>
+              </>
+            }
+          />
 
         <p className="pt-6">
        You don’t have to guess, and you don’t have to wait. Our free online milestone assessment is a quick and thoughtful way to check how your little one is developing across speech, motor skills, emotions, and more. Designed by experts, and parent-tested for peace of mind, all from the comfort of your home.
@@ -81,9 +91,9 @@ milestone assessment</span>
                    />
                       </button>
                     </div> */}
-                    <div className="flex justify-center py-6">
+                    <div className="flex justify-center pt-6">
                     <SuperDocButton
-                        href={"https://babymd.in/pp/development-assesment"}
+                        href={"https://babymd.in/pp/free-growth-assessment-for-infants-children"}
                         target={"_blank"}
                         label="Start your free milestone assessment"
                         className="w-80 text-center fade-in uppercase whitespace-wrap"

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 import Image from "next/image";
-import React, { useRef, useState, useEffect } from 'react';
-import { useKeenSlider, KeenSliderInstance } from 'keen-slider/react';
+import React, { useRef, useState, useEffect } from "react";
+import { useKeenSlider, KeenSliderInstance } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import expert1 from "../../../../../public/images/serviceassets/expert1.png";
 import expert2 from "../../../../../public/images/serviceassets/expert2.png";
@@ -22,33 +22,33 @@ export default function ExpertSlider() {
   const [loaded, setLoaded] = useState<boolean>(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
-  loop: true,
-  slides: {
-    perView: 1.4,
-    spacing: 16,
-  },
-  breakpoints: {
-    "(min-width: 530px)": {
-      slides: {
-        perView: 2.4,
-        spacing: 20,
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    slides: {
+      perView: 1.4,
+      spacing: 16,
+    },
+    breakpoints: {
+      "(min-width: 530px)": {
+        slides: {
+          perView: 2.4,
+          spacing: 20,
+        },
+      },
+      "(min-width: 768px)": {
+        slides: {
+          perView: 3.4,
+          spacing: 24,
+        },
       },
     },
-    "(min-width: 768px)": {
-      slides: {
-        perView: 3.4,
-        spacing: 24,
-      },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
     },
-  },
-  slideChanged(slider) {
-    setCurrentSlide(slider.track.details.rel);
-  },
-  created() {
-    setLoaded(true);
-  },
-});
+    created() {
+      setLoaded(true);
+    },
+  });
 
   useEffect(() => {
     if (instanceRef.current) {
@@ -63,13 +63,41 @@ const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
   }, [instanceRef]);
 
   const slides: Slide[] = [
-    { title: 'Speech and Language Therapy', desc: `For children who speak late, struggle to express themselves, or have unclear speech, we work on improving language development, vocabulary, clarity, comprehension, and communication confidence.`, image: expert1 },
-    { title: 'Speech and Language Therapy', desc: `For children who speak late, struggle to express themselves, or have unclear speech, we work on improving language development, vocabulary, clarity, comprehension, and communication confidence.`, image: expert2 },
-    { title: 'Speech and Language Therapy', desc: `For children who speak late, struggle to express themselves, or have unclear speech, we work on improving language development, vocabulary, clarity, comprehension, and communication confidence.`, image: expert3 },
-    { title: 'Speech and Language Therapy', desc: `For children who speak late, struggle to express themselves, or have unclear speech, we work on improving language development, vocabulary, clarity, comprehension, and communication confidence.`, image: expert4 },
-    { title: 'Speech and Language Therapy', desc: `For children who speak late, struggle to express themselves, or have unclear speech, we work on improving language development, vocabulary, clarity, comprehension, and communication confidence.`, image: expert5 },
-    { title: 'Speech and Language Therapy', desc: `For children who speak late, struggle to express themselves, or have unclear speech, we work on improving language development, vocabulary, clarity, comprehension, and communication confidence.`, image: expert6 },
-    { title: 'Speech and Language Therapy', desc: `For children who speak late, struggle to express themselves, or have unclear speech, we work on improving language development, vocabulary, clarity, comprehension, and communication confidence.`, image: expert7 },
+    {
+      title: "Speech and Language Therapy",
+      desc: `For children who speak late, struggle to express themselves, or have unclear speech, we work on improving language development, vocabulary, clarity, comprehension, and communication confidence.`,
+      image: expert1,
+    },
+    {
+      title: "Occupational Therapy",
+      desc: `For children who have difficulty with fine motor skills, handwriting, balance, or daily routines, we focus on improving independence, coordination, and sensory regulation.`,
+      image: expert2,
+    },
+    {
+      title: "Applied Behavior Analysis",
+      desc: `For children with Autism Spectrum Disorder, ADHD, or behavior challenges, we provide a structured, evidence-based approach to improve communication, learning, and social behavior.`,
+      image: expert3,
+    },
+    {
+      title: "Behavioral Therapy",
+      desc: `For children with tantrums, aggression, anxiety, or difficulty following instructions, we help children build emotional regulation, routines, and coping skills in a safe environment.`,
+      image: expert4,
+    },
+    {
+      title: "Sensory Integration Therapy",
+      desc: `For children who are overly sensitive to light, sound, textures, or movement, our sensory integration sessions use gentle, play-based desensitization strategies.`,
+      image: expert5,
+    },
+    {
+      title: "Group Therapy (Social Skills)",
+      desc: `For children who struggle to engage with peers, take turns, or understand social cues, we run small-group sessions to help children build confidence in real-life interactions.`,
+      image: expert6,
+    },
+    {
+      title: "Parent and Caregiver Guidance",
+      desc: `We work closely with parents to support therapy at home, build routines, and offer clarity at every step. You are not just included, you are empowered.`,
+      image: expert7,
+    },
   ];
 
   return (
@@ -109,7 +137,7 @@ const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
                   key={idx}
                   onClick={() => instanceRef.current?.moveToIdx(idx)}
                   className={`mx-1 w-2 h-2 rounded-full ${
-                    currentSlide === idx ? 'bg-[#5943A5]' : 'bg-gray-300'
+                    currentSlide === idx ? "bg-[#5943A5]" : "bg-gray-300"
                   }`}
                 />
               )
