@@ -61,33 +61,6 @@ export default function Header() {
             </li> 
             <li>
               <div className="border dividerpex"></div>
-              <Link href="/doctors" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
-                Doctors
-              </Link>
-            </li>
-            <li>
-              <div className="border dividerpex"></div>
-              <Link href="/clinics" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
-                Clinics
-              </Link>
-            </li>
-            <li className="hidden">
-              <Link href="/testimonials" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
-                Testimonials
-              </Link>
-            </li>
-            <li className="hidden">
-              <Link href="/about-us" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
-                About Us
-              </Link>
-            </li>            
-              <li className="hidden">
-              <Link href="/resources" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
-                Resources
-              </Link>
-            </li>
-            <li>
-              <div className="border dividerpex"></div>
               <details className="group">
                 <div className="border dividerpex"></div>
                 <summary className="text-[#4B3A8F] hover:text-[#FF6F61] cursor-pointer">
@@ -109,19 +82,49 @@ export default function Header() {
                       Vaccinations
                     </Link>
                   </li>
-                  <li className="hidden">
-                    <Link href="/service/super-special-consultations" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
-                      Super Special Consultations
+                  <li>
+                    <Link href="/service/super-speciality-consultation" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                      Super Speciality Consultation
                     </Link>
                   </li>
-                  <li className="hidden">
-                    <Link href="/service/developmental-assessments-and-therapies" className="text-[#4B3A8F] hover:text-[#FF6F61] block">
+                  <li>
+                    <Link href="/service/developmental-assessments-and-therapies" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
                       DA&T
                     </Link>
                   </li>
                 </ul>
               </details>
             </li>
+            <li>
+              <div className="border dividerpex"></div>
+              <Link href="/doctors" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                Doctors
+              </Link>
+            </li>
+            <li>
+              <div className="border dividerpex"></div>
+              <Link href="/clinics" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                Clinics
+              </Link>
+            </li>
+            <li>
+              <div className="border dividerpex"></div>
+              <Link href="/testimonials" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                Testimonials
+              </Link>
+            </li>
+            <li>
+              <div className="border dividerpex"></div>
+              <Link href="/about-us" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                About Us
+              </Link>
+            </li>            
+              <li>
+              <div className="border dividerpex"></div>
+              <Link href="/resources" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                Resources
+              </Link>
+            </li>            
             <li>
               <div className="border dividerpex"></div>
               <Link href="/contact-baby-md" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
