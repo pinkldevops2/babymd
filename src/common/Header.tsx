@@ -83,8 +83,8 @@ export default function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/service/super-speciality-consultation" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
-                      Super Speciality Consultation
+                    <Link href="/service/super-specialist-consultation" className="text-[#4B3A8F] hover:text-[#FF6F61] block" onClick={handleLinkClick}>
+                      Super Specialist Consultation
                     </Link>
                   </li>
                   <li>

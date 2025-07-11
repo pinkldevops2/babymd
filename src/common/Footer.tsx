@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="">
             <h3 className="font-bold uppercase mb-2">Company</h3>
             <ul className="space-y-1 footerULline">
-              <li className="hidden">
+              <li>
                 <Link href="/about-us" className="hover:text-[#FF6F61]">
                   About Us
                 </Link>
@@ -28,23 +28,18 @@ export default function Footer() {
                   Contact Us
                 </Link>
               </li>
-              <li className="hidden">
-                <Link href="/doctor" className="hover:text-[#FF6F61]">
-                  Our Doctors
+              <li>
+                <Link href="/doctors" className="hover:text-[#FF6F61]">
+                  Doctors
                 </Link>
               </li>
-              <li className="hidden">
+              <li>
                 <Link href="/testimonials" className="hover:text-[#FF6F61]">
                   Testimonials
                 </Link>
               </li>
-              <li className="hidden">
-                <Link href="/testimonials" className="hover:text-[#FF6F61]">
-                  Our Locations
-                </Link>
-              </li>
-              <li className="hidden">
-                <Link href="/testimonials" className="hover:text-[#FF6F61]">
+              <li>
+                <Link href="/resources" className="hover:text-[#FF6F61]">
                   Resources
                 </Link>
               </li>
@@ -53,33 +48,33 @@ export default function Footer() {
           <div className="">
             <h3 className="font-bold uppercase mb-2">Services</h3>
             <ul className="space-y-1 footerULline">
+              <li className="leading-[20px] md:leading-[40px]">
+                <Link href="/service/general-pediatrics-consultation" className="hover:text-[#FF6F61]">
+                  General Pediatric Consultations
+                </Link>
+              </li>
               <li>
-                <Link href="/clinic" className="hover:text-[#FF6F61]">
-                  Clinics
-                </Link>
-              </li>
-              <li className="hidden">
                 <Link
-                  href="/services/vaccinations"
+                  href="/service/vaccinations"
                   className="hover:text-[#FF6F61]"
                 >
-                  Vaccination
+                  Vaccinations
                 </Link>
               </li>
-              <li className="hidden">
+              <li className="leading-[20px] md:leading-[40px]">
                 <Link
-                  href="/services/24x7-services"
+                  href="/service/super-specialist-consultation"
                   className="hover:text-[#FF6F61]"
                 >
-                  24x7 Services
+                  Super Specialist Consultation
                 </Link>
               </li>
-              <li className="hidden">
+              <li>
                 <Link
-                  href="/services/treatment-and-therapies"
+                  href="/service/developmental-assessments-and-therapies"
                   className="hover:text-[#FF6F61]"
                 >
-                  Treatment and Therapies
+                  DA&amp;T
                 </Link>
               </li>
             </ul>
