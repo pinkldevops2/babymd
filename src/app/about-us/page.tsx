@@ -5,6 +5,7 @@ import RoadMap from '../../components/RoadMap';
 import Modal from '../../components/FormPopUp';
 import BabyMDCampaignForm from '../../components/BabyMDCampaignForm';
 import baby_about from "public/images/baby_about.png";
+import ContactSubC from '../../components/anime/ContactSubSmall';
 import SubHeading2 from "@/components/SubHeading2";
 import Empathy from "public/icons/a1.svg"; // Replace with actual SVGs
 import Doctor from "public/icons/a4.svg";
@@ -181,7 +182,7 @@ here to{" "}
                 <p className="mb-4">
                   So in 2024, BabyMD began with one clinic and a simple mission: to make paediatric care feel closer, calmer, and kinder.
                 </p>
-                <p className=" mb-4">
+                <p className="mb-4">
                   Today, BabyMD is a growing network of neighbourhood clinics — offering everything from consultations and vaccinations to developmental assessments and therapy, all under one roof. We’re proud to be open 7 days a week, backed by a team that listens first, treats with heart, and partners with parents every step of the way.
                 </p>
               </div>
@@ -295,11 +296,17 @@ and more joyful.</p>
         <div>
         <div>
           <div className="mb-0">
-            <SubHeading2
-            mainText={<>The minds that lead,</>}
-            subText={<>care</>}
-            highlightText={<>the hearts that</>}
-            />
+           
+             <h2 className="text-[28px] text-black leading-[32px] font-bold mb-2 fade-in">
+       The minds that lead,{" "}
+ <span className="text-[#5943A5]">the hearts that  </span>
+       
+        <span className="text-[#5943A5] italic font-medium relative circling_around-single">
+          <i className="relative z-5">care </i>
+          <ContactSubC />
+        </span>{" "}
+        
+      </h2>
             </div>
             <div className="pb-4">
             <p>Our leadership team blends together decades of medical expertise in paediatrics, child development, and holistic care — all to support you and your little one throughout your journey. We are united by one belief: every kid deserves exceptional care, and every parent deserves a partner they can trust.</p>
